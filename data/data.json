@@ -2,10 +2,10 @@
  "meta": {
   "title": "GHG Standards Tracker",
   "subtitle": "Weekly-updated reference on revisions to corporate emissions reporting standards and regulations",
-  "last_updated": "2026-08-18",
+  "last_updated": "2026-08-25",
   "revision_window_start": "2022-11-01",
   "disclaimer": "Independent, non-commercial reference compiled from official sources for sustainability professionals. Not legal or compliance advice. Verify deadlines against primary sources before acting.",
-  "update_cadence": "Weekly (Wednesdays)"
+  "update_cadence": "Weekly (Mondays)"
  },
  "confidence_legend": {
   "confirmed": {
@@ -18,7 +18,7 @@
   },
   "medium": {
    "label": "Medium",
-   "description": "Active proposal or consultation where the outcome is genuinely open \u2014 stakeholder divergence, pending litigation, or an unpublished feedback summary means the final shape could differ materially."
+   "description": "Active proposal or consultation where the outcome is genuinely open — stakeholder divergence, pending litigation, or an unpublished feedback summary means the final shape could differ materially."
   },
   "low": {
    "label": "Low",
@@ -29,8 +29,8 @@
   {
    "id": "m-ca",
    "value": "Nov 10, 2026",
-   "label": "First mandatory US emissions reports due",
-   "sub": "California \u2014 big companies doing business there, including non-US parents",
+   "label": "First mandatory US corporate emissions reports due",
+   "sub": "California — big companies doing business there, including US arms of foreign groups",
    "framework": "us"
   },
   {
@@ -64,7 +64,7 @@
   {
    "id": "m-consolidation",
    "value": "Q2 2027",
-   "label": "Public comment opens on the merged GHGP\u2013ISO standard",
+   "label": "Public comment opens on the merged GHGP–ISO standard",
    "sub": "The world's two carbon accounting rulebooks become one; final expected late 2028",
    "framework": "ghgp"
   }
@@ -81,8 +81,8 @@
     "note": "The GHGP Corporate Standard, Scope 2 Guidance, Scope 3 Standard, AMI, and ISO 14064-1 become one co-branded standard (consultation Q2 2027, publication est. Q4 2028). Product (ISO 14067 + GHGP Product Standard) and project standards are being harmonized in parallel.",
     "bullets": [
      "One co-branded standard replaces the GHGP corporate suite + ISO 14064-1",
-     "Part 1: physical inventory \u00b7 Part 2: actions & market instruments",
-     "Consultation Q2 2027 \u2192 publication est. Q4 2028; product & project standards harmonizing in parallel"
+     "Part 1: physical inventory · Part 2: actions & market instruments",
+     "Consultation Q2 2027 → publication est. Q4 2028; product & project standards harmonizing in parallel"
     ]
    },
    {
@@ -91,11 +91,11 @@
     "type": "references",
     "strength": "hard",
     "title": "IFRS S2 hard-wires the GHG Protocol",
-    "note": "S2 requires Scopes 1\u20133 measured per the GHGP Corporate Standard (2004). The ISSB holds an observer seat on the GHGP standards board; any switch to the revised GHGP standard requires an ISSB exposure draft and public consultation \u2014 reporters are not automatically moved.",
+    "note": "S2 requires Scopes 1–3 measured per the GHGP Corporate Standard (2004), unless a jurisdiction or exchange mandates a different method — a relief the Dec 2025 amendments extend. The ISSB holds an observer seat on the GHGP standards board; any switch to the revised GHGP standard requires an ISSB exposure draft and public consultation — reporters are not automatically moved.",
     "bullets": [
-     "S2 requires Scopes 1\u20133 per the GHGP Corporate Standard (2004) \u2014 today's version, not the revision",
+     "S2 requires Scopes 1–3 per the GHGP Corporate Standard (2004) — today's version, not the revision",
      "ISSB holds an observer seat on the GHGP standards board",
-     "Moving S2 to the revised standard requires an exposure draft + consultation \u2014 no automatic migration"
+     "Moving S2 to the revised standard requires an exposure draft + consultation — no automatic migration"
     ]
    },
    {
@@ -104,11 +104,11 @@
     "type": "references",
     "strength": "hard",
     "title": "California pins SB 253 to specific GHGP versions",
-    "note": "SB 253 statutorily requires GHG Protocol conformance, and CARB has pinned reporting to current versions \u2014 stating it 'will not dynamically update to reflect GHG Protocol developments.' Revised GHGP standards would need a new rulemaking, creating a likely lag and possible divergence. New York's Senate-passed bill copies the same anchoring.",
+    "note": "SB 253 statutorily requires GHG Protocol conformance, and CARB has pinned reporting to current versions — stating it 'will not dynamically update to reflect GHG Protocol developments.' Revised GHGP standards would need a new rulemaking, creating a likely lag and possible divergence. New York's Senate-passed bill copies the same anchoring.",
     "bullets": [
      "SB 253 writes GHGP conformance into statute; CARB pinned specific versions",
-     "CARB: reporting \u201cwill not dynamically update to reflect GHG Protocol developments\u201d",
-     "Revised GHGP \u2192 new rulemaking needed \u2192 lag + dual-methodology risk; NY's bill copies the anchoring"
+     "CARB: reporting “will not dynamically update to reflect GHG Protocol developments”",
+     "Revised GHGP → new rulemaking needed → lag + dual-methodology risk; NY's bill copies the anchoring"
     ]
    },
    {
@@ -130,11 +130,11 @@
     "type": "depends",
     "strength": "hard",
     "title": "SBTi targets sit on GHGP inventories",
-    "note": "SBTi target boundaries, progress measurement, and assurance all consume GHGP-based inventories. V2.0 was finalized mid-revision, so SBTi and GHGP plan joint provisional accounting guidance (interim guidance expected Q4 2026). V2.0's location-based scope 2 basis and hourly provisions anticipate the GHGP Scope 2 direction \u2014 but GHGP's Scope 2 outcome is still open, a real divergence risk.",
+    "note": "SBTi target boundaries, progress measurement, and assurance all consume GHGP-based inventories. V2.0 was finalized mid-revision, so SBTi and GHGP plan joint provisional accounting guidance (interim guidance expected Q4 2026). V2.0's location-based scope 2 basis and hourly provisions anticipate the GHGP Scope 2 direction — but GHGP's Scope 2 outcome is still open, a real divergence risk.",
     "bullets": [
      "Target boundaries, progress, and assurance all consume GHGP-based inventories",
-     "V2.0 finalized mid-revision \u2192 joint provisional accounting guidance planned (interim ~Q4 2026)",
-     "V2.0 anticipates GHGP's Scope 2 direction \u2014 but that outcome is still open: divergence risk"
+     "V2.0 finalized mid-revision → joint provisional accounting guidance planned (interim ~Q4 2026)",
+     "V2.0 anticipates GHGP's Scope 2 direction — but that outcome is still open: divergence risk"
     ]
    },
    {
@@ -143,10 +143,10 @@
     "type": "aligns",
     "strength": "medium",
     "title": "FLAG V2 will align with GHGP Land Sector & Removals",
-    "note": "SBTi's FLAG Standard revision (call for input open) will harmonize with the LSR Standard/Guidance that becomes effective January 1, 2027 \u2014 a direct methodological coupling on land and removals.",
+    "note": "SBTi's FLAG Standard revision (call for input open) will harmonize with the LSR Standard/Guidance that becomes effective January 1, 2027 — a direct methodological coupling on land and removals.",
     "bullets": [
      "FLAG revision will harmonize with the GHGP LSR Standard/Guidance",
-     "LSR effective Jan 1, 2027 \u00b7 FLAG evidence due Oct 8, 2026",
+     "LSR effective Jan 1, 2027 · FLAG evidence due Oct 8, 2026",
      "Land-exposed companies get one coupled accounting + target system"
     ]
    },
@@ -169,11 +169,11 @@
     "type": "diverges",
     "strength": "structural",
     "title": "CBAM does NOT use corporate inventories",
-    "note": "CBAM prices product-level embedded emissions calculated with installation-level, EU ETS-aligned MRV rules \u2014 not GHGP corporate inventories. Companies in scope run parallel datasets: a GHGP/ESRS corporate inventory and supplier-specific installation data for imports. The ISO\u2013GHGP product standard harmonization may eventually narrow this gap.",
+    "note": "CBAM prices product-level embedded emissions calculated with installation-level, EU ETS-aligned MRV rules — not GHGP corporate inventories. Companies in scope run parallel datasets: a GHGP/ESRS corporate inventory and supplier-specific installation data for imports. The ISO–GHGP product standard harmonization may eventually narrow this gap.",
     "bullets": [
      "CBAM prices product-level embedded emissions via EU ETS-aligned installation MRV",
      "In-scope importers run parallel datasets: corporate GHGP/ESRS + supplier installation data",
-     "ISO\u2013GHGP product standard harmonization may narrow the gap later"
+     "ISO–GHGP product standard harmonization may narrow the gap later"
     ]
    },
    {
@@ -182,11 +182,11 @@
     "type": "diverges",
     "strength": "medium",
     "title": "US federal exits while states and the baseline advance",
-    "note": "The SEC is rescinding its climate rule with no replacement, while ISSB adoption spreads (Japan, UK, Korea among ~28\u201336 jurisdictions) and California proceeds. US multinationals face the baseline anyway \u2014 through the EU (ESRS 40a for non-EU groups from FY2028), ISSB-adopting jurisdictions, and state law.",
+    "note": "The SEC is rescinding its climate rule with no replacement, while ISSB adoption spreads (Japan, UK, Korea among ~28–36 jurisdictions) and California proceeds. US multinationals face the baseline anyway — through the EU (the Article 40a standard for non-EU groups from FY2028), ISSB-adopting jurisdictions, and state law.",
     "bullets": [
-     "SEC exits with no replacement; the ISSB baseline keeps spreading (Japan, UK, Korea\u2026)",
-     "California proceeds \u2014 first reports Nov 2026",
-     "US multinationals meet the baseline anyway: EU ESRS 40a (FY2028), ISSB jurisdictions, state law"
+     "SEC exits with no replacement; the ISSB baseline keeps spreading (Japan, UK, Korea…)",
+     "California proceeds — first reports Nov 2026",
+     "US multinationals meet the baseline anyway: EU Art. 40a (non-EU groups, FY2028), ISSB jurisdictions, state law"
     ]
    },
    {
@@ -195,9 +195,9 @@
     "type": "watch",
     "strength": "medium",
     "title": "Multi-statement reporting could reshape claims everywhere",
-    "note": "GHGP's AMI direction \u2014 separate statements for physical inventory, market-based instruments, and action impacts, with no netting \u2014 would change how renewable procurement, certificates, and 'impact' claims are reported and how SBTi recognizes them. SBTi says it is coordinating on multi-statement structures; EmpCo's ban on offset-based neutrality claims (Sept 2026) pushes the same direction in the EU.",
+    "note": "GHGP's AMI direction — separate statements for physical inventory, market-based instruments, and action impacts, with no netting — would change how renewable procurement, certificates, and 'impact' claims are reported and how SBTi recognizes them. SBTi says it is coordinating on multi-statement structures; EmpCo's ban on offset-based neutrality claims (Sept 2026) pushes the same direction in the EU.",
     "bullets": [
-     "AMI direction: separate statements for inventory, market instruments, and action impacts \u2014 no netting",
+     "AMI direction: separate statements for inventory, market instruments, and action impacts — no netting",
      "Would reshape renewable procurement claims and how SBTi recognizes instruments",
      "EmpCo's offset-claim ban (Sep 2026) pushes the same way in the EU"
     ]
@@ -206,7 +206,7 @@
   "divergence_watchlist": [
    {
     "title": "Frozen vs. moving GHGP versions",
-    "detail": "California (and IFRS S2, for now) reference the current GHGP standards while GHGP revises them. If regulators lag the Q4 2028 consolidated standard, companies may have to maintain dual inventories \u2014 one per the frozen version, one per the new standard.",
+    "detail": "California (and IFRS S2, for now) reference the current GHGP standards while GHGP revises them. If regulators lag the Q4 2028 consolidated standard, companies may have to maintain dual inventories — one per the frozen version, one per the new standard.",
     "frameworks": [
      "ghgp",
      "us",
@@ -214,24 +214,24 @@
     ],
     "bullets": [
      "California + IFRS S2 reference current GHGP versions while GHGP rewrites them",
-     "If regulators lag the Q4 2028 standard \u2192 companies maintain dual inventories"
+     "If regulators lag the Q4 2028 standard → companies maintain dual inventories"
     ]
    },
    {
     "title": "Scope 2 accounting outcome",
-    "detail": "GHGP's Scope 2 consultation showed deep divergence (hourly matching vs. status quo vs. multiple approaches). SBTi V2.0 already commits to location-based inventories plus hourly intervals for large users. If GHGP lands elsewhere, target accounting and inventory accounting could split.",
+    "detail": "GHGP's Scope 2 consultation showed deep divergence (hourly matching vs. status quo vs. multiple approaches). SBTi V2.0 already anchors targets to location-based inventories and requires hourly-interval disclosure from large electricity users. If GHGP lands elsewhere, target accounting and inventory accounting could split.",
     "frameworks": [
      "ghgp",
      "sbti"
     ],
     "bullets": [
      "GHGP consultation split (hourly matching vs. status quo vs. multiple approaches); reported support for hourly matching just ~22%",
-     "SBTi V2.0 already commits to location-based + hourly for large users \u2014 if GHGP lands elsewhere, target and inventory accounting split"
+     "SBTi V2.0 already uses location-based accounting + hourly disclosure for large users — if GHGP lands elsewhere, target and inventory accounting split"
     ]
    },
    {
     "title": "Scope 3 boundaries",
-    "detail": "GHGP proposes 95% inclusion with data-type disaggregation and a possible Category 16; California proposes only five mandatory Scope 3 categories; SBTi V2.0 uses a \u22655%-significance boundary; ESRS phases Scope 3 in. Four different Scope 3 boundaries for the same value chain.",
+    "detail": "GHGP proposes 95% inclusion with data-type disaggregation and a possible Category 16; California proposes only five mandatory Scope 3 categories; SBTi V2.0 uses a ≥5%-significance boundary; ESRS phases Scope 3 in. Four different Scope 3 boundaries for the same value chain.",
     "frameworks": [
      "ghgp",
      "us",
@@ -239,19 +239,19 @@
      "eu"
     ],
     "bullets": [
-     "GHGP: 95% inclusion + possible Cat. 16 \u00b7 California: 5 mandatory categories \u00b7 SBTi: \u22655% significance \u00b7 ESRS: phased",
+     "GHGP: 95% inclusion + possible Cat. 16 · California: 5 mandatory categories · SBTi: ≥5% significance · ESRS: phased",
      "Four different Scope 3 boundaries for the same value chain"
     ]
    },
    {
     "title": "Litigation risk in the US",
-    "detail": "The Ninth Circuit's pending merits ruling on SB 253/261 could reshape state authority to mandate climate disclosure \u2014 and with it, the only mandatory US reporting regime.",
+    "detail": "The Ninth Circuit's pending merits ruling on SB 253/261 could reshape state authority to mandate climate disclosure — and with it, the only mandatory US corporate reporting regime.",
     "frameworks": [
      "us"
     ],
     "bullets": [
      "Ninth Circuit merits ruling (argued Jan 9, 2026) still pending",
-     "Could reshape state authority to mandate climate disclosure \u2014 and the only mandatory US regime"
+     "Could reshape state authority to mandate climate disclosure — and the only mandatory US corporate regime"
     ]
    }
   ]
@@ -263,19 +263,19 @@
    "short": "GHGP",
    "org": "WRI / WBCSD",
    "color": "#1E6BA8",
-   "tagline": "The corporate carbon accounting rulebook \u2014 first full revision since the standards were published",
+   "tagline": "The corporate carbon accounting rulebook — first full revision since the standards were published",
    "description": "The GHG Protocol Corporate Standard (2004), Scope 2 Guidance (2015), and Scope 3 Standard (2011) are the measurement backbone for nearly every corporate emissions inventory worldwide. All three are being revised simultaneously through Technical Working Groups, and will be consolidated with ISO 14064-1 into a single co-branded corporate standard.",
-   "status_headline": "All workstreams active \u2014 consolidated public consultation planned Q2 2027, final publication estimated Q4 2028",
+   "status_headline": "All workstreams active — consolidated public consultation planned Q2 2027, final publication estimated Q4 2028",
    "workstreams": [
     {
      "id": "ghgp-consolidation",
-     "name": "GHGP\u2013ISO Consolidated Corporate Standard",
-     "status_label": "Confirmed governance decision \u2014 drafting underway",
+     "name": "GHGP–ISO Consolidated Corporate Standard",
+     "status_label": "Confirmed governance decision — drafting underway",
      "phase": "drafting",
      "summary": "On July 29, 2026, GHG Protocol and ISO announced they will combine their corporate carbon accounting standards into a single co-branded global standard, integrating the GHGP Corporate Standard, Scope 2 Guidance, Scope 3 Standard, the Actions & Market Instruments workstream, and ISO 14064-1. The deliverable is structured as Part 1 (General Requirements and Physical GHG Inventory) and Part 2 (Actions and Market Instruments).",
      "key_points": [
       "Single co-branded standard replaces the GHGP corporate suite and ISO 14064-1",
-      "Two-part structure: Part 1 = physical GHG inventory requirements; Part 2 = actions and market instruments",
+      "Two-part structure (subject to change): Part 1 = physical GHG inventory requirements; Part 2 = actions and market instruments",
       "Dual approval required: GHGP Independent Standards Board plus two-thirds majority of ISO/TC 207/SC 7 permanent members",
       "Integrated public consultation Q2 2027; final publication estimated Q4 2028 (explicitly subject to change; pilot testing could extend timelines)",
       "No effective date announced for the consolidated standard"
@@ -313,9 +313,9 @@
     {
      "id": "ghgp-corporate",
      "name": "Corporate Standard revision",
-     "status_label": "Draft proposals \u2014 provisional (Phase 1, Dec 2025)",
+     "status_label": "Draft proposals — provisional (Phase 1, Dec 2025)",
      "phase": "draft",
-     "summary": "The Corporate Standard Technical Working Group published a Phase 1 Progress Update in December 2025 with provisional proposals on consolidation boundaries, principles, and mandatory Scope 3 reporting. All proposals are explicitly subject to change before public consultation, which now happens through the consolidated GHGP\u2013ISO standard in Q2 2027.",
+     "summary": "The Corporate Standard Technical Working Group published a Phase 1 Progress Update in December 2025 with provisional proposals on consolidation boundaries, principles, and mandatory Scope 3 reporting. All proposals are explicitly subject to change before public consultation, which now happens through the consolidated GHGP–ISO standard in Q2 2027.",
      "key_points": [
       "Eliminate the equity-share consolidation approach (used by only ~2% of companies in 2023 CDP disclosures)",
       "Financial control recommended as the primary consolidation approach; operational control retained as an option with a revised, clearer definition",
@@ -325,7 +325,7 @@
      ],
      "confidence": {
       "level": "high",
-      "reasoning": "Published in the official December 2025 Phase 1 Progress Update with TWG backing, but the document states all revisions 'are subject to change prior to public consultation' \u2014 a strong directional signal, not final text."
+      "reasoning": "Published in the official December 2025 Phase 1 Progress Update with TWG backing, but the document states all revisions 'are subject to change prior to public consultation' — a strong directional signal, not final text."
      },
      "next_milestone": {
       "date": "2027-Q2",
@@ -346,9 +346,9 @@
     {
      "id": "ghgp-scope2",
      "name": "Scope 2 Guidance revision",
-     "status_label": "Consultation feedback published \u2014 direction still open",
+     "status_label": "Consultation feedback published — direction still open",
      "phase": "consultation",
-     "summary": "A public consultation on Scope 2 revisions \u2014 including a proposed hourly matching and deliverability requirement for market-based accounting \u2014 ran October 20, 2025 to January 31, 2026 and drew nearly 1,100 responses from 56 countries. Feedback showed significant stakeholder divergence, and the Independent Standards Board is exploring whether offering multiple reporting approaches could address concerns.",
+     "summary": "A public consultation on Scope 2 revisions — including a proposed hourly matching and deliverability requirement for market-based accounting — ran October 20, 2025 to January 31, 2026 and drew nearly 1,100 responses from 56 countries. Feedback showed significant stakeholder divergence, and GHG Protocol is exploring whether offering multiple reporting approaches could address concerns.",
      "key_points": [
       "Hourly matching and deliverability requirements proposed for market-based scope 2 accounting",
       "Improvements proposed to both location-based and market-based methods",
@@ -359,7 +359,7 @@
      ],
      "confidence": {
       "level": "medium",
-      "reasoning": "Consultation facts are confirmed, but the substantive outcome is genuinely unresolved \u2014 the consultation revealed deep divergence on how electricity procurement should be reflected in accounting and claims, and GHGP has explicitly said the direction is still open. Treat any specific proposal (e.g. hourly matching) as possible, not probable."
+      "reasoning": "Consultation facts are confirmed, but the substantive outcome is genuinely unresolved — the consultation revealed deep divergence on how electricity procurement should be reflected in accounting and claims, and GHGP has explicitly said the direction is still open. Treat any specific proposal (e.g. hourly matching) as possible, not probable."
      },
      "next_milestone": {
       "date": "2027-Q2",
@@ -385,20 +385,20 @@
     {
      "id": "ghgp-scope3",
      "name": "Scope 3 Standard revision",
-     "status_label": "Draft proposals \u2014 provisional (Phase 1, Mar 2026)",
+     "status_label": "Draft proposals — provisional (Phase 1, Mar 2026)",
      "phase": "draft",
      "summary": "The Scope 3 TWG (65 members, 42 meetings since September 2024) published its Phase 1 Progress Update on March 31, 2026, with provisional proposals pointing strongly toward auditable data-quality metadata: disaggregation by data type, verification-status disclosure, quantitative boundaries, and a possible new Category 16.",
      "key_points": [
       "Required disaggregation of scope 3 emissions by data type/specificity (80% TWG support)",
-      "Disclosure of verification status \u2014 fully/partially/not verified (87% TWG support)",
+      "Disclosure of verification status — fully/partially/not verified (87% TWG support)",
       "Minimum 95% inclusion of required scope 3 emissions, with annual 100% quantification (hotspot analysis permitted) to validate exclusions",
       "Category 15 narrowed to investments/financed emissions, PCAF-aligned",
-      "Proposed new Category 16 'Other value chain activities' for facilitated activities (licensing, insurance, underwriting) \u2014 optional generally, mandatory for oil and gas distributors",
+      "Proposed new Category 16 'Other value chain activities' for facilitated activities (licensing, insurance, underwriting) — optional generally, mandatory for oil and gas distributors",
       "Separate reporting of required vs. optional emissions with standardized exclusion notation"
      ],
      "confidence": {
       "level": "high",
-      "reasoning": "Official Phase 1 Progress Update with recorded TWG support percentages (80\u201387% on headline proposals), but released 'for transparency' with an explicit caveat that all content is draft and subject to change before public consultation."
+      "reasoning": "Official Phase 1 Progress Update with recorded TWG support percentages (80–87% on headline proposals), but released 'for transparency' with an explicit caveat that all content is draft and subject to change before public consultation."
      },
      "next_milestone": {
       "date": "2027-Q2",
@@ -419,13 +419,13 @@
     {
      "id": "ghgp-ami",
      "name": "Actions & Market Instruments (AMI)",
-     "status_label": "White Paper RFI closed \u2014 feedback summary pending",
+     "status_label": "White Paper RFI closed — feedback summary pending",
      "phase": "scoping",
-     "summary": "AMI is a new workstream defining how companies report the effects of climate actions and market instruments beyond the physical inventory. The Phase 1 White Paper and RFI (March\u2013May 2026) drew ~500 responses with preliminary support for a 'multi-statement' model that separates physical emissions, market-based/contractual emissions, and consequential GHG impacts \u2014 with no netting between statements. AMI becomes Part 2 of the consolidated GHGP\u2013ISO standard.",
+     "summary": "AMI is a new workstream defining how companies report the effects of climate actions and market instruments beyond the physical inventory. The Phase 1 White Paper and RFI (March–May 2026) drew ~500 responses with preliminary support for a 'multi-statement' model that separates physical emissions, market-based/contractual emissions, and consequential GHG impacts — with no netting between statements. AMI becomes Part 2 of the consolidated GHGP–ISO standard.",
      "key_points": [
       "Multi-statement model: (1) physical GHG inventory; (2) market-based inventory (commodity certificates for steel, cement, chemicals, SAF, biomethane); (3) GHG impact statement using consequential accounting; (4) optional non-GHG indicators",
-      "No netting between statements \u2014 interim guidance is to report separately and transparently",
-      "AMI TWG met in Amsterdam June 30\u2013July 2, 2026 on market-based inventory design, additionality, and traceability",
+      "No netting between statements — interim guidance is to report separately and transparently",
+      "AMI TWG met in Amsterdam June 30–July 2, 2026 on market-based inventory design, additionality, and traceability",
       "Formal public consultation on a draft AMI standard planned for Q3 2027 (per GHGP's AMI page; one quarter after the Part 1 consultation)"
      ],
      "confidence": {
@@ -450,20 +450,20 @@
      ],
      "stat": {
       "value": "4",
-      "label": "separate statements proposed \u2014 no netting"
+      "label": "separate statements proposed — no netting"
      }
     },
     {
      "id": "ghgp-lsr",
      "name": "Land Sector & Removals + Forest Carbon RFI",
-     "status_label": "Final \u2014 v1.1 effective January 1, 2027",
+     "status_label": "Final — v1.1 effective January 1, 2027",
      "phase": "final",
-     "summary": "The Land Sector and Removals Standard v1.0 was published January 30, 2026 \u2014 GHGP's first standard for land-sector emissions, biogenic products, and CO2 removals. Version 1.1 (minor edits) plus a 20-chapter implementation Guidance followed on June 30, 2026. The standard takes effect for reporting from January 1, 2027. Forest carbon accounting was deferred to an open Request for Information (responses due February 1, 2027).",
+     "summary": "The Land Sector and Removals Standard v1.0 was published January 30, 2026 — GHGP's first standard for land-sector emissions, biogenic products, and CO2 removals. Version 1.1 (minor edits) plus a 20-chapter implementation Guidance followed on June 30, 2026. The standard takes effect for reporting from January 1, 2027. Forest carbon accounting was deferred to an open Request for Information (responses due February 1, 2027).",
      "key_points": [
       "First-ever GHGP requirements for land management, land use change, biogenic products, and technological CO2 removals",
       "Applies to agriculture and CO2 removal technologies; does NOT apply to forestry (deferred to FCA process)",
       "Effective for corporate reporting from January 1, 2027",
-      "FCA RFI seeks input on activity-based accounting, managed land proxy methods, non-zero reference levels, and spatial/temporal boundaries \u2014 due February 1, 2027"
+      "FCA RFI seeks input on activity-based accounting, managed land proxy methods, non-zero reference levels, and spatial/temporal boundaries — due February 1, 2027"
      ],
      "confidence": {
       "level": "confirmed",
@@ -493,7 +493,7 @@
     {
      "id": "ghgp-product",
      "name": "Product Carbon Accounting (with ISO)",
-     "status_label": "Joint Working Group active \u2014 no published timeline",
+     "status_label": "Joint Working Group active — no published timeline",
      "phase": "drafting",
      "summary": "ISO and GHG Protocol finalized a Joint Working Group on April 9, 2026 to develop a harmonized product-level GHG accounting standard building on ISO 14067 and the GHGP Product Life Cycle Standard, after 450+ expert submissions from 410+ organizations. No consultation or publication dates have been announced.",
      "key_points": [
@@ -503,7 +503,7 @@
      ],
      "confidence": {
       "level": "high",
-      "reasoning": "JWG formation is officially confirmed, but no draft text, consultation date, or publication timeline exists \u2014 content direction is not yet visible."
+      "reasoning": "JWG formation is officially confirmed, but no draft text, consultation date, or publication timeline exists — content direction is not yet visible."
      },
      "next_milestone": {
       "date": null,
@@ -524,12 +524,12 @@
     {
      "id": "ghgp-project",
      "name": "Project Protocol",
-     "status_label": "Under revision via ISO TC 207/SC 7/WG5 \u2014 2005 edition in force",
+     "status_label": "Under revision via ISO TC 207/SC 7/WG5 — 2005 edition in force",
      "phase": "drafting",
-     "summary": "The 2005 Project Protocol is being updated as part of the ISO\u2013GHGP harmonization, aligned with ISO's project-level standards (ISO 14064-2). GHGP has appointed three experts to the ISO working group. The 2005 edition remains in force until the revised co-branded Project Standard is published; no date announced.",
+     "summary": "The 2005 Project Protocol is being updated as part of the ISO–GHGP harmonization, aligned with ISO's project-level standards (ISO 14064-2). GHGP has appointed three experts to the ISO working group. The 2005 edition remains in force until the revised co-branded Project Standard is published; no date announced.",
      "key_points": [
       "Co-branded revised Project Standard harmonized with ISO project-level standards",
-      "Project accounting quantifies GHG reductions from projects \u2014 it is not for corporate/entity-wide inventories",
+      "Project accounting quantifies GHG reductions from projects — it is not for corporate/entity-wide inventories",
       "Adjacent to AMI and LSR: project-, offset-, and avoided-emissions narratives sit outside the physical inventory"
      ],
      "confidence": {
@@ -562,19 +562,19 @@
    "color": "#C2410C",
    "tagline": "The 14060 family is merging with GHG Protocol into unified global standards",
    "description": "ISO's GHG standards (14064-1 corporate, 14064-2 project, 14067 product) have run in parallel to GHG Protocol for two decades. The September 2025 strategic partnership ends that: corporate, project, and product-level standards are being co-developed and co-branded, with ISO experts embedded in GHGP working groups since Q1 2026.",
-   "status_headline": "Strategic partnership executing \u2014 corporate consolidation confirmed, product JWG active, project revision underway",
+   "status_headline": "Strategic partnership executing — corporate consolidation confirmed, product JWG active, project revision underway",
    "workstreams": [
     {
      "id": "iso-partnership",
-     "name": "ISO\u2013GHGP strategic partnership",
-     "status_label": "Active \u2014 governing framework for all joint work",
+     "name": "ISO–GHGP strategic partnership",
+     "status_label": "Active — governing framework for all joint work",
      "phase": "drafting",
      "summary": "Announced September 9, 2025 and formally launched as the 'Plan to Harmonize Global Carbon Accounting Standards' at COP30 (November 2025), the partnership commits ISO and GHG Protocol to unify the ISO 14060 series with the GHGP corporate suite and to co-develop co-branded standards across corporate, project, and product levels. Endorsed publicly by ISSB Chair Emmanuel Faber.",
      "key_points": [
       "ISO 14064-1 merges into the consolidated corporate standard (Part 1 consultation Q2 2027, publication est. Q4 2028)",
       "ISO experts joined GHGP Technical Working Groups from Q1 2026",
       "Joint approval gates: GHGP ISB ratification plus two-thirds majority of ISO/TC 207/SC 7 permanent members",
-      "Existing ISO standards remain in effect until successors publish, with transition periods"
+      "Existing ISO standards remain in effect until successors publish; transition arrangements not yet specified"
      ],
      "confidence": {
       "level": "confirmed",
@@ -597,7 +597,7 @@
       }
      ],
      "stat": {
-      "value": "2 \u2192 1",
+      "value": "2 → 1",
       "label": "standard families merging"
      }
     },
@@ -640,24 +640,24 @@
    "short": "SBTi",
    "org": "Science Based Targets initiative",
    "color": "#15803D",
-   "tagline": "Corporate Net-Zero Standard V2.0 is final \u2014 the transition clock is running",
+   "tagline": "Corporate Net-Zero Standard V2.0 is final — the transition clock is running",
    "description": "SBTi validates corporate climate targets against science-based criteria. The Corporate Net-Zero Standard V2.0, published June 11, 2026, is the biggest change since the initiative launched: new company categories, separate scope target structures, formalized assurance, and an Ongoing Emissions Responsibility framework replacing BVCM.",
-   "status_headline": "CNZS V2.0 final \u2014 validation opens Q1 2027; V1.3.1 sunsets January 31, 2028; sector standards revising to match",
+   "status_headline": "CNZS V2.0 final — validation opens Q1 2027; V1.3.1 sunsets January 31, 2028; sector standards revising to match",
    "workstreams": [
     {
      "id": "sbti-cnzs-v2",
      "name": "Corporate Net-Zero Standard V2.0",
-     "status_label": "Final \u2014 published June 11, 2026",
+     "status_label": "Final — published June 11, 2026",
      "phase": "final",
      "summary": "Published after two public consultations (March 2025, November 2025) and two pilot phases involving 370+ companies. 42% of sections are entirely new and 58% modified. V2.0 shifts emphasis from target-setting to implementation and delivery, with an implementation hierarchy prioritizing direct emissions reductions.",
      "key_points": [
-      "Category A/B company classification replaces the SME route: Category A (large + medium companies in high-income countries) faces the most stringent requirements",
+      "Category A/B company classification replaces the SME route: Category A (large companies worldwide + medium companies in high-income countries) faces the most stringent requirements",
       "Separate scope 1, scope 2, and scope 3 target structures (previously combined scope 1+2)",
       "Scope 2: location-based inventory basis; alignment targets revised from 'renewable' to 'low-carbon electricity'; hourly accounting intervals for significant electricity users",
-      "Scope 3: significance-based boundary \u2014 cover all categories \u22655% of category 1\u201314 emissions (replaces fixed 67%/90% thresholds); new alignment-target methods; long-term scope 3 targets now largely optional",
+      "Scope 3: significance-based boundary — cover all categories ≥5% of category 1–14 emissions (replaces fixed 67%/90% thresholds); new alignment-target methods; long-term scope 3 targets now largely optional",
       "Mandatory limited assurance of inventories and target-setting metrics for Category A; assured end-of-cycle assessments",
-      "Ongoing Emissions Responsibility (OER) replaces BVCM: optional recognition tiers now, mandatory carbon-removals support (\u22651% of ongoing emissions) for Category A from 2035",
-      "Five-year target review cycle retired in favor of continuous evaluation"
+      "Ongoing Emissions Responsibility (OER) replaces BVCM: optional recognition tiers now, mandatory carbon-removals support (≥1% of ongoing emissions) for Category A from 2035",
+      "Mandatory five-year review retired — all targets now run on five-year cycles with assured end-of-cycle assessments"
      ],
      "confidence": {
       "level": "confirmed",
@@ -686,13 +686,13 @@
     },
     {
      "id": "sbti-transition",
-     "name": "V1.3.1 \u2192 V2.0 transition",
+     "name": "V1.3.1 → V2.0 transition",
      "status_label": "Transition window open",
      "phase": "implementation",
      "summary": "Companies can submit targets under V1.3.1 until January 31, 2028. V2.0 validation opens via the SBTi Services Validation Portal in Q1 2027. From February 1, 2028, all new submissions must align with V2.0. During transition, V1.3.1 users can adopt selected V2.0 innovations early.",
      "key_points": [
       "Q1 2027: Validation Portal opens for V2.0 submissions",
-      "Until Jan 31, 2028: dual track \u2014 submit under V1.3.1 or V2.0",
+      "Until Jan 31, 2028: dual track — submit under V1.3.1 or V2.0",
       "Feb 1, 2028: V2.0 mandatory for all new submissions",
       "Q4 2026 expected: final methods/pathways, Interpretation Guidance, interim accounting & reporting guidance, Renewal Policy; Claims Policy expected Q1 2027",
       "~300 of 11,600+ companies with validated targets must complete five-year reviews by end of 2026 under updated review guidance",
@@ -700,7 +700,7 @@
      ],
      "confidence": {
       "level": "confirmed",
-      "reasoning": "Dates stated on SBTi's official transition pages. Minor wording inconsistency exists between the Main Changes Document ('effective January 31, 2027') and the website ('Q1 2027' validation opening) \u2014 the website formulation is treated as authoritative."
+      "reasoning": "Dates stated on SBTi's official transition pages. Minor wording inconsistency exists between the Main Changes Document ('effective January 31, 2027') and the website ('Q1 2027' validation opening) — the website formulation is treated as authoritative."
      },
      "next_milestone": {
       "date": "2027-Q1",
@@ -726,44 +726,50 @@
     {
      "id": "sbti-sector",
      "name": "Sector standards (FLAG, Power, Automotive, FINZ, Buildings, Chemicals, O&G)",
-     "status_label": "Multiple revisions in flight, aligning to V2.0",
+     "stat": {
+      "label": "sector standards revising or in flight",
+      "value": "7"
+     },
      "phase": "consultation",
-     "summary": "SBTi's sector program is realigning around CNZS V2.0. FLAG V2 opened a call for input July 30, 2026 (evidence due October 8, 2026). The Power Sector standard is in its second consultation (closes August 31, 2026). Automotive is post-consultation with publication no sooner than Q3 2026. FINZ V1.0 (financial institutions) published July 2025 with a minor revision in scoping. Buildings criteria revision is in scoping; Chemicals pathways published December 2025; Oil & Gas scoping begins 2027.",
-     "key_points": [
-      "FLAG V2: call for input open \u2014 will align with CNZS V2 and the GHGP Land Sector & Removals Standard",
-      "Power: second consultation closes August 31, 2026; publication no sooner than Q3 2026",
-      "Automotive: ZEV-based metrics; publication no sooner than Q3 2026",
-      "FINZ: financial institutions may choose Near-Term Criteria or FINZ until at least July 31, 2027",
-      "Fossil Fuel Policy formalized in V2.0; dedicated O&G standard scoping commences 2027"
-     ],
-     "confidence": {
-      "level": "high",
-      "reasoning": "Each item is confirmed by an official SBTi release, but publication timing for in-flight standards is expressed as earliest-possible dates and consultations can shift content substantially."
-     },
-     "next_milestone": {
-      "date": "2026-08-31",
-      "what": "Power Sector Net-Zero Standard consultation closes"
-     },
      "sources": [
       {
-       "title": "SBTi issues call for input on FLAG Standard revision",
+       "url": "https://sciencebasedtargets.org/blog/get-involved-today-your-chance-to-help-shape-the-next-generation-of-sbti-standards",
+       "date": "2026-08-17",
+       "title": "SBTi: four open input windows on Power, FLAG and high-emitting sectors"
+      },
+      {
        "url": "https://sciencebasedtargets.org/news/sbti-issues-call-for-input-to-inform-revision-of-forest-land-and-agriculture-standard",
-       "date": "2026-07-30"
+       "date": "2026-07-30",
+       "title": "SBTi issues call for input on FLAG Standard revision"
       },
       {
-       "title": "Second consultation: Power Sector Net-Zero Standard",
        "url": "https://sciencebasedtargets.org/news/the-sbti-launches-second-public-consultation-on-updated-draft-power-sector-net-zero-standard",
-       "date": "2026-07-15"
+       "date": "2026-07-15",
+       "title": "Second consultation: Power Sector Net-Zero Standard"
       },
       {
-       "title": "Standards and guidance",
        "url": "https://sciencebasedtargets.org/standards-and-guidance",
-       "date": "2026"
+       "date": "2026",
+       "title": "Standards and guidance"
       }
      ],
-     "stat": {
-      "value": "7",
-      "label": "sector standards revising or in flight"
+     "summary": "SBTi's sector program is realigning around CNZS V2.0. FLAG V2 opened a call for input July 30, 2026 (evidence due October 8, 2026). The Power Sector standard is in its second consultation, extended on August 14 to close September 7, 2026. A separate Call for Evidence on high-emitting sectors (aluminium, aviation, steel and others) closes September 11, 2026. Automotive is post-consultation with publication no sooner than Q3 2026. FINZ V1.0 (financial institutions) published July 2025. Buildings Criteria received minor updates (V1.2, July 2026), with a separate project assessing V2.0 compatibility; Chemicals pathways published December 2025; Oil & Gas scoping begins 2027.",
+     "confidence": {
+      "level": "high",
+      "reasoning": "Each item is confirmed by an official SBTi release, but publication timing for in-flight standards is expressed as earliest-possible dates, and consultation deadlines have already moved once (Power extended August 14 from August 31 to September 7)."
+     },
+     "key_points": [
+      "FLAG V2: call for evidence closes October 8, 2026 — will align with CNZS V2 and the GHGP Land Sector & Removals Standard",
+      "Power: second consultation closes September 7, 2026 (extended from August 31); pilot running in parallel, no publication date announced",
+      "High-emitting sectors (aluminium, aviation, steel and others): call for evidence closes September 11, 2026",
+      "Automotive: ZEV-based metrics; publication no sooner than Q3 2026",
+      "FINZ: financial institutions may choose Near-Term Criteria or FINZ until at least July 31, 2027",
+      "Interim fossil-fuel policy remains in force; dedicated O&G standard scoping commences 2027"
+     ],
+     "status_label": "Multiple revisions in flight, aligning to V2.0",
+     "next_milestone": {
+      "date": "2026-09-07",
+      "what": "Power Sector Net-Zero Standard second consultation closes (extended from August 31)"
      }
     },
     {
@@ -773,7 +779,7 @@
      "phase": "scoping",
      "summary": "V2.0 was finalized while the GHG Protocol revisions are still in progress. SBTi has said it will work with GHG Protocol on provisional accounting guidance until the GHGP revision completes; SBTi's own interim accounting and reporting guidance is expected Q4 2026. V2.0's location-based scope 2 basis and hourly-matching provisions anticipate the GHGP Scope 2 direction.",
      "key_points": [
-      "Joint SBTi\u2013GHGP provisional accounting guidance planned",
+      "Joint SBTi–GHGP provisional accounting guidance planned",
       "Interim accounting & reporting guidance expected Q4 2026",
       "Coordination on scope 2 and multi-statement (AMI-style) reporting structures"
      ],
@@ -805,9 +811,9 @@
    "short": "ISSB",
    "org": "IFRS Foundation",
    "color": "#8B5CF6",
-   "tagline": "The global disclosure baseline \u2014 S2 amendments effective 2027, nature disclosures next",
-   "description": "IFRS S1 and S2 are the global baseline for sustainability-related financial disclosure, adopted or being adopted by dozens of jurisdictions. IFRS S2 hard-wires the GHG Protocol Corporate Standard (2004) as its required measurement basis \u2014 making the GHGP revision directly consequential for every S2 reporter.",
-   "status_headline": "S1/S2 in force where adopted \u2014 targeted S2 amendments effective January 1, 2027; nature exposure draft due October 2026",
+   "tagline": "The global disclosure baseline — S2 amendments effective 2027, nature disclosures next",
+   "description": "IFRS S1 and S2 are the global baseline for sustainability-related financial disclosure, adopted or being adopted by dozens of jurisdictions. IFRS S2 hard-wires the GHG Protocol Corporate Standard (2004) as its required measurement basis — making the GHGP revision directly consequential for every S2 reporter.",
+   "status_headline": "S1/S2 in force where adopted — targeted S2 amendments effective January 1, 2027; nature exposure draft due October 2026",
    "workstreams": [
     {
      "id": "issb-core",
@@ -818,7 +824,7 @@
      "key_points": [
       "IFRS S2 requires Scope 1, 2, and 3 GHG emissions measured per the GHG Protocol Corporate Standard (2004)",
       "Recent adoption moves: Japan mandated ISSB-aligned disclosure for listed companies (Feb 2026); UK SRS S1/S2 published with proposed mandatory application from Jan 1, 2027; South Korea issued KSDS 1/2",
-      "Adoption counts vary by methodology \u2014 cite source and as-of date"
+      "Adoption counts vary by methodology — cite source and as-of date"
      ],
      "confidence": {
       "level": "confirmed",
@@ -848,7 +854,7 @@
     {
      "id": "issb-s2-amendments",
      "name": "IFRS S2 GHG amendments (Dec 2025)",
-     "status_label": "Issued \u2014 effective January 1, 2027",
+     "status_label": "Issued — effective January 1, 2027",
      "phase": "final",
      "summary": "Targeted amendments issued December 11, 2025 ease application: Scope 3 Category 15 may be limited to financed emissions (derivatives excludable), industry-classification systems other than GICS are permitted, jurisdictional relief for non-GHGP measurement methods is clarified (including partial-entity application), and new relief covers jurisdiction-mandated GWP values. Effective January 1, 2027; early application permitted.",
      "key_points": [
@@ -856,7 +862,7 @@
       "Alternative industry classification systems beyond GICS permitted with justification",
       "Jurisdictional relief to use non-GHG-Protocol methods, including for only part of an entity",
       "Relief from latest-IPCC GWP values where law requires alternatives",
-      "Important: the amendments did NOT change which GHGP version S2 references \u2014 still the 2004 Corporate Standard"
+      "Important: the amendments did NOT change which GHGP version S2 references — still the 2004 Corporate Standard"
      ],
      "confidence": {
       "level": "confirmed",
@@ -880,18 +886,18 @@
     },
     {
      "id": "issb-ghgp-link",
-     "name": "S2 \u2194 GHG Protocol dependency",
-     "status_label": "MoU governance active \u2014 no S2 change triggered yet",
+     "name": "S2 ↔ GHG Protocol dependency",
+     "status_label": "MoU governance active — no S2 change triggered yet",
      "phase": "scoping",
      "summary": "Under a June 2024 MoU, the ISSB holds an observer seat on the GHGP Independent Standards Board and engages early in revisions. When GHGP publishes revised standards, the ISSB will assess the effects and decide via full due process (public consultation) whether to amend the S2 reference. S2 reporters are NOT automatically required to switch to revised GHGP versions.",
      "key_points": [
       "ISSB observer on GHGP Independent Standards Board since June 2024",
-      "Any future switch to the consolidated GHGP\u2013ISO standard requires an ISSB exposure draft and due process",
+      "Any future switch to the consolidated GHGP–ISO standard requires an ISSB exposure draft and due process",
       "Net effect: continuity on the 2004 Corporate Standard for now; a mediated, consultative transition later"
      ],
      "confidence": {
       "level": "high",
-      "reasoning": "The governance mechanism is documented (MoU, SSAF staff paper Sept 2025), but the timing and outcome of any future S2 reference update are inherently unknown \u2014 GHGP/ISO publication (est. Q4 2028) is the trigger."
+      "reasoning": "The governance mechanism is documented (MoU, SSAF staff paper Sept 2025), but the timing and outcome of any future S2 reference update are inherently unknown — GHGP/ISO publication (est. Q4 2028) is the trigger."
      },
      "next_milestone": {
       "date": null,
@@ -921,7 +927,7 @@
      "phase": "draft",
      "summary": "The ISSB agreed in April 2026 to propose nature-related disclosure requirements as an IFRS Practice Statement (not a new mandatory standard), building on the TNFD framework and complementing S1/S2 without amending them. All 12 board members approved due-process steps in July 2026 for an exposure draft with a 120-day comment period, planned for October 2026.",
      "key_points": [
-      "Practice Statement route \u2014 NOT a new 'IFRS S3'-style mandatory standard",
+      "Practice Statement route — NOT a new 'IFRS S3'-style mandatory standard",
       "Builds on TNFD; TNFD support secured November 2025",
       "120-day comment period planned"
      ],
@@ -971,7 +977,7 @@
      },
      "sources": [
       {
-       "title": "Enhancing the SASB Standards \u2014 Phase 1",
+       "title": "Enhancing the SASB Standards — Phase 1",
        "url": "https://www.ifrs.org/projects/work-plan/enhancing-the-sasb-standards/",
        "date": "2026"
       },
@@ -990,27 +996,27 @@
   },
   {
    "id": "eu",
-   "name": "EU (CSRD \u00b7 ESRS \u00b7 CBAM)",
+   "name": "EU (CSRD · ESRS · CBAM)",
    "short": "EU",
    "org": "European Union",
    "color": "#0794BC",
-   "tagline": "Omnibus simplification adopted \u2014 revised ESRS in scrutiny, CBAM definitive regime live",
-   "description": "The EU's sustainability reporting architecture was dramatically simplified in 2025\u20132026. The Omnibus I directive (adopted February 2026) cut CSRD scope by ~90%, the revised ESRS (adopted July 2026, in scrutiny) cut datapoints by 60%+, and CBAM entered its definitive regime January 2026 with certificate sales starting February 2027.",
+   "tagline": "Omnibus simplification adopted — revised ESRS in scrutiny, CBAM definitive regime live",
+   "description": "The EU's sustainability reporting architecture was dramatically simplified in 2025–2026. The Omnibus I directive (adopted February 2026) cut CSRD scope by ~90%, the revised ESRS (adopted July 2026, in scrutiny) cut datapoints by 60%+, and CBAM entered its definitive regime January 2026 with certificate sales starting February 2027.",
    "status_headline": "Omnibus adopted; revised ESRS awaiting scrutiny-period expiry (~Nov 2026); CBAM expansion in co-decision",
    "workstreams": [
     {
      "id": "eu-csrd",
      "name": "CSRD scope & Omnibus I",
-     "status_label": "Adopted \u2014 Directive (EU) 2026/470, in transposition",
+     "status_label": "Adopted — Directive (EU) 2026/470, in transposition",
      "phase": "final",
-     "summary": "The Omnibus saga concluded: after the trilogue agreement of December 9, 2025, the final directive was published February 26, 2026 and entered into force March 18, 2026. CSRD now covers EU companies with >1,000 employees AND >\u20ac450m turnover (~90% of originally scoped companies removed). Remaining newly covered companies first report in 2028 on FY2027. Member States must transpose by March 19, 2027.",
+     "summary": "The Omnibus saga concluded: after the trilogue agreement of December 9, 2025, the final directive was published February 26, 2026 and entered into force March 18, 2026. CSRD now covers EU companies with >1,000 employees AND >€450m turnover (~90% of originally scoped companies removed). Remaining newly covered companies first report in 2028 on FY2027. Member States must transpose by March 19, 2027.",
      "key_points": [
-      "Scope: >1,000 employees AND >\u20ac450m net turnover; listed SMEs fully exempt",
-      "Non-EU groups: >\u20ac450m EU turnover + qualifying EU presence, reporting from FY2028 (first reports 2029)",
+      "Scope: >1,000 employees AND >€450m net turnover; listed SMEs fully exempt",
+      "Non-EU groups: >€450m EU turnover + qualifying EU presence, reporting from FY2028 (first reports 2029)",
       "Value-chain cap: reporters cannot demand more than the voluntary (VSME-based) standard's content from partners with <1,000 employees",
-      "Limited assurance made permanent \u2014 the reasonable-assurance upgrade was deleted",
+      "Limited assurance made permanent — the reasonable-assurance upgrade was deleted",
       "Mandatory sector-specific ESRS abandoned in favor of optional guidance",
-      "CSDDD (due diligence): scope raised to >5,000 employees/\u20ac1.5bn, application from July 2029"
+      "CSDDD (due diligence): scope raised to >5,000 employees/€1.5bn, application from July 2029"
      ],
      "confidence": {
       "level": "confirmed",
@@ -1027,7 +1033,7 @@
        "date": "2026-02"
       },
       {
-       "title": "EP Legislative Train \u2014 Omnibus I",
+       "title": "EP Legislative Train — Omnibus I",
        "url": "https://www.europarl.europa.eu/legislative-train/package-simplification-business/file-first-omnibus-package-on-sustainability-proposal-amending-csrd-and-csddd",
        "date": "2026"
       }
@@ -1040,19 +1046,19 @@
     {
      "id": "eu-esrs",
      "name": "Revised ESRS (incl. E1 climate)",
-     "status_label": "Adopted July 3, 2026 \u2014 in scrutiny, not yet in force",
+     "status_label": "Adopted July 3, 2026 — in scrutiny, not yet in force",
      "phase": "adopted-pending",
      "summary": "The Commission adopted the revised, simplified ESRS delegated act on July 3, 2026, alongside a voluntary (VSME-based) standard that anchors the value-chain cap. Mandatory datapoints are cut by more than 60% (total by 70%+). The act is in the Parliament/Council scrutiny period; entry into force is expected around November 2026, with mandatory application for financial years beginning January 1, 2027.",
      "key_points": [
       "Mandatory application FY2027 (first reports 2028); optional early adoption FY2026",
       "Double materiality retained with a 'top-down' materiality approach",
       "ESRS E1 keeps its GHG Protocol-based architecture: Scope 1, 2 (location- and market-based), and Scope 3 consistent with GHGP standards, ISO 14064-1 permitted as alternative",
-      "Companies without a 1.5\u00b0C-aligned transition plan must disclose that gap and whether/when they will adopt one",
+      "Companies without a 1.5°C-aligned transition plan must disclose that gap and whether/when they will adopt one",
       "ESRS 40a exposure draft for non-EU groups: consultation closes October 31, 2026"
      ],
      "confidence": {
       "level": "high",
-      "reasoning": "Adoption is confirmed, but the act is not yet law \u2014 it remains in the scrutiny period (rejection considered unlikely) and sources conflict on the exact entry-into-force date (Nov 10 vs Nov 20, 2026)."
+      "reasoning": "Adoption is confirmed, but the act is not yet law — it remains in the scrutiny period (rejection considered unlikely) and sources conflict on the exact entry-into-force date (Nov 10 vs Nov 20, 2026)."
      },
      "next_milestone": {
       "date": "2026-09-03",
@@ -1071,56 +1077,61 @@
       }
      ],
      "stat": {
-      "value": "\u221260%",
+      "value": "−60%",
       "label": "mandatory datapoints vs. Set 1"
      }
     },
     {
      "id": "eu-cbam",
      "name": "CBAM (carbon border adjustment)",
-     "status_label": "Definitive regime live \u2014 expansion in co-decision",
+     "stat": {
+      "label": "of embedded emissions still covered",
+      "value": "~99%"
+     },
      "phase": "implementation",
-     "summary": "CBAM's definitive regime began January 1, 2026. The CBAM Omnibus (October 2025) added a 50-tonne/year de minimis exempting ~90% of importers while keeping ~99% of embedded emissions covered, and moved certificate purchases to February 2027. A December 2025 proposal would extend CBAM to ~180 downstream iron/steel/aluminium product categories from January 1, 2028; the Council agreed its position June 12, 2026 and a trilogue agreement is targeted by end-2026.",
+     "sources": [
+      {
+       "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/06/12/council-moves-to-strengthen-the-eu-s-carbon-border-adjustment-mechanism/",
+       "date": "2026-06-12",
+       "title": "Council: general approach on strengthening CBAM"
+      },
+      {
+       "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0419(COD)",
+       "date": "2026-07-09",
+       "title": "European Parliament Legislative Observatory: procedure file 2025/0419(COD)"
+      },
+      {
+       "url": "https://www.mayerbrown.com/en/insights/publications/2025/12/european-commission-issues-cbam-operational-rules-and-proposes-downstream-extension-of-the-cbam-scope",
+       "date": "2025-12",
+       "title": "Mayer Brown: CBAM operational rules + downstream extension"
+      }
+     ],
+     "summary": "CBAM's definitive regime began January 1, 2026. The CBAM Omnibus (October 2025) added a 50-tonne/year de minimis exempting ~90% of importers while keeping ~99% of embedded emissions covered, and moved certificate purchases to February 2027. A December 2025 proposal would extend CBAM to ~180 downstream iron/steel/aluminium product categories from January 1, 2028; the Council agreed its position June 12, 2026, the Parliament's ENVI committee report was tabled July 9, 2026, and the plenary first-reading position is indicatively scheduled for September 14, 2026, with a trilogue agreement targeted by end-2026.",
+     "confidence": {
+      "level": "confirmed",
+      "reasoning": "The live regime and adopted Omnibus simplification are confirmed law; the downstream expansion is a proposal in co-decision — its final scope and timing depend on trilogue outcome (targeted end-2026, not guaranteed)."
+     },
      "key_points": [
       "First annual CBAM declaration due September 30, 2027 (covering 2026 imports)",
       "Certificate sales/surrender begin February 2027; 2026 costs at quarterly ETS average",
-      "Downstream expansion proposal: ~180 product categories from 2028, anti-circumvention rules including pre-consumer scrap",
-      "CBAM uses installation-level, EU ETS-aligned product emissions \u2014 NOT corporate GHGP inventories",
+      "Downstream expansion: Commission proposed ~180 product categories from 2028; Council (+~200 goods) and Parliament (~457 products) positions would widen it — final scope set in trilogue",
+      "CBAM uses installation-level, EU ETS-aligned product emissions — NOT corporate GHGP inventories",
       "Export/carbon-leakage-on-exports solution remains unresolved"
      ],
-     "confidence": {
-      "level": "confirmed",
-      "reasoning": "The live regime and adopted Omnibus simplification are confirmed law; the downstream expansion is a proposal in co-decision \u2014 its final scope and timing depend on trilogue outcome (targeted end-2026, not guaranteed)."
-     },
+     "status_label": "Definitive regime live — expansion in co-decision",
      "next_milestone": {
-      "date": "2026-09",
-      "what": "European Parliament plenary mandate on downstream expansion expected"
-     },
-     "sources": [
-      {
-       "title": "Council: general approach on strengthening CBAM",
-       "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/06/12/council-moves-to-strengthen-the-eu-s-carbon-border-adjustment-mechanism/",
-       "date": "2026-06-12"
-      },
-      {
-       "title": "Mayer Brown: CBAM operational rules + downstream extension",
-       "url": "https://www.mayerbrown.com/en/insights/publications/2025/12/european-commission-issues-cbam-operational-rules-and-proposes-downstream-extension-of-the-cbam-scope",
-       "date": "2025-12"
-      }
-     ],
-     "stat": {
-      "value": "~99%",
-      "label": "of embedded emissions still covered"
+      "date": "2026-09-14",
+      "what": "European Parliament first-reading position on the downstream expansion (indicative plenary date)"
      }
     },
     {
      "id": "eu-green-claims",
      "name": "Green claims rules",
-     "status_label": "Green Claims Directive dormant \u2014 EmpCo Directive applies Sept 27, 2026",
+     "status_label": "Green Claims Directive dormant — EmpCo Directive applies Sept 27, 2026",
      "phase": "implementation",
      "summary": "The Green Claims Directive proposal collapsed in June 2025 and was never adopted. The operative instrument is the Empowering Consumers for the Green Transition Directive (EU) 2024/825: from September 27, 2026, national rules ban generic environmental claims and offset-based 'carbon neutral' product claims.",
      "key_points": [
-      "EmpCo rules apply September 27, 2026 \u2014 a near-term compliance date for consumer-facing claims",
+      "EmpCo rules apply September 27, 2026 — a near-term compliance date for consumer-facing claims",
       "Offset-based product carbon-neutrality claims banned",
       "Green Claims Directive formally dormant; revival uncertain"
      ],
@@ -1148,22 +1159,22 @@
   },
   {
    "id": "us",
-   "name": "US (SEC \u00b7 California \u00b7 States)",
+   "name": "US (SEC · California · States)",
    "short": "US",
    "org": "SEC / CARB / State legislatures",
    "color": "#C0316F",
    "tagline": "SEC rescinding its rule while California's SB 253 becomes the de facto national mandate",
-   "description": "The US picture is bifurcated: the SEC has proposed full rescission of its never-effective 2024 climate rule, while California is implementing SB 253/261 \u2014 the first mandatory US corporate GHG reporting regime, statutorily anchored to the GHG Protocol. New York's copycat bill passed its Senate in February 2026.",
+   "description": "The US picture is bifurcated: the SEC has proposed full rescission of its never-effective 2024 climate rule, while California is implementing SB 253/261 — the first mandatory US corporate GHG reporting regime, statutorily anchored to the GHG Protocol. New York's copycat bill passed its Senate in February 2026.",
    "status_headline": "SEC rescission expected late 2026; first SB 253 Scope 1/2 reports due November 10, 2026; Ninth Circuit ruling pending",
    "workstreams": [
     {
      "id": "us-sec",
      "name": "SEC climate disclosure rule",
-     "status_label": "Rescission proposed \u2014 final withdrawal expected",
+     "status_label": "Rescission proposed — final withdrawal expected",
      "phase": "rescinding",
      "summary": "The March 2024 rules never took effect (Commission-stayed April 2024 amid Eighth Circuit litigation). The SEC stopped defending them in March 2025 and on May 29, 2026 proposed full rescission, returning to the pre-2024 principles-based materiality framework. The comment period closed August 3, 2026; a status report to the Eighth Circuit is due August 31, 2026. Final rescission is expected but not yet adopted.",
      "key_points": [
-      "Rules were never in effect \u2014 rescission removes stayed rules; no compliance rollback for companies",
+      "Rules were never in effect — rescission removes stayed rules; no compliance rollback for companies",
       "No replacement climate rule proposed; 2010 climate guidance and Reg S-K materiality remain",
       "Litigation (Iowa v. SEC) held in abeyance pending the rulemaking"
      ],
@@ -1195,21 +1206,21 @@
     {
      "id": "us-sb253",
      "name": "California SB 253 (GHG disclosure)",
-     "status_label": "Active \u2014 first reports due November 10, 2026 (awaiting OAL resubmission/approval)",
+     "status_label": "Active — first reports due November 10, 2026 (awaiting OAL resubmission/approval)",
      "phase": "implementation",
      "summary": "CARB's Board approved the initial SB 253/261 regulation February 26, 2026, but withdrew it from final legal review in June for modifications. The Modified Regulations (July 27, 2026) reset the first Scope 1/2 deadline from August 10 to November 10, 2026, for companies with >$1B revenue doing business in California; the 15-day comment period closed August 11 and the package awaits resubmission to the Office of Administrative Law (not yet on OAL's under-review list as of August 17). Scope 3 begins 2027. Enforcement discretion applies to good-faith first-cycle filers.",
      "key_points": [
       "First Scope 1/2 reports due November 10, 2026 (proposed as the fixed annual date going forward); contingent on OAL approval",
-      "Scope 3 from 2027 \u2014 proposed as five mandatory categories only (1, 3, 5, 6, 7); others voluntary",
+      "Scope 3 from 2027 — proposed as five mandatory categories only (1, 3, 5, 6, 7); others voluntary",
       "Limited assurance for Scope 1/2 from 2027, reasonable assurance by 2030",
-      "Reporting pinned to specific GHGP versions (Corporate Standard, Scope 2 Guidance 2015, Scope 3 Standard) \u2014 CARB says SB 253 'will not dynamically update to reflect GHG Protocol developments'",
+      "Reporting pinned to specific GHGP versions (Corporate Standard, Scope 2 Guidance 2015, Scope 3 Standard) — CARB says SB 253 'will not dynamically update to reflect GHG Protocol developments'",
       "Voluntary online intake platform + guidance targeted for September 1, 2026 (mandatory template abandoned)",
       "Fee notices December 10, 2026; payment within 60 days",
       "Ninth Circuit denied an injunction against SB 253 (Nov 2025); merits ruling pending"
      ],
      "confidence": {
       "level": "high",
-      "reasoning": "The November 10 deadline sits in Modified Regulations still awaiting Office of Administrative Law approval, and the pending Ninth Circuit merits ruling is a genuine wildcard \u2014 high confidence in the near-term trajectory, not certainty."
+      "reasoning": "The November 10 deadline sits in Modified Regulations still awaiting Office of Administrative Law approval, and the pending Ninth Circuit merits ruling is a genuine wildcard — high confidence in the near-term trajectory, not certainty."
      },
      "next_milestone": {
       "date": "2026-11-10",
@@ -1240,17 +1251,17 @@
     {
      "id": "us-sb261",
      "name": "California SB 261 (climate risk)",
-     "status_label": "Enforcement enjoined \u2014 deadline suspended",
+     "status_label": "Enforcement enjoined — deadline suspended",
      "phase": "litigation",
      "summary": "SB 261's climate-related financial risk reports (companies >$500M revenue) were due January 1, 2026, but a Ninth Circuit panel enjoined enforcement on November 18, 2025 on First Amendment grounds. Oral argument was held January 9, 2026; the merits decision is still pending. CARB will set a replacement deadline after the appeal resolves.",
      "key_points": [
-      "Injunction applies to SB 261 only \u2014 SB 253 was left intact",
+      "Injunction applies to SB 261 only — SB 253 was left intact",
       "Many companies voluntarily posted TCFD/ISSB-aligned reports before the injunction",
       "Administrative framework is ready in CARB's regulations if the injunction lifts"
      ],
      "confidence": {
       "level": "medium",
-      "reasoning": "The current enjoined status is confirmed, but the outcome and timing of the Ninth Circuit merits ruling are unknowable \u2014 the workstream's future hinges entirely on it."
+      "reasoning": "The current enjoined status is confirmed, but the outcome and timing of the Ninth Circuit merits ruling are unknowable — the workstream's future hinges entirely on it."
      },
      "next_milestone": {
       "date": null,
@@ -1270,7 +1281,7 @@
      ],
      "stat": {
       "value": "Jan 9, 2026",
-      "label": "argued \u2014 ruling pending"
+      "label": "argued — ruling pending"
      }
     },
     {
@@ -1278,7 +1289,7 @@
      "name": "Other state programs (NY, NJ, IL, CO, WA)",
      "status_label": "New York Senate-passed; others stalled",
      "phase": "legislation",
-     "summary": "New York's Climate Corporate Data Accountability Act (S9072A) passed the state Senate February 10, 2026 and awaits Assembly action. It mirrors SB 253 \u2014 GHG Protocol-based, >$1B revenue, Scope 1/2 from 2028, Scope 3 from 2029 \u2014 and adds ISSB-report reciprocity. New Jersey reintroduced a bill without Scope 3 (S679). Illinois, Colorado, and Washington bills died in 2025 without reintroduction.",
+     "summary": "New York's Climate Corporate Data Accountability Act (S9072A) passed the state Senate February 10, 2026 and awaits Assembly action. It mirrors SB 253 — GHG Protocol-based, >$1B revenue, Scope 1/2 from 2028, Scope 3 from 2029 — and adds ISSB-report reciprocity. New Jersey's reintroduced bill (S679) was amended in committee to drop Scope 3. Illinois, Colorado, and Washington bills stalled in 2025 and have not been revived.",
      "key_points": [
       "NY S9072A: limited assurance from 2028, reasonable from 2032; penalties up to $100k/day capped at $500k/year",
       "No state beyond California has enacted a mandatory GHG disclosure law as of August 2026",
@@ -1314,26 +1325,70 @@
  ],
  "updates": [
   {
+   "date": "2026-08-18",
+   "detail": "The Trustees approved operating and financing plans covering 2027-2031 that put ISSB on a longer-term, shared funding base. They also approved opening an ISSB office in Geneva during 2027 and proposed that each board comprise 10 members from 2028. Proposed amendments to the Foundation's Constitution are open for public comment until November 16, 2026. No reporting standard or effective date changed.",
+   "so_what": "Nothing to implement, but if you want a say in how ISSB is governed and resourced, the Constitution consultation closes November 16, 2026.",
+   "headline": "IFRS Foundation Trustees approve a five-year plan and open a consultation on Constitution changes",
+   "framework": "issb",
+   "source_url": "https://www.ifrs.org/news-and-events/news/2026/08/trustees-announce-five-year-plan/",
+   "workstream": "Governance & funding",
+   "significance": "medium",
+   "source_title": "IFRS Foundation Trustees announce five-year plan"
+  },
+  {
+   "date": "2026-08-17",
+   "detail": "SBTi published a consolidated call for participation covering four open processes that will shape its next generation of sector standards. The four windows are a Call for Evidence on high-emitting sectors including aluminium, aviation and steel (closes September 11, 2026); the second public consultation on the draft Power Sector Net-Zero Standard (closes September 7, 2026); an expression of interest for FLAG regional stakeholder convenings (closes September 8, 2026); and a Call for Evidence informing FLAG Standard V2 (closes October 8, 2026). The Power consultation deadline was extended from August 31 to September 7 to allow more considered feedback. None of this creates a requirement today — these are the formal windows for influencing criteria that will bind sector-exposed companies from 2027 onward.",
+   "so_what": "If your emissions sit in power, agriculture, forestry or a heavy-emitting sector, assign an owner this week — the windows close between September 7 and October 8 and are the cheapest chance to shape criteria you will later have to meet.",
+   "headline": "SBTi opens four concurrent input windows on Power, FLAG and high-emitting sector standards",
+   "framework": "sbti",
+   "source_url": "https://sciencebasedtargets.org/blog/get-involved-today-your-chance-to-help-shape-the-next-generation-of-sbti-standards",
+   "workstream": "Sector standards",
+   "significance": "medium",
+   "source_title": "SBTi: Get involved today — your chance to help shape the next generation of SBTi Standards"
+  },
+  {
+   "date": "2026-08-14",
+   "detail": "The European Commission released four general guides covering CBAM concepts, a quick guide for non-EU operators, methods for calculating emissions embedded in goods, and the free-allocation adjustment to the number of certificates surrendered. Six sector-specific guides accompany them, for cement, hydrogen, fertilisers, iron and steel, aluminium and electricity. The documents are non-binding but set out, with worked examples, how the Commission expects the definitive-regime rules to be applied. Much of the material is aimed at non-EU operators who must supply embedded-emissions data to EU importers.",
+   "so_what": "Send the relevant sector guide to whoever produces your embedded-emissions data for EU-bound goods, well before the first certificate surrender in 2027.",
+   "headline": "Commission publishes ten CBAM guidance documents for the definitive regime",
+   "framework": "eu",
+   "source_url": "https://taxation-customs.ec.europa.eu/news/european-commission-publishes-series-guidance-documents-support-cbam-implementation-definitive-2026-08-14_en",
+   "workstream": "CBAM (carbon border adjustment)",
+   "significance": "high",
+   "source_title": "European Commission publishes a series of guidance documents to support CBAM implementation in the definitive period"
+  },
+  {
+   "date": "2026-08-14",
+   "detail": "The SEC's semiannual Regulatory Flexibility Agenda, published in the Federal Register, carries the rescission of the 2024 climate-related disclosure rules (RIN 3235-AN76) at the proposed rule stage. It records the June 3, 2026 proposal and the August 3, 2026 comment close, but states no target date for final action. The absence of a timetable means the rescission had no committed adoption date as of mid-August 2026.",
+   "so_what": "Do not plan around a specific rescission date; the SEC's August 31 status report to the Eighth Circuit is the next real signal on timing.",
+   "headline": "SEC regulatory agenda lists the climate-rule rescission with no date for final action",
+   "framework": "us",
+   "source_url": "https://www.federalregister.gov/documents/2026/08/14/2026-16619/regulatory-flexibility-agenda",
+   "workstream": "SEC climate disclosure rule",
+   "significance": "medium",
+   "source_title": "Regulatory Flexibility Agenda (Securities and Exchange Commission)"
+  },
+  {
    "date": "2026-08-14",
    "framework": "ghgp",
    "workstream": "Scope 2",
    "headline": "Reported consultation tallies show broad opposition to Scope 2 hourly matching",
-   "detail": "Media reporting (Fortune) on the ~1,100-response Scope 2 consultation: only about 22% of all respondents \u2014 and 12% of the 429 responding companies \u2014 supported the proposed hourly matching requirement, with the Clean Energy Buyers Association publicly opposed. The electricity accounting working group is reportedly scheduled to meet in September 2026 to address the pushback. Not an official GHGP publication and no decision has been made \u2014 but it reinforces why this workstream carries medium confidence: the market-based accounting outcome is genuinely open.",
+   "detail": "Media reporting (Fortune) on the ~1,100-response Scope 2 consultation: only about 22% of all respondents — and 12% of the 429 responding companies — supported the proposed hourly matching requirement, with the Clean Energy Buyers Association publicly opposed. The electricity accounting working group is reportedly scheduled to meet in September 2026 to address the pushback. Not an official GHGP publication and no decision has been made — but it reinforces why this workstream carries medium confidence: the market-based accounting outcome is genuinely open.",
    "significance": "low",
    "source_url": "https://fortune.com/2026/08/14/clean-energy-rule-accounting-guidelines/",
    "source_title": "Fortune, Aug 14, 2026 (media report)",
-   "so_what": "No action \u2014 but scenario-plan for both hourly matching and status-quo market-based accounting; don't rebuild procurement strategy on a rule that may not land."
+   "so_what": "No action — but scenario-plan for both hourly matching and status-quo market-based accounting; don't rebuild procurement strategy on a rule that may not land."
   },
   {
    "date": "2026-08-13",
    "framework": "sbti",
    "workstream": "Target Dashboard",
    "headline": "SBTi Target Dashboard status overhaul: Commitment Compliance Policy superseded Sept 24",
-   "detail": "A companion blog post to the Five-Year Review explainer details the September 24, 2026 Target Dashboard changes: revised company status terminology, updated commitment- and target-level status classifications, and regional classifications aligned to the UN M49 standard. Once effective, the revised Commitment and Target Statuses Document supersedes the existing Commitment Compliance Policy \u2014 status labels visible to investors and civil society will change for companies on the public dashboard.",
+   "detail": "A companion blog post to the Five-Year Review explainer details the September 24, 2026 Target Dashboard changes: revised company status terminology, updated commitment- and target-level status classifications, and regional classifications aligned to the UN M49 standard. Once effective, the revised Commitment and Target Statuses Document supersedes the existing Commitment Compliance Policy — status labels visible to investors and civil society will change for companies on the public dashboard.",
    "significance": "medium",
    "source_url": "https://sciencebasedtargets.org/blog/upcoming-changes-to-the-sbti-target-dashboard",
    "source_title": "SBTi blog, Aug 13, 2026",
-   "so_what": "Check how your company's public dashboard status will read after Sept 24 \u2014 investors and NGOs will see the new labels."
+   "so_what": "Check how your company's public dashboard status will read after Sept 24 — investors and NGOs will see the new labels."
   },
   {
    "date": "2026-08-13",
@@ -1344,14 +1399,14 @@
    "significance": "medium",
    "source_url": "https://sciencebasedtargets.org/blog/ten-things-companies-need-to-know-about-the-updated-mandatory-five-year-review-guidance-and-the-commitment-and-target-statuses-document",
    "source_title": "SBTi blog, Aug 13, 2026",
-   "so_what": "If your targets hit their 5-year mark, calendar the 6-month review form and 12-month revised-target deadlines \u2014 ~300 companies must complete reviews by end of 2026."
+   "so_what": "If your targets hit their 5-year mark, calendar the 6-month review form and 12-month revised-target deadlines — ~300 companies must complete reviews by end of 2026."
   },
   {
    "date": "2026-08-12",
    "framework": "eu",
    "workstream": "EFRAG / financed emissions",
    "headline": "EFRAG joins the PCAF Engagement Group for central banks and financial regulators",
-   "detail": "Signals continued convergence between ESRS GHG accounting guidance and the PCAF financed-emissions methodology (which GHGP's draft Scope 3 revision also aligns to for Category 15). No new requirement or deadline \u2014 a monitor-only item for non-financial reporters.",
+   "detail": "Signals continued convergence between ESRS GHG accounting guidance and the PCAF financed-emissions methodology (which GHGP's draft Scope 3 revision also aligns to for Category 15). No new requirement or deadline — a monitor-only item for non-financial reporters.",
    "significance": "low",
    "source_url": "https://www.efrag.org/en/news-and-calendar/news/efrag-joins-the-pcaf-engagement-group",
    "source_title": "EFRAG, Aug 12, 2026",
@@ -1362,33 +1417,33 @@
    "framework": "ghgp",
    "workstream": "Cross-workstream",
    "headline": "GHG Protocol Pulse (August) recaps consolidation announcement",
-   "detail": "Monthly newsletter summarizing the July 29 GHGP\u2013ISO consolidation, Scope 2 consultation results, AMI multi-statement support, LSR Guidance availability, the Forest Carbon Accounting RFI (open through Feb 1, 2027), and the Amsterdam AMI TWG meeting. No new milestones announced.",
+   "detail": "Monthly newsletter summarizing the July 29 GHGP–ISO consolidation, Scope 2 consultation results, AMI multi-statement support, LSR Guidance availability, the Forest Carbon Accounting RFI (open through Feb 1, 2027), and the Amsterdam AMI TWG meeting. No new milestones announced.",
    "significance": "medium",
    "source_url": "https://ghgprotocol.org/blog/ghg-protocol-pulse-august-update",
    "source_title": "GHG Protocol Pulse: August Update",
-   "so_what": "Recap only \u2014 nothing new to action."
+   "so_what": "Recap only — nothing new to action."
   },
   {
    "date": "2026-08-11",
    "framework": "issb",
    "workstream": "IFRS Foundation governance",
    "headline": "IFRS Foundation names new Trustees and IASB chairs; Faber stays at ISSB",
-   "detail": "Steven Maijoor becomes IFRS Foundation Trustees Chair from January 1, 2027 and Sam Woods becomes IASB Chair from October 1, 2026. Emmanuel Faber continues as ISSB Chair, so no change to sustainability standard-setting direction \u2014 governance continuity for the body that will decide whether IFRS S2 migrates to the revised GHG Protocol standards.",
+   "detail": "Steven Maijoor becomes IFRS Foundation Trustees Chair from January 1, 2027 and Sam Woods becomes IASB Chair from October 1, 2026. Emmanuel Faber continues as ISSB Chair, so no change to sustainability standard-setting direction — governance continuity for the body that will decide whether IFRS S2 migrates to the revised GHG Protocol standards.",
    "significance": "low",
    "source_url": "https://www.ifrs.org/news-and-events/news/2026/08/steven-maijoor-chair-trustees-sam-woods-chair-iasb/",
    "source_title": "IFRS Foundation, Aug 11, 2026",
-   "so_what": "No action \u2014 leadership continuity at the ISSB."
+   "so_what": "No action — leadership continuity at the ISSB."
   },
   {
    "date": "2026-08-11",
    "framework": "us",
    "workstream": "California SB 253",
    "headline": "Comment period closes on CARB's Modified Regulations",
-   "detail": "The 15-day comment window on the July 27 Modified Regulations (which reset the first Scope 1/2 deadline to November 10, 2026) closed as scheduled. As of August 17, the package had not yet appeared on the Office of Administrative Law's under-review list \u2014 resubmission and OAL approval, which make the November 10 deadline legally effective, remain pending. CARB's guidance and voluntary intake platform are still targeted for ~September 1; the next sector listening session is August 26.",
+   "detail": "The 15-day comment window on the July 27 Modified Regulations (which reset the first Scope 1/2 deadline to November 10, 2026) closed as scheduled. As of August 17, the package had not yet appeared on the Office of Administrative Law's under-review list — resubmission and OAL approval, which make the November 10 deadline legally effective, remain pending. CARB's guidance and voluntary intake platform are still targeted for ~September 1; the next sector listening session is August 26.",
    "significance": "high",
    "source_url": "https://www.morganlewis.com/pubs/2026/08/carb-extends-sb-253-deadline-and-previews-2027-reporting-rules",
    "source_title": "Morgan Lewis, Aug 7, 2026",
-   "so_what": "Hold Nov 10 as your working deadline, but watch for OAL approval \u2014 and don't stand down Scope 1/2 data collection."
+   "so_what": "Hold Nov 10 as your working deadline, but watch for OAL approval — and don't stand down Scope 1/2 data collection."
   },
   {
    "date": "2026-08-08",
@@ -1402,11 +1457,22 @@
    "so_what": "No corporate action."
   },
   {
+   "date": "2026-08-07",
+   "detail": "The revised standard ISO 14068, Climate change management - Carbon neutrality, advanced to stage 60.00, international standard under publication, on August 7, 2026. It will replace ISO 14068-1:2023, and ISO lists expected publication in September 2026. The standard sets the principles and requirements an organization or product is measured against when it claims carbon neutrality, including how reductions and offsets are quantified and disclosed.",
+   "so_what": "Have legal and marketing review existing carbon-neutral claim language against the new edition once it publishes - it lands days before the EU's EmpCo claim bans apply on September 27, 2026.",
+   "headline": "ISO 14068 on carbon neutrality moves to publication, expected September 2026",
+   "framework": "iso",
+   "source_url": "https://www.iso.org/standard/94470.html",
+   "workstream": "Carbon neutrality claims (ISO 14068)",
+   "significance": "medium",
+   "source_title": "ISO/FDIS 14068 - Climate change management - Carbon neutrality"
+  },
+  {
    "date": "2026-08-05",
    "framework": "us",
    "workstream": "California SB 253",
    "headline": "CARB begins sector listening sessions for the 2027 rulemaking",
-   "detail": "First of six sector-specific sessions (Aug 5 \u2013 Sep 9, 2026) gathering industry input on Scope 3 categories and assurance for the Subsequent Rulemaking covering 2027+ reporting.",
+   "detail": "First of six sector-specific sessions (Aug 5 – Sep 9, 2026) gathering industry input on Scope 3 categories and assurance for the Subsequent Rulemaking covering 2027+ reporting.",
    "significance": "low",
    "source_url": "https://www.mayerbrown.com/en/insights/publications/2026/08/california-climate-disclosure-laws-carb-finalizes-its-initial-rulemaking-resets-the-2026-deadline-and-previews-the-2027-framework",
    "source_title": "Mayer Brown, Aug 2026",
@@ -1421,14 +1487,14 @@
    "significance": "medium",
    "source_url": "https://www.federalregister.gov/documents/2026/06/03/2026-11091/rescission-of-climate-related-disclosure-rules",
    "source_title": "Federal Register 91 FR 33296",
-   "so_what": "No federal obligations coming \u2014 keep climate-risk materiality assessments current under the pre-2024 framework."
+   "so_what": "No federal obligations coming — keep climate-risk materiality assessments current under the pre-2024 framework."
   },
   {
    "date": "2026-07-30",
    "framework": "sbti",
    "workstream": "FLAG",
    "headline": "SBTi opens call for input on FLAG Standard V2",
-   "detail": "Revision of the Forest, Land and Agriculture Standard begins: stakeholder-meeting expressions of interest due September 8, evidence submissions due October 8, 2026. FLAG V2 will integrate CNZS V2.0 innovations and align with the GHG Protocol Land Sector & Removals Standard \u2014 a direct cross-framework dependency.",
+   "detail": "Revision of the Forest, Land and Agriculture Standard begins: stakeholder-meeting expressions of interest due September 8, evidence submissions due October 8, 2026. FLAG V2 will integrate CNZS V2.0 innovations and align with the GHG Protocol Land Sector & Removals Standard — a direct cross-framework dependency.",
    "significance": "high",
    "source_url": "https://sciencebasedtargets.org/news/sbti-issues-call-for-input-to-inform-revision-of-forest-land-and-agriculture-standard",
    "source_title": "SBTi news, Jul 30, 2026",
@@ -1437,20 +1503,20 @@
   {
    "date": "2026-07-29",
    "framework": "ghgp",
-   "workstream": "GHGP\u2013ISO consolidation",
+   "workstream": "GHGP–ISO consolidation",
    "headline": "GHGP and ISO confirm single co-branded corporate standard",
    "detail": "The headline governance decision of the revision cycle: Corporate Standard, Scope 2 Guidance, Scope 3 Standard, AMI, and ISO 14064-1 merge into one standard (Part 1: physical inventory; Part 2: actions & market instruments). Integrated public consultation planned Q2 2027; final publication estimated Q4 2028. Published alongside an updated Standard Development Plan, FAQ, Scope 2 consultation feedback summary (~1,100 responses from 56 countries), and preliminary AMI RFI findings (~500 responses).",
    "significance": "high",
    "source_url": "https://ghgprotocol.org/blog/ghg-protocol-announces-key-standard-development-updates",
    "source_title": "GHG Protocol announcement, Jul 29, 2026",
-   "so_what": "Plan for one global corporate standard by ~2029 \u2014 budget a gap assessment before the Q2 2027 consultation."
+   "so_what": "Plan for one global corporate standard by ~2029 — budget a gap assessment before the Q2 2027 consultation."
   },
   {
    "date": "2026-07-29",
    "framework": "issb",
    "workstream": "Digital taxonomy",
    "headline": "ISSB proposes Taxonomy Update for the December 2025 S2 amendments",
-   "detail": "Digital tagging taxonomy update reflecting the GHG emissions disclosure amendments; comments due September 28, 2026 \u2014 keeping digital reporting aligned ahead of the January 1, 2027 effective date.",
+   "detail": "Digital tagging taxonomy update reflecting the GHG emissions disclosure amendments; comments due September 28, 2026 — keeping digital reporting aligned ahead of the January 1, 2027 effective date.",
    "significance": "medium",
    "source_url": "https://www.ifrs.org/projects/work-plan/ifrs-sustainability-disclosure-taxonomy-update-amendments-ghg-emissions-disclosures/",
    "source_title": "IFRS Taxonomy Update project page",
@@ -1465,7 +1531,7 @@
    "significance": "high",
    "source_url": "https://www.morganlewis.com/pubs/2026/08/carb-extends-sb-253-deadline-and-previews-2027-reporting-rules",
    "source_title": "Morgan Lewis, Aug 7, 2026",
-   "so_what": "Three extra months for first Scope 1/2 reports \u2014 spend them on assurance-readiness, not delay."
+   "so_what": "Three extra months for first Scope 1/2 reports — spend them on assurance-readiness, not delay."
   },
   {
    "date": "2026-07-22",
@@ -1483,11 +1549,11 @@
    "framework": "us",
    "workstream": "California SB 253",
    "headline": "CARB previews 2027+ framework and locks GHG Protocol versions",
-   "detail": "Workshop proposals: Scope 3 limited to five mandatory categories (1, 3, 5, 6, 7) from 2027; limited assurance for Scope 1/2 from 2027 escalating to reasonable by 2030; mandatory template abandoned for a voluntary intake platform. CARB stated SB 253 reporting 'will not dynamically update to reflect GHG Protocol developments' \u2014 pinning California to current GHGP versions even as they are revised.",
+   "detail": "Workshop proposals: Scope 3 limited to five mandatory categories (1, 3, 5, 6, 7) from 2027; limited assurance for Scope 1/2 from 2027 escalating to reasonable by 2030; mandatory template abandoned for a voluntary intake platform. CARB stated SB 253 reporting 'will not dynamically update to reflect GHG Protocol developments' — pinning California to current GHGP versions even as they are revised.",
    "significance": "high",
    "source_url": "https://www.ropesgray.com/en/insights/viewpoints/2026/07/102ndej/carb-fleshes-out-proposed-sb-253-ghg-emissions-reporting-and-assurance-requiremen",
    "source_title": "Ropes & Gray, Jul 2026",
-   "so_what": "Build California reporting on today's GHGP versions \u2014 and expect to run dual methodologies once revised GHGP publishes."
+   "so_what": "Build California reporting on today's GHGP versions — and expect to run dual methodologies once revised GHGP publishes."
   },
   {
    "date": "2026-07-15",
@@ -1498,25 +1564,25 @@
    "significance": "medium",
    "source_url": "https://sciencebasedtargets.org/news/the-sbti-launches-second-public-consultation-on-updated-draft-power-sector-net-zero-standard",
    "source_title": "SBTi news, Jul 15, 2026",
-   "so_what": "Power-sector companies: respond by Aug 31 \u2014 target-setting metrics are changing."
+   "so_what": "Power-sector companies: respond by Aug 31 — target-setting metrics are changing."
   },
   {
    "date": "2026-07-15",
    "framework": "eu",
    "workstream": "ESRS",
    "headline": "EFRAG publishes ESRS 40a exposure draft for non-EU groups",
-   "detail": "Single-materiality standard for non-EU parents with >\u20ac450m EU turnover; reporting from FY2028 (first reports 2029). Consultation closes October 31, 2026 \u2014 directly relevant to US-headquartered multinationals.",
+   "detail": "Single-materiality standard for non-EU parents with >€450m EU turnover; reporting from FY2028 (first reports 2029). Consultation closes October 31, 2026 — directly relevant to US-headquartered multinationals.",
    "significance": "medium",
    "source_url": "https://www.persefoni.com/blog/climate-policy-roundup-july-2026",
    "source_title": "Persefoni policy roundup, Jul 2026",
-   "so_what": "Non-EU parents with >\u20ac450m EU turnover: your FY2028 EU reporting template is on the table \u2014 comment by Oct 31."
+   "so_what": "Non-EU parents with >€450m EU turnover: your FY2028 EU reporting template is on the table — comment by Oct 31."
   },
   {
    "date": "2026-07-14",
    "framework": "sbti",
    "workstream": "Validation services",
    "headline": "SBTi Services launches V2.0 Readiness Assessment",
-   "detail": "Paid service covering Category A/B determination, target mapping to V2.0, and inventory/assurance gap analysis \u2014 explicitly not pre-validation.",
+   "detail": "Paid service covering Category A/B determination, target mapping to V2.0, and inventory/assurance gap analysis — explicitly not pre-validation.",
    "significance": "low",
    "source_url": "https://sciencebasedtargets.org/news/sbti-services-launches-new-service-to-help-companies-understand-their-readiness-for-the-corporate-net-zero-standard-version-2-0",
    "source_title": "SBTi news, Jul 14, 2026",
@@ -1549,29 +1615,29 @@
    "framework": "us",
    "workstream": "California SB 253",
    "headline": "CARB withdraws regulation from OAL for modifications",
-   "detail": "The initial regulation package (submitted May 20) was pulled back for clarifying changes six weeks before the then-applicable August 10 deadline, creating temporary deadline uncertainty resolved by the July 27 Modified Regulations.",
+   "detail": "The initial regulation package (submitted May 20) was pulled back for clarifying changes six weeks before the then-applicable August 10 deadline, with a simultaneous announcement that the deadline would move to November 10; the July 27 Modified Regulations put the new date into regulatory text.",
    "significance": "medium",
    "source_url": "https://www.mayerbrown.com/en/insights/publications/2026/08/california-climate-disclosure-laws-carb-finalizes-its-initial-rulemaking-resets-the-2026-deadline-and-previews-the-2027-framework",
    "source_title": "Mayer Brown, Aug 2026",
-   "so_what": "Superseded \u2014 the July 27 package reset the deadline to Nov 10."
+   "so_what": "Superseded — the July 27 package reset the deadline to Nov 10."
   },
   {
    "date": "2026-06-12",
    "framework": "eu",
    "workstream": "CBAM",
    "headline": "Council agrees position on CBAM downstream expansion",
-   "detail": "General approach endorses extending CBAM to downstream iron/steel/aluminium goods with a refined product list, pre-consumer scrap anti-circumvention, a crisis-exemption mechanism, and mandatory annual scope reviews. EP committee backed expansion in late June; trilogue agreement targeted by end-2026.",
+   "detail": "General approach endorses extending CBAM to downstream iron/steel/aluminium goods with a refined product list, pre-consumer scrap anti-circumvention, a crisis-exemption mechanism, and mandatory annual scope reviews. EP's ENVI committee backed expansion July 6 (report tabled July 9); trilogue agreement targeted by end-2026.",
    "significance": "high",
    "source_url": "https://www.consilium.europa.eu/en/press/press-releases/2026/06/12/council-moves-to-strengthen-the-eu-s-carbon-border-adjustment-mechanism/",
    "source_title": "Council of the EU, Jun 12, 2026",
-   "so_what": "Importers of finished steel/aluminium goods: model 2028 cost exposure now \u2014 scope is expanding."
+   "so_what": "Importers of finished steel/aluminium goods: model 2028 cost exposure now — scope is expanding."
   },
   {
    "date": "2026-06-11",
    "framework": "sbti",
    "workstream": "CNZS V2.0",
    "headline": "SBTi publishes Corporate Net-Zero Standard V2.0",
-   "detail": "The final standard lands after two consultations and two pilot phases: Category A/B classification, separate scope target structures, significance-based scope 3 boundary (\u22655% categories), formalized limited assurance for Category A, and the Ongoing Emissions Responsibility framework. Validation opens Q1 2027; V1.3.1 available until January 31, 2028; V2.0-only from February 1, 2028.",
+   "detail": "The final standard lands after two consultations and two pilot phases: Category A/B classification, separate scope target structures, significance-based scope 3 boundary (≥5% categories), formalized limited assurance for Category A, and the Ongoing Emissions Responsibility framework. Validation opens Q1 2027; V1.3.1 available until January 31, 2028; V2.0-only from February 1, 2028.",
    "significance": "high",
    "source_url": "https://sciencebasedtargets.org/news/the-sbti-releases-corporate-net-zero-standard-v2-0-to-accelerate-corporate-climate-action",
    "source_title": "SBTi news, Jun 11, 2026",
@@ -1586,7 +1652,7 @@
    "significance": "medium",
    "source_url": "https://ghgprotocol.org/actions-and-market-instruments-standard",
    "source_title": "GHG Protocol AMI page",
-   "so_what": "Expect market-instrument reporting to become separate statements \u2014 stop designing systems that net certificates against inventory."
+   "so_what": "Expect market-instrument reporting to become separate statements — stop designing systems that net certificates against inventory."
   },
   {
    "date": "2026-05-29",
@@ -1615,40 +1681,40 @@
    "framework": "issb",
    "workstream": "Nature disclosures",
    "headline": "ISSB chooses Practice Statement route for nature disclosures",
-   "detail": "Nature-related requirements will be proposed as an IFRS Practice Statement building on TNFD rather than a new mandatory standard \u2014 complementing S1/S2 without amending them. Exposure draft planned October 2026.",
+   "detail": "Nature-related requirements will be proposed as an IFRS Practice Statement building on TNFD rather than a new mandatory standard — complementing S1/S2 without amending them. Exposure draft planned October 2026.",
    "significance": "high",
    "source_url": "https://www.ifrs.org/news-and-events/news/2026/05/issb-agrees-proposed-way-forward-nature-related-disclosures/",
    "source_title": "IFRS news, Apr 22, 2026",
-   "so_what": "No new mandatory nature standard \u2014 TNFD-aligned guidance instead; existing TNFD work carries over."
+   "so_what": "No new mandatory nature standard — TNFD-aligned guidance instead; existing TNFD work carries over."
   },
   {
    "date": "2026-04-09",
    "framework": "ghgp",
    "workstream": "Product accounting",
-   "headline": "ISO\u2013GHGP Joint Working Group finalized for product-level standard",
+   "headline": "ISO–GHGP Joint Working Group finalized for product-level standard",
    "detail": "The JWG will develop a harmonized product carbon footprint standard building on ISO 14067 and the GHGP Product Life Cycle Standard, drawing on 450+ expert submissions from 410+ organizations in 50+ countries.",
    "significance": "high",
    "source_url": "https://ghgprotocol.org/blog/announcement-iso-and-ghg-protocol-finalize-joint-working-group-develop-product-level",
    "source_title": "GHG Protocol announcement, Apr 9, 2026",
-   "so_what": "Product carbon footprint methods will converge \u2014 avoid over-customizing PCF tooling to any single standard."
+   "so_what": "Product carbon footprint methods will converge — avoid over-customizing PCF tooling to any single standard."
   },
   {
    "date": "2026-03-31",
    "framework": "ghgp",
    "workstream": "Scope 3",
    "headline": "Scope 3 Phase 1 Progress Update published (provisional)",
-   "detail": "Headline proposals with 80\u201387% TWG support: disaggregation by data type, verification-status disclosure, 95% minimum inclusion with annual 100% quantification, Category 15 narrowed to financed emissions, and a proposed new Category 16 for facilitated activities. All explicitly draft.",
+   "detail": "Headline proposals with 80–87% TWG support: disaggregation by data type, verification-status disclosure, 95% minimum inclusion with annual 100% quantification, Category 15 narrowed to financed emissions, and a proposed new Category 16 for facilitated activities. All explicitly draft.",
    "significance": "high",
    "source_url": "https://ghgprotocol.org/sites/default/files/2026-03/S3-Phase1ProgressUpdate-20260331.pdf",
    "source_title": "Scope 3 Phase 1 Progress Update",
-   "so_what": "Start tagging Scope 3 data by type, method, and verification status \u2014 auditable metadata is where this is heading."
+   "so_what": "Start tagging Scope 3 data by type, method, and verification status — auditable metadata is where this is heading."
   },
   {
    "date": "2026-03-31",
    "framework": "ghgp",
    "workstream": "AMI",
    "headline": "AMI Phase 1 White Paper published; 60-day RFI opens",
-   "detail": "White paper proposes the multi-statement reporting model: physical inventory, market-based inventory (commodity certificates), consequential GHG impact statement, and optional non-GHG indicators \u2014 with no netting between statements.",
+   "detail": "White paper proposes the multi-statement reporting model: physical inventory, market-based inventory (commodity certificates), consequential GHG impact statement, and optional non-GHG indicators — with no netting between statements.",
    "significance": "high",
    "source_url": "https://ghgprotocol.org/blog/ghg-protocol-launches-action-and-market-instruments-request-information-what-it-and-why-it",
    "source_title": "GHG Protocol AMI RFI launch",
@@ -1670,11 +1736,11 @@
    "framework": "eu",
    "workstream": "CSRD / Omnibus",
    "headline": "Omnibus I directive enters into force",
-   "detail": "Directive (EU) 2026/470 takes effect: CSRD scope narrowed to >1,000 employees AND >\u20ac450m turnover, value-chain cap live, limited assurance permanent. Member State transposition due March 19, 2027.",
+   "detail": "Directive (EU) 2026/470 takes effect: CSRD scope narrowed to >1,000 employees AND >€450m turnover, value-chain cap live, limited assurance permanent. Member State transposition due March 19, 2027.",
    "significance": "high",
    "source_url": "https://www.lw.com/en/insights/eu-sustainability-omnibus-published-in-the-official-journal",
    "source_title": "Latham & Watkins, Feb 2026",
-   "so_what": "Re-check whether you're still in CSRD scope (>1,000 employees AND >\u20ac450m); value-chain data requests are now capped."
+   "so_what": "Re-check whether you're still in CSRD scope (>1,000 employees AND >€450m); value-chain data requests are now capped."
   },
   {
    "date": "2026-02-26",
@@ -1692,11 +1758,11 @@
    "framework": "eu",
    "workstream": "CSRD / Omnibus",
    "headline": "Omnibus I published in the Official Journal as Directive (EU) 2026/470",
-   "detail": "Final legislative step after Parliament's December 16 vote and Council's February 24 adoption \u2014 the Omnibus saga formally concludes.",
+   "detail": "Final legislative step after Parliament's December 16 vote and Council's February 24 adoption — the Omnibus saga formally concludes.",
    "significance": "high",
    "source_url": "https://www.lw.com/en/insights/eu-sustainability-omnibus-published-in-the-official-journal",
    "source_title": "Latham & Watkins",
-   "so_what": "Scope certainty at last \u2014 newly scoped companies plan against FY2027 first reports."
+   "so_what": "Scope certainty at last — newly scoped companies plan against FY2027 as the first reporting year (reports published 2028)."
   },
   {
    "date": "2026-02-10",
@@ -1707,7 +1773,7 @@
    "significance": "high",
    "source_url": "https://www.persefoni.com/blog/ny-climate-corporate-data-accountability-act",
    "source_title": "Persefoni: NY S9072A explained",
-   "so_what": "Doing business in NY at >$1B revenue? Pencil in Scope 1/2 for 2028 \u2014 Assembly passage still required."
+   "so_what": "Doing business in NY at >$1B revenue? Pencil in Scope 1/2 for 2028 — Assembly passage still required."
   },
   {
    "date": "2026-02-01",
@@ -1718,40 +1784,40 @@
    "significance": "high",
    "source_url": "https://www.spglobal.com/sustainable1/en/insights/research-reports/issb-q2-2026",
    "source_title": "S&P Global ISSB adoption tracking (May 2026)",
-   "so_what": "Listed in Japan, the UK, or Korea? Local ISSB-aligned reporting lands FY2027\u20132028."
+   "so_what": "Listed in Japan, the UK, or Korea? Local ISSB-aligned reporting lands FY2027–2028."
   },
   {
    "date": "2026-01-31",
    "framework": "ghgp",
    "workstream": "Scope 2",
    "headline": "Scope 2 consultation closes: ~1,100 responses from 56 countries",
-   "detail": "The extended consultation (Oct 20, 2025 \u2013 Jan 31, 2026) on hourly matching, deliverability, and consequential accounting closes with heavy engagement and sharply divergent views on market-based accounting.",
+   "detail": "The extended consultation (Oct 20, 2025 – Jan 31, 2026) on hourly matching, deliverability, and consequential accounting closes with heavy engagement and sharply divergent views on market-based accounting.",
    "significance": "medium",
    "source_url": "https://ghgprotocol.org/ghg-protocol-public-consultations",
    "source_title": "GHG Protocol Public Consultations",
-   "so_what": "Keep granular (hourly-capable) electricity data accessible \u2014 whichever way the rule lands, granularity wins."
+   "so_what": "Keep granular (hourly-capable) electricity data accessible — whichever way the rule lands, granularity wins."
   },
   {
    "date": "2026-01-30",
    "framework": "ghgp",
    "workstream": "Land Sector & Removals",
    "headline": "Land Sector and Removals Standard v1.0 published",
-   "detail": "GHGP's first standard for land-sector emissions, biogenic products, and CO2 removals released as final \u2014 the first completed deliverable of the revision cycle.",
+   "detail": "GHGP's first standard for land-sector emissions, biogenic products, and CO2 removals released as final — the first completed deliverable of the revision cycle.",
    "significance": "high",
    "source_url": "https://ghgprotocol.org/land-sector-and-removals-standard",
    "source_title": "LSR Standard page",
-   "so_what": "Agriculture and removals accounting now has final rules \u2014 the revision cycle's first finished deliverable."
+   "so_what": "Agriculture and removals accounting now has final rules — the revision cycle's first finished deliverable."
   },
   {
    "date": "2026-01-09",
    "framework": "us",
    "workstream": "California SB 261",
    "headline": "Ninth Circuit hears oral argument in Chamber v. CARB",
-   "detail": "Panel probes First Amendment compelled-speech claims against SB 253 and SB 261. No ruling as of August 13, 2026 \u2014 the single biggest wildcard for California's regime.",
+   "detail": "Panel probes First Amendment compelled-speech claims against SB 253 and SB 261. No ruling as of August 13, 2026 — the single biggest wildcard for California's regime.",
    "significance": "high",
    "source_url": "https://www.whitecase.com/insight-alert/california-climate-disclosure-laws-ninth-circuit-hears-oral-argument-no-ruling-yet",
    "source_title": "White & Case, Jan 2026",
-   "so_what": "The ruling could void or cement California's regime \u2014 build to comply, watch the docket."
+   "so_what": "The ruling could void or cement California's regime — build to comply, watch the docket."
   },
   {
    "date": "2026-01-01",
@@ -1762,7 +1828,7 @@
    "significance": "high",
    "source_url": "https://icapcarbonaction.com/en/news/eu-cbam-enters-compliance-phase-and-outlines-path-ahead",
    "source_title": "ICAP",
-   "so_what": "EU importers: 2026 imports carry real cost \u2014 secure supplier emissions data now."
+   "so_what": "EU importers: 2026 imports carry real cost — secure supplier emissions data now."
   },
   {
    "date": "2025-12-17",
@@ -1773,7 +1839,7 @@
    "significance": "high",
    "source_url": "https://www.mayerbrown.com/en/insights/publications/2025/12/european-commission-issues-cbam-operational-rules-and-proposes-downstream-extension-of-the-cbam-scope",
    "source_title": "Mayer Brown, Dec 2025",
-   "so_what": "Default values and certificate mechanics are set \u2014 start supplier data collection for 2026 imports."
+   "so_what": "Default values and certificate mechanics are set — start supplier data collection for 2026 imports."
   },
   {
    "date": "2025-12-11",
@@ -1791,18 +1857,18 @@
    "framework": "eu",
    "workstream": "CSRD / Omnibus",
    "headline": "Trilogue reaches provisional Omnibus I agreement",
-   "detail": "The deal lands on the Council's line \u2014 1,000 employees + \u20ac450m turnover (not Parliament's 1,750) \u2014 with permanent limited assurance, the value-chain cap, and CSDDD at 5,000 employees/\u20ac1.5bn.",
+   "detail": "The deal lands on the Council's line — 1,000 employees + €450m turnover (not Parliament's 1,750) — with permanent limited assurance, the value-chain cap, and CSDDD at 5,000 employees/€1.5bn.",
    "significance": "high",
    "source_url": "https://www.gtlaw.com/en/insights/2025/12/eu-omnibus-package-trilogue-agreement-on-eu-csrd-and-csddd",
    "source_title": "Greenberg Traurig, Dec 2025",
-   "so_what": "The 1,000-employee threshold survived \u2014 final scope call for your entity list."
+   "so_what": "The 1,000-employee threshold survived — final scope call for your entity list."
   },
   {
    "date": "2025-12-02",
    "framework": "sbti",
    "workstream": "Chemicals",
    "headline": "SBTi publishes Chemicals Sector Pathways",
-   "detail": "Decarbonization pathways for ammonia, methanol, HVCs, nitric acid N2O, non-primary chemicals, fertilizer use-phase N2O, and alternative feedstocks \u2014 to be updated for CNZS V2.0 compatibility.",
+   "detail": "Decarbonization pathways for ammonia, methanol, HVCs, nitric acid N2O, non-primary chemicals, fertilizer use-phase N2O, and alternative feedstocks.",
    "significance": "medium",
    "source_url": "https://sciencebasedtargets.org/news/sbti-publishes-new-pathways-to-accelerate-chemicals-sectors-net-zero-transition",
    "source_title": "SBTi news, Dec 2, 2025",
@@ -1817,7 +1883,7 @@
    "significance": "high",
    "source_url": "https://www.bracewell.com/resources/carb-issues-proposed-regulations-implementing-sb-253-and-sb-261/",
    "source_title": "Bracewell, Dec 2025",
-   "so_what": "First concrete California deadlines proposed \u2014 the shape held through 2026."
+   "so_what": "First concrete California deadlines proposed — the shape held through 2026."
   },
   {
    "date": "2025-12-01",
@@ -1828,7 +1894,7 @@
    "significance": "high",
    "source_url": "https://ghgprotocol.org/sites/default/files/2025-12/CS-Phase1-ProgressUpdate.pdf",
    "source_title": "CS Phase 1 Progress Update, Dec 2025",
-   "so_what": "Assess your consolidation approach now \u2014 equity share is likely disappearing and Scope 3 becoming mandatory."
+   "so_what": "Assess your consolidation approach now — equity share is likely disappearing and Scope 3 becoming mandatory."
   },
   {
    "date": "2025-12-01",
@@ -1846,29 +1912,40 @@
    "framework": "us",
    "workstream": "California SB 261",
    "headline": "Ninth Circuit enjoins SB 261 enforcement; SB 253 left intact",
-   "detail": "A motions panel grants an injunction pending appeal against SB 261's climate-risk reports on First Amendment grounds, suspending the January 1, 2026 deadline \u2014 while denying relief against SB 253's emissions reporting.",
+   "detail": "A motions panel grants an injunction pending appeal against SB 261's climate-risk reports on First Amendment grounds, suspending the January 1, 2026 deadline — while denying relief against SB 253's emissions reporting.",
    "significance": "high",
    "source_url": "https://www.sullcrom.com/insights/memo/2025/November/Ninth-Circuit-Temporarily-Enjoins-Enforcement-SB-261",
    "source_title": "Sullivan & Cromwell, Nov 2025",
-   "so_what": "Climate-risk report deadline suspended \u2014 keep TCFD/ISSB content warm; SB 253 emissions reporting is unaffected."
+   "so_what": "Climate-risk report deadline suspended — keep TCFD/ISSB content warm; SB 253 emissions reporting is unaffected."
   },
   {
    "date": "2025-11-13",
    "framework": "eu",
    "workstream": "CSRD / Omnibus",
    "headline": "Parliament adopts revised Omnibus negotiating position",
-   "detail": "After the surprise October 22 plenary rejection of the committee mandate, Parliament adopts a deeper-cutting position (1,750 employees + \u20ac450m) by 382\u2013249 \u2014 later superseded by the 1,000-employee trilogue deal.",
+   "detail": "After the surprise October 22 plenary rejection of the committee mandate, Parliament adopts a deeper-cutting position (1,750 employees + €450m) by 382–249 — later superseded by the 1,000-employee trilogue deal.",
    "significance": "medium",
    "source_url": "https://www.loyensloeff.com/insights/news--events/news/the-omnibus-saga-continues-euparliaments-revised-final-position-on-csrd-and-csddd/",
    "source_title": "Loyens & Loeff, Nov 2025",
    "so_what": "Superseded by the December trilogue deal."
   },
   {
+   "date": "2025-11-13",
+   "framework": "ghgp",
+   "workstream": "GHGP–ISO consolidation",
+   "headline": "Harmonization plan launched at COP30",
+   "detail": "ISO and GHGP formally launch the 'Plan to Harmonize Global Carbon Accounting Standards' at COP30, with recognition from the COP30 Presidency and UN Climate High-Level Champions, spanning corporate, project, and product levels.",
+   "significance": "high",
+   "source_url": "https://ghgprotocol.org/blog/ghg-protocol-and-iso-advance-global-harmonization-iso-environmental-management-international",
+   "source_title": "GHG Protocol blog, Dec 2, 2025",
+   "so_what": "Political weight behind a single global carbon accounting rulebook."
+  },
+  {
    "date": "2025-11-06",
    "framework": "sbti",
    "workstream": "CNZS V2.0",
    "headline": "Second CNZS V2 consultation draft published",
-   "detail": "Consultation ran November 6 \u2013 December 12, 2025: simpler structure, scope-specific requirements, the new OER recognition mechanism, and greater sector/geography differentiation.",
+   "detail": "Consultation ran November 6 – December 12, 2025: simpler structure, scope-specific requirements, the new OER recognition mechanism, and greater sector/geography differentiation.",
    "significance": "high",
    "source_url": "https://sciencebasedtargets.org/news/sbti-releases-second-draft-corporate-net-zero-standard-v2-for-consultation",
    "source_title": "SBTi news, Nov 6, 2025",
@@ -1883,18 +1960,7 @@
    "significance": "medium",
    "source_url": "https://www.ifrs.org/news-and-events/news/2025/11/issb-welcomes-tnfd-support-nature-related-disclosure/",
    "source_title": "IFRS news, Nov 2025",
-   "so_what": "Nature disclosures will be TNFD-shaped \u2014 existing TNFD work carries over."
-  },
-  {
-   "date": "2025-11-01",
-   "framework": "ghgp",
-   "workstream": "GHGP\u2013ISO consolidation",
-   "headline": "Harmonization plan launched at COP30",
-   "detail": "ISO and GHGP formally launch the 'Plan to Harmonize Global Carbon Accounting Standards' at COP30, with recognition from the COP30 Presidency and UN Climate High-Level Champions, spanning corporate, project, and product levels.",
-   "significance": "high",
-   "source_url": "https://ghgprotocol.org/blog/ghg-protocol-and-iso-advance-global-harmonization-iso-environmental-management-international",
-   "source_title": "GHG Protocol blog, Dec 2, 2025",
-   "so_what": "Political weight behind a single global carbon accounting rulebook."
+   "so_what": "Nature disclosures will be TNFD-shaped — existing TNFD work carries over."
   },
   {
    "date": "2025-10-24",
@@ -1905,7 +1971,7 @@
    "significance": "medium",
    "source_url": "https://www.mayerbrown.com/en/insights/publications/2026/08/california-climate-disclosure-laws-carb-finalizes-its-initial-rulemaking-resets-the-2026-deadline-and-previews-the-2027-framework",
    "source_title": "Mayer Brown, Aug 2026",
-   "so_what": "A second legal front against California \u2014 no change to deadlines."
+   "so_what": "A second legal front against California — no change to deadlines."
   },
   {
    "date": "2025-10-20",
@@ -1916,40 +1982,40 @@
    "significance": "high",
    "source_url": "https://ghgprotocol.org/blog/release-ghg-protocol-opens-public-consultations-scope-2-and-electricity-sector-consequential",
    "source_title": "GHG Protocol release, Oct 20, 2025",
-   "so_what": "The market-based accounting fight begins \u2014 respond if procurement claims matter to you."
+   "so_what": "The market-based accounting fight begins — respond if procurement claims matter to you."
   },
   {
    "date": "2025-10-08",
    "framework": "eu",
    "workstream": "CBAM",
    "headline": "CBAM Omnibus Regulation (EU) 2025/2083 adopted",
-   "detail": "50-tonne annual de minimis for iron/steel, aluminium, and fertilisers \u2014 exempting ~90% of importers while keeping ~99% of embedded emissions covered. Certificate sales moved to February 2027; in force October 20, 2025.",
+   "detail": "50-tonne annual de minimis covering all CBAM goods except electricity and hydrogen — exempting ~90% of importers while keeping ~99% of embedded emissions covered. Certificate sales moved to February 2027; in force October 20, 2025.",
    "significance": "high",
    "source_url": "https://www.ey.com/en_gl/technical/tax-alerts/eu-adopts-cbam-omnibus-regulation",
    "source_title": "EY, Oct 2025",
-   "so_what": "Small importers (<50t/yr) exempt; everyone else \u2014 certificates start Feb 2027."
+   "so_what": "Small importers (<50t/yr) exempt; everyone else — certificates start Feb 2027."
   },
   {
    "date": "2025-09-12",
    "framework": "us",
    "workstream": "SEC climate rule",
    "headline": "Eighth Circuit holds case until SEC reconsiders or defends",
-   "detail": "The court keeps petitions in abeyance 'until such time as' the SEC reconsiders the rules via notice-and-comment rulemaking or renews its defense \u2014 effectively forcing the rescission path.",
+   "detail": "The court keeps petitions in abeyance 'until such time as' the SEC reconsiders the rules via notice-and-comment rulemaking or renews its defense — effectively forcing the rescission path.",
    "significance": "medium",
    "source_url": "https://www.sec.gov/newsroom/press-releases/2026-49-sec-proposes-rescission-climate-related-disclosure-rules",
    "source_title": "SEC press release 2026-49 (history)",
-   "so_what": "Procedural \u2014 the rescission path was confirmed here."
+   "so_what": "Procedural — the rescission path was confirmed here."
   },
   {
    "date": "2025-09-09",
    "framework": "iso",
    "workstream": "Partnership",
    "headline": "ISO and GHG Protocol announce strategic partnership",
-   "detail": "Agreement to harmonize the ISO 14060 family with the GHGP corporate suite and co-develop co-branded standards including a joint product carbon footprint standard. Endorsed publicly by ISSB Chair Emmanuel Faber \u2014 the structural event behind everything that followed.",
+   "detail": "Agreement to harmonize the ISO 14060 family with the GHGP corporate suite and co-develop co-branded standards including a joint product carbon footprint standard. Endorsed publicly by ISSB Chair Emmanuel Faber — the structural event behind everything that followed.",
    "significance": "high",
    "source_url": "https://ghgprotocol.org/blog/release-iso-and-ghg-protocol-announce-strategic-partnership-deliver-unified-global-standards",
-   "source_title": "ISO\u2013GHGP partnership release, Sep 9, 2025",
-   "so_what": "The structural event: two standard families become one \u2014 plan for convergence, not parallel compliance."
+   "source_title": "ISO–GHGP partnership release, Sep 9, 2025",
+   "so_what": "The structural event: two standard families become one — plan for convergence, not parallel compliance."
   },
   {
    "date": "2025-07-31",
@@ -1971,13 +2037,13 @@
    "significance": "medium",
    "source_url": "https://www.ifrs.org/news-and-events/news/2025/07/issb-comprehensive-review-sasb/",
    "source_title": "IFRS news, Jul 2025",
-   "so_what": "Industry metric refresh underway \u2014 watch your sector's standard."
+   "so_what": "Industry metric refresh underway — watch your sector's standard."
   },
   {
    "date": "2025-07-22",
    "framework": "sbti",
    "workstream": "Financial institutions",
-   "headline": "FINZ V1.0 released \u2014 first net-zero standard for finance",
+   "headline": "FINZ V1.0 released — first net-zero standard for finance",
    "detail": "Covers lending, investment, insurance, and capital markets; requires deforestation-exposure assessment and timelines for ceasing new fossil fuel financing. FIs may choose Near-Term Criteria or FINZ until at least July 31, 2027.",
    "significance": "high",
    "source_url": "https://sciencebasedtargets.org/news/the-sbti-opens-net-zero-standard-for-finance-industry",
@@ -1989,7 +2055,7 @@
    "framework": "us",
    "workstream": "California SB 253",
    "headline": "CARB issues FAQs on SB 253/261",
-   "detail": "Guidance on covered entities, revenue definition, and first-cycle expectations ahead of formal rulemaking \u2014 CARB having missed its July 1, 2025 statutory rulemaking deadline.",
+   "detail": "Guidance on covered entities, revenue definition, and first-cycle expectations ahead of formal rulemaking — CARB having missed its July 1, 2025 statutory rulemaking deadline.",
    "significance": "medium",
    "source_url": "https://dart.deloitte.com/USDART/home/news/all-news/2025/jul/california-air-resources-board-releases-faqs-california-climate-disclosure-regulations",
    "source_title": "Deloitte DART, Jul 2025",
@@ -2004,18 +2070,18 @@
    "significance": "medium",
    "source_url": "https://gorrissenfederspiel.com/en/the-european-commission-withdraws-the-green-claims-directive-proposal/",
    "source_title": "Gorrissen Federspiel",
-   "so_what": "GCD is dead \u2014 but EmpCo still bans offset-based neutrality claims from Sep 2026; audit product claims now."
+   "so_what": "GCD is dead — but EmpCo still bans offset-based neutrality claims from Sep 2026; audit product claims now."
   },
   {
    "date": "2025-06-12",
    "framework": "issb",
    "workstream": "Adoption",
    "headline": "IFRS Foundation: 36 jurisdictions adopting or finalizing ISSB adoption",
-   "detail": "First 17 jurisdictional profiles published (14 targeting full adoption) plus 16 snapshots, covering Australia, Brazil, Hong Kong, Malaysia, Nigeria, T\u00fcrkiye, and others.",
+   "detail": "First 17 jurisdictional profiles published (14 targeting full adoption) plus 16 snapshots, covering Australia, Brazil, Hong Kong, Malaysia, Nigeria, Türkiye, and others.",
    "significance": "high",
    "source_url": "https://www.ifrs.org/news-and-events/news/2025/06/ifrs-foundation-publishes-jurisdictional-profiles-issb-standards/",
    "source_title": "IFRS news, Jun 12, 2025",
-   "so_what": "The ISSB baseline is the global default \u2014 map your exposure by jurisdiction."
+   "so_what": "The ISSB baseline is the global default — map your exposure by jurisdiction."
   },
   {
    "date": "2025-04-28",
@@ -2033,7 +2099,7 @@
    "framework": "eu",
    "workstream": "CSRD / Omnibus",
    "headline": "Stop-the-clock directive adopted",
-   "detail": "Directive (EU) 2025/794 delays wave 2 reporting to FY2027 and wave 3 to FY2028 \u2014 buying time for the substantive Omnibus negotiation.",
+   "detail": "Directive (EU) 2025/794 delays wave 2 reporting to FY2027 and wave 3 to FY2028 — buying time for the substantive Omnibus negotiation.",
    "significance": "high",
    "source_url": "https://www.europarl.europa.eu/legislative-train/package-simplification-business/file-first-omnibus-package-on-sustainability-proposal-amending-csrd-and-csddd",
    "source_title": "EP Legislative Train",
@@ -2048,14 +2114,14 @@
    "significance": "high",
    "source_url": "https://www.sec.gov/newsroom/press-releases/2026-49-sec-proposes-rescission-climate-related-disclosure-rules",
    "source_title": "SEC press release 2026-49 (history)",
-   "so_what": "The federal rule was effectively finished here \u2014 planning pivoted to California and the EU."
+   "so_what": "The federal rule was effectively finished here — planning pivoted to California and the EU."
   },
   {
    "date": "2025-03-18",
    "framework": "sbti",
    "workstream": "CNZS V2.0",
    "headline": "First CNZS V2 consultation draft published",
-   "detail": "Consultation ran March 18 \u2013 June 1, 2025: scope 1/2 split, low-carbon electricity commitment by 2040, scope 3 flexibility options, and BVCM recognition proposals.",
+   "detail": "Consultation ran March 18 – June 1, 2025: scope 1/2 split, low-carbon electricity commitment by 2040, scope 3 flexibility options, and BVCM recognition proposals.",
    "significance": "high",
    "source_url": "https://sciencebasedtargets.org/news/sbti-launches-draft-corporate-net-zero-standard-v2-for-consultation",
    "source_title": "SBTi news, Mar 18, 2025",
@@ -2070,7 +2136,7 @@
    "significance": "high",
    "source_url": "https://www.europarl.europa.eu/legislative-train/package-simplification-business/file-first-omnibus-package-on-sustainability-proposal-amending-csrd-and-csddd",
    "source_title": "EP Legislative Train",
-   "so_what": "The EU blinked on scope \u2014 reporting programs went into re-planning."
+   "so_what": "The EU blinked on scope — reporting programs went into re-planning."
   },
   {
    "date": "2024-12-05",
@@ -2092,18 +2158,18 @@
    "significance": "medium",
    "source_url": "https://www.hunton.com/the-nickel-report/update-on-us-climate-disclosure-requirements",
    "source_title": "Hunton",
-   "so_what": "Parent-level consolidated filing allowed \u2014 decide your filing entity."
+   "so_what": "Parent-level consolidated filing allowed — decide your filing entity."
   },
   {
    "date": "2024-09-26",
    "framework": "ghgp",
    "workstream": "Governance",
    "headline": "Four Technical Working Groups announced",
-   "detail": "Corporate Standard, Scope 2, Scope 3, and AMI TWGs formed from 1,300+ applications \u2014 the working machinery of the revision cycle. The Scope 3 TWG alone held 42 meetings through end-2025.",
+   "detail": "Corporate Standard, Scope 2, Scope 3, and AMI TWGs formed from 1,300+ applications — the working machinery of the revision cycle. The Scope 3 TWG alone held 42 meetings through end-2025.",
    "significance": "high",
    "source_url": "https://ghgprotocol.org/blog/release-ghg-protocol-announces-technical-working-groups-update-process-suite-corporate",
    "source_title": "GHG Protocol release, Sep 26, 2024",
-   "so_what": "The people rewriting the rules were seated here \u2014 the progress updates that followed trace to these groups."
+   "so_what": "The people rewriting the rules were seated here — the progress updates that followed trace to these groups."
   },
   {
    "date": "2024-09-19",
@@ -2121,10 +2187,10 @@
    "framework": "issb",
    "workstream": "GHGP relationship",
    "headline": "IFRS Foundation and GHG Protocol sign MoU",
-   "detail": "Governance arrangements give the ISSB an observer seat on the GHGP Independent Standards Board and early input into revisions \u2014 the mechanism that will mediate any future S2 reference update.",
+   "detail": "Governance arrangements give the ISSB an observer seat on the GHGP Independent Standards Board and early input into revisions — the mechanism that will mediate any future S2 reference update.",
    "significance": "high",
    "source_url": "https://ghgprotocol.org/blog/release-ghg-protocol-launches-official-partnership-ifrs-foundation",
-   "source_title": "GHGP\u2013IFRS partnership release, Jun 24, 2024",
+   "source_title": "GHGP–IFRS partnership release, Jun 24, 2024",
    "so_what": "Insurance that ISSB reporting won't be yanked onto new GHGP rules without consultation."
   },
   {
@@ -2147,7 +2213,7 @@
    "significance": "high",
    "source_url": "https://www.federalregister.gov/documents/2026/06/03/2026-11091/rescission-of-climate-related-disclosure-rules",
    "source_title": "Federal Register (history)",
-   "so_what": "No SEC compliance clock ever started \u2014 and it never restarted."
+   "so_what": "No SEC compliance clock ever started — and it never restarted."
   },
   {
    "date": "2024-03-06",
@@ -2158,7 +2224,7 @@
    "significance": "high",
    "source_url": "https://www.federalregister.gov/documents/2026/06/03/2026-11091/rescission-of-climate-related-disclosure-rules",
    "source_title": "Federal Register (history)",
-   "so_what": "The high-water mark of US federal climate disclosure \u2014 never took effect."
+   "so_what": "The high-water mark of US federal climate disclosure — never took effect."
   },
   {
    "date": "2024-01-01",
@@ -2176,33 +2242,33 @@
    "framework": "us",
    "workstream": "California SB 253",
    "headline": "Governor Newsom signs SB 253 and SB 261",
-   "detail": "The Climate Corporate Data Accountability Act and climate-risk disclosure law are signed \u2014 the first mandatory US corporate GHG reporting regime, statutorily anchored to the GHG Protocol.",
+   "detail": "The Climate Corporate Data Accountability Act and climate-risk disclosure law are signed — the first mandatory US corporate GHG reporting regime, statutorily anchored to the GHG Protocol.",
    "significance": "high",
    "source_url": "https://eelp.law.harvard.edu/tracker/financial-regulation-climate-change-and-climate-related-risk-disclosure/",
    "source_title": "Harvard EELP tracker",
-   "so_what": "US mandatory GHG reporting was born here \u2014 and the GHG Protocol became law in California."
+   "so_what": "US mandatory GHG reporting was born here — and the GHG Protocol became law in California."
   },
   {
    "date": "2023-10-01",
    "framework": "eu",
    "workstream": "CBAM",
    "headline": "CBAM transitional reporting phase begins",
-   "detail": "Quarterly embedded-emissions reporting for covered imports, running through December 31, 2025 \u2014 no financial obligation yet.",
+   "detail": "Quarterly embedded-emissions reporting for covered imports, running through December 31, 2025 — no financial obligation yet.",
    "significance": "medium",
    "source_url": "https://icapcarbonaction.com/en/news/eu-cbam-enters-compliance-phase-and-outlines-path-ahead",
    "source_title": "ICAP",
-   "so_what": "Reporting-only dry run for importers \u2014 the cost phase came in 2026."
+   "so_what": "Reporting-only dry run for importers — the cost phase came in 2026."
   },
   {
    "date": "2023-07-31",
    "framework": "eu",
    "workstream": "ESRS",
    "headline": "Commission adopts ESRS Set 1",
-   "detail": "Twelve sector-agnostic standards adopted, applied from FY2024 by wave 1 companies \u2014 the baseline the 2026 revision now simplifies.",
+   "detail": "Twelve sector-agnostic standards adopted, applied from FY2024 by wave 1 companies — the baseline the 2026 revision now simplifies.",
    "significance": "high",
    "source_url": "https://www.efrag.org/en/draft-simplified-esrs",
    "source_title": "EFRAG",
-   "so_what": "The original 12 standards \u2014 now simplified by the 2026 revision."
+   "so_what": "The original 12 standards — now simplified by the 2026 revision."
   },
   {
    "date": "2023-06-26",
@@ -2220,7 +2286,7 @@
    "framework": "eu",
    "workstream": "CSRD / Omnibus",
    "headline": "CSRD enters into force",
-   "detail": "Directive (EU) 2022/2464 in force with phased application from FY2024 \u2014 the starting point of the EU reporting arc that the Omnibus later reshaped.",
+   "detail": "Directive (EU) 2022/2464 in force with phased application from FY2024 — the starting point of the EU reporting arc that the Omnibus later reshaped.",
    "significance": "high",
    "source_url": "https://www.europarl.europa.eu/legislative-train/package-simplification-business/file-first-omnibus-package-on-sustainability-proposal-amending-csrd-and-csddd",
    "source_title": "EP Legislative Train",
@@ -2231,7 +2297,7 @@
    "framework": "ghgp",
    "workstream": "Revision launch",
    "headline": "GHG Protocol launches corporate suite revision",
-   "detail": "Public surveys and a call for proposals open on the Corporate Standard, Scope 2 Guidance, Scope 3 Standard, and market instruments (through March 2023) \u2014 the formal start of the revision cycle this tracker follows.",
+   "detail": "Public surveys and a call for proposals open on the Corporate Standard, Scope 2 Guidance, Scope 3 Standard, and market instruments (through March 2023) — the formal start of the revision cycle this tracker follows.",
    "significance": "high",
    "source_url": "https://ghgprotocol.org/ghg-protocol-corporate-suite-standards-and-guidance-update-process",
    "source_title": "GHGP corporate suite update process",
@@ -2245,7 +2311,7 @@
    {
     "id": "lane-ghgp-corp",
     "framework": "ghgp",
-    "label": "GHG Protocol \u2014 Corporate Suite (Corp / Scope 2 / Scope 3 / AMI)",
+    "label": "GHG Protocol — Corporate Suite (Corp / Scope 2 / Scope 3 / AMI)",
     "spans": [
      {
       "start": "2022-11",
@@ -2256,13 +2322,13 @@
      {
       "start": "2024-09",
       "end": "2027-04",
-      "label": "TWG development (Phase 1\u20132)",
+      "label": "TWG development (Phase 1–2)",
       "kind": "development"
      },
      {
       "start": "2027-04",
       "end": "2027-10",
-      "label": "Integrated consultation (planned Q2\u2013Q3 2027)",
+      "label": "Integrated consultation (planned Q2–Q3 2027)",
       "kind": "consultation",
       "projected": true
      },
@@ -2276,7 +2342,7 @@
      {
       "start": "2028-12",
       "end": "2029-06",
-      "label": "Consolidated standard published (est. Q4 2028) \u2192 transition",
+      "label": "Consolidated standard published (est. Q4 2028) → transition",
       "kind": "effective",
       "projected": true
      }
@@ -2309,7 +2375,7 @@
      },
      {
       "date": "2026-07",
-      "label": "GHGP\u2013ISO consolidation confirmed",
+      "label": "GHGP–ISO consolidation confirmed",
       "status": "completed",
       "major": true
      },
@@ -2330,7 +2396,7 @@
    {
     "id": "lane-ghgp-lsr",
     "framework": "ghgp",
-    "label": "GHG Protocol \u2014 Land Sector & Removals",
+    "label": "GHG Protocol — Land Sector & Removals",
     "spans": [
      {
       "start": "2022-07",
@@ -2341,7 +2407,7 @@
      {
       "start": "2026-01",
       "end": "2027-01",
-      "label": "Final standard published \u2014 pre-effective",
+      "label": "Final standard published — pre-effective",
       "kind": "final"
      },
      {
@@ -2379,7 +2445,7 @@
    {
     "id": "lane-sbti",
     "framework": "sbti",
-    "label": "SBTi \u2014 Corporate Net-Zero Standard",
+    "label": "SBTi — Corporate Net-Zero Standard",
     "spans": [
      {
       "start": "2024-05",
@@ -2390,7 +2456,7 @@
      {
       "start": "2026-06",
       "end": "2027-03",
-      "label": "V2.0 final \u2014 pre-validation window",
+      "label": "V2.0 final — pre-validation window",
       "kind": "final"
      },
      {
@@ -2450,7 +2516,7 @@
    {
     "id": "lane-issb",
     "framework": "issb",
-    "label": "ISSB \u2014 IFRS S1/S2 & amendments",
+    "label": "ISSB — IFRS S1/S2 & amendments",
     "spans": [
      {
       "start": "2022-07",
@@ -2461,19 +2527,19 @@
      {
       "start": "2023-06",
       "end": "2024-01",
-      "label": "Issued \u2014 pre-effective",
+      "label": "Issued — pre-effective",
       "kind": "final"
      },
      {
       "start": "2024-01",
       "end": "2029-06",
-      "label": "Effective (where adopted) \u2014 jurisdictional rollout",
+      "label": "Effective (where adopted) — jurisdictional rollout",
       "kind": "effective"
      },
      {
       "start": "2025-04",
       "end": "2025-12",
-      "label": "S2 GHG amendments: ED \u2192 final",
+      "label": "S2 GHG amendments: ED → final",
       "kind": "consultation"
      },
      {
@@ -2517,12 +2583,12 @@
    {
     "id": "lane-eu-csrd",
     "framework": "eu",
-    "label": "EU \u2014 CSRD / ESRS",
+    "label": "EU — CSRD / ESRS",
     "spans": [
      {
       "start": "2023-01",
       "end": "2025-02",
-      "label": "CSRD in force \u2014 wave 1 reporting from FY2024",
+      "label": "CSRD in force — wave 1 reporting from FY2024",
       "kind": "effective"
      },
      {
@@ -2534,7 +2600,7 @@
      {
       "start": "2026-03",
       "end": "2027-03",
-      "label": "Omnibus in force \u2014 transposition",
+      "label": "Omnibus in force — transposition",
       "kind": "final"
      },
      {
@@ -2595,7 +2661,7 @@
    {
     "id": "lane-eu-cbam",
     "framework": "eu",
-    "label": "EU \u2014 CBAM",
+    "label": "EU — CBAM",
     "spans": [
      {
       "start": "2023-10",
@@ -2654,12 +2720,12 @@
    {
     "id": "lane-us-sec",
     "framework": "us",
-    "label": "US \u2014 SEC climate rule",
+    "label": "US — SEC climate rule",
     "spans": [
      {
       "start": "2024-03",
       "end": "2026-06",
-      "label": "Adopted but stayed \u2014 never effective",
+      "label": "Adopted but stayed — never effective",
       "kind": "litigation"
      },
      {
@@ -2702,12 +2768,12 @@
    {
     "id": "lane-us-ca",
     "framework": "us",
-    "label": "US \u2014 California SB 253 / SB 261",
+    "label": "US — California SB 253 / SB 261",
     "spans": [
      {
       "start": "2023-10",
       "end": "2025-12",
-      "label": "Statute \u2192 pre-rulemaking (FAQs, workshops)",
+      "label": "Statute → pre-rulemaking (FAQs, workshops)",
       "kind": "development"
      },
      {
@@ -2767,277 +2833,278 @@
   ]
  },
  "overview": {
-  "heavy_hitters_intro": "The changes most likely to hit reporting teams, ranked by how settled they are. Hover any dotted term for a plain-English definition.",
-  "heavy_hitters": [
-   {
-    "framework": "sbti",
-    "confidence": "confirmed",
-    "title": "New rulebook for climate targets \u2014 SBTi V2.0 is final",
-    "who": "Any company with an approved science-based target, or planning one (11,600+ companies)",
-    "what": "The rules for setting and maintaining net-zero targets have been rewritten. Larger companies face stricter requirements \u2014 including outside verification of their emissions numbers. New targets must follow the new rules from February 2028.",
-    "action": "Check which tier your company falls into, and decide whether to submit under the old or new rulebook before the old one closes (Jan 31, 2028)."
-   },
-   {
-    "framework": "issb",
-    "confidence": "confirmed",
-    "title": "Global climate disclosure gets easier \u2014 updates effective Jan 1, 2027",
-    "who": "Companies reporting under ISSB-based rules (adopted or adopting in 30+ jurisdictions \u2014 Japan, UK, Korea\u2026)",
-    "what": "A package of simplifications takes effect: banks and investors only have to count the emissions of their loans and investments (not every financial product), and companies get flexibility where local law conflicts with the default method.",
-    "action": "Plan 2027 filings with the simplifications \u2014 using them early is allowed."
-   },
-   {
-    "framework": "ghgp",
-    "confidence": "confirmed",
-    "title": "The world's two carbon accounting rulebooks are merging",
-    "who": "Effectively everyone \u2014 nearly all emissions inventories follow the GHG Protocol, ISO 14064-1, or both",
-    "what": "GHG Protocol and ISO are combining their corporate standards into one. Public comment opens Q2 2027; final version expected late 2028. Core counting rules will change \u2014 including which subsidiaries count as 'yours' and whether supply-chain emissions are mandatory.",
-    "action": "No rewrite needed yet \u2014 but review how your inventory would hold up under the proposed changes before the comment period opens."
-   },
-   {
-    "framework": "ghgp",
-    "confidence": "confirmed",
-    "title": "First-ever rules for land and carbon-removal accounting \u2014 in force Jan 1, 2027",
-    "who": "Companies with agriculture, bioenergy, or land in their supply chain \u2014 or buying carbon removals",
-    "what": "The GHG Protocol published its first standard for counting land-related emissions and CO2 removals. If your business touches farmland or you plan to count removals toward targets, this is now the rulebook. (Forestry is still being worked out.)",
-    "action": "Screen whether any part of your business or supply chain is covered \u2014 before the January effective date."
-   },
-   {
-    "framework": "eu",
-    "confidence": "confirmed",
-    "title": "The EU's carbon border tax is now real money",
-    "who": "Anyone importing steel, aluminium, cement, fertiliser, hydrogen, or electricity into the EU",
-    "what": "Since January 2026, covered imports carry a carbon cost under CBAM. Payments begin February 2027, first bill due September 2027 \u2014 and the EU plans to extend coverage to finished metal products in 2028.",
-    "action": "Collect emissions data from your suppliers now \u2014 without it, you pay default rates that are usually higher."
-   },
-   {
-    "framework": "us",
-    "confidence": "high",
-    "title": "First mandatory US emissions reports \u2014 California, Nov 10, 2026",
-    "who": "Companies with over $1B revenue doing business in California \u2014 including non-US parents",
-    "what": "California will require public reporting of Scope 1 and Scope 2 emissions, expanding to supply-chain (Scope 3) emissions in 2027. Year one accepts good-faith numbers built from data you already have. The regulation awaits one final legal sign-off.",
-    "action": "Treat Nov 10 as fixed even though sign-off is pending \u2014 and use the time to get your numbers audit-ready."
-   },
-   {
-    "framework": "eu",
-    "confidence": "high",
-    "title": "EU sustainability reporting is slimmer \u2014 and mandatory from FY2027",
-    "who": "Companies with significant EU business: over 1,000 employees and \u20ac450m EU revenue",
-    "what": "The EU cut its required reporting datapoints by roughly 60% and removed about 90% of companies from scope entirely. If you're still in scope, the clock is running: first reports under the new rules are due in 2028.",
-    "action": "Confirm whether you're still in scope, then re-plan reporting against the slimmed template."
-   }
-  ],
-  "horizon_intro": "Open outcomes that could move \u2014 lower certainty, worth watching.",
-  "horizon": [
-   {
-    "framework": "ghgp",
-    "confidence": "medium",
-    "title": "Renewable-electricity accounting is still unresolved",
-    "note": "A proposal would make clean-power claims count only if the power was produced in the same hour and region you used it. Companies pushed back strongly (~22% support in the consultation). If it passes in 2027, renewable procurement strategies change."
-   },
-   {
-    "framework": "us",
-    "confidence": "medium",
-    "title": "A court ruling could upend California's rules \u2014 any day",
-    "note": "Business groups argue the laws force companies to speak against their will. The appeals court heard the case in January 2026; its ruling could void or cement the only mandatory US reporting regime."
-   },
-   {
-    "framework": "ghgp",
-    "confidence": "medium",
-    "title": "How clean-power contracts and carbon credits get reported may change",
-    "note": "GHG Protocol's proposal: report actual emissions and market instruments (certificates, credits) separately \u2014 no more blending them into one number. Draft opens for comment in 2027."
-   },
-   {
-    "framework": "us",
-    "confidence": "high",
-    "title": "SEC set to formally scrap the US federal climate rule",
-    "note": "Expected late 2026. The rules never took effect, so nothing changes day-to-day \u2014 it confirms that US disclosure pressure comes from California, the EU, and investors instead."
-   },
-   {
-    "framework": "eu",
-    "confidence": "confirmed",
-    "title": "EU bans 'carbon neutral' product claims \u2014 Sep 27, 2026",
-    "note": "Claims based on offsetting and vague green labels become illegal on products sold to EU consumers. A near-term to-do for marketing and legal teams."
-   }
-  ],
-  "matrix_intro": "How settled each change is vs. how much work it creates. Editorial estimates \u2014 hover a dot for reasoning.",
   "matrix": [
    {
-    "framework": "sbti",
-    "label": "SBTi V2.0",
     "x": 92,
     "y": 82,
-    "note": "Final standard. New target rules for 11,600+ companies; validation opens Q1 2027.",
     "dx": 0,
-    "dy": 1
+    "dy": 1,
+    "note": "Final standard. New target rules for 11,600+ companies; validation opens Q1 2027.",
+    "label": "SBTi V2.0",
+    "framework": "sbti"
    },
    {
-    "framework": "us",
-    "label": "California SB 253",
     "x": 80,
     "y": 86,
-    "note": "First reports Nov 10, 2026. Near-certain but awaiting final legal sign-off, and a court ruling is pending.",
     "dx": 0,
-    "dy": -1
+    "dy": -1,
+    "note": "First reports Nov 10, 2026. Near-certain but awaiting final legal sign-off, and a court ruling is pending.",
+    "label": "California SB 253",
+    "framework": "us"
    },
    {
-    "framework": "ghgp",
-    "label": "GHGP+ISO merger",
     "x": 72,
     "y": 93,
-    "note": "Confirmed to happen; content lands 2027\u201328. The biggest long-term rewrite of how everyone counts.",
     "dx": 0,
-    "dy": -1
+    "dy": -1,
+    "note": "Confirmed to happen; content lands 2027–28. The biggest long-term rewrite of how everyone counts.",
+    "label": "GHGP+ISO merger",
+    "framework": "ghgp"
    },
    {
-    "framework": "eu",
-    "label": "EU border tax (CBAM)",
     "x": 90,
     "y": 70,
-    "note": "Live law. Heavy for EU importers of covered goods; irrelevant if you import none.",
     "dx": 0,
-    "dy": 1
+    "dy": 1,
+    "note": "Live law. Heavy for EU importers of covered goods; irrelevant if you import none.",
+    "label": "EU border tax (CBAM)",
+    "framework": "eu"
    },
    {
-    "framework": "eu",
-    "label": "Revised ESRS",
     "x": 82,
     "y": 76,
-    "note": "Adopted, in final EU review. Slimmer but still the heaviest disclosure regime for in-scope companies.",
     "dx": 0,
-    "dy": -1
+    "dy": -1,
+    "note": "Adopted, in final EU review. Slimmer but still the heaviest disclosure regime for in-scope companies.",
+    "label": "Revised ESRS",
+    "framework": "eu"
    },
    {
-    "framework": "ghgp",
-    "label": "Scope 3 revision",
     "x": 46,
     "y": 84,
-    "note": "Draft proposals with strong committee support: 95% coverage + data-quality metadata. Big lift if adopted.",
     "dx": 0,
-    "dy": -1
+    "dy": -1,
+    "note": "Draft proposals with strong committee support: 95% coverage + data-quality metadata. Big lift if adopted.",
+    "label": "Scope 3 revision",
+    "framework": "ghgp"
    },
    {
-    "framework": "ghgp",
-    "label": "Scope 2 debate",
     "x": 40,
     "y": 80,
-    "note": "Genuinely unresolved \u2014 hourly matching had ~22% support. Could reshape renewable procurement.",
     "dx": 0,
-    "dy": -1
+    "dy": -1,
+    "note": "Genuinely unresolved — hourly matching had ~22% support. Could reshape renewable procurement.",
+    "label": "Scope 2 debate",
+    "framework": "ghgp"
    },
    {
-    "framework": "ghgp",
-    "label": "Market instruments (AMI)",
     "x": 45,
     "y": 66,
-    "note": "Direction (separate statements, no netting) is clear; details aren't. Would change claims and systems.",
     "dx": 0,
-    "dy": 1
+    "dy": 1,
+    "note": "Direction (separate statements, no netting) is clear; details aren't. Would change claims and systems.",
+    "label": "Market instruments (AMI)",
+    "framework": "ghgp"
    },
    {
-    "framework": "ghgp",
-    "label": "Land & removals (LSR)",
     "x": 90,
     "y": 45,
-    "note": "Final, effective Jan 1, 2027. Heavy only if you touch land, agriculture, or removals.",
     "dx": 0,
-    "dy": -1
+    "dy": -1,
+    "note": "Final, effective Jan 1, 2027. Heavy only if you touch land, agriculture, or removals.",
+    "label": "Land & removals (LSR)",
+    "framework": "ghgp"
    },
    {
-    "framework": "issb",
-    "label": "ISSB S2 updates",
     "x": 94,
     "y": 42,
-    "note": "Final, effective Jan 1, 2027. Mostly relief \u2014 real work only for financial institutions.",
     "dx": 0,
-    "dy": 1
+    "dy": 1,
+    "note": "Final, effective Jan 1, 2027. Mostly relief — real work only for financial institutions.",
+    "label": "ISSB S2 updates",
+    "framework": "issb"
    },
    {
-    "framework": "eu",
-    "label": "EU green-claims ban",
     "x": 95,
     "y": 32,
-    "note": "Law, applies Sep 27, 2026. A contained to-do for marketing and legal.",
     "dx": 0,
-    "dy": 1
+    "dy": 1,
+    "note": "Law, applies Sep 27, 2026. A contained to-do for marketing and legal.",
+    "label": "EU green-claims ban",
+    "framework": "eu"
    },
    {
-    "framework": "us",
-    "label": "New York bill",
     "x": 28,
     "y": 44,
-    "note": "Passed one chamber. If enacted: SB 253-style reporting from 2028 for NY businesses.",
     "dx": 0,
-    "dy": -1
+    "dy": -1,
+    "note": "Passed one chamber. If enacted: SB 253-style reporting from 2028 for NY businesses.",
+    "label": "New York bill",
+    "framework": "us"
    },
    {
-    "framework": "us",
-    "label": "SEC rescission",
     "x": 82,
     "y": 12,
-    "note": "Expected late 2026, but the rules never applied \u2014 near-zero operational impact.",
     "dx": 0,
-    "dy": -1
+    "dy": -1,
+    "note": "Expected late 2026, but the rules never applied — near-zero operational impact.",
+    "label": "SEC rescission",
+    "framework": "us"
    }
-  ]
+  ],
+  "horizon": [
+   {
+    "note": "A proposal would make clean-power claims count only if the power was produced in the same hour and region you used it. Companies pushed back strongly (~22% support in the consultation). If it passes in 2027, renewable procurement strategies change.",
+    "title": "Renewable-electricity accounting is still unresolved",
+    "framework": "ghgp",
+    "confidence": "medium"
+   },
+   {
+    "note": "Business groups argue the laws force companies to speak against their will. The appeals court heard the case in January 2026; its ruling could void or cement the only mandatory US corporate reporting regime.",
+    "title": "A court ruling could upend California's rules — any day",
+    "framework": "us",
+    "confidence": "medium"
+   },
+   {
+    "note": "GHG Protocol's proposal: report actual emissions and market instruments (certificates, credits) separately — no more blending them into one number. Draft opens for comment in 2027.",
+    "title": "How clean-power contracts and carbon credits get reported may change",
+    "framework": "ghgp",
+    "confidence": "medium"
+   },
+   {
+    "note": "The SEC has formally proposed scrapping the rule, but its August 2026 regulatory agenda sets no date for final action. The rules never took effect, so nothing changes day-to-day - it confirms that US disclosure pressure comes from California, the EU, and investors instead.",
+    "title": "SEC set to formally scrap the US federal climate rule",
+    "framework": "us",
+    "confidence": "high"
+   },
+   {
+    "note": "Claims based on offsetting and vague green labels become illegal on products sold to EU consumers. A near-term to-do for marketing and legal teams.",
+    "title": "EU bans offset-based 'carbon neutral' claims — Sep 27, 2026",
+    "framework": "eu",
+    "confidence": "confirmed"
+   }
+  ],
+  "matrix_intro": "How settled each change is vs. how much work it creates. Editorial estimates — hover a dot for reasoning.",
+  "heavy_hitters": [
+   {
+    "who": "Any company with an approved science-based target, or planning one (11,600+ companies)",
+    "what": "The rules for setting and maintaining net-zero targets have been rewritten. Larger companies face stricter requirements — including outside verification of their emissions numbers. New targets must follow the new rules from February 2028.",
+    "title": "New rulebook for climate targets — SBTi V2.0 is final",
+    "action": "Check which tier your company falls into, and decide whether to submit under the old or new rulebook before the old one closes (Jan 31, 2028).",
+    "framework": "sbti",
+    "confidence": "confirmed"
+   },
+   {
+    "who": "Companies reporting under ISSB-based rules (adopted or adopting in 30+ jurisdictions — Japan, UK, Korea…)",
+    "what": "A package of simplifications takes effect: banks and investors only have to count the emissions of their loans and investments (not every financial product), and companies get flexibility where local law conflicts with the default method.",
+    "title": "Global climate disclosure gets easier — updates effective Jan 1, 2027",
+    "action": "Plan 2027 filings with the simplifications — using them early is allowed.",
+    "framework": "issb",
+    "confidence": "confirmed"
+   },
+   {
+    "who": "Effectively everyone — nearly all emissions inventories follow the GHG Protocol, ISO 14064-1, or both",
+    "what": "GHG Protocol and ISO are combining their corporate standards into one. Public comment opens Q2 2027; final version expected late 2028. Core counting rules will change — including which subsidiaries count as 'yours' and whether supply-chain emissions are mandatory.",
+    "title": "The world's two carbon accounting rulebooks are merging",
+    "action": "No rewrite needed yet — but review how your inventory would hold up under the proposed changes before the comment period opens.",
+    "framework": "ghgp",
+    "confidence": "confirmed"
+   },
+   {
+    "who": "Companies with agriculture, bioenergy, or land in their supply chain — or buying carbon removals",
+    "what": "The GHG Protocol published its first standard for counting land-related emissions and CO2 removals. If your business touches farmland or you plan to count removals toward targets, this is now the rulebook. (Forestry is still being worked out.)",
+    "title": "First-ever rules for land and carbon-removal accounting — in force Jan 1, 2027",
+    "action": "Screen whether any part of your business or supply chain is covered — before the January effective date.",
+    "framework": "ghgp",
+    "confidence": "confirmed"
+   },
+   {
+    "who": "Anyone importing steel, aluminium, cement, fertiliser, hydrogen, or electricity into the EU",
+    "what": "Since January 2026, covered imports carry a carbon cost under CBAM. Payments begin February 2027, first bill due September 2027 — and the EU plans to extend coverage to finished metal products in 2028.",
+    "title": "The EU's carbon border tax is now real money",
+    "action": "Collect emissions data from your suppliers now — without it, you pay default rates that are usually higher.",
+    "framework": "eu",
+    "confidence": "confirmed"
+   },
+   {
+    "who": "Companies with over $1B revenue doing business in California — including US subsidiaries of non-US groups",
+    "what": "California will require public reporting of Scope 1 and Scope 2 emissions, expanding to supply-chain (Scope 3) emissions in 2027. Year one accepts good-faith numbers built from data you already have. The regulation awaits one final legal sign-off.",
+    "title": "First mandatory US corporate emissions reports — California, Nov 10, 2026",
+    "action": "Treat Nov 10 as fixed even though sign-off is pending — and use the time to get your numbers audit-ready.",
+    "framework": "us",
+    "confidence": "high"
+   },
+   {
+    "who": "Companies with significant EU business: over 1,000 employees and €450m turnover (non-EU parents have a separate EU-turnover test)",
+    "what": "The EU cut its required reporting datapoints by roughly 60% and removed about 90% of companies from scope entirely. If you're still in scope, the clock is running: first reports under the new rules are due in 2028.",
+    "title": "EU sustainability reporting is slimmer — and mandatory from FY2027",
+    "action": "Confirm whether you're still in scope, then re-plan reporting against the slimmed template.",
+    "framework": "eu",
+    "confidence": "high"
+   }
+  ],
+  "horizon_intro": "Open outcomes that could move — lower certainty, worth watching.",
+  "heavy_hitters_intro": "The changes most likely to hit reporting teams, ranked by how settled they are. Hover any dotted term for a plain-English definition."
  },
  "glossary": {
-  "Scope 1": "Emissions from things your company burns or leaks directly \u2014 vehicles, boilers, refrigerants.",
-  "Scope 2": "Emissions from the electricity, heat, or steam your company buys.",
-  "Scope 3": "Everything else up and down the value chain \u2014 suppliers, purchased goods, shipping, travel, how customers use your products. Usually the biggest share and the hardest to measure.",
+  "Scope 1": "Emissions from things your company burns or leaks directly — vehicles, boilers, refrigerants.",
+  "Scope 2": "Emissions from the electricity, heat, steam, or cooling your company buys.",
+  "Scope 3": "Everything else up and down the value chain — suppliers, purchased goods, shipping, travel, how customers use your products. Usually the biggest share and the hardest to measure.",
   "GHG Protocol": "The de facto global rulebook for how companies count greenhouse gas emissions, maintained by two nonprofits (WRI and WBCSD). Nearly every law and framework builds on it.",
-  "ISO 14064-1": "The international standards body's version of corporate emissions accounting \u2014 now merging with the GHG Protocol.",
-  "SBTi": "Science Based Targets initiative \u2014 the nonprofit that checks whether corporate climate targets are ambitious enough to match climate science.",
-  "ISSB": "International Sustainability Standards Board \u2014 sets the global baseline rules (IFRS S1 and S2) for climate information in annual reports. Countries adopt them into local law.",
-  "IFRS S2": "The ISSB's climate disclosure standard \u2014 what companies must say about climate risk and emissions in investor reports.",
-  "CSRD": "The EU law requiring large companies to publish audited sustainability reports.",
+  "ISO 14064-1": "The international standards body's version of corporate emissions accounting — now merging with the GHG Protocol.",
+  "SBTi": "Science Based Targets initiative — the nonprofit that checks whether corporate climate targets are ambitious enough to match climate science.",
+  "ISSB": "International Sustainability Standards Board — sets the global baseline rules (IFRS S1 and S2) for climate information in annual reports. Countries adopt them into local law.",
+  "IFRS S2": "The ISSB's climate disclosure standard — what companies must say about climate risk and emissions in investor reports.",
+  "CSRD": "The EU law requiring large companies to publish externally assured sustainability reports.",
   "ESRS": "The detailed EU reporting templates CSRD companies must follow; ESRS E1 is the climate one.",
-  "CBAM": "The EU's carbon border tax \u2014 importers pay for emissions embedded in steel, aluminium, cement, fertiliser, hydrogen, and electricity brought into the EU.",
+  "CBAM": "The EU's carbon border tax — importers pay for emissions embedded in steel, aluminium, cement, fertiliser, hydrogen, and electricity brought into the EU.",
   "SB 253": "California's law requiring large companies doing business there to publicly report their emissions.",
   "SB 261": "California's companion law requiring reports on climate-related financial risks.",
   "market-based": "Counting purchased electricity using your contracts and certificates (like renewable energy credits) instead of the local grid average.",
   "location-based": "Counting purchased electricity at the average emissions of your local grid, regardless of what contracts you hold.",
-  "hourly matching": "A proposed stricter rule: clean-power claims would only count if the clean power was generated in the same hour and region it was used.",
-  "limited assurance": "A light-touch external check \u2014 a reviewer confirms nothing looks wrong. Cheaper and less thorough than a full audit.",
-  "reasonable assurance": "A full audit at the level of a financial audit \u2014 much more evidence, much more cost.",
+  "hourly matching": "A stricter rule proposed in the GHG Protocol Scope 2 revision: clean-power claims would only count if the clean power was generated in the same hour and region it was used.",
+  "limited assurance": "A light-touch external check — a reviewer confirms nothing looks wrong. Cheaper and less thorough than a full audit.",
+  "reasonable assurance": "A full audit at the level of a financial audit — much more evidence, much more cost.",
   "financed emissions": "The share of emissions attributable to a bank's or investor's loans and investments.",
   "consolidation": "The rules deciding which subsidiaries, joint ventures, and facilities count as part of 'your' company's emissions.",
-  "equity share": "A consolidation approach where you count emissions in proportion to your ownership stake \u2014 proposed for elimination.",
+  "equity share": "A consolidation approach where you count emissions in proportion to your ownership stake — proposed for elimination.",
   "operational control": "A consolidation approach where you count 100% of emissions from operations you run day-to-day.",
-  "financial control": "A consolidation approach where you count 100% of emissions from operations you control financially \u2014 proposed as the new default.",
-  "public consultation": "A formal comment period on a draft \u2014 the text is not final and can change.",
+  "financial control": "A consolidation approach where you count 100% of emissions from operations you control financially — proposed as the new default.",
+  "public consultation": "A formal comment period on a draft — the text is not final and can change.",
   "exposure draft": "A draft standard published for public comment before being finalized.",
-  "delegated act": "EU fine-print legislation adopted by the Commission \u2014 becomes law unless Parliament or Council object during a review ('scrutiny') period.",
-  "OAL": "California's Office of Administrative Law \u2014 the final legal check before a state regulation takes effect.",
-  "AMI": "'Actions & Market Instruments' \u2014 the GHG Protocol workstream deciding how clean-power contracts, carbon credits, and other climate actions get reported.",
+  "delegated act": "EU fine-print legislation adopted by the Commission — becomes law unless Parliament or Council object during a review ('scrutiny') period.",
+  "OAL": "California's Office of Administrative Law — the final legal check before a state regulation takes effect.",
+  "AMI": "'Actions & Market Instruments' — the GHG Protocol workstream deciding how clean-power contracts, carbon credits, and other climate actions get reported.",
   "FLAG": "SBTi's target rules for companies with forest, land, and agriculture emissions.",
-  "TWG": "Technical Working Group \u2014 the expert committees drafting the GHG Protocol revisions.",
-  "OER": "'Ongoing Emissions Responsibility' \u2014 SBTi's new expectation that companies take responsibility for emissions they haven't yet eliminated, e.g. by funding carbon removals.",
-  "carbon removals": "Taking CO2 out of the atmosphere \u2014 through trees, soil, or technology \u2014 as opposed to emitting less.",
-  "Omnibus": "The EU's 2025\u201326 simplification package that cut the scope and content of its sustainability reporting laws.",
+  "TWG": "Technical Working Group — the expert committees drafting the GHG Protocol revisions.",
+  "OER": "'Ongoing Emissions Responsibility' — SBTi's new expectation that companies take responsibility for emissions they haven't yet eliminated, e.g. by funding carbon removals.",
+  "carbon removals": "Taking CO2 out of the atmosphere — through trees, soil, or technology — as opposed to emitting less.",
+  "Omnibus": "The EU's 2025–26 simplification package that cut the scope and content of its sustainability reporting laws.",
   "double materiality": "The EU principle that companies report both how climate affects them financially and how they affect the climate.",
-  "Category 15": "The Scope 3 category covering emissions from investments \u2014 being narrowed to banks' and investors' financed emissions.",
-  "netting": "Subtracting credits or clean-power certificates from measured emissions to show one combined number \u2014 increasingly disallowed.",
-  "GWP": "Global warming potential \u2014 the conversion factors that translate different greenhouse gases into CO2-equivalents.",
-  "CARB": "California Air Resources Board \u2014 the state agency writing and enforcing California's climate disclosure rules.",
-  "SEC": "US Securities and Exchange Commission \u2014 the federal stock-market regulator.",
-  "EFRAG": "European Financial Reporting Advisory Group \u2014 the technical body that drafts the EU's reporting standards.",
-  "PCAF": "Partnership for Carbon Accounting Financials \u2014 the industry methodology for counting financed emissions.",
-  "TNFD": "Taskforce on Nature-related Financial Disclosures \u2014 the voluntary framework for reporting nature-related risks.",
-  "SASB": "Sustainability Accounting Standards Board \u2014 industry-specific disclosure metrics, now maintained by the ISSB.",
-  "CNZS": "Corporate Net-Zero Standard \u2014 SBTi's main rulebook for net-zero targets.",
-  "LSR": "Land Sector and Removals \u2014 the GHG Protocol standard for land emissions and carbon removals.",
-  "FCA": "Forest Carbon Accounting \u2014 the unresolved forestry piece of the GHG Protocol's land rules.",
-  "FINZ": "Financial Institutions Net-Zero \u2014 SBTi's target rules for banks, insurers, and investors.",
-  "ISB": "Independent Standards Board \u2014 the body that approves GHG Protocol standards.",
-  "JWG": "Joint Working Group \u2014 a combined ISO + GHG Protocol drafting team.",
-  "RFI": "Request for Information \u2014 an early questionnaire before drafting begins; more preliminary than a consultation.",
-  "MRV": "Measurement, reporting and verification \u2014 compliance-grade rules for proving emissions numbers.",
-  "EmpCo": "The EU's Empowering Consumers Directive \u2014 bans vague green claims and offset-based 'carbon neutral' labels from September 2026.",
-  "VSME": "The EU's voluntary reporting standard for smaller companies \u2014 also caps what data big companies may demand from small suppliers.",
+  "Category 15": "The Scope 3 category covering emissions from investments — being narrowed to banks' and investors' financed emissions.",
+  "netting": "Subtracting credits or clean-power certificates from measured emissions to show one combined number — increasingly disallowed.",
+  "GWP": "Global warming potential — the conversion factors that translate different greenhouse gases into CO2-equivalents.",
+  "CARB": "California Air Resources Board — the state agency writing and enforcing California's climate disclosure rules.",
+  "SEC": "US Securities and Exchange Commission — the federal stock-market regulator.",
+  "EFRAG": "European Financial Reporting Advisory Group — the technical body that drafts the EU's reporting standards.",
+  "PCAF": "Partnership for Carbon Accounting Financials — the industry methodology for counting financed emissions.",
+  "TNFD": "Taskforce on Nature-related Financial Disclosures — the voluntary framework for reporting nature-related risks.",
+  "SASB": "Sustainability Accounting Standards Board — industry-specific disclosure metrics, now maintained by the ISSB.",
+  "CNZS": "Corporate Net-Zero Standard — SBTi's main rulebook for net-zero targets.",
+  "LSR": "Land Sector and Removals — the GHG Protocol standard for land emissions and carbon removals.",
+  "FCA": "Forest Carbon Accounting — the unresolved forestry piece of the GHG Protocol's land rules.",
+  "FINZ": "Financial Institutions Net-Zero — SBTi's target rules for banks, insurers, and investors.",
+  "ISB": "Independent Standards Board — the body that approves GHG Protocol standards.",
+  "JWG": "Joint Working Group — a combined ISO + GHG Protocol drafting team.",
+  "RFI": "Request for Information — an early questionnaire before drafting begins; more preliminary than a consultation.",
+  "MRV": "Measurement, reporting and verification — compliance-grade rules for proving emissions numbers.",
+  "EmpCo": "The EU's Empowering Consumers Directive — bans vague green claims and offset-based 'carbon neutral' labels from September 2026.",
+  "VSME": "The EU's voluntary reporting standard for smaller companies — also caps what data big companies may demand from small suppliers.",
   "CDP": "The nonprofit disclosure platform (formerly Carbon Disclosure Project) where thousands of companies report emissions annually.",
-  "GHG": "Greenhouse gas \u2014 CO2 plus methane, N2O, and industrial gases, counted together as CO2-equivalents.",
-  "PCF": "Product carbon footprint \u2014 the emissions of one product across its whole life cycle.",
-  "GHGP": "GHG Protocol \u2014 the de facto global rulebook for corporate emissions accounting."
+  "GHG": "Greenhouse gas — CO2 plus methane, N2O, and industrial gases, counted together as CO2-equivalents.",
+  "PCF": "Product carbon footprint — the emissions of one product across its whole life cycle.",
+  "GHGP": "GHG Protocol — the de facto global rulebook for corporate emissions accounting.",
+  "call for evidence": "An open request from a standard-setter for data, studies and practical experience on a topic, used to shape a draft before any text exists — broader and earlier than a public consultation, which asks for comment on an already-written draft."
  },
  "acronyms": {
   "SBTi": "Science Based Targets initiative",
@@ -3067,10 +3134,11 @@
   "GWP": "global warming potential",
   "PCF": "product carbon footprint",
   "GHGP": "GHG Protocol",
-  "EmpCo": "Empowering Consumers Directive"
+  "EmpCo": "Empowering Consumers Directive",
+  "VSME": "Voluntary sustainability reporting Standard for SMEs"
  },
  "landscape": {
-  "intro": "Corporate emissions rules come in three layers, and companies usually face all three at once. Right now, every layer is being rewritten \u2014 which is why this dashboard exists.",
+  "intro": "Corporate emissions rules come in three layers, and companies usually face all three at once. Right now, every layer is being rewritten — which is why this dashboard exists.",
   "layers": [
    {
     "name": "MEASURE",
@@ -3079,12 +3147,12 @@
      {
       "framework": "ghgp",
       "name": "GHG Protocol",
-      "line": "The de facto global rulebook for counting corporate emissions \u2014 first full revision since it was written."
+      "line": "The de facto global rulebook for counting corporate emissions — first full revision since the 2004 edition."
      },
      {
       "framework": "iso",
       "name": "ISO 14060 family",
-      "line": "The international-standards version of the same rules \u2014 now merging with the GHG Protocol into one standard."
+      "line": "The international-standards version of the same rules — now merging with the GHG Protocol into one standard."
      }
     ]
    },
@@ -3095,7 +3163,7 @@
      {
       "framework": "sbti",
       "name": "SBTi",
-      "line": "Validates whether climate targets match the science \u2014 its main rulebook (V2.0) was just rewritten."
+      "line": "Validates whether climate targets match the science — its main rulebook (V2.0) was just rewritten."
      }
     ]
    },
@@ -3110,31 +3178,31 @@
      },
      {
       "framework": "eu",
-      "name": "EU (CSRD \u00b7 ESRS \u00b7 CBAM)",
-      "line": "The most demanding disclosure regime \u2014 just simplified \u2014 plus a carbon border tax with real money attached."
+      "name": "EU (CSRD · ESRS · CBAM)",
+      "line": "The most demanding disclosure regime — just simplified — plus a carbon border tax with real money attached."
      },
      {
       "framework": "us",
-      "name": "US (California \u00b7 SEC \u00b7 states)",
-      "line": "Federal rules are being scrapped while California builds the first mandatory US reporting regime."
+      "name": "US (California · SEC · states)",
+      "line": "Federal rules are being scrapped while California builds the first mandatory US corporate reporting regime."
      }
     ]
    }
   ],
-  "footer": "The layers connect: disclosure laws and target frameworks almost all point back at the GHG Protocol for the actual counting \u2014 the full map is in How they relate."
+  "footer": "The layers connect: disclosure laws and target frameworks almost all point back at the GHG Protocol for the actual counting — the full map is in How they relate."
  },
  "changes": {
   "intro": "What the new or proposed rules actually change, framework by framework: today's rule on the left, the new one on the right. Final = adopted text. Proposed = official draft, can still change. Open = direction genuinely undecided.",
   "frameworks": [
    {
     "framework": "sbti",
-    "title": "SBTi \u2014 Corporate Net-Zero Standard: V1.3.1 \u2192 V2.0",
+    "title": "SBTi — Corporate Net-Zero Standard: V1.3.1 → V2.0",
     "note": "V2.0 is final (June 11, 2026). Companies may still submit under V1.3.1 until January 31, 2028; V2.0-only after that.",
     "rows": [
      {
       "topic": "Who faces which rules",
       "old": "Broadly uniform requirements, with a separate SME route.",
-      "new": "Category A (large + medium companies in high-income countries) gets the strictest requirements; Category B gets lighter ones. The SME route is replaced.",
+      "new": "Category A (large companies from all countries + medium companies in high-income countries) gets the strictest requirements; Category B gets lighter ones. The SME route is replaced.",
       "status": "final"
      },
      {
@@ -3145,26 +3213,26 @@
      },
      {
       "topic": "Assurance / verification",
-      "old": "No third-party assurance requirement \u2014 inventories and progress were self-reported.",
-      "new": "Category A companies must obtain at least limited assurance over the GHG inventory (scopes 1, 2, and 3) and the data behind target-setting, plus assured end-of-cycle performance assessments. Category B: encouraged, not required.",
+      "old": "No third-party assurance requirement — inventories and progress were self-reported.",
+      "new": "Category A companies must obtain at least limited assurance over the GHG inventory and target-setting data and the data behind target-setting, plus assured end-of-cycle performance assessments. Category B: encouraged, not required.",
       "status": "final"
      },
      {
       "topic": "Scope 2 accounting for targets",
       "old": "Market-based accounting (contracts and certificates) could carry the target.",
-      "new": "Targets sit on location-based (grid-average) numbers; a separate optional 'low-carbon electricity' alignment target covers procurement \u2014 with hourly accounting intervals for significant electricity users.",
+      "new": "Targets sit on location-based (grid-average) numbers; a separate optional 'low-carbon electricity' alignment target covers procurement — with hourly accounting intervals for significant electricity users.",
       "status": "final"
      },
      {
       "topic": "Scope 3 boundary",
       "old": "Cover 67% of scope 3 near-term / 90% long-term.",
-      "new": "Significance-based: address every category that is \u22655% of category 1\u201314 emissions; new alignment-target options (supplier engagement, revenue-based); long-term scope 3 targets largely optional.",
+      "new": "Significance-based: address every category that is ≥5% of category 1–14 emissions; new alignment-target options (supplier engagement, revenue-based); long-term scope 3 targets largely optional.",
       "status": "final"
      },
      {
       "topic": "Offsets & residual emissions",
       "old": "Beyond-value-chain mitigation encouraged but voluntary; offsets never count toward targets.",
-      "new": "Offsets still never count toward targets. New Ongoing Emissions Responsibility framework: optional recognition tiers now; from 2035 Category A companies are expected to fund carbon removals (\u22651% of ongoing emissions).",
+      "new": "Offsets still never count toward targets. New Ongoing Emissions Responsibility framework: optional recognition tiers now; from 2035 Category A companies are expected to fund carbon removals (≥1% of ongoing emissions).",
       "status": "final"
      },
      {
@@ -3177,7 +3245,7 @@
    },
    {
     "framework": "ghgp",
-    "title": "GHG Protocol \u2014 Corporate Standard (2004), Scope 2 Guidance (2015), Scope 3 Standard (2011) \u2192 consolidated GHGP\u2013ISO standard",
+    "title": "GHG Protocol — Corporate Standard (2004), Scope 2 Guidance (2015), Scope 3 Standard (2011) → consolidated GHGP–ISO standard",
     "note": "The merger is confirmed; the content below is largely PROPOSED (public comment Q2 2027, final expected late 2028). Land Sector & Removals is already final.",
     "rows": [
      {
@@ -3188,7 +3256,7 @@
      },
      {
       "topic": "Is scope 3 mandatory?",
-      "old": "Optional \u2014 a separate standard; exclusions justified qualitatively.",
+      "old": "Optional — a separate standard; exclusions justified qualitatively.",
       "new": "Required for conformance: cover at least 95% of required scope 3 emissions, quantify 100% annually to prove exclusions, and disaggregate by data type with verification status disclosed.",
       "status": "proposed"
      },
@@ -3213,26 +3281,26 @@
      {
       "topic": "New scope 3 category",
       "old": "15 categories, fixed since 2011.",
-      "new": "Proposed Category 16 'other value chain activities' (e.g. facilitated deals, licensing) \u2014 optional for most, mandatory for oil & gas distributors.",
+      "new": "Proposed Category 16 'other value chain activities' (e.g. facilitated deals, licensing) — optional for most, mandatory for oil & gas distributors.",
       "status": "proposed"
      },
      {
       "topic": "Clean-power contracts & carbon credits",
       "old": "Instruments blend into the market-based scope 2 figure; no standard for claiming 'impact.'",
-      "new": "Separate statements: physical inventory, market-based/contractual inventory, and an impact statement \u2014 reported side by side, never netted.",
+      "new": "Separate statements: physical inventory, market-based/contractual inventory, and an impact statement — reported side by side, never netted.",
       "status": "proposed"
      },
      {
       "topic": "Land & carbon removals",
       "old": "Not covered by the corporate suite.",
-      "new": "Land Sector & Removals Standard v1.1: final rules for land emissions, biogenic products, and removals \u2014 effective January 1, 2027 (forestry still being worked out).",
+      "new": "Land Sector & Removals Standard v1.1: final rules for land emissions, biogenic products, and removals — effective January 1, 2027 (forestry still being worked out).",
       "status": "final"
      }
     ]
    },
    {
     "framework": "issb",
-    "title": "ISSB \u2014 IFRS S2 as issued (2023) \u2192 December 2025 amendments",
+    "title": "ISSB — IFRS S2 as issued (2023) → December 2025 amendments",
     "note": "Final; effective January 1, 2027, early use allowed. Mostly relief, not new obligations.",
     "rows": [
      {
@@ -3250,7 +3318,7 @@
      {
       "topic": "Measurement method",
       "old": "GHG Protocol (2004) required unless a jurisdiction mandates otherwise.",
-      "new": "The jurisdictional relief is clarified \u2014 and can now be applied to just part of the company.",
+      "new": "The jurisdictional relief is clarified — and can now be applied to just part of the company.",
       "status": "final"
      },
      {
@@ -3262,20 +3330,20 @@
      {
       "topic": "Nature & biodiversity",
       "old": "Not covered.",
-      "new": "Proposed voluntary practice statement built on the TNFD framework \u2014 draft due October 2026. Not a new mandatory standard.",
+      "new": "Proposed voluntary practice statement built on the TNFD framework — draft due October 2026. Not a new mandatory standard.",
       "status": "proposed"
      }
     ]
    },
    {
     "framework": "eu",
-    "title": "EU \u2014 original CSRD/ESRS (2023) \u2192 Omnibus + revised ESRS (2026)",
+    "title": "EU — original CSRD/ESRS (2023) → Omnibus + revised ESRS (2026)",
     "note": "The Omnibus directive is law; the revised ESRS are adopted and in a final review period (expected in force ~Nov 2026, mandatory FY2027).",
     "rows": [
      {
       "topic": "Who must report",
       "old": "Large companies from ~250 employees, in waves; listed SMEs later.",
-      "new": ">1,000 employees AND >\u20ac450m turnover \u2014 roughly 90% of originally scoped companies removed; listed SMEs fully exempt.",
+      "new": ">1,000 employees AND >€450m turnover — roughly 90% of originally scoped companies removed; listed SMEs fully exempt.",
       "status": "final"
      },
      {
@@ -3287,7 +3355,7 @@
      {
       "topic": "Audit level",
       "old": "Limited assurance, with a planned upgrade to reasonable assurance.",
-      "new": "Limited assurance made permanent \u2014 the upgrade is deleted.",
+      "new": "Limited assurance made permanent — the upgrade is deleted.",
       "status": "final"
      },
      {
@@ -3318,42 +3386,42 @@
    },
    {
     "framework": "us",
-    "title": "US \u2014 SEC rule (2024) and California SB 253/261 \u2192 where each stands",
+    "title": "US — SEC rule (2024) and California SB 253/261 → where each stands",
     "note": "Two opposite directions: the federal rule is being withdrawn while California's regime comes into force.",
     "rows": [
      {
       "topic": "Federal disclosure",
-      "old": "SEC 2024 climate rule: material climate risk + scope 1/2 disclosure for large filers (never took effect \u2014 stayed in court).",
+      "old": "SEC 2024 climate rule: material climate risk + scope 1/2 disclosure for large filers (never took effect — stayed in court).",
       "new": "Full rescission proposed May 2026, no replacement; back to the pre-2024 materiality-based regime. Final action expected late 2026.",
       "status": "proposed"
      },
      {
       "topic": "Emissions reporting (California)",
       "old": "No mandatory US corporate GHG reporting.",
-      "new": "SB 253: >$1B-revenue companies doing business in CA report scope 1 & 2 publicly from Nov 10, 2026 (good-faith year one), scope 3 from 2027 \u2014 proposed as five mandatory categories (purchased goods, fuel/energy, waste, travel, commuting).",
+      "new": "SB 253: >$1B-revenue companies doing business in CA report scope 1 & 2 publicly from Nov 10, 2026 (good-faith year one), scope 3 from 2027 — proposed as five mandatory categories (purchased goods, fuel/energy, waste, travel, commuting).",
       "status": "final"
      },
      {
       "topic": "Assurance (California)",
-      "old": "\u2014",
+      "old": "—",
       "new": "Limited assurance over scope 1 & 2 from 2027, escalating to reasonable assurance by 2030; recognized standards include ISSA 5000 and ISO 14064-3.",
       "status": "proposed"
      },
      {
       "topic": "Which GHG Protocol applies (California)",
-      "old": "\u2014",
-      "new": "Pinned to today's GHGP versions (Corporate Standard, 2015 Scope 2 Guidance, Scope 3 Standard); CARB says reporting 'will not dynamically update' as GHGP revises \u2014 dual-methodology risk later.",
+      "old": "—",
+      "new": "Pinned to today's GHGP versions (Corporate Standard, 2015 Scope 2 Guidance, Scope 3 Standard); CARB says reporting 'will not dynamically update' as GHGP revises — dual-methodology risk later.",
       "status": "final"
      },
      {
       "topic": "Climate-risk reports (California)",
       "old": "Voluntary TCFD-style reporting.",
-      "new": "SB 261 biennial climate-risk reports (>$500M revenue) \u2014 currently blocked by a court injunction; new deadline set after the appeal resolves.",
+      "new": "SB 261 biennial climate-risk reports (>$500M revenue) — currently blocked by a court injunction; new deadline set after the appeal resolves.",
       "status": "litigation"
      },
      {
       "topic": "Other states",
-      "old": "\u2014",
+      "old": "—",
       "new": "New York's SB 253-style bill passed its Senate (Feb 2026): scope 1/2 from 2028, scope 3 from 2029 if enacted.",
       "status": "proposed"
      }
