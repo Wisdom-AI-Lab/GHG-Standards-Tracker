@@ -22,7 +22,7 @@
 :root{
   --ink:#1E2D3D; --ink-2:#475569; --ink-3:#64748B; --ink-4:#94A3B8;
   --bg:#F8F9FA; --card:#FFFFFF; --line:#E2E8F0; --line-soft:#EDF1F5;
-  --ghgp:#1E6BA8; --iso:#C2410C; --issb:#8B5CF6; --sbti:#15803D; --eu:#0794BC; --us:#C0316F;
+  --ghgp:#1E6BA8; --iso:#9A6A00; --issb:#8B5CF6; --sbti:#15803D; --eu:#0794BC; --us:#C0316F;
   --ok:#047857; --warn:#B45309; --info:#1D4ED8; --muted:#6B7280;
 }
 html { scroll-behavior: smooth; overflow-y: scroll; scrollbar-gutter: stable; }
@@ -48,6 +48,9 @@ a { color: var(--ghgp); }
 .sidebar.collapsed .side-fw { justify-content:center; padding:7px 0; }
 .side-item { display:flex; align-items:center; gap:10px; padding:9px 10px; border:none; background:none; color:#9BB5D4; font-family:inherit; font-size:12.5px; font-weight:550; border-radius:8px; cursor:pointer; text-align:left; transition:background .12s,color .12s; white-space:nowrap; }
 .side-item:hover { background:rgba(255,255,255,.08); color:#fff; }
+.side-item[data-view="about"] { color:#FBBF24; }
+.side-item[data-view="about"]:hover { color:#FCD34D; }
+.side-item[data-view="about"].active { color:#FBBF24; }
 .side-item.active { background:rgba(255,255,255,.14); color:#fff; box-shadow:inset 3px 0 0 #5B9BD5; }
 .si-ico { width:16px; height:16px; flex-shrink:0; display:inline-flex; }
 .si-ico svg { width:16px; height:16px; }
@@ -65,6 +68,12 @@ a { color: var(--ghgp); }
 .tb-right { display:flex; align-items:center; gap:12px; min-width:0; }
 .topbar .updated-chip { color:#D6E6F2; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22); }
 .topbar .updated-chip b { color:#fff; }
+.tb-left { display:flex; align-items:center; gap:20px; min-width:0; }
+.fw-key { display:flex; align-items:center; gap:11px; overflow:hidden; cursor:default; background:rgba(255,255,255,.92); border-radius:9px; padding:5px 12px; }
+.fw-key .fk-item { display:flex; align-items:center; gap:5px; font-size:10.5px; font-weight:700; color:#3D4F61; white-space:nowrap; }
+.fw-key .fk-item .fw-dot { width:8px; height:8px; }
+.fw-key .fk-info { color:#8598AB; font-size:10px; font-weight:800; border:1.3px solid #A9B8C7; border-radius:50%; width:14px; height:14px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+@media (max-width: 1280px){ .fw-key { display:none; } }
 .searchbox { position:relative; }
 .searchbox input { width:min(340px, 38vw); padding:7px 12px 7px 30px; font-size:12.5px; font-family:inherit; border:1px solid #CBD5E1; border-radius:18px; background:#F8FAFC url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="%2394A3B8" stroke-width="1.6"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg>') no-repeat 9px center/14px; color:var(--ink); }
 .searchbox input:focus { outline:none; border-color:#fff; background-color:#fff; }
@@ -184,11 +193,14 @@ a { color: var(--ghgp); }
 .fw-chip { display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:600; }
 .fw-dot { width:9px; height:9px; border-radius:3px; flex-shrink:0; }
 .conf { display:inline-flex; align-items:center; gap:5px; font-size:10.5px; font-weight:700; padding:2px 8px; border-radius:10px; white-space:nowrap; }
+.conf-link { cursor:pointer; }
+.conf-link:hover { filter:brightness(.92); }
 .conf-confirmed { background:#ECFDF5; color:#047857; border:1px solid #A7F3D0; }
 .conf-high { background:#EFF6FF; color:#1D4ED8; border:1px solid #BFDBFE; }
 .conf-medium { background:#FFFBEB; color:#B45309; border:1px solid #FDE68A; }
 .conf-low { background:#F3F4F6; color:#6B7280; border:1px solid #E5E7EB; }
-.sig { font-size:9.5px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; padding:2px 6px; border-radius:3px; }
+.sig { display:inline-flex; align-items:center; gap:4px; font-size:9.5px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; padding:2px 6px; border-radius:3px; }
+.sig .sig-bars { flex-shrink:0; }
 .sig-high { background:#FEF2F2; color:#B91C1C; }
 .sig-medium { background:#FFF7ED; color:#9A3412; }
 .sig-low { background:#F1F5F9; color:#64748B; }
@@ -260,7 +272,7 @@ main { min-height: 70vh; }
 .xw-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:12px; margin-top:14px; }
 .xw-card { padding:15px 18px; }
 .xw-type { font-size:9.5px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; padding:2px 7px; border-radius:3px; display:inline-block; }
-.xt-merging { background:#FFF1E7; color:#C2410C; }
+.xt-merging { background:#F8F1DF; color:#9A6A00; }
 .xt-references { background:#EFF6FF; color:#1D4ED8; }
 .xt-depends { background:#ECFDF5; color:#047857; }
 .xt-aligns { background:#F5F3FF; color:#6D28D9; }
@@ -480,14 +492,17 @@ footer .wrap { font-size:11.5px; color:var(--ink-3); line-height:1.7; }
       <button class="side-item" data-view="timeline"><span class="si-ico"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M2.5 4.5h7M2.5 8h11M2.5 11.5h5" stroke-linecap="round" stroke-width="2.2"/></svg></span><span class="si-lbl">Timeline</span></button>
       <button class="side-item" data-view="about"><span class="si-ico"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="8" cy="8" r="5.8"/><path d="M8 7.2v3.6"/><circle cx="8" cy="4.9" r=".9" fill="currentColor" stroke="none"/></svg></span><span class="si-lbl">Method</span></button>
     </div>
-    <div class="side-sec">Framework filter</div>
+    <div class="side-sec" id="fwFilterSec">Framework filter</div>
     <div class="side-fws" id="sideFws"></div>
     <div class="side-fill"></div>
     <button class="side-collapse" id="sideCollapse" title="Collapse menu"><span class="si-ico">«</span><span class="si-lbl">Collapse</span></button>
   </nav>
   <div class="content">
     <div class="topbar">
-      <div class="tb-title" id="tbTitle">Overview</div>
+      <div class="tb-left">
+        <div class="tb-title" id="tbTitle">Overview</div>
+        <div class="fw-key" id="fwKey" title="Framework colors are consistent across every page, chart, and map"></div>
+      </div>
       <div class="tb-right">
         <div class="searchbox">
           <input id="searchInput" type="search" placeholder="Search anything — try “assurance” or “Scope 3”" autocomplete="off">
@@ -552,12 +567,17 @@ footer .wrap { font-size:11.5px; color:var(--ink-3); line-height:1.7; }
     </div>
     <div class="card about-card">
       <h3>How the data is maintained</h3>
-      <p>The dataset behind this page is refreshed weekly. Each cycle re-checks official sources — standard-setter announcements, consultation pages, regulators' rulemaking dockets, and the Official Journal / Federal Register — plus reputable legal analyses for interpretation. Every dated item links to its source. Corrections land in the next weekly cycle; if you spot an error, check the linked source first, then the repository linked in the footer.</p>
+      <p>The dataset behind this page is refreshed weekly. Each cycle re-checks official sources — standard-setter announcements, consultation pages, regulators' rulemaking dockets, and the Official Journal / Federal Register — plus reputable legal analyses for interpretation. Every dated item links to its source. Corrections land in the next weekly cycle; if you spot an error, check the linked source first, then the repository linked in the footer. On top of the weekly refresh, the full dataset is <a href="https://github.com/jmz5033/ghg-standards-tracker/blob/main/VERIFICATION.md" target="_blank" rel="noopener">re-audited monthly against primary sources</a> — the verification process is documented publicly.</p>
     </div>
     <div class="card about-card">
       <h3>How to read the confidence ratings</h3>
       <p>Every workstream carries a confidence rating <em>with its reasoning shown</em>, answering one question: <b>how likely is it that what's described here is what you'll eventually have to comply with?</b></p>
       <table class="conf-table" id="confTable"></table>
+    </div>
+    <div class="card about-card">
+      <h3>How to read the impact tags</h3>
+      <p>Each item in the Updates feed carries an <b>impact</b> tag: how much work the development creates for a typical corporate reporting team. Impact is separate from confidence — a change can be fully confirmed but light, or wide open but potentially heavy.</p>
+      <table class="conf-table" id="impactTable"></table>
     </div>
     <div class="card about-card">
       <h3>Plain-English glossary</h3>
@@ -658,7 +678,36 @@ function gloss(text, opts){
   }
   return out + esc(text.slice(pos));
 }
-const confBadge = lv => `<span class="conf conf-${lv}">${lv === 'confirmed' ? '✓ ' : ''}${DATA.confidence_legend[lv].label}${lv==='confirmed'?'':' confidence'}</span>`;
+function sigBars(lv){
+  const n = lv === 'high' ? 3 : lv === 'medium' ? 2 : 1;
+  let bars = '';
+  for (let i = 0; i < 3; i++){
+    const bh = 3.2 + i * 2.6;
+    bars += `<rect x="${i*3.5}" y="${9-bh}" width="2.5" height="${bh}" rx="0.8" opacity="${i < n ? 1 : .28}"/>`;
+  }
+  return `<svg class="sig-bars" width="10" height="9" viewBox="0 0 10 9" fill="currentColor" aria-hidden="true">${bars}</svg>`;
+}
+function buildFwKey(){
+  document.getElementById('fwKey').innerHTML =
+    DATA.frameworks.map(f => `<span class="fk-item"><span class="fw-dot" style="background:${f.color}"></span>${esc(f.short)}</span>`).join('') +
+    `<span class="fk-info" aria-hidden="true">i</span>`;
+}
+const FILTERABLE_VIEWS = ['frameworks','changes','updates'];
+function updateFilterVis(v){
+  const on = FILTERABLE_VIEWS.includes(v);
+  const sec = document.getElementById('fwFilterSec'), fws = document.getElementById('sideFws');
+  if (sec) sec.style.display = on ? '' : 'none';
+  if (fws) fws.style.display = on ? '' : 'none';
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('.conf-link'); if (!b) return;
+  showView('about');
+  const t = document.getElementById('confTable');
+  const card = t.closest('.card');
+  setTimeout(() => { card.scrollIntoView({behavior:'smooth', block:'start'});
+    card.style.boxShadow = '0 0 0 2px #1E6BA8'; setTimeout(() => card.style.boxShadow = '', 1800); }, 60);
+});
+const confBadge = lv => `<span class="conf conf-${lv} conf-link" title="Click to see how confidence is rated">${lv === 'confirmed' ? '✓ ' : ''}${DATA.confidence_legend[lv].label}${lv==='confirmed'?'':' confidence'}</span>`;
 const fwChip = id => { const f = DATA.frameworks.find(x=>x.id===id); return f ? `<span class="fw-chip"><span class="fw-dot" style="background:${f.color}"></span>${esc(f.short)}</span>` : ''; };
 
 function init(){
@@ -681,6 +730,8 @@ function init(){
 
   DATA.updates.forEach((u,i) => u._i = i);
   buildSideFws();
+  buildFwKey();
+  updateFilterVis('overview');
   renderLandscape();
   renderChanges();
   renderOverview();
@@ -698,6 +749,7 @@ function showView(v){
   document.querySelectorAll('.view').forEach(x => x.classList.remove('active'));
   document.getElementById('view-' + v).classList.add('active');
   document.getElementById('tbTitle').textContent = VIEW_TITLES[v] || '';
+  updateFilterVis(v);
   window.scrollTo({top:0});
 }
 
@@ -719,7 +771,7 @@ function devRow(u){
   const bullets = sentences(u.detail).map(s=>`<li>${gloss(s)}</li>`).join('');
   return `<div class="dev-row" id="upd-${u._i}">
     <div class="dev-new">
-      <div class="dev-meta"><span class="date">${fmtDate(u.date)}</span>${fwChip(u.framework)}<span class="ws" style="font-size:10.5px;color:var(--ink-3)">${esc(u.workstream)}</span><span class="sig sig-${u.significance}">${u.significance}</span></div>
+      <div class="dev-meta"><span class="date">${fmtDate(u.date)}</span>${fwChip(u.framework)}<span class="ws" style="font-size:10.5px;color:var(--ink-3)">${esc(u.workstream)}</span><span class="sig sig-${u.significance}" title="${u.significance.charAt(0).toUpperCase()+u.significance.slice(1)} impact — how much work this creates for reporting teams (separate from confidence). See Method.">${sigBars(u.significance)}impact</span></div>
       <div class="head">${gloss(u.headline, {expand:false, mark:false})}</div>
       <ul>${bullets}</ul>
       <div class="src"><a href="${esc(u.source_url)}" target="_blank" rel="noopener">${esc(u.source_title)} ↗</a></div>
@@ -1037,7 +1089,7 @@ function stepper(w, color){
 function wsxCard(w, f){
   glossBegin();
   const conf = w.confidence.level, cc = CONF_COLOR[conf];
-  const meter = `<div class="meter" title="${esc(w.confidence.reasoning)}">
+  const meter = `<div class="meter conf-link" title="${esc(w.confidence.reasoning)} — click for how ratings work">
     <div class="segs">${[0,1,2,3].map(i=>`<div class="seg" style="${i<CONF_FILL[conf]?`background:${cc}`:''}"></div>`).join('')}</div>
     <span class="lbl" style="color:${cc}">${conf}</span>
   </div>`;
@@ -1063,7 +1115,7 @@ function wsxCard(w, f){
 }
 
 /* ---------- crosswalk ---------- */
-const XW_TYPE_COLOR = { merging:'#C2410C', references:'#1D4ED8', depends:'#047857', aligns:'#6D28D9', diverges:'#B91C1C', watch:'#B45309' };
+const XW_TYPE_COLOR = { merging:'#9A6A00', references:'#1D4ED8', depends:'#047857', aligns:'#6D28D9', diverges:'#B91C1C', watch:'#B45309' };
 
 function renderCrosswalk(){
   document.getElementById('xwIntro').textContent = DATA.crosswalk.intro;
@@ -1227,8 +1279,18 @@ function drawBuckets(){
 
 /* ---------- about ---------- */
 function renderAbout(){
-  document.getElementById('confTable').innerHTML = Object.entries(DATA.confidence_legend).map(([k,v]) =>
+  const CONF_ORDER = { confirmed:0, high:1, medium:2, low:3 };
+  document.getElementById('confTable').innerHTML = Object.entries(DATA.confidence_legend)
+    .sort((a,b) => (CONF_ORDER[a[0]] ?? 9) - (CONF_ORDER[b[0]] ?? 9)).map(([k,v]) =>
     `<tr><td>${confBadge(k)}</td><td>${esc(v.description)}</td></tr>`).join('');
+  const IMPACT_LEGEND = [
+    ['high', 'Creates or changes obligations — expect real work: new data, new processes, or a deadline.'],
+    ['medium', 'Worth planning around — shapes decisions or timelines, but demands no immediate action.'],
+    ['low', 'Context — a useful signal with no action needed.']
+  ];
+  const it = document.getElementById('impactTable');
+  if (it) it.innerHTML = IMPACT_LEGEND.map(([lv, d]) =>
+    `<tr><td><span class="sig sig-${lv}">${sigBars(lv)}impact</span></td><td>${esc(d)}</td></tr>`).join('');
   const g = document.getElementById('glossTable');
   if (g && DATA.glossary) g.innerHTML = Object.entries(DATA.glossary).sort((a,b)=>a[0].localeCompare(b[0]))
     .map(([t,def],i) => `<tr id="gl-${i}"><td>${esc(t)}</td><td>${esc(def)}</td></tr>`).join('');
