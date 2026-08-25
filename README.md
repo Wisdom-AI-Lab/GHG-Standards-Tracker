@@ -15,7 +15,12 @@ A weekly-updated, vendor-neutral reference for sustainability professionals trac
 index.html        # the entire dashboard (single file, no build step, no dependencies)
 data/data.json    # all content: frameworks, workstreams, updates, timeline, crosswalk
 UPDATE_GUIDE.md   # how the weekly refresh works
+VERIFICATION.md   # how the dataset is audited monthly against primary sources
 ```
+
+## Data quality
+
+Content is refreshed weekly and **re-audited monthly**: parallel AI research agents re-verify every load-bearing date, status, and figure against primary sources, findings are cross-checked and classified by severity, and verified corrections are applied to the live dataset. See [VERIFICATION.md](VERIFICATION.md) for the full process and its limitations. Spotted an error? Open an issue — flagged items get priority in the next audit.
 
 The page loads its dataset from a live endpoint (`https://jhuaienvydgdnqwgwiau.supabase.co/functions/v1/ghg-data`), which is refreshed weekly — so content updates never require a redeploy. The bundled `data/data.json` is the fallback snapshot: the site uses it when the endpoint is unreachable, and the endpoint seeds itself from it if its store is ever empty. The snapshot is re-synced to the repo periodically.
 
