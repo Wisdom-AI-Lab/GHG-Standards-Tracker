@@ -1,3 +1,4 @@
+import {PACKAGING_RECORD_IDS,MAP_SOURCE_IDS,INTERACTIONS} from '../data/interactions.mjs';
 import {PUBLIC_SOURCE,PUBLIC_ENTITIES,ILLUSTRATIVE_ENTITIES,SCENARIOS,GUIDED_QUESTIONS} from '../data/client-demo.mjs';
 import {REAL_REQUIREMENTS,REGULATORY_SOURCES,RULESET_VERSION,REPORTING_PERIODS} from '../data/requirements.mjs';
 import {dateRange,safeUrl} from './core.mjs';
@@ -10,7 +11,7 @@ export {PUBLIC_SOURCE,PUBLIC_ENTITIES,SCENARIOS,GUIDED_QUESTIONS,REPORTING_PERIO
 export const RESULTS={match:'Scope screen matched',no_match:'Selected route not matched',unknown:'Requires more facts',not_due:'Before selected route starts',not_covered:'Coverage not researched',outside:'Outside scenario group',implementation:'Scope matched · implementation unresolved',paused:'Scope matched · enforcement enjoined'};
 export const BOUNDARIES={financial_control:'Financial control',operational_control:'Operational control',equity_share:'Equity share'};
 export function createDemoState(){
-  return {profile:'illustrative',scenario:'baseline',asOf:'2027-02-01',reportingStart:'2026-07-01',boundary:'financial_control',entity:'all',jurisdiction:'all',tab:'graph',materialityCase:'water',materialityLevel:'entity',supplierEvidence:'missing',sources:['public-entities','illustrative-facts',...REGULATORY_SOURCES.map(s=>s.id),'ifrs'],question:'',answer:null,saved:[],notice:''};
+  return {profile:'illustrative',scenario:'baseline',asOf:'2027-02-01',reportingStart:'2026-07-01',boundary:'financial_control',entity:'all',jurisdiction:'all',tab:'graph',materialityCase:'water',materialityLevel:'entity',supplierEvidence:'missing',sources:['public-entities','illustrative-facts',...REGULATORY_SOURCES.map(s=>s.id),...MAP_SOURCE_IDS,'ifrs'],question:'',answer:null,saved:[],notice:''};
 }
 const fullDate=value=>typeof value==='string'&&value.length===10&&!!dateRange(value);
 export function snapshot({scenario='baseline',asOf='2027-02-01',reportingStart='2026-07-01'}={}){
@@ -107,6 +108,7 @@ export function demoSources(data){
     {...PUBLIC_SOURCE,text:PUBLIC_SOURCE.note+' Selected rows and exhibit page references are shown in the optional public workspace.'},
     {id:'illustrative-facts',title:'Atlas · company evidence',kind:'Illustrative company data',url:null,text:'All Atlas company facts are authored assumptions, including Mainboard coverage, historical STI membership, control and absence of relief. Pacific has separate illustrative consolidated figures for each selectable financial year: AUD 240m revenue, AUD 600m assets and 200 employees. Straits is assumed in the historical STI cohort. UK Distribution is assumed subject to SGX Mainboard rules, but its historical STI membership is unknown. Orchid is Mainboard-listed and outside the historical STI cohort. Acquisition adds it to the group without creating its local obligations. Americas and California Distribution are illustrative US-formed businesses with California nexus and FY 2025 total revenue of USD 1,500m and USD 750m respectively. Mexico is a domestic nonfinancial CNBV issuer; relief elections are unknown. France has illustrative 1,200 average employees and EUR 600m net turnover; national scope, wave and exemptions are unverified. Lumen Packaging is an independent illustrative supplier, not an owned entity. Materiality and sample evidence controls are authored assumptions. Group root and facility are not separately screened. These are not PepsiCo facts or actual client records.'},
     ...REGULATORY_SOURCES,
+    ...MAP_SOURCE_IDS.map(id=>{const r=data.records.find(r=>'record:'+r.id===id);return {id,title:r?.title||id,kind:'Register evidence · human review pending',url:r?.sources[0]?.url||null,checked_on:r?.checked_on,locator:r?.sources.map(s=>s.locator||s.title).join('; '),text:r?`${r.summary} ${r.applicability} ${r.check_note}`:'Source record unavailable.',available:!!r,recordId:r?.id,additionalSources:r?.sources};}),
     {id:'ifrs',title:'IFRS S2 amendment source note',kind:'Official source · bounded summary',url:ifrs?.sources[0]?.url||null,text:ifrs?`${ifrs.summary} ${ifrs.applicability}`:'The IFRS S2 source record is unavailable. No answer can be supported.',available:!!ifrs}
   ];
 }
@@ -114,8 +116,9 @@ const normalise=value=>String(value).toLowerCase().replace(/[?.,!]/g,'').replace
 export function answerQuestion(input,state,data){
   const question=GUIDED_QUESTIONS.find(q=>[q.question,...q.aliases].some(label=>normalise(label)===normalise(input)));
   if(!question)return {supported:false,title:'Outside supported questions',text:'No live AI model is connected. Choose a supported question; arbitrary questions and uploaded files are not analysed.',citations:[]};
-  const citations=question.id==='ifrs'?['ifrs']:state.profile==='public'?['public-entities']:['illustrative-facts',...(TOPIC_SOURCES[question.id]||REGULATORY_SOURCES.map(s=>s.id))];
-  const sources=demoSources(data),missing=citations.filter(id=>!state.sources.includes(id)||sources.find(s=>s.id===id)?.available===false);
+  const extraCitations=question.id==='packaging'?PACKAGING_RECORD_IDS.map(id=>'record:'+id):question.id==='overlaps'?['record:eu-csrd','record:eu-ppwr','interoperability','ifrs']:null;
+  const citations=question.id==='ifrs'?['ifrs']:state.profile==='public'?['public-entities']:['illustrative-facts',...(extraCitations||TOPIC_SOURCES[question.id]||REGULATORY_SOURCES.map(s=>s.id))];
+  const sources=demoSources(data),missing=citations.filter(id=>!state.sources.includes(id)||!sources.some(s=>s.id===id)||sources.find(s=>s.id===id)?.available===false);
   if(missing.length)return {supported:false,title:'Required evidence is not selected',text:'Select the following source(s) before this guided answer can be shown: '+missing.map(id=>sources.find(s=>s.id===id)?.title||id).join('; ')+'. No answer has been inferred from excluded sources.',citations:[]};
   let text,rows=[],materiality=null,suppliers=[];
   const allRows=assessmentRows(state),snap=state.profile==='illustrative'?snapshot(state):null;
@@ -123,6 +126,10 @@ export function answerQuestion(input,state,data){
   else if(state.profile==='public'){
     text=question.id==='changes'?'Business scenarios are disabled for the optional public example. Use Atlas for the presentation.':question.id==='boundary'?'The subsidiary list supports selected names and jurisdictions at its stated date, not direct ownership, control or legal applicability.':question.id==='missing'?'Missing: verified reporting periods, direct ownership/control, listing, financial facts, applicable instruments and relief. The real-rule pack has not been applied to these public records.':'Five entity/jurisdiction pairs are visible in the optional public extract; every row remains unresolved.';
     if(question.id==='matrix'||question.id==='missing')rows=allRows;
+  }else if(question.id==='packaging'){
+    text='PPWR and the seven selected US state packaging EPR programmes need a separate product-market assessment. Missing facts: destination markets, responsible producer/importer, covered materials, exemptions, material weights, registration/PRO membership and product-conformity evidence. No packaging applicability conclusion is made from the Atlas organisation graph. '+PACKAGING_RECORD_IDS.map(id=>{const r=data.records.find(r=>r.id===id);return r.title+': '+r.summary;}).join(' ')+' A divestment does not erase an entity’s market obligations; supplier data may remain relevant to the buyer. Programme milestones are not automatically client filing deadlines.';
+  }else if(question.id==='overlaps'){
+    text=INTERACTIONS.filter(r=>['esrs-issb','packaging-disclosure'].includes(r.id)).map(r=>r.shared+' '+r.separate).join(' ')+' Review the Interoperability map for the full selected crosswalk. Reuse evidence only after checking entity scope, materiality, units, periods, methods and source versions; there is no automatic equivalence.';
   }else if(TOPIC_TEXT[question.id]){
     text=TOPIC_TEXT[question.id];
     if(question.id==='california')rows=allRows.filter(r=>r.rule.startsWith('CA-')&&r.entityId.startsWith('atlas-us'));

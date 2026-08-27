@@ -66,7 +66,7 @@ These are bounded primary-source checks, not an independent legal opinion, a rev
 | [IFRS Foundation · adoption and materiality FAQs](https://www.ifrs.org/sustainability/knowledge-hub/faqs/) | FAQs: mandatory adoption; materiality; reasonable and supportable information |
 | [ISSB / European Commission / EFRAG · interoperability](https://www.ifrs.org/content/dam/ifrs/supporting-implementation/issb-standards/esrs-issb-standards-interoperability-guidance.pdf) | 2 May 2024 · section 1.1; Scope 3 measurement mapping; ESRS 1 and IFRS S2 references |
 
-Retrieval limits: the direct Mexico DOF amendment and the March 2026 CNBV support PDF were not retrievable. The Mexico route relies on the IFRS Foundation jurisdiction profile, not a claimed full-text CUE review. EUR-Lex Directive (EU) 2026/470 HTML/PDF retrieval returned a bot-verification page; the EU scope gate uses the Council announcement. No French transposition analysis was completed.
+Retrieval limits: the direct Mexico DOF amendment and the March 2026 CNBV support PDF were not retrievable. The Mexico route relies on the IFRS Foundation jurisdiction profile, not a claimed full-text CUE review. At the earlier check, EUR-Lex Directive (EU) 2026/470 returned a bot-verification page. The subsequent packaging/interoperability update successfully read the directive and updated the EU source note; see the entry below. No French transposition analysis was completed.
 
 CARB’s 27 July bulletin is a modified proposal, not evidence of final OAL approval. No operative first SB 253 deadline was established by this check. The SB 261 docket separately supplies the current injunction/voluntary-reporting status. The Commission’s July ESRS announcement describes scrutiny before application; the demo does not mark the revised standards as operative. These uncertainties are shown in the interface rather than silently resolved.
 
@@ -81,3 +81,36 @@ The 2024 joint interoperability guidance supports the conceptual comparison and 
 - California HSC 38532/38533, CARB July modified-text notice and SB 261 docket were reopened for the register summaries. Their URLs are in the record data and the earlier extension table. Statutory scope, proposed deadlines and enforcement status remain separate. No new final OAL approval or independent court-order review was established.
 
 These four register records complement the client screening pack; they do not add a TNFD entity-applicability engine or enable automatic monitoring.
+
+
+## CSRD, packaging and interoperability update — 27 August 2026
+
+The source checks below support the new register records and selected timeline events. They are bounded research, not human approval or a full producer-compliance assessment. This update did not reverify every pre-existing regulatory record.
+
+| Record | Evidence and bounded check |
+|---|---|
+| eu-csrd | [European Union / EUR-Lex](https://eur-lex.europa.eu/eli/dir/2026/470/oj/eng) — Articles 2(4), 2(5), 3 and 5; [Council of the EU](https://www.consilium.europa.eu/en/press/press-releases/2026/02/24/council-signs-off-simplification-of-sustainability-reporting-and-due-diligence-requirements-to-boost-eu-competitiveness/) — CSRD scope and transition exemption; [European Commission](https://finance.ec.europa.eu/news/commission-adopts-revised-sustainability-reporting-standards-2026-07-03_en) — 3 July 2026; scrutiny period and value-chain cap |
+| eu-ppwr | [European Commission](https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en) — Overview, implementation and timeline; [European Union / EUR-Lex](https://eur-lex.europa.eu/eli/reg/2025/40/oj/eng) — Articles 5–7, 12, 15, 29, 44–45, 71 |
+| us-epr-ca | [CalRecycle](https://calrecycle.ca.gov/laws/rulemaking/sb54regulations/) — Overview and Current Status |
+| us-epr-or | [Oregon DEQ](https://www.oregon.gov/deq/recycling/Documents/RMAProducerObligationsSummary.pdf) — Pages 1–3: products, producers, exemptions and compliance |
+| us-epr-co | [Colorado General Assembly](https://leg.colorado.gov/bills/hb22-1355) — Bill Summary: programme participation and plans; [Circular Action Alliance · programme operator](https://circularactionalliance.org/news-feed/co-program-plan-approved) — 10 December 2025 announcement; What’s Next |
+| us-epr-me | [Maine DEP](https://www.maine.gov/dep/waste/recycle/epr.html) — Recent newsletters; implementation progress; producer obligations |
+| us-epr-mn | [Minnesota Pollution Control Agency](https://www.pca.state.mn.us/air-water-land-climate/extended-producer-responsibility-for-packaging) — Covered materials; programme oversight; timeline |
+| us-epr-md | [Maryland Department of the Environment](https://mde.maryland.gov/programs/land/WasteManagement/Pages/ProducerResponsibility.aspx) — Packaging and Paper Products section; [State of Maryland](https://regs.maryland.gov/us/md/exec/comar/26.04.14) — Effective date: May 25, 2026 |
+| us-epr-wa | [Washington Department of Ecology](https://ecology.wa.gov/waste-toxics/reducing-recycling-waste/our-recycling-programs/recycling-reform-act) — Programme timeline; [Washington Department of Ecology](https://ecology.wa.gov/waste-toxics/reducing-recycling-waste/our-recycling-programs/recycling-reform-act/producer-responsibility-organization) — Producer obligations: from 2026 |
+
+Important distinctions:
+
+- **CSRD:** Directive 2026/470 Articles 2–3 support the revised EU scope and FY 2027 phase; Article 5 sets 19 March 2027 for transposing Articles 1–3. Neither that date nor the reporting-year start is a client filing deadline. No French transposition or full two-year qualification/exemption analysis was completed. The 3 July revised-ESRS announcement remains subject to scrutiny; operative application is not assumed.
+- **PPWR:** Article 71 provides general application on 12 August 2026. Article 12 labelling uses the later of 12 August 2028 or 24 months after relevant implementing acts. Articles 6–7 also have later-of conditions around January 2030. The UI preserves these as conditional anchors. Article 29 beverage reuse is subject to product/operator exceptions. National EPR registration and product conformity need separate assessment.
+- **California:** SB 54 is administered by CalRecycle; it is not a CARB climate-disclosure programme. Its regulation approval does not establish SB 253 rule approval.
+- **Oregon:** Bottle Bill beverage containers and associated secondary packaging must be assessed separately. The February 2025 guidance supports the July 2025 programme start, not a current annual fee schedule or every later development.
+- **Colorado:** The legislature’s enacted-act summary and CAA’s December 2025 programme announcement were read. CDPHE programme and press-release pages returned HTTP 403. The displayed June 2026 planning window is derived from the announcement’s six-month implementation requirement; current agency status, exact launch and client deadlines remain unverified.
+- **Maine:** DEP’s August 20 notice records no stewardship-organisation proposals; the programme page says implementation timing is being reassessed. Do not roll old anticipated registration or payment dates forward. The 90-day initial-registration trigger depends on the registration mechanism becoming available.
+- **Minnesota:** MPCA programme phases and January 2032 product routes were checked. Phase windows do not resolve individual submissions.
+- **Maryland:** COMAR 26.04.14 administrative history confirms 25 May 2026 effectiveness. The full compliance guide could not be retrieved; detailed registration, fee and submission schedules remain open. MDE’s paint-plan approval date must not be assigned to packaging.
+- **Washington:** Ecology distinguishes producer registration/data/membership-fee duties from 2026 from the 2030 service rollout. The webpage’s “after March 2029” membership restriction is retained at month precision, pending exact statutory-date review.
+
+The [2024 ESRS–ISSB interoperability guidance](https://www.ifrs.org/content/dam/ifrs/supporting-implementation/issb-standards/esrs-issb-standards-interoperability-guidance.pdf) was reopened: introductory disclaimer and sections 1–4 support an alignment crosswalk, not blanket equivalence. The map explicitly separates this published guidance from editorial reuse mappings. It predates later revisions.
+
+No confidential files, actual producer sales figures, product conformity documents or new ownership facts were added. Packaging applicability remains unassessed pending destination markets, responsible producer roles, covered-product/exemption evidence and registration records.

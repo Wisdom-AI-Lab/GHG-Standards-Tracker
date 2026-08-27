@@ -2,7 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createServer} from 'node:http';
-import {STAGES,escapeHtml,safeUrl,dateRange,formatDate,isStale,filterRecords,milestones,developments,summarise,validateDataset} from '../assets/core.mjs';
+import {STAGES,escapeHtml,safeUrl,dateRange,formatDate,formatTimelineDate,datePrecision,isStale,filterRecords,milestones,developments,summarise,validateDataset} from '../assets/core.mjs';
+import {priorityActions} from '../assets/priority-actions.mjs';
+import {INTERACTIONS,PACKAGING_RECORD_IDS,validateInteractions} from '../data/interactions.mjs';
 import {renderView,renderDetail,start} from '../assets/app.mjs';
 import {createDemoState,updateDemo,validateDemo,PUBLIC_SOURCE,PUBLIC_ENTITIES,snapshot,isMember,boundaryPosition,assessmentRows,evaluateRequirement,atLeastTwo,visibleRows,scenarioDiff,answerQuestion,GUIDED_QUESTIONS,assessMateriality,valueChainRows} from '../assets/demo-core.mjs';
 import {REAL_REQUIREMENTS,REGULATORY_SOURCES,RULESET_VERSION} from '../data/requirements.mjs';
@@ -15,7 +17,7 @@ const clone=()=>structuredClone(data);
 
 test('independent dataset passes validation and has no invented human approvals',()=>{
   assert.deepEqual(validateDataset(data),[]);
-  assert.equal(data.records.length,11);
+  assert.equal(data.records.length,20);
   assert.ok(data.records.every(r=>r.review==='source_checked'));
   assert.ok(data.records.every(r=>r.sources.every(s=>safeUrl(s.url))));
 });
@@ -31,11 +33,11 @@ test('filters combine search tokens, framework, stage and region',()=>{
   assert.equal(filterRecords(data.records,{query:'  IFRS   emissions ',framework:'ISSB / IFRS',stage:'published',region:'Global'})[0].id,'ifrs-s2-ghg-amendments');
   assert.equal(filterRecords(data.records,{query:'Scope 2',region:'United States'}).length,0);
   assert.equal(filterRecords(data.records,{query:'CBAM',region:'European Union'}).length,1);
-  assert.equal(filterRecords(data.records).length,11);
+  assert.equal(filterRecords(data.records).length,20);
 });
 test('filtered metrics and stale checks derive from records, not hardcoded counts',()=>{
   const stats=summarise(data.records,today);
-  assert.deepEqual(stats,{records:11,frameworks:9,pending:11,stale:0});
+  assert.deepEqual(stats,{records:20,frameworks:12,pending:20,stale:0});
   assert.equal(summarise(filterRecords(data.records,{region:'United States'}),today).records,1);
   assert.equal(isStale(data.records[0],new Date('2026-10-01')),true);
   assert.equal(isStale(data.records[0],new Date('2026-08-28')),false);
@@ -43,7 +45,7 @@ test('filtered metrics and stale checks derive from records, not hardcoded count
 test('upcoming timeline excludes elapsed dates and keeps a quarter until its end',()=>{
   const all=milestones(data.records,{today});
   const upcoming=milestones(data.records,{upcomingOnly:true,today});
-  assert.equal(all.length,13);assert.equal(upcoming.length,9);
+  assert.equal(all.length,39);assert.equal(upcoming.length,22);
   assert.ok(upcoming.every(m=>dateRange(m.date)[1]>=today.getTime()));
   const duringQuarter=milestones(data.records,{upcomingOnly:true,today:new Date('2027-05-15')});
   assert.ok(duringQuarter.some(m=>m.date==='2027-Q2'));
@@ -52,7 +54,7 @@ test('upcoming timeline excludes elapsed dates and keeps a quarter until its end
 test('development log is reverse chronological without mutating source data',()=>{
   const original=JSON.stringify(data.records);
   const list=developments(data.records);
-  assert.equal(list[0].date,'2026-08-13');assert.equal(list.at(-1).date,'2023-09');
+  assert.equal(list[0].date,'2026-08-20');assert.equal(list.at(-1).date,'2023-09');
   assert.equal(JSON.stringify(data.records),original);
 });
 test('validator catches malformed structure, duplicate IDs, dates and evidence references',()=>{
@@ -64,7 +66,7 @@ test('validator catches malformed structure, duplicate IDs, dates and evidence r
 test('human review labels require actual reviewer fields',()=>{
   const d=clone();d.records[0].review='human_reviewed';assert.ok(validateDataset(d).some(e=>e.includes('reviewer')));
   d.records[0].reviewer='Demo reviewer';d.records[0].reviewed_on='2026-08-27';assert.deepEqual(validateDataset(d),[]);
-  assert.equal(summarise(d.records,today).pending,10);
+  assert.equal(summarise(d.records,today).pending,19);
   d.records[0].reviewed_on='2026-Q3';assert.ok(validateDataset(d).length>0);
   d.records[0].reviewed_on='2026-09-01';assert.ok(validateDataset(d).length>0);
 });
@@ -76,17 +78,17 @@ test('text and links are escaped or restricted before HTML rendering',()=>{
   assert.ok(validateDataset(d).length>0);
 });
 test('all eight views render source-linked content without undefined fields',()=>{
-  for(const view of ['overview','register','updates','timeline','compare','method','workspace','notebook']){
+  for(const view of ['overview','register','updates','timeline','compare','interoperability','method','workspace','notebook']){
     const result=renderView({view,data,today});assert.ok(result.length>250);assert.doesNotMatch(result,/undefined|NaN/);
     assert.match(result,/record|source|evidence/i);
   }
   assert.match(renderView({view:'timeline',data,today,upcoming:false}),/Date elapsed · not a completion finding/);
-  assert.match(renderView({view:'method',data,today}),/no model provider, API credentials/);
+  assert.match(renderView({view:'method',data,today}),/no scheduled research or live AI is configured/);
 });
 test('empty results show recovery; comparison and method are explicitly unfiltered',()=>{
   assert.match(renderView({view:'register',data,records:[],today}),/No matching records/);
   assert.match(renderView({view:'compare',data,records:[],today}),/Accounting methods/);
-  assert.match(renderView({view:'method',data,records:[],today}),/RESEARCH STANDARD/);
+  assert.match(renderView({view:'method',data,records:[],today}),/EVIDENCE LABELS/);
 });
 test('detail records include applicability, primary source and review boundaries',()=>{
   for(const r of data.records){const result=renderDetail(r,today);assert.match(result,/id="dialog-title"/);assert.match(result,/Applicability boundary/);assert.match(result,/Source checked/);assert.match(result,/noopener noreferrer/);}
@@ -118,11 +120,11 @@ test('application loads, filters, changes routes and opens/closes evidence detai
   const env=harness(async url=>{assert.equal(url,'data/records.json');return {ok:true,json:async()=>clone()};});
   try{
     await start();assert.match(env.nodes.view.innerHTML,/The watch register/);
-    env.nodes.search.value='CBAM';env.nodes.search.handlers.input();assert.match(env.nodes['result-count'].textContent,/1 of 11/);
+    env.nodes.search.value='CBAM';env.nodes.search.handlers.input();assert.match(env.nodes['result-count'].textContent,/1 of 20/);
     location.hash='#register';env.window.handlers.hashchange();assert.match(env.nodes.view.innerHTML,/<table>/);
     const b=env.button('data-record','eu-cbam-definitive');env.nodes.view.handlers.click({target:b});assert.equal(env.nodes['record-dialog'].open,true);assert.match(env.nodes['dialog-body'].innerHTML,/CBAM definitive/);
     env.nodes['close-dialog'].handlers.click();assert.equal(env.nodes['record-dialog'].open,false);
-    env.nodes['clear-filters'].handlers.click();assert.match(env.nodes['result-count'].textContent,/11 of 11/);
+    env.nodes['clear-filters'].handlers.click();assert.match(env.nodes['result-count'].textContent,/20 of 20/);
     location.hash='#timeline';env.window.handlers.hashchange();env.nodes.view.handlers.change({target:{id:'upcoming-only',checked:false}});assert.match(env.nodes.view.innerHTML,/Date elapsed/);
     location.hash='#method';env.window.handlers.hashchange();assert.equal(env.nodes.filters.hidden,true);
     assert.equal(env.nav.find(a=>a.getAttribute('href')==='#method').getAttribute('aria-current'),'page');
@@ -142,7 +144,7 @@ test('static assets and dataset are served from repository-relative paths over H
   const root=new URL('../',import.meta.url);
   const server=createServer(async(req,res)=>{try{const target=req.url==='/'?'index.html':req.url.slice(1);const body=await readFile(new URL(target,root));res.setHeader('Content-Type',target.endsWith('.mjs')?'text/javascript':target.endsWith('.json')?'application/json':target.endsWith('.css')?'text/css':'text/html');res.end(body);}catch{res.writeHead(404);res.end();}});
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
-  try{const base=`http://127.0.0.1:${server.address().port}`;for(const target of ['/','/assets/app.mjs','/assets/core.mjs','/assets/styles.css','/assets/demo.css','/assets/demo-core.mjs','/assets/demo-views.mjs','/data/client-demo.mjs','/data/requirements.mjs','/data/extended-requirements.mjs','/assets/extended-core.mjs','/assets/extended-views.mjs','/data/glossary.mjs','/assets/logo.svg','/data/records.json']){const response=await fetch(base+target);assert.equal(response.status,200);if(target.endsWith('.json'))assert.deepEqual(validateDataset(await response.json()),[]);}}
+  try{const base=`http://127.0.0.1:${server.address().port}`;for(const target of ['/','/assets/app.mjs','/assets/core.mjs','/assets/styles.css','/assets/demo.css','/assets/demo-core.mjs','/assets/demo-views.mjs','/data/client-demo.mjs','/data/requirements.mjs','/data/extended-requirements.mjs','/assets/extended-core.mjs','/assets/extended-views.mjs','/data/glossary.mjs','/data/interactions.mjs','/assets/interaction-views.mjs','/assets/priority-actions.mjs','/assets/logo.svg','/data/records.json']){const response=await fetch(base+target);assert.equal(response.status,200);if(target.endsWith('.json'))assert.deepEqual(validateDataset(await response.json()),[]);}}
   finally{await new Promise(resolve=>server.close(resolve));}
 });
 
@@ -296,7 +298,7 @@ test('notebook supports only guided questions and requires selected evidence',()
   assert.ok(publicAnswer.rows.every(r=>r.status==='unknown'));
   assert.deepEqual(publicAnswer.citations,['public-entities']);
   const noIfRS=clone();noIfRS.records=noIfRS.records.filter(r=>r.id!=='ifrs-s2-ghg-amendments');
-  assert.equal(answerQuestion(GUIDED_QUESTIONS[4].question,state,noIfRS).supported,false);
+  assert.equal(answerQuestion(GUIDED_QUESTIONS.find(q=>q.id==='ifrs').question,state,noIfRS).supported,false);
 });
 test('notebook answers reflect the active scenario, not workspace table filters',()=>{
   const state={...createDemoState(),scenario:'acquisition',entity:'atlas-au',jurisdiction:'Australia'};
@@ -476,7 +478,7 @@ test('presentation branding removes the old heading and labels while keeping upd
 test('Compare is a Developments subsection and Evidence includes the glossary and monitoring limits',async()=>{
   const env=harness(async()=>({ok:true,json:async()=>clone()}));
   try{await start();location.hash='#updates';env.window.handlers.hashchange();assert.match(env.nodes.view.innerHTML,/href="#compare"/);
-    location.hash='#compare';env.window.handlers.hashchange();assert.equal(env.nodes['page-title'].textContent,'Compare regulatory impacts');assert.equal(env.nav.find(a=>a.getAttribute('href')==='#updates').getAttribute('aria-current'),'page');assert.match(env.nodes.view.innerHTML,/aria-label="Developments sections"/);
+    location.hash='#compare';env.window.handlers.hashchange();assert.equal(env.nodes['page-title'].textContent,'Compare regulatory impacts');assert.equal(env.nav.find(a=>a.getAttribute('href')==='#updates').getAttribute('aria-current'),'page');assert.match(env.nodes.view.innerHTML,/aria-label="Regulatory change sections"/);
     location.hash='#method';env.window.handlers.hashchange();assert.match(env.nodes.view.innerHTML,/Glossary/);assert.match(env.nodes.view.innerHTML,/Double materiality/);assert.match(env.nodes.view.innerHTML,/LEAP/);assert.match(env.nodes.view.innerHTML,/Near real-time monitoring is a planned capability/);assert.doesNotMatch(env.nodes.view.innerHTML,/How this demo separates/);
   }finally{env.restore();}
 });
@@ -493,4 +495,92 @@ test('published framework and glossary names preserve SBTi spelling',()=>{
   assert.equal(data.records.find(r=>r.id==='sbti-net-zero-v2').framework,'SBTi');
   const register=renderView({view:'register',data,today}),evidence=renderView({view:'method',data,today});
   assert.match(register,/>SBTi</);assert.match(evidence,/>SBTi</);assert.doesNotMatch(register+evidence,/>SBTI</);
+});
+
+test('timeline month/year presentation retains exact days and imprecise source ranges',()=>{
+ assert.equal(formatTimelineDate('2026-10-19'),'Oct 2026');
+ assert.equal(formatTimelineDate('2026-10'),'Oct 2026');
+ assert.equal(formatTimelineDate('2027-Q2'),'Apr 2027 – Jun 2027');
+ assert.equal(formatTimelineDate('2027'),'Jan 2027 – Dec 2027');
+ assert.equal(formatTimelineDate('bad'),'Not specified');
+ assert.equal(datePrecision('2026-08-12'),'Exact date: 12 Aug 2026');
+ const markup=renderView({view:'timeline',data,today,upcoming:false});
+ assert.match(markup,/Exact date: 12 Aug 2026/);assert.match(markup,/Year only · exact month not specified/);
+ assert.match(renderDetail(data.records.find(r=>r.id==='eu-ppwr')),/12 Aug 2028/);
+ assert.equal(milestones(data.records,{upcomingOnly:true,today:new Date('2026-08-13')}).some(m=>m.recordId==='eu-ppwr'&&m.date==='2026-08-12'),false);
+});
+test('new EU and seven state packaging records are visible across shared regulatory views',()=>{
+ for(const id of ['eu-csrd',...PACKAGING_RECORD_IDS]){
+  const r=data.records.find(r=>r.id===id);assert.ok(r.sources.length);assert.ok(r.milestones.length);
+  for(const view of ['overview','register','updates','timeline'])assert.ok(renderView({view,data,today,upcoming:false}).includes(`data-record="${id}"`),`${view}: ${id}`);
+  assert.ok(renderView({view:'workspace',data,today}).includes(`data-record="${id}"`));
+  assert.ok(renderNotebook(createDemoState(),data).includes(`record:${id}`));
+ }
+ assert.equal(data.records.filter(r=>r.framework==='US packaging EPR').length,7);
+ assert.equal(data.records.find(r=>r.id==='us-epr-me').stage,'implementation_pending');
+ assert.match(data.records.find(r=>r.id==='us-epr-co').check_note,/access errors/);
+});
+test('conditional PPWR anchors and public authority deadlines are not universal client filing dates',()=>{
+ const ppwr=data.records.find(r=>r.id==='eu-ppwr');
+ assert.equal(ppwr.milestones.filter(m=>m.kind==='conditional_application').length,2);
+ assert.ok(ppwr.milestones.filter(m=>m.kind==='conditional_application').every(m=>m.projected));
+ const invalid=clone();invalid.records.find(r=>r.id==='eu-ppwr').milestones.find(m=>m.kind==='conditional_application').projected=false;
+ assert.ok(validateDataset(invalid).some(x=>x.includes('projected')));
+ assert.ok(data.records.find(r=>r.id==='eu-csrd').milestones.some(m=>m.date==='2027-03-19'&&m.kind==='transposition_deadline'));
+ assert.ok(data.records.find(r=>r.id==='us-epr-me').milestones.every(m=>!['registration_deadline','reporting_year'].includes(m.kind)));
+});
+test('interoperability graph validates record references and separates alignment from equivalence',()=>{
+ assert.deepEqual(validateInteractions(data),[]);
+ assert.ok(validateInteractions({...data,records:data.records.filter(r=>r.id!=='eu-ppwr')}).length);
+ assert.ok(validateInteractions({}).length);
+ for(const edge of INTERACTIONS){
+  const output=renderView({view:'interoperability',data,today,interaction:edge.id});
+  assert.match(output,/What can be reused/);assert.match(output,/What remains separate/);assert.match(output,/not automatic compliance equivalence/);
+  assert.ok(output.includes(edge.label));assert.doesNotMatch(output,/undefined|NaN/);
+ }
+ const invalid=renderView({view:'interoperability',data,today,interaction:'<script>'});assert.doesNotMatch(invalid,/<script>/);
+});
+test('interoperability selection, navigation highlighting and record dialogs work through application events',async()=>{
+ const env=harness(async()=>({ok:true,json:async()=>clone()}));
+ try{
+  await start();location.hash='#interoperability';env.window.handlers.hashchange();
+  assert.equal(env.nodes.filters.hidden,true);assert.equal(env.nav.find(a=>a.getAttribute('href')==='#updates').getAttribute('aria-current'),'page');
+  env.nodes.view.handlers.click({target:env.button('data-map-relation','packaging-markets')});
+  assert.match(env.nodes.view.innerHTML,/data-map-relation="packaging-markets" aria-pressed="true"/);
+  env.nodes.view.handlers.click({target:env.button('data-record','eu-ppwr')});assert.match(env.nodes['dialog-body'].innerHTML,/Timeline and exact date evidence/);
+  location.hash='#updates';env.window.handlers.hashchange();assert.equal(env.nodes['page-title'].textContent,'Amended Disclosure Requirements');
+ }finally{env.restore();}
+});
+test('priority actions follow entities and dated transactions without inferring packaging duties',()=>{
+ const state=createDemoState();const get=s=>priorityActions(s,data,snapshot(s).entities,assessmentRows(s),valueChainRows(s));
+ const before=JSON.stringify(state);const all=get(state);assert.equal(JSON.stringify(state),before);
+ assert.ok(all.some(t=>t.id==='packaging-scope'&&t.missing.some(m=>m.includes('Destination'))));
+ assert.match(get({...state,entity:'atlas-eu'}).find(t=>t.id==='resolve-screens').missing.join(' '),/national implementation/);
+ assert.ok(get({...state,entity:'atlas-au'}).every(t=>!t.records.includes('ca-sb253')));
+ assert.equal(get({...state,entity:'atlas-site'})[0].id,'entity-selection');
+ const beforeSale=get({...state,scenario:'divest_mexico',asOf:'2026-12-31'}).find(t=>t.id==='supplier-data');
+ const afterSale=get({...state,scenario:'divest_mexico',asOf:'2027-01-01'}).find(t=>t.id==='supplier-data');
+ assert.notEqual(beforeSale.title,afterSale.title);
+ const divested=get({...state,scenario:'divest_mexico',entity:'atlas-mx'});assert.ok(divested.some(t=>t.id==='reporting-plan'));
+ const publicTasks=priorityActions({...state,profile:'public'},data,PUBLIC_ENTITIES,assessmentRows({...state,profile:'public'}));
+ assert.deepEqual(publicTasks.map(t=>t.id),['public-facts']);assert.deepEqual(publicTasks[0].records,[]);
+});
+test('packaging and overlap notebook answers require their actual selected records and isolate public facts',()=>{
+ const state=createDemoState();
+ for(const id of ['packaging','overlaps']){
+  const q=GUIDED_QUESTIONS.find(q=>q.id===id);const answer=answerQuestion(q.question,state,data);assert.equal(answer.supported,true);
+  assert.equal(answerQuestion(q.question,{...state,sources:state.sources.filter(s=>s!=='record:eu-ppwr')},data).supported,false);
+  assert.equal(answerQuestion(q.question,state,{...data,records:data.records.filter(r=>r.id!=='eu-ppwr')}).supported,false);
+  const publicAnswer=answerQuestion(q.question,{...state,profile:'public'},data);assert.deepEqual(publicAnswer.citations,['public-entities']);assert.doesNotMatch(publicAnswer.text,/Atlas|must register/);
+ }
+ assert.match(answerQuestion('Explain packaging requirements',state,data).text,/No packaging applicability conclusion/);
+ assert.match(renderDemoSource('record:eu-ppwr',data),/eur-lex.europa.eu/);
+});
+test('Evidence has balanced sibling sections and new glossary definitions',()=>{
+ const output=renderView({view:'method',data,today});
+ const beforeGlossary=output.split('<section class="method-section glossary">')[0];
+ assert.equal((beforeGlossary.match(/<section class="method-section">/g)||[]).length,4);
+ assert.doesNotMatch(beforeGlossary,/<div class="method-grid"><div>/);
+ for(const term of ['PPWR','EPR','PRO / SO','Interoperability','Conditional date'])assert.ok(output.includes(term));
+ assert.match(html,/MANDATORY DISCLOSURES · TARGET TIMELINES · ACCOUNTING UPDATES/);
 });

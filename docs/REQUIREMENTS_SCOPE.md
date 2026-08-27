@@ -58,3 +58,10 @@ The graph root and facility are not independently assessed. No conclusion about 
 ## Extension and review gate
 
 Before adding another route, record its authoritative source, locator, applicable version, effective/reporting periods, scope, relief and required fact units. Test exact boundaries, unknown inputs, alternate routes and source exclusions. Obtain human regulatory review before client reliance. Recheck sources before a later presentation; no monitoring or automatic legal refresh is configured.
+
+
+## Packaging records and client priorities
+
+The register now contains CSRD, PPWR and seven US packaging EPR state records. These are not eight additional automatic entity-eligibility tests. Existing matrix routes remain unchanged. Priority actions and the two added notebook topics explicitly require market, producer-role, covered-product, exemption and conformity/registration evidence before a packaging conclusion.
+
+The interoperability view provides nine selected relationships. A reused data point is not proof of legal equivalence or satisfaction of each framework. Corporate versus product boundaries, materiality, units, reporting periods and version differences require separate review.
