@@ -14,4 +14,8 @@ Do not use upstream “Sync fork” merges without reviewing them: the original 
 
 The two additional views, scenario logic, sample entities and guided responses are original code and content. The user-provided notebook screenshot informed the general Sources / Questions / Outputs concept; no screenshot assets, branded interface elements, code or document contents were imported.
 
-The PepsiCo example is a short, attributed factual extract independently researched from the official SEC filing linked in SOURCE_LOG.md. It remains an optional example, separate from fictional Atlas facts. The original invented rule pack has been replaced with bounded summaries and screening logic independently researched from official ASIC and SGX sources; the source documents themselves are not reproduced. The demo does not claim affiliation with PepsiCo, Google, any regulator or any model provider, and does not call a notebook product or AI service.
+The PepsiCo example is a short, attributed factual extract independently researched from the official SEC filing linked in SOURCE_LOG.md. It remains an optional example, separate from illustrative Atlas facts. The original invented rule pack has been replaced with bounded summaries and screening logic independently researched from official ASIC and SGX sources; the source documents themselves are not reproduced. The demo does not claim affiliation with PepsiCo, Google, any regulator or any model provider, and does not call a notebook product or AI service.
+
+## Internal-review presentation refresh
+
+The ESG Regulatory Scanner name and rounded oblong-ray SVG mark are original project assets. The mark does not reproduce Claude or Copilot artwork. Atlas is still an illustrative dataset: the concise workspace notice, company evidence note and Evidence page retain that distinction. Removing repeated banners does not create verified company facts or reviewer approval. No live monitoring capability is claimed.

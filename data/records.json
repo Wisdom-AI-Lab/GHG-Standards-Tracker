@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "prepared_on": "2026-08-27",
-  "edition": "Independent research starter · 01",
+  "edition": "ESG regulatory research · Aug 27, 2026",
   "records": [
     {
       "id": "joint-corporate-standard",
@@ -14,15 +14,44 @@
       "change_note": "The announced work combines corporate inventory standards into a joint development programme; publication remains a future milestone.",
       "action": "Keep an inventory of accounting policies that may need reassessment when the consultation text is available.",
       "applicability": "A development plan is not a new reporting obligation. Assess future requirements once final text and adoption arrangements are available.",
-      "tags": ["ISO 14064-1", "corporate inventory", "Scope 3", "harmonisation"],
+      "tags": [
+        "ISO 14064-1",
+        "corporate inventory",
+        "Scope 3",
+        "harmonisation"
+      ],
       "review": "source_checked",
       "checked_on": "2026-08-27",
       "check_note": "Announcement and quarter-level milestones checked against the official FAQ. No review of the full development plan or entity applicability was performed.",
-      "sources": [{"title": "Standard development updates: official FAQ", "publisher": "GHG Protocol", "url": "https://ghgprotocol.org/blog/ghg-protocol-announces-key-standard-development-updates-faq-resource"}],
-      "developments": [{"date": "2026-07-29", "label": "Joint programme and revised timetable announced", "source": 0}],
+      "sources": [
+        {
+          "title": "Standard development updates: official FAQ",
+          "publisher": "GHG Protocol",
+          "url": "https://ghgprotocol.org/blog/ghg-protocol-announces-key-standard-development-updates-faq-resource"
+        }
+      ],
+      "developments": [
+        {
+          "date": "2026-07-29",
+          "label": "Joint programme and revised timetable announced",
+          "source": 0
+        }
+      ],
       "milestones": [
-        {"date": "2027-Q2", "label": "Consolidated public consultation", "kind": "consultation", "projected": true, "source": 0},
-        {"date": "2028-Q4", "label": "Planned joint standard publication", "kind": "expected_publication", "projected": true, "source": 0}
+        {
+          "date": "2027-Q2",
+          "label": "Consolidated public consultation",
+          "kind": "consultation",
+          "projected": true,
+          "source": 0
+        },
+        {
+          "date": "2028-Q4",
+          "label": "Planned joint standard publication",
+          "kind": "expected_publication",
+          "projected": true,
+          "source": 0
+        }
       ]
     },
     {
@@ -36,12 +65,29 @@
       "change_note": "Consultation feedback is available; it is not a final replacement accounting standard.",
       "action": "Record assumptions behind electricity procurement claims so they can be tested against future proposals.",
       "applicability": "Do not treat consultation preferences as adopted accounting rules.",
-      "tags": ["Scope 2", "electricity", "procurement", "market-based"],
+      "tags": [
+        "Scope 2",
+        "electricity",
+        "procurement",
+        "market-based"
+      ],
       "review": "source_checked",
       "checked_on": "2026-08-27",
       "check_note": "Feedback publication checked against the official FAQ. No separate finalisation date is asserted here.",
-      "sources": [{"title": "Standard development updates: Scope 2 feedback", "publisher": "GHG Protocol", "url": "https://ghgprotocol.org/blog/ghg-protocol-announces-key-standard-development-updates-faq-resource"}],
-      "developments": [{"date": "2026-07-29", "label": "Scope 2 consultation findings published", "source": 0}],
+      "sources": [
+        {
+          "title": "Standard development updates: Scope 2 feedback",
+          "publisher": "GHG Protocol",
+          "url": "https://ghgprotocol.org/blog/ghg-protocol-announces-key-standard-development-updates-faq-resource"
+        }
+      ],
+      "developments": [
+        {
+          "date": "2026-07-29",
+          "label": "Scope 2 consultation findings published",
+          "source": 0
+        }
+      ],
       "milestones": []
     },
     {
@@ -55,13 +101,39 @@
       "change_note": "The standard was initially published on 30 January 2026; the resource page also lists subsequent non-substantive edits and supporting guidance.",
       "action": "Identify relevant land and removal activities, then review the latest standard and guidance before changing inventory methods.",
       "applicability": "An accounting standard’s effective date is distinct from a statutory filing deadline. Coverage and any reporting-programme adoption need separate assessment.",
-      "tags": ["land", "agriculture", "removals", "LSR", "carbon capture"],
+      "tags": [
+        "land",
+        "agriculture",
+        "removals",
+        "LSR",
+        "carbon capture"
+      ],
       "review": "source_checked",
       "checked_on": "2026-08-27",
       "check_note": "Publication and effective date checked on the official resource page. This record does not reproduce the standard or claim a technical conformity review.",
-      "sources": [{"title": "Land Sector and Removals Standard resources", "publisher": "GHG Protocol", "url": "https://ghgprotocol.org/land-sector-and-removals-standard"}],
-      "developments": [{"date": "2026-01-30", "label": "Initial Land Sector and Removals Standard publication", "source": 0}],
-      "milestones": [{"date": "2027-01-01", "label": "Standard becomes effective", "kind": "standard_effective", "projected": false, "source": 0}]
+      "sources": [
+        {
+          "title": "Land Sector and Removals Standard resources",
+          "publisher": "GHG Protocol",
+          "url": "https://ghgprotocol.org/land-sector-and-removals-standard"
+        }
+      ],
+      "developments": [
+        {
+          "date": "2026-01-30",
+          "label": "Initial Land Sector and Removals Standard publication",
+          "source": 0
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2027-01-01",
+          "label": "Standard becomes effective",
+          "kind": "standard_effective",
+          "projected": false,
+          "source": 0
+        }
+      ]
     },
     {
       "id": "sbti-net-zero-v2",
@@ -74,13 +146,39 @@
       "change_note": "Publication and availability for validation are separate events. Existing target cycles require their own transition assessment.",
       "action": "Check your target renewal date and the programme’s transition guidance before choosing a submission version.",
       "applicability": "This is a target-setting programme, not a jurisdiction-wide statutory disclosure mandate.",
-      "tags": ["SBTi", "net zero", "targets", "transition", "validation"],
+      "tags": [
+        "SBTi",
+        "net zero",
+        "targets",
+        "transition",
+        "validation"
+      ],
       "review": "source_checked",
       "checked_on": "2026-08-27",
       "check_note": "Release and validation-opening dates checked against SBTi’s implementation notice. Sector-specific and company-specific transition requirements are not evaluated.",
-      "sources": [{"title": "Version 2.0: implementation and next steps", "publisher": "Science Based Targets initiative", "url": "https://sciencebasedtargets.org/blog/the-corporate-net-zero-standard-v2-0-is-here-what-comes-next"}],
-      "developments": [{"date": "2026-06-11", "label": "Version 2.0 implementation information published", "source": 0}],
-      "milestones": [{"date": "2027-02-01", "label": "Version 2.0 target validation opens", "kind": "programme_opening", "projected": false, "source": 0}]
+      "sources": [
+        {
+          "title": "Version 2.0: implementation and next steps",
+          "publisher": "Science Based Targets initiative",
+          "url": "https://sciencebasedtargets.org/blog/the-corporate-net-zero-standard-v2-0-is-here-what-comes-next"
+        }
+      ],
+      "developments": [
+        {
+          "date": "2026-06-11",
+          "label": "Version 2.0 implementation information published",
+          "source": 0
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2027-02-01",
+          "label": "Version 2.0 target validation opens",
+          "kind": "programme_opening",
+          "projected": false,
+          "source": 0
+        }
+      ]
     },
     {
       "id": "ifrs-s2-ghg-amendments",
@@ -93,16 +191,44 @@
       "change_note": "The amendments provide reliefs and clarifications rather than replacing the full climate disclosure standard.",
       "action": "Compare the amended provisions with your reporting policies and confirm the version recognised by the relevant jurisdiction.",
       "applicability": "ISSB publication alone does not impose a universal legal obligation. Local adoption and the reporting entity’s circumstances determine applicability.",
-      "tags": ["IFRS S2", "ISSB", "Scope 3", "financed emissions", "disclosure"],
+      "tags": [
+        "IFRS S2",
+        "ISSB",
+        "Scope 3",
+        "financed emissions",
+        "disclosure"
+      ],
       "review": "source_checked",
       "checked_on": "2026-08-27",
       "check_note": "Issue month and effective-period wording checked against the IFRS announcement and completed-project page. No jurisdiction adoption review was performed.",
       "sources": [
-        {"title": "ISSB issues targeted amendments to IFRS S2", "publisher": "IFRS Foundation", "url": "https://www.ifrs.org/news-and-events/news/2025/12/issb-issues-targeted-amendments-ifrs-s2/"},
-        {"title": "Completed project: greenhouse gas emissions disclosures", "publisher": "IFRS Foundation", "url": "https://www.ifrs.org/projects/completed-projects/2025/amendments-to-disclosure-of-greenhouse-gas-emissions-s2/"}
+        {
+          "title": "ISSB issues targeted amendments to IFRS S2",
+          "publisher": "IFRS Foundation",
+          "url": "https://www.ifrs.org/news-and-events/news/2025/12/issb-issues-targeted-amendments-ifrs-s2/"
+        },
+        {
+          "title": "Completed project: greenhouse gas emissions disclosures",
+          "publisher": "IFRS Foundation",
+          "url": "https://www.ifrs.org/projects/completed-projects/2025/amendments-to-disclosure-of-greenhouse-gas-emissions-s2/"
+        }
       ],
-      "developments": [{"date": "2025-12", "label": "Targeted IFRS S2 amendments issued", "source": 1}],
-      "milestones": [{"date": "2027-01-01", "label": "Effective for annual periods beginning on or after this date", "kind": "standard_effective", "projected": false, "source": 0}]
+      "developments": [
+        {
+          "date": "2025-12",
+          "label": "Targeted IFRS S2 amendments issued",
+          "source": 1
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2027-01-01",
+          "label": "Effective for annual periods beginning on or after this date",
+          "kind": "standard_effective",
+          "projected": false,
+          "source": 0
+        }
+      ]
     },
     {
       "id": "eu-cbam-definitive",
@@ -115,13 +241,38 @@
       "change_note": "The regime has moved beyond its transitional phase. Import-specific obligations must be assessed under the applicable legislation and guidance.",
       "action": "Map relevant goods, customs roles and supplier emissions data before determining your organisation’s obligations.",
       "applicability": "Product codes, exclusions, thresholds and the importer’s circumstances require assessment. This record makes no in-scope determination.",
-      "tags": ["CBAM", "imports", "embedded emissions", "carbon border"],
+      "tags": [
+        "CBAM",
+        "imports",
+        "embedded emissions",
+        "carbon border"
+      ],
       "review": "source_checked",
       "checked_on": "2026-08-27",
       "check_note": "Regime commencement checked on the Commission’s definitive-regime page. Filing and certificate deadlines are intentionally not inferred.",
-      "sources": [{"title": "CBAM definitive regime", "publisher": "European Commission", "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"}],
-      "developments": [{"date": "2026-01-01", "label": "Definitive regime begins (effective event, not article publication)", "source": 0}],
-      "milestones": [{"date": "2026-01-01", "label": "Definitive regime commencement", "kind": "regulatory_effective", "projected": false, "source": 0}]
+      "sources": [
+        {
+          "title": "CBAM definitive regime",
+          "publisher": "European Commission",
+          "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+        }
+      ],
+      "developments": [
+        {
+          "date": "2026-01-01",
+          "label": "Definitive regime begins (effective event, not article publication)",
+          "source": 0
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2026-01-01",
+          "label": "Definitive regime commencement",
+          "kind": "regulatory_effective",
+          "projected": false,
+          "source": 0
+        }
+      ]
     },
     {
       "id": "us-sec-rescission",
@@ -134,19 +285,320 @@
       "change_note": "The listed action is a proposed rescission, not evidence that a final rescission has taken effect.",
       "action": "Monitor the rulemaking docket for a final action and assess other applicable disclosure obligations separately.",
       "applicability": "This record concerns one federal proposal. It does not establish the status of state rules, litigation or general securities disclosure duties.",
-      "tags": ["SEC", "rescission", "climate rule", "proposal", "United States"],
+      "tags": [
+        "SEC",
+        "rescission",
+        "climate rule",
+        "proposal",
+        "United States"
+      ],
       "review": "source_checked",
       "checked_on": "2026-08-27",
       "check_note": "Proposal classification, issue date and comment deadline checked against docket S7-2026-19. This is not a comprehensive court-docket search.",
-      "sources": [{"title": "S7-2026-19: Rescission of Climate-Related Disclosure Rules", "publisher": "US Securities and Exchange Commission", "url": "https://www.sec.gov/rules-regulations/2026/05/s7-2026-19"}],
-      "developments": [{"date": "2026-05-29", "label": "SEC issues rescission proposal", "source": 0}],
-      "milestones": [{"date": "2026-08-03", "label": "Published public-comment deadline", "kind": "comment_deadline", "projected": false, "source": 0}]
+      "sources": [
+        {
+          "title": "S7-2026-19: Rescission of Climate-Related Disclosure Rules",
+          "publisher": "US Securities and Exchange Commission",
+          "url": "https://www.sec.gov/rules-regulations/2026/05/s7-2026-19"
+        }
+      ],
+      "developments": [
+        {
+          "date": "2026-05-29",
+          "label": "SEC issues rescission proposal",
+          "source": 0
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2026-08-03",
+          "label": "Published public-comment deadline",
+          "kind": "comment_deadline",
+          "projected": false,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "id": "tnfd-recommendations",
+      "title": "TNFD nature-related disclosure recommendations",
+      "framework": "TNFD",
+      "category": "Nature disclosure framework",
+      "region": "Global",
+      "stage": "published",
+      "summary": "TNFD provides 14 recommended disclosures across governance, strategy, risk and impact management, and metrics and targets. Its framework covers nature-related dependencies, impacts, risks and opportunities.",
+      "change_note": "Final recommendations were published in September 2023. The framework is supported by assessment and sector guidance; publication does not create a universal statutory duty.",
+      "action": "Map nature-related dependencies and impacts, select relevant metrics and use the LEAP assessment approach to inform reporting.",
+      "applicability": "A voluntary disclosure framework unless adopted or required through another instrument or commitment. Confirm the applicable reporting basis, materiality approach and sector guidance.",
+      "tags": [
+        "TNFD",
+        "nature",
+        "biodiversity",
+        "LEAP",
+        "dependencies",
+        "impacts"
+      ],
+      "sources": [
+        {
+          "title": "TNFD disclosure recommendations",
+          "publisher": "TNFD",
+          "url": "https://tnfd.global/recommendations/"
+        },
+        {
+          "title": "TNFD development history",
+          "publisher": "TNFD",
+          "url": "https://tnfd.global/about/history/"
+        }
+      ],
+      "developments": [
+        {
+          "date": "2023-09",
+          "label": "TNFD final recommendations published",
+          "source": 1
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2023-09",
+          "label": "TNFD final recommendations published",
+          "kind": "publication",
+          "projected": false,
+          "source": 1
+        }
+      ],
+      "check_note": "Disclosure architecture and publication month checked on TNFD recommendations and history pages. The publication-download landing page returned a verification interstitial; no full-document conformity review is claimed.",
+      "review": "source_checked",
+      "checked_on": "2026-08-27"
+    },
+    {
+      "id": "tnfd-issb-nature",
+      "title": "ISSB nature-related proposals drawing on TNFD",
+      "framework": "TNFD / ISSB",
+      "category": "Nature disclosure development",
+      "region": "Global",
+      "stage": "development",
+      "summary": "The ISSB is targeting October 2026 for an exposure draft of a nature-related Practice Statement drawing on TNFD and building on IFRS S1 and S2.",
+      "change_note": "The proposed Practice Statement would support nature-related disclosures. The planned exposure draft is not a final standard or a new filing deadline.",
+      "action": "Track the exposure draft and assess its relationship to existing nature-related information requirements under the applicable reporting basis.",
+      "applicability": "IFRS S1 already addresses material sustainability-related risks and opportunities. The proposed tool and any jurisdictional requirement to use it must be assessed separately.",
+      "tags": [
+        "TNFD",
+        "ISSB",
+        "IFRS S1",
+        "nature",
+        "Practice Statement",
+        "consultation"
+      ],
+      "sources": [
+        {
+          "title": "Nature-related proposals preview at IFRS Foundation Conference",
+          "publisher": "IFRS Foundation",
+          "url": "https://www.ifrs.org/news-and-events/news/2026/06/sue-lloyd-nature-related-disclosure-ifrs-conference/"
+        },
+        {
+          "title": "TNFD standards alignment",
+          "publisher": "TNFD",
+          "url": "https://tnfd.global/standards-alignment/"
+        }
+      ],
+      "developments": [
+        {
+          "date": "2026-06",
+          "label": "ISSB previews nature-related disclosure proposals",
+          "source": 0
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2026-10",
+          "label": "Targeted nature-related exposure draft publication",
+          "kind": "expected_publication",
+          "projected": true,
+          "source": 0
+        }
+      ],
+      "check_note": "October target and proposed form checked against the IFRS Foundation announcement, cross-checked with TNFD alignment information. No final adoption or compliance deadline is asserted.",
+      "review": "source_checked",
+      "checked_on": "2026-08-27"
+    },
+    {
+      "id": "ca-sb253",
+      "title": "California SB 253 · corporate GHG reporting",
+      "framework": "CARB / California",
+      "category": "Statutory emissions disclosure",
+      "region": "California (US)",
+      "stage": "implementation_pending",
+      "summary": "SB 253 covers selected US-formed businesses doing business in California with annual revenue above USD 1 billion. Scope 1/2 reporting starts in 2026; Scope 3 starts in 2027 under the statute.",
+      "change_note": "CARB’s 27 July 2026 modified proposal would move the initial reporting deadline to 10 November 2026. Final approval and the operative deadline were not established by this check.",
+      "action": "Confirm entity scope, reporting perimeter, revenue evidence, final rule approval and the operative deadline.",
+      "applicability": "Scope and parent-report coverage need entity-specific assessment. Do not substitute worldwide-parent revenue or interpret the proposed date as confirmed.",
+      "tags": [
+        "CARB",
+        "SB 253",
+        "California",
+        "Scope 1",
+        "Scope 2",
+        "Scope 3",
+        "suppliers"
+      ],
+      "sources": [
+        {
+          "title": "Health and Safety Code section 38532",
+          "publisher": "California Legislature",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=38532."
+        },
+        {
+          "title": "Modified initial regulation: 15-day notice",
+          "publisher": "California Air Resources Board",
+          "url": "https://content.govdelivery.com/accounts/CARB/bulletins/421d3a1"
+        }
+      ],
+      "developments": [
+        {
+          "date": "2026-07-27",
+          "label": "CARB posts modified initial regulation proposal",
+          "source": 1
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2026",
+          "label": "Statutory initial Scope 1/2 reporting year",
+          "kind": "reporting_year",
+          "projected": false,
+          "source": 0
+        },
+        {
+          "date": "2026-11-10",
+          "label": "Proposed first SB 253 reporting deadline · approval unverified",
+          "kind": "proposed_deadline",
+          "projected": true,
+          "source": 1
+        },
+        {
+          "date": "2027",
+          "label": "Statutory initial Scope 3 reporting year · CARB schedule to confirm",
+          "kind": "reporting_year",
+          "projected": false,
+          "source": 0
+        }
+      ],
+      "check_note": "Statutory scope and reporting years checked against HSC 38532; proposed date checked against CARB’s July notice. Current OAL approval, detailed assurance and deadline implementation remain unresolved.",
+      "review": "source_checked",
+      "checked_on": "2026-08-27"
+    },
+    {
+      "id": "ca-sb261",
+      "title": "California SB 261 · climate-related financial risk",
+      "framework": "CARB / California",
+      "category": "Statutory climate-risk disclosure",
+      "region": "California (US)",
+      "stage": "enforcement_paused",
+      "summary": "SB 261 sets a climate-related financial-risk reporting framework for selected US-formed businesses with revenue above USD 500 million and California business activity, excluding specified insurers. CARB currently describes submissions as voluntary while enforcement is enjoined.",
+      "change_note": "CARB’s docket cites the 18 November 2025 injunction pending appeal and states it will not enforce the missed 1 January 2026 statutory deadline during that injunction.",
+      "action": "Recheck the court and CARB status before deciding whether a filing is mandatory; document any qualifying parent or equivalent-report arrangement.",
+      "applicability": "Statutory scope, enforcement and equivalent-report eligibility are separate. An ISSB report is not automatically proof that all conditions are satisfied.",
+      "tags": [
+        "CARB",
+        "SB 261",
+        "California",
+        "climate risk",
+        "injunction",
+        "TCFD",
+        "ISSB"
+      ],
+      "sources": [
+        {
+          "title": "Health and Safety Code section 38533",
+          "publisher": "California Legislature",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=38533."
+        },
+        {
+          "title": "Climate-related financial risk reports docket",
+          "publisher": "California Air Resources Board",
+          "url": "https://ww2.arb.ca.gov/public-comments/climate-related-financial-risk-reports-sb-261-docket"
+        }
+      ],
+      "developments": [
+        {
+          "date": "2025-11-18",
+          "label": "Enforcement injunction reported by CARB",
+          "source": 1
+        },
+        {
+          "date": "2026-08-13",
+          "label": "CARB updates voluntary-submission portal notice",
+          "source": 1
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2025-11-18",
+          "label": "Enforcement injunction pending appeal · as reported by CARB",
+          "kind": "enforcement_event",
+          "projected": false,
+          "source": 1
+        }
+      ],
+      "check_note": "Scope checked against HSC 38533; enforcement position checked on CARB’s docket. The underlying court order was not independently reviewed here. No current overdue filing or future appeal outcome is inferred.",
+      "review": "source_checked",
+      "checked_on": "2026-08-27"
     }
   ],
   "comparisons": [
-    {"topic": "Accounting methods and disclosure rules", "records": ["joint-corporate-standard", "ifrs-s2-ghg-amendments"], "distinction": "Keep the method used to calculate an inventory separate from the requirements governing its disclosure. A change to one does not by itself establish a change to the other.", "question": "Which accounting method and which disclosure rule does your reporting basis reference?"},
-    {"topic": "An inventory and a target", "records": ["scope-2-revision", "sbti-net-zero-v2"], "distinction": "An emissions inventory and a validated target answer different questions. This tracker does not assume that a proposed accounting treatment is accepted by a target programme.", "question": "Has the target programme explicitly recognised the accounting treatment you intend to use?"},
-    {"topic": "Corporate totals and embedded emissions", "records": ["joint-corporate-standard", "eu-cbam-definitive"], "distinction": "Avoid treating a corporate inventory total as a substitute for the information required for a particular imported good. Map data needs and boundaries independently.", "question": "Can you trace the data for the relevant goods, processes and reporting boundaries?"},
-    {"topic": "Global standards and national action", "records": ["ifrs-s2-ghg-amendments", "us-sec-rescission"], "distinction": "Do not infer domestic legal applicability from a global standard, or infer changes in other jurisdictions from one national proposal.", "question": "Which jurisdiction, entity and reporting period have you actually assessed?"}
+    {
+      "topic": "Accounting methods and disclosure rules",
+      "records": [
+        "joint-corporate-standard",
+        "ifrs-s2-ghg-amendments"
+      ],
+      "distinction": "Keep the method used to calculate an inventory separate from the requirements governing its disclosure. A change to one does not by itself establish a change to the other.",
+      "question": "Which accounting method and which disclosure rule does your reporting basis reference?"
+    },
+    {
+      "topic": "An inventory and a target",
+      "records": [
+        "scope-2-revision",
+        "sbti-net-zero-v2"
+      ],
+      "distinction": "An emissions inventory and a validated target answer different questions. This tracker does not assume that a proposed accounting treatment is accepted by a target programme.",
+      "question": "Has the target programme explicitly recognised the accounting treatment you intend to use?"
+    },
+    {
+      "topic": "Corporate totals and embedded emissions",
+      "records": [
+        "joint-corporate-standard",
+        "eu-cbam-definitive"
+      ],
+      "distinction": "Avoid treating a corporate inventory total as a substitute for the information required for a particular imported good. Map data needs and boundaries independently.",
+      "question": "Can you trace the data for the relevant goods, processes and reporting boundaries?"
+    },
+    {
+      "topic": "Global standards and national action",
+      "records": [
+        "ifrs-s2-ghg-amendments",
+        "us-sec-rescission"
+      ],
+      "distinction": "Do not infer domestic legal applicability from a global standard, or infer changes in other jurisdictions from one national proposal.",
+      "question": "Which jurisdiction, entity and reporting period have you actually assessed?"
+    },
+    {
+      "topic": "TNFD and investor-focused nature disclosures",
+      "records": [
+        "tnfd-recommendations",
+        "tnfd-issb-nature"
+      ],
+      "distinction": "Separate the published TNFD framework from the ISSB’s planned nature-related proposals. Alignment does not itself establish an identical scope, mandatory adoption or a final standard.",
+      "question": "Which nature information is required by your reporting basis, and which additional assessment guidance will you use?"
+    },
+    {
+      "topic": "California emissions and climate-risk reporting",
+      "records": [
+        "ca-sb253",
+        "ca-sb261"
+      ],
+      "distinction": "SB 253 and SB 261 have different thresholds, reporting subjects and implementation or enforcement positions. A single California nexus does not make their reporting duties interchangeable.",
+      "question": "Which entity crosses each threshold, and what operative reporting or enforcement conditions apply?"
+    }
   ]
 }

@@ -1,5 +1,5 @@
 import {REPORTING_PERIODS} from './requirements.mjs';
-// Public facts and fictional scenario inputs are deliberately separate.
+// Public facts and illustrative scenario inputs are deliberately separate.
 // No client confidential information, ownership inference or live service is used.
 export const PUBLIC_SOURCE = {
   id: 'public-entities',
@@ -19,7 +19,7 @@ export const PUBLIC_ENTITIES = [
   {id:'public-ie', name:'Baltray Finance Unlimited Company', jurisdiction:'Ireland', locator:'Exhibit 21, page 1'}
 ].map(entity=>({...entity, type:'entity', source:'public-entities', observed_on:'2025-12-27'}));
 
-export const FICTIONAL_ENTITIES = [
+export const ILLUSTRATIVE_ENTITIES = [
   {id:'atlas', name:'Atlas Beverages Group', jurisdiction:'United Kingdom', type:'group', parent:null, member:true, ownership:100, financial_control:true, operational_control:true},
   {id:'atlas-au', name:'Atlas Pacific Beverages', jurisdiction:'Australia', type:'entity', parent:'atlas', member:true, ownership:100, financial_control:true, operational_control:true},
   {id:'atlas-sg', name:'Atlas Straits Trading', jurisdiction:'Singapore', type:'entity', parent:'atlas', member:true, ownership:60, financial_control:true, operational_control:false},
@@ -28,15 +28,15 @@ export const FICTIONAL_ENTITIES = [
   {id:'orchid', name:'Orchid Beverage Co.', jurisdiction:'Singapore', type:'entity', parent:'atlas', member:false, ownership:0, financial_control:false, operational_control:false}
 ];
 
-FICTIONAL_ENTITIES.push(
+ILLUSTRATIVE_ENTITIES.push(
   {id:'atlas-us',name:'Atlas Americas Holdings',jurisdiction:'United States',type:'entity',parent:'atlas',member:true,ownership:100,financial_control:true,operational_control:true},
-  {id:'atlas-us-ops',name:'Atlas California Distribution',jurisdiction:'United States',type:'entity',parent:'atlas-us',member:true,ownership:100,financial_control:true,operational_control:true},
-  {id:'atlas-mx',name:'Atlas Mexico Beverages',jurisdiction:'Mexico',type:'entity',parent:'atlas-us',member:true,ownership:100,financial_control:true,operational_control:true},
-  {id:'atlas-eu',name:'Atlas France Beverages',jurisdiction:'France',type:'entity',parent:'atlas',member:true,ownership:100,financial_control:true,operational_control:true}
+  {id:'atlas-us-ops',name:'Atlas California Division',jurisdiction:'United States',type:'entity',parent:'atlas-us',member:true,ownership:100,financial_control:true,operational_control:true},
+  {id:'atlas-mx',name:'Atlas Mexico Beverages',jurisdiction:'Mexico',type:'entity',parent:'atlas-us-ops',member:true,ownership:100,financial_control:true,operational_control:true},
+  {id:'atlas-eu',name:'Atlas France Beverages',jurisdiction:'France',type:'entity',parent:'atlas-uk',member:true,ownership:100,financial_control:true,operational_control:true}
 );
 // All regulatory facts below are authored scenario assumptions, not public data.
 // Financial totals are supplied consolidated figures, not computed from GHG boundaries.
-for(const entity of FICTIONAL_ENTITIES){
+for(const entity of ILLUSTRATIVE_ENTITIES){
   Object.assign(entity,{au_ch2m:false,au_ordinary_company:true,au_no_relief:true,sgx_mainboard:false,sgx_no_waiver:true,sti_at_2025_06_30:false});
   if(entity.id==='atlas-au'){
     entity.au_ch2m=true;
@@ -52,11 +52,11 @@ for(const entity of FICTIONAL_ENTITIES){
 }
 
 export const SCENARIOS = {
-  baseline: {label:'Baseline', effective_on:null, note:'Fictional baseline. No scenario overlay is applied.'},
-  acquisition: {label:'Acquire Orchid', effective_on:'2027-01-01', note:'Fictional 40% investment with financial control stipulated separately; operational control remains false. This is not a real transaction.'},
-  divestment: {label:'Divest Pacific', effective_on:'2027-01-01', note:'Fictional exit of Atlas Pacific and its facility from this group view. Removal from a group is not termination of the entity’s legal obligations.'},
-  divest_mexico: {label:'Sell Mexico · retain supplier',effective_on:'2027-01-01',note:'Fictional sale of Atlas Mexico with a continuing supply contract to Atlas Americas. Its own issuer status is unchanged; group inclusion becomes an external value-chain relationship. No accounting or emissions totals are calculated.'},
-  regulation: {label:'Compare reporting phases', effective_on:null, note:'Compare the selected financial-year start with 1 January 2028 using the same source-checked requirements and fictional facts. No legal threshold is invented or changed.'}
+  baseline: {label:'Baseline', effective_on:null, note:'Illustrative baseline. No scenario overlay is applied.'},
+  acquisition: {label:'Acquire Orchid', effective_on:'2027-01-01', note:'Illustrative 40% investment with financial control stipulated separately; operational control remains false. This is not a real transaction.'},
+  divestment: {label:'Divest Pacific', effective_on:'2027-01-01', note:'Illustrative exit of Atlas Pacific and its facility from this group view. Removal from a group is not termination of the entity’s legal obligations.'},
+  divest_mexico: {label:'Sell Mexico · retain supplier',effective_on:'2027-01-01',note:'Illustrative sale of Atlas Mexico with a continuing supply contract to Atlas Americas. Its own issuer status is unchanged; group inclusion becomes an external value-chain relationship. No accounting or emissions totals are calculated.'},
+  regulation: {label:'Compare reporting phases', effective_on:null, note:'Compare the selected financial-year start with 1 January 2028 using the same source-checked requirements and illustrative facts. No legal threshold is invented or changed.'}
 };
 
 export const GUIDED_QUESTIONS = [
@@ -77,4 +77,4 @@ function freeze(value) {
   Object.freeze(value);
   for (const child of Object.values(value)) if(child && typeof child==='object' && !Object.isFrozen(child)) freeze(child);
 }
-for(const value of [PUBLIC_SOURCE,PUBLIC_ENTITIES,FICTIONAL_ENTITIES,SCENARIOS,GUIDED_QUESTIONS]) freeze(value);
+for(const value of [PUBLIC_SOURCE,PUBLIC_ENTITIES,ILLUSTRATIVE_ENTITIES,SCENARIOS,GUIDED_QUESTIONS]) freeze(value);

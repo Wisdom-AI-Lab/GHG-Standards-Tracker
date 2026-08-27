@@ -2,26 +2,30 @@
 
 ## Open and frame the demo
 
-Local preview is optional: download the PR branch, serve its repository root with `python3 -m http.server 8000`, and open http://localhost:8000. This does not publish anything. No hosting is enabled by this PR. Atlas is the default view; refresh resets the session. PepsiCo remains under **Optional public-data example**.
+Local preview is optional: download the PR branch, serve its repository root with `python3 -m http.server 8000`, and open http://localhost:8000. This does not publish anything. No hosting is enabled by this PR. ESG Regulatory Scanner opens in the Atlas workspace; refresh resets the session. PepsiCo remains under **Optional public-data example**.
 
-Opening statement: “Atlas is fictional. We are demonstrating selected real reporting routes with cited evidence, explicit gaps and separate legal-status checks. This is not a completed compliance assessment.”
+Opening statement: “Atlas is illustrative. We are demonstrating selected real reporting routes with cited evidence, explicit gaps and separate legal-status checks. This is not a completed compliance assessment.”
 
 Start with **Baseline**, organisation date **1 Feb 2027**, FY start **1 Jul 2026**, and **Financial control**. Legal-status overlays remain dated 27 August 2026: the scenario date does not predict future law.
 
+## Product navigation
+
+Overview and Standards register include TNFD and California records. Developments contains the comparison subsection. Evidence contains the glossary and source-review definitions. The header date identifies the published edition; automated searches are not active.
+
 ## 1. Organisation graph
 
-Select Atlas Americas, its California subsidiary, and Atlas Mexico. The inspector shows separate entity facts. Mexico is a fictional domestic nonfinancial CNBV issuer; its parent relationship does not establish or remove that status. France has illustrative size facts but no verified national scope determination. The group root and facility are not separately screened.
+Select Atlas Americas, Atlas California Division and Atlas Mexico. Mexico is directly beneath California Division; France is beneath Atlas UK Distribution. Continuous connectors show the parent chain at every depth. The inspector shows separate entity facts. Mexico is a illustrative domestic nonfinancial CNBV issuer; its parent relationship does not establish or remove that status. France has illustrative size facts but no verified national scope determination. The group root and facility are not separately screened.
 
 ## 2. Adoption & entity roles
 
 This focused table is easier for presenting than the complete **Applicability** matrix. Open **Why this result?** and source notes.
 
-- **California:** Americas has fictional FY 2025 revenue of USD 1,500m; California Distribution has USD 750m. Show their different SB 253 screens using the Applicability entity filter. SB 261 has a separate risk-reporting purpose and an injunction overlay. The California example is fixed to its 2026 initial cycle regardless of the FY selector.
+- **California:** Americas has illustrative FY 2025 revenue of USD 1,500m; California Distribution has USD 750m. Show their different SB 253 screens using the Applicability entity filter. SB 261 has a separate risk-reporting purpose and an injunction overlay. The California example is fixed to its 2026 initial cycle regardless of the FY selector.
 - **Mexico:** incorporation alone is insufficient. The issuer evidence is explicitly stipulated; first-application relief and assurance need review. A parent report is not an automatic local exemption.
 - **EU:** matching revised thresholds does not settle French implementation, reporting wave or subsidiary exemption. Keep those gaps visible.
 - **Australia / SGX:** local size and historical listing routes illustrate why ISSB adoption differs by entity and jurisdiction.
 
-The full matrix has 65 rows: eight fictional legal entities against eight selected routes plus one UK coverage gap. Six in-group screens match at baseline; this excludes California's separate implementation/enforcement statuses. A match may still have content/timing evidence gaps. A non-match is not a general exemption.
+The full matrix has 65 rows: eight illustrative legal entities against eight selected routes plus one UK coverage gap. Six in-group screens match at baseline; this excludes California's separate implementation/enforcement statuses. A match may still have content/timing evidence gaps. A non-match is not a general exemption.
 
 ## 3. Materiality
 
@@ -38,7 +42,7 @@ These controls illustrate human judgement, not automated materiality decisions. 
 
 Open **Group & supplier data**. At baseline, Mexico supplies group operations information; Lumen is a separate independent supplier.
 
-Choose **Sell Mexico · retain supplier**. At **1 Feb 2027**, Mexico leaves the ownership group and becomes an independent supplier to Atlas Americas under the fictional continuing contract. Its own CNBV screen remains matched. Set the organisation date to **27 Aug 2026** to return to the pre-sale relationship. Restore the later date.
+Choose **Sell Mexico · retain supplier**. At **1 Feb 2027**, Mexico leaves the ownership group and becomes an independent supplier to Atlas Americas under the illustrative continuing contract. Its own CNBV screen remains matched. Set the organisation date to **27 Aug 2026** to return to the pre-sale relationship. Restore the later date.
 
 Compare **Data missing**, **Secondary estimate example**, and **Supplier sample example**. Each mode retains missing-information flags. No emissions quantity is calculated, no sample becomes verified data, and no request is sent. A buyer's Scope 3 need does not automatically give the supplier a statutory filing duty. EU supplier request limits need a separate current-law check.
 
@@ -55,7 +59,7 @@ Eleven questions and selected exact aliases work. Arbitrary questions receive a 
 
 ## Optional: acquisition and reporting phases
 
-**Acquire Orchid** changes eight row memberships; its local conditions are unchanged. The in-group matched count rises from six to seven. Financial control includes the fictional 40% investment while operational control excludes it. **Divest Pacific** removes it and its facility from the group without erasing its local screen.
+**Acquire Orchid** changes eight row memberships; its local conditions are unchanged. The in-group matched count rises from six to seven. Financial control includes the illustrative 40% investment while operational control excludes it. **Divest Pacific** removes it and its facility from the group without erasing its local screen.
 
 Choose FY start **1 Jan 2025**, then **Compare reporting phases** to compare with **1 Jan 2028** under the same checked rules. Three rows change status: the AU size route and two historical-STI Scope 3 rows. California's fixed cycle and legal-status overlays do not advance.
 

@@ -18,12 +18,12 @@ export const EXTENDED_REQUIREMENTS=[
   {id:'EU-CSRD',kind:'eu',jurisdiction:'European Union',title:'CSRD · revised EU undertaking scope gate',standard:'ESRS · double materiality',trigger:'EU undertaking + employees > 1,000 AND net turnover > EUR 450m',sources:['eu-scope','eu-esrs-status'],locator:'Council 24 February 2026 announcement; country implementation not assessed'}
 ];
 export const MATERIALITY_CASES={
-  water:{label:'Water stress · impact only at subsidiary',topic:'Atlas Mexico water withdrawal affects a local community (fictional assessment).',entity:{financial:false,impact:true},group:{financial:null,impact:true},missing:['Group financial exposure and time horizons need assessment']},
-  transition:{label:'Transition cost · financial only',topic:'A fictional energy-price transition changes expected cash flows; no material impact is stipulated.',entity:{financial:true,impact:false},group:{financial:true,impact:false},missing:[]},
-  both:{label:'Supply disruption · both lenses',topic:'Fictional severe water impacts also threaten supply continuity and financing.',entity:{financial:true,impact:true},group:{financial:true,impact:true},missing:[]},
+  water:{label:'Water stress · impact only at subsidiary',topic:'Atlas Mexico water withdrawal affects a local community (illustrative assessment).',entity:{financial:false,impact:true},group:{financial:null,impact:true},missing:['Group financial exposure and time horizons need assessment']},
+  transition:{label:'Transition cost · financial only',topic:'A illustrative energy-price transition changes expected cash flows; no material impact is stipulated.',entity:{financial:true,impact:false},group:{financial:true,impact:false},missing:[]},
+  both:{label:'Supply disruption · both lenses',topic:'Illustrative severe water impacts also threaten supply continuity and financing.',entity:{financial:true,impact:true},group:{financial:true,impact:true},missing:[]},
   unknown:{label:'Evidence not yet assessed',topic:'A supplier allegation has not been assessed for impact severity or financial consequences.',entity:{financial:null,impact:null},group:{financial:null,impact:null},missing:['Impact evidence, severity and likelihood','Financial exposure, time horizons and decision-usefulness']}
 };
-export const SUPPLIER={id:'lumen',name:'Lumen Packaging (fictional independent supplier)',buyer:'atlas-us',jurisdiction:'Mexico',employees:180,product:'Purchased packaging · candidate Scope 3 category 1'};
+export const SUPPLIER={id:'lumen',name:'Lumen Packaging (illustrative independent supplier)',buyer:'atlas-us',jurisdiction:'Mexico',employees:180,product:'Purchased packaging · candidate Scope 3 category 1'};
 export const EVIDENCE_MODES={missing:'Data missing',secondary:'Secondary estimate example',primary:'Supplier sample example'};
 function freeze(v){Object.freeze(v);for(const child of Object.values(v))if(child&&typeof child==='object'&&!Object.isFrozen(child))freeze(child);}
 for(const v of [EXTENDED_SOURCES,EXTENDED_REQUIREMENTS,MATERIALITY_CASES,SUPPLIER,EVIDENCE_MODES])freeze(v);

@@ -2,7 +2,7 @@
 
 ## Current demo
 
-The application is static and uses public or fictional data. There is no sign-in, tenant isolation, file picker, upload endpoint, database or model connection. Session notes live in page memory and disappear on refresh. A public static host exposes its bundled files to visitors; do not place confidential information in this repository, even if the interface hides it.
+The application is static and uses public or illustrative data. There is no sign-in, tenant isolation, file picker, upload endpoint, database or model connection. Session notes live in page memory and disappear on refresh. A public static host exposes its bundled files to visitors; do not place confidential information in this repository, even if the interface hides it.
 
 ## Before accepting client material
 

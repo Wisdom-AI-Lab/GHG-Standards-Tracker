@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An independent demonstration tracker for greenhouse gas accounting standards and disclosure developments. Source-linked records, dated milestones and transparent review status.">
+  <meta name="description" content="ESG Regulatory Scanner: sustainability frameworks, regulatory developments, entity assessments and source-linked evidence.">
   <meta name="theme-color" content="#102f36">
-  <title>GHG Standards Watch | Wisdom AI Lab</title>
-  <link rel="icon" href="data:,">
+  <title>ESG Regulatory Scanner</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="stylesheet" href="assets/demo.css">
   <script type="module" src="assets/app.mjs"></script>
@@ -14,13 +14,13 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="masthead">
-    <div class="masthead-inner"><a class="identity" href="#workspace"><span class="mark" aria-hidden="true">W.</span><span>WISDOM AI LAB<small>GHG Standards Watch</small></span></a><span class="demo-label">INDEPENDENT DEMO <span aria-hidden="true">/</span> 01</span></div>
+    <div class="masthead-inner"><a class="identity" href="#workspace"><img class="mark" src="assets/logo.svg" width="34" height="34" alt=""><span>ESG Regulatory Scanner</span></a><span id="last-update" class="edition-date">Last update: Aug 27, 2026</span></div>
   </header>
   <div class="navigation"><nav aria-label="Main navigation">
-    <a href="#overview">Overview</a><a href="#register">Standards register</a><a href="#updates">Developments</a><a href="#timeline">Timeline</a><a href="#compare">Compare</a><a href="#workspace">Client workspace <span class="badge">Demo</span></a><a href="#notebook">Regulatory notebook <span class="badge">Demo</span></a><a href="#method">Evidence & method</a>
+    <a href="#overview">Overview</a><a href="#register">Standards register</a><a href="#updates">Developments</a><a href="#timeline">Timeline</a><a href="#workspace">Client workspace</a><a href="#notebook">Regulatory notebook</a><a href="#method">Evidence</a>
   </nav></div>
   <main id="main" tabindex="-1">
-    <section class="page-heading"><div><p class="eyebrow">ACCOUNTING · TARGETS · DISCLOSURE</p><h1 id="page-title">Standards, in context.</h1><p id="page-intro">A focused view of what is changing—and the evidence behind it.</p></div><div id="dataset-status" class="dataset-status" aria-live="polite">Loading source register…</div></section>
+    <section class="page-heading"><div><p class="eyebrow">ACCOUNTING · TARGETS · NATURE · DISCLOSURE</p><h1 id="page-title">Regulatory Overview</h1><p id="page-intro">Assessment of changes in sustainability frameworks</p></div><div id="dataset-status" class="dataset-status" aria-live="polite" hidden></div></section>
     <section id="filters" class="filters" aria-label="Filter records" hidden>
       <label class="search-label">Search records<input id="search" type="search" placeholder="Try Scope 2, removals or disclosure" autocomplete="off"></label>
       <label>Framework<select id="framework"><option value="all">All frameworks</option></select></label>
@@ -31,7 +31,7 @@
     <p id="result-count" class="result-count" role="status"></p>
     <div id="view" aria-busy="true"><div class="empty"><h2>Opening the watch register</h2><p>Reading the dataset included with this website.</p></div></div>
     <noscript><div class="empty">Enable JavaScript to search this tracker. The source records are also available in <a href="data/records.json">records.json</a>.</div></noscript>
-    <footer><p><strong>A research aid, not an applicability decision.</strong> This demo is not legal, accounting or assurance advice. Check the original source and your entity’s circumstances before acting.</p><div><span>Original implementation · Wisdom AI Lab</span><a href="https://github.com/Wisdom-AI-Lab/GHG-Standards-Tracker" target="_blank" rel="noopener noreferrer">Repository ↗</a><span>No automatic updates enabled</span></div></footer>
+    <footer><p><strong>Research and decision support.</strong> Not legal, accounting or assurance advice. Check the original source and the relevant entity’s circumstances before acting.</p><div><span>ESG Regulatory Scanner</span><a href="https://github.com/Wisdom-AI-Lab/GHG-Standards-Tracker" target="_blank" rel="noopener noreferrer">Repository ↗</a><span>Monitoring: scheduled searches not yet enabled</span></div></footer>
   </main>
   <dialog id="record-dialog" aria-labelledby="dialog-title"><div class="dialog-toolbar"><span class="eyebrow">RECORD & EVIDENCE</span><button id="close-dialog" class="button quiet" type="button">Close ×</button></div><div id="dialog-body"></div></dialog>
 </body>

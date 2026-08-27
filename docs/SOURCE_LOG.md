@@ -35,7 +35,7 @@ Source checked: 27 August 2026. Observed entity snapshot: 27 December 2025.
 
 This deliberately small extract supports names, jurisdictions and the listed-subsidiary relationship at the stated date. It does not establish a complete organisation chart, direct parents, ownership percentages, control, thresholds, listing status or current regulatory applicability. No client relationship or endorsement is claimed. The public workspace therefore leaves all applicability rows unresolved.
 
-Atlas, Orchid, their company facts and transactions remain fictional. The earlier DEMO-prefixed invented rules are no longer used. The main presentation now uses the selected real-requirement screens documented below. No public PepsiCo fact is augmented with a fictional assumption.
+Atlas, Orchid, their company facts and transactions remain illustrative. The earlier DEMO-prefixed invented rules are no longer used. The main presentation now uses the selected real-requirement screens documented below. No public PepsiCo fact is augmented with a illustrative assumption.
 
 
 ## Real-requirement pack — checked 27 August 2026
@@ -50,7 +50,7 @@ Atlas, Orchid, their company facts and transactions remain fictional. The earlie
 
 The ASIC simplified small-business page returned inconsistent dates/comparison wording in retrieval. The implemented tests follow RG 280 Table 2, cross-checked against ASIC's preparer page, rather than that simplified summary. This discrepancy is recorded for human review.
 
-These are bounded primary-source checks, not an independent legal opinion, a review of every amending instrument, or human approval. Requirements and check dates are separate from fictional entity facts. Source locators and conditions are maintained in data/requirements.mjs. Scope exclusions and date semantics are set out in REQUIREMENTS_SCOPE.md.
+These are bounded primary-source checks, not an independent legal opinion, a review of every amending instrument, or human approval. Requirements and check dates are separate from illustrative entity facts. Source locators and conditions are maintained in data/requirements.mjs. Scope exclusions and date semantics are set out in REQUIREMENTS_SCOPE.md.
 
 ## California, Mexico, materiality and value-chain extension — 27 August 2026
 
@@ -71,3 +71,13 @@ Retrieval limits: the direct Mexico DOF amendment and the March 2026 CNBV suppor
 CARB’s 27 July bulletin is a modified proposal, not evidence of final OAL approval. No operative first SB 253 deadline was established by this check. The SB 261 docket separately supplies the current injunction/voluntary-reporting status. The Commission’s July ESRS announcement describes scrutiny before application; the demo does not mark the revised standards as operative. These uncertainties are shown in the interface rather than silently resolved.
 
 The 2024 joint interoperability guidance supports the conceptual comparison and measurement discussion (section 1.1 and Annex, printed page 32). It is educational material, not a formal equivalence decision, and predates later amendments. Human regulatory review and a fresh source check are required before client reliance or a later presentation.
+
+## TNFD and California register additions — 27 August 2026
+
+- [TNFD recommendations](https://tnfd.global/recommendations/): disclosure architecture; a framework rather than a universal legal mandate.
+- [TNFD history](https://tnfd.global/about/history/): September 2023 publication month.
+- [IFRS Foundation nature-proposal preview](https://www.ifrs.org/news-and-events/news/2026/06/sue-lloyd-nature-related-disclosure-ifrs-conference/): October 2026 exposure-draft target and proposed Practice Statement form; publication remains planned.
+- [TNFD standards alignment](https://tnfd.global/standards-alignment/): cross-check of the nature-related work. The TNFD publication-download landing page returned a verification interstitial; no full-document review is claimed.
+- California HSC 38532/38533, CARB July modified-text notice and SB 261 docket were reopened for the register summaries. Their URLs are in the record data and the earlier extension table. Statutory scope, proposed deadlines and enforcement status remain separate. No new final OAL approval or independent court-order review was established.
+
+These four register records complement the client screening pack; they do not add a TNFD entity-applicability engine or enable automatic monitoring.

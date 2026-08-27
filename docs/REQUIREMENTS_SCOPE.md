@@ -1,6 +1,6 @@
 # Selected real requirements: scope and evidence
 
-The Atlas presentation uses fictional client facts with eight selected reporting routes. Official source checks are dated 27 August 2026. They are **source checked, human review pending**. Some checks use official summaries where legal text was unavailable; those limits are recorded below and in the source log. No actual client compliance determination is made.
+The Atlas presentation uses illustrative client facts with eight selected reporting routes. Official source checks are dated 27 August 2026. They are **source checked, human review pending**. Some checks use official summaries where legal text was unavailable; those limits are recorded below and in the source log. No actual client compliance determination is made.
 
 ## Included routes
 
@@ -21,7 +21,7 @@ The additional source metadata and selected rules are in [extended-requirements.
 
 ## Client facts and dates
 
-Every Atlas ownership, control, financial, Mainboard, historical index and relief input is fictional. The UK entity's hypothetical Mainboard status demonstrates why incorporation country alone is insufficient. Its historical STI membership is deliberately null; unknown is not false.
+Every Atlas ownership, control, financial, Mainboard, historical index and relief input is illustrative. The UK entity's hypothetical Mainboard status demonstrates why incorporation country alone is insufficient. Its historical STI membership is deliberately null; unknown is not false.
 
 The organisation date controls transaction overlays. The financial-year start selects the reporting phase and the exact financial-input record. A missing financial period stays unknown; amounts are not copied from another year. The selectable periods contain explicit sample figures, not real-company forecasts. AU amounts represent supplied consolidated AUD totals and employee counts; they are not calculated from the GHG boundary method or ownership allocation.
 
@@ -31,7 +31,7 @@ California deliberately uses a fixed 2026 initial cycle and FY 2025 USD revenue.
 
 ## Result meanings
 
-- **Screen matched:** the fictional inputs satisfy the selected route and the fixture's no-relief/no-waiver assumption. This is not full compliance, an assurance opinion or human approval.
+- **Screen matched:** the illustrative inputs satisfy the selected route and the fixture's no-relief/no-waiver assumption. This is not full compliance, an assurance opinion or human approval.
 - **Selected route not matched:** one or more required conditions fail. Other reporting routes can still apply.
 - **Requires more facts:** a required input is unknown, or a relief/waiver position needs assessment. The row names missing evidence.
 - **Before selected route starts:** the selected financial year precedes this route's commencement. This is not a conclusion about earlier or alternative regimes.
@@ -47,7 +47,7 @@ Group inclusion is separate from every local screen. Acquisition/divestment chan
 
 The materiality controls use authored assessment outcomes, not a model or automatic legal judgement. Financial and impact flags are independent; unknown remains unknown. The ESRS concept comparison uses impact OR financial materiality, and group-level assessment is distinct from subsidiary assessment. It does not assert that Atlas's UK parent is within CSRD. The 2024 interoperability guidance is educational and predates subsequent amendments; revised ESRS application must be checked separately.
 
-Lumen is a fictional independent supplier, not an ownership node. The Mexico sale assumes an explicit continuing supply contract: group operations data becomes a potential buyer-side Scope 3 input, while the seller's own CNBV scope remains unchanged. No scope totals, transaction-period allocation, double-counting adjustments or data requests are produced. The examples do not classify every emission under every boundary method. Supplier evidence modes are missing, fictional secondary method, or fictional primary sample; none is assurance or verified evidence. EU value-chain request protections need operative-text and eligibility review.
+Lumen is a illustrative independent supplier, not an ownership node. The Mexico sale assumes an explicit continuing supply contract: group operations data becomes a potential buyer-side Scope 3 input, while the seller's own CNBV scope remains unchanged. No scope totals, transaction-period allocation, double-counting adjustments or data requests are produced. The examples do not classify every emission under every boundary method. Supplier evidence modes are missing, illustrative secondary method, or illustrative primary sample; none is assurance or verified evidence. EU value-chain request protections need operative-text and eligibility review.
 
 ## Excluded from this build
 
