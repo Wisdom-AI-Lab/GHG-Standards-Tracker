@@ -8,9 +8,11 @@ This is a proposal, not an implemented backend or a delivery commitment. The two
 | --- | --- | --- |
 | Organisation | Selected public subsidiaries; fictional group and facility graph | Verified entity identities, relationship types, reporting hierarchy, control evidence and effective-dated ownership |
 | Boundaries | Three methods using explicit fictional facts | Framework-specific policies, joint arrangements, consolidation adjustments and reviewed client decisions |
-| Applicability | Four selected source-backed AU/SGX screens, condition traces and unresolved inputs | Expanded jurisdiction coverage, reviewed exemptions, full transitional rules, versioned evidence and statutory consolidation |
+| Applicability | Eight selected AU/SGX/California/Mexico/EU routes with implementation limits, traces and unresolved inputs | Expanded jurisdiction coverage, reviewed exemptions, full transitional rules, versioned evidence and statutory consolidation |
 | Change impact | Independent transaction overlays and source-backed reporting-phase comparisons | Persistent transaction/rule history, affected-entity recomputation, review queue and approvals |
-| Notebook | Five guided answers, evidence selection and session notes | Secure ingestion, retrieval, source passages, arbitrary-question handling, model integration and evaluations |
+| Notebook | Eleven guided answers, evidence selection and session notes | Secure ingestion, retrieval, source passages, arbitrary-question handling, model integration and evaluations |
+| Materiality | Fictional subsidiary/group inputs comparing the financial lens with impact OR financial materiality | Reviewed assessment workflow, stakeholder evidence, thresholds, disaggregation and versioned standards |
+| Supplier data | Separate ownership and supply roles; missing/sample/secondary evidence modes | Validated activity data, allocation, estimation, data-request controls and secure supplier portal |
 | Monitoring | Proposed workflow in AGENT_WORKFLOW.md | Scheduled jobs, permitted search sources, model/service credentials, budget, observability and human approval |
 
 ## Data model to preserve

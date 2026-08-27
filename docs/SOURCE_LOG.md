@@ -51,3 +51,23 @@ Atlas, Orchid, their company facts and transactions remain fictional. The earlie
 The ASIC simplified small-business page returned inconsistent dates/comparison wording in retrieval. The implemented tests follow RG 280 Table 2, cross-checked against ASIC's preparer page, rather than that simplified summary. This discrepancy is recorded for human review.
 
 These are bounded primary-source checks, not an independent legal opinion, a review of every amending instrument, or human approval. Requirements and check dates are separate from fictional entity facts. Source locators and conditions are maintained in data/requirements.mjs. Scope exclusions and date semantics are set out in REQUIREMENTS_SCOPE.md.
+
+## California, Mexico, materiality and value-chain extension — 27 August 2026
+
+| Source | Checked locator / status basis |
+| --- | --- |
+| [California · SB 253 statute](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=38532.) | HSC 38532(b)(2), (c)(2)(A), (c)(2)(E) |
+| [CARB · July 2026 modified proposal](https://content.govdelivery.com/accounts/CARB/bulletins/421d3a1) | 27 July 2026 bulletin · Background |
+| [California · SB 261 statute](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=38533.) | HSC 38533(a)(4), (b)(1)–(3) |
+| [CARB · SB 261 enforcement status](https://ww2.arb.ca.gov/public-comments/climate-related-financial-risk-reports-sb-261-docket) | Current docket notice · checked 27 August 2026 |
+| [IFRS Foundation · Mexico jurisdiction profile](https://www.ifrs.org/content/dam/ifrs/publications/sustainability-jurisdictions/pdf-profiles/mexico-ifrs-profile.pdf) | Profile updated 12 June 2025 · pages 1–3 |
+| [EU Council · adopted CSRD scope changes](https://www.consilium.europa.eu/en/press/press-releases/2026/02/24/council-signs-off-simplification-of-sustainability-reporting-and-due-diligence-requirements-to-boost-eu-competitiveness/) | 24 February 2026 · CSRD scope and national transposition |
+| [European Commission · revised ESRS status](https://finance.ec.europa.eu/news/commission-adopts-revised-sustainability-reporting-standards-2026-07-03_en) | 3 July 2026 · adoption, value-chain cap and scrutiny |
+| [IFRS Foundation · adoption and materiality FAQs](https://www.ifrs.org/sustainability/knowledge-hub/faqs/) | FAQs: mandatory adoption; materiality; reasonable and supportable information |
+| [ISSB / European Commission / EFRAG · interoperability](https://www.ifrs.org/content/dam/ifrs/supporting-implementation/issb-standards/esrs-issb-standards-interoperability-guidance.pdf) | 2 May 2024 · section 1.1; Scope 3 measurement mapping; ESRS 1 and IFRS S2 references |
+
+Retrieval limits: the direct Mexico DOF amendment and the March 2026 CNBV support PDF were not retrievable. The Mexico route relies on the IFRS Foundation jurisdiction profile, not a claimed full-text CUE review. EUR-Lex Directive (EU) 2026/470 HTML/PDF retrieval returned a bot-verification page; the EU scope gate uses the Council announcement. No French transposition analysis was completed.
+
+CARB’s 27 July bulletin is a modified proposal, not evidence of final OAL approval. No operative first SB 253 deadline was established by this check. The SB 261 docket separately supplies the current injunction/voluntary-reporting status. The Commission’s July ESRS announcement describes scrutiny before application; the demo does not mark the revised standards as operative. These uncertainties are shown in the interface rather than silently resolved.
+
+The 2024 joint interoperability guidance supports the conceptual comparison and measurement discussion (section 1.1 and Annex, printed page 32). It is educational material, not a formal equivalence decision, and predates later amendments. Human regulatory review and a fresh source check are required before client reliance or a later presentation.

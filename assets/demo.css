@@ -2,3 +2,13 @@
 @media(max-width:1100px){.notebook-grid{grid-template-columns:minmax(210px,.7fr) minmax(350px,1.3fr)}.output-panel{grid-column:1/-1}.workspace-grid{grid-template-columns:1fr}.scenario-toolbar{flex-wrap:wrap}.scenario-buttons{flex-basis:100%}.scenario-toolbar label{flex:1}}@media(max-width:700px){.demo-banner{align-items:start;flex-direction:column;gap:5px}.demo-context{align-items:start;flex-direction:column;gap:10px}.demo-metrics{grid-template-columns:repeat(2,1fr)}.workspace-tabs a{margin:9px 0 0;flex-basis:100%}.scenario-description{flex-direction:column;gap:7px}.scenario-toolbar label{min-width:100%}.notebook-grid{grid-template-columns:1fr}.notebook-panel{padding:17px}.output-panel{grid-column:auto}.matrix-filters{flex-direction:column;align-items:stretch}.matrix-filters select{width:100%}.demo-panel{padding:17px}.public-branches>li{min-width:130px}.question-input{align-items:start}.question-input .button{padding:9px}.org-branches:not(.public-branches){min-width:560px}}
 
 .optional-example{margin-top:12px;font-size:12px;color:var(--muted)}.optional-example summary{cursor:pointer}.optional-example p{max-width:550px;margin-top:9px}.missing-facts{background:var(--amber-bg);padding:9px;margin:9px 0;font-size:10px;border-radius:4px}.missing-facts ul{padding-left:17px;margin:5px 0}.demo-result.not_covered,.demo-result.not_due{background:#eef1f5;color:#445a6e}.outside-note{font-weight:650;color:#6d5555}.scenario-toolbar{flex-wrap:wrap}.scenario-buttons{flex-basis:100%}.scenario-toolbar label{flex:1;min-width:180px}.demo-table .citations{margin:8px 0;gap:6px}.demo-table .citations button{font-size:9px}
+.org-branches:not(.public-branches){display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:24px;min-width:0}
+.org-branches>li{min-width:0}
+.org-branches .entity-node{width:100%;min-width:0;box-sizing:border-box}
+.workspace-tabs{flex-wrap:wrap}
+.lens-grid,.supplier-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:20px 0}
+.lens-grid>section{min-width:0;padding:18px;background:var(--surface,#f5f7f9);border:1px solid var(--line,#dbe3e9);border-radius:12px}
+.supplier-card dl>div{padding:10px 0;border-bottom:1px solid var(--line,#dbe3e9)}
+.supplier-card dt{font-weight:700;font-size:12px}.supplier-card dd{margin:5px 0 0}
+.demo-result.implementation,.demo-result.paused{background:#fff0d2;color:#784900;white-space:normal}
+@media(max-width:800px){.lens-grid,.supplier-grid{grid-template-columns:1fr}}

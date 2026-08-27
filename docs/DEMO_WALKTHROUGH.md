@@ -1,60 +1,66 @@
-# Five-minute Atlas team walkthrough
+# Atlas team demonstration · 7–10 minutes
 
-## Opening the demo
+## Open and frame the demo
 
-Local preview is optional: with the project downloaded and Python installed, serve the repository root with `python3 -m http.server 8000`, then open http://localhost:8000. This does not publish anything. Alternatively, after review/merge and explicit hosting setup, open the hosted link. Hosting is not enabled by this change.
+Local preview is optional: download the PR branch, serve its repository root with `python3 -m http.server 8000`, and open http://localhost:8000. This does not publish anything. No hosting is enabled by this PR. Atlas is the default view; refresh resets the session. PepsiCo remains under **Optional public-data example**.
 
-The default view is **Atlas · main demo**. Refresh resets the session. PepsiCo is available under **Optional public-data example**, but is not needed for this presentation.
+Opening statement: “Atlas is fictional. We are demonstrating selected real reporting routes with cited evidence, explicit gaps and separate legal-status checks. This is not a completed compliance assessment.”
 
-Opening statement: “Atlas is a fictional client. We are testing selected real reporting requirements against clearly labelled sample facts, showing the evidence and the gaps. A screening result is not a final compliance determination.”
+Start with **Baseline**, organisation date **1 Feb 2027**, FY start **1 Jul 2026**, and **Financial control**. Legal-status overlays remain dated 27 August 2026: the scenario date does not predict future law.
 
-## 1. Organisation and reporting boundary — 45 seconds
+## 1. Organisation graph
 
-Start with **Baseline**, organisation date **1 Feb 2027**, FY start **1 Jul 2026**, and **Financial control**. Select a graph node to inspect its facts. Ownership and control are separate inputs. The group root and facility illustrate structure but are not separately screened as legal entities.
+Select Atlas Americas, its California subsidiary, and Atlas Mexico. The inspector shows separate entity facts. Mexico is a fictional domestic nonfinancial CNBV issuer; its parent relationship does not establish or remove that status. France has illustrative size facts but no verified national scope determination. The group root and facility are not separately screened.
 
-## 2. Requirements and evidence — 75 seconds
+## 2. Adoption & entity roles
 
-Open **Applicability**, then **Clear table filters**. There are 17 rows: four fictional legal entities against four selected real requirements, plus one explicit UK domestic-coverage gap.
+This focused table is easier for presenting than the complete **Applicability** matrix. Open **Why this result?** and source notes.
 
-- Five in-group pairs pass the selected screens at the default period.
-- Pacific matches the Australian corporate-size route. Open **Why this result?** to see the two-of-three calculation, period, currency, prerequisites and ASIC citations.
-- Straits matches the three selected SGX routes. The inspector identifies its historical STI membership as a fictional fact.
-- UK Distribution matches the SGX Scope 1/2 screen because Mainboard coverage is explicitly assumed, despite UK incorporation. Its historical STI membership is unknown, so two routes remain unresolved. Its UK domestic obligations are unresearched.
+- **California:** Americas has fictional FY 2025 revenue of USD 1,500m; California Distribution has USD 750m. Show their different SB 253 screens using the Applicability entity filter. SB 261 has a separate risk-reporting purpose and an injunction overlay. The California example is fixed to its 2026 initial cycle regardless of the FY selector.
+- **Mexico:** incorporation alone is insufficient. The issuer evidence is explicitly stipulated; first-application relief and assurance need review. A parent report is not an automatic local exemption.
+- **EU:** matching revised thresholds does not settle French implementation, reporting wave or subsidiary exemption. Keep those gaps visible.
+- **Australia / SGX:** local size and historical listing routes illustrate why ISSB adoption differs by entity and jurisdiction.
 
-Every row provides source-note buttons. Open a note to see the official URL, paragraph/page locator, source-check date and review limits. A route non-match does not mean there are no reporting obligations.
+The full matrix has 65 rows: eight fictional legal entities against eight selected routes plus one UK coverage gap. Six in-group screens match at baseline; this excludes California's separate implementation/enforcement statuses. A match may still have content/timing evidence gaps. A non-match is not a general exemption.
 
-## 3. Acquisition, divestment and real reporting phases — 90 seconds
+## 3. Materiality
 
-Choose **Acquire Orchid**, then **Changes & history**. Four rows change group membership; Orchid's local screening results do not change merely because it enters Atlas. The in-group match count rises from five to six.
+Open **Materiality** and keep **Water stress** selected.
 
-In the graph, select Orchid. Financial control includes it, operational control excludes it, and equity share shows a 40% illustrative allocation. The control facts are stipulated, not inferred from the ownership percentage. Set the organisation date to **27 Aug 2026** to show the acquisition has not yet taken effect.
+1. Under **Subsidiary assessment**, the stipulated impact is material but no financial signal is stipulated: the two lenses differ.
+2. Switch to **Group assessment**: the impact remains in the example while the financial assessment is unresolved. A small subsidiary is not automatically ignored because of group revenue size.
+3. Choose **Transition cost** or **Supply disruption** to show financial-only and both-lens cases.
+4. Choose **Evidence not yet assessed** to show that unknown is not false.
 
-Return to **1 Feb 2027** and choose **Divest Pacific**. Pacific and its facility leave the group view. Pacific's local screen remains visible and matched; group exit is not an exemption.
+These controls illustrate human judgement, not automated materiality decisions. ESRS uses impact OR financial materiality. The group comparison does not claim Atlas's UK parent has a CSRD filing duty. Open the revised-ESRS status source to explain the version gate.
 
-For the regulatory-time example, choose **Baseline** and FY start **1 Jan 2025**, then **Compare reporting phases**. This compares that period with **1 Jan 2028**, holding the checked rule pack constant. Three rows change screening status: Pacific's Australian screen and two STI Scope 3 screens. One moves to unresolved because the historical index fact is missing. No threshold or regulatory amendment is invented. Non-STI routes in later years remain outside this selected pack.
+## 4. Sell Mexico, retain the supply relationship
 
-The organisation date and FY start have different jobs. All financial inputs are explicit sample amounts for the selected period, not actual year-end results or forecasts of a real company.
+Open **Group & supplier data**. At baseline, Mexico supplies group operations information; Lumen is a separate independent supplier.
 
-## 4. Cited answers and missing facts — 60 seconds
+Choose **Sell Mexico · retain supplier**. At **1 Feb 2027**, Mexico leaves the ownership group and becomes an independent supplier to Atlas Americas under the fictional continuing contract. Its own CNBV screen remains matched. Set the organisation date to **27 Aug 2026** to return to the pre-sale relationship. Restore the later date.
 
-Open **Regulatory notebook**. It shares the active Atlas scenario and reporting period.
+Compare **Data missing**, **Secondary estimate example**, and **Supplier sample example**. Each mode retains missing-information flags. No emissions quantity is calculated, no sample becomes verified data, and no request is sent. A buyer's Scope 3 need does not automatically give the supplier a statutory filing duty. EU supplier request limits need a separate current-law check.
 
-1. Choose **Which jurisdictions and triggers apply?** View the matrix, source buttons and context.
-2. Choose **What information is missing?** See named evidence gaps and the UK coverage gap.
-3. Uncheck **ASIC RG 280 · size and commencement**. The guided answer is withheld until required evidence is selected again.
-4. Save a supported response. It becomes a session snapshot, not a reviewer approval; refresh clears it.
-5. Use **What does a screening result mean?** to explain the distinction between a source-backed screen and a final compliance conclusion.
+## 5. Cited notebook answers
 
-Five guided questions and a few exact aliases are supported. Arbitrary questions receive a limitation message. No live model or file ingestion is connected.
+Open **Regulatory notebook**, sharing the active scenario.
 
-## 5. Funding discussion — 30 seconds
+- Ask the California, Mexico, materiality, subsidiary/supplier or Scope 3 guided question.
+- Uncheck a required source: the answer is withheld. Restore it.
+- Save a response: the note records the selected scenario and assessment/evidence controls, but is only a page-session snapshot.
+- Ask **What information is missing?** to show relief, implementation, enforcement and coverage gaps.
 
-The demonstrated workflow is entity facts → selected legal conditions → explained result → missing information → reviewed guidance. The funded build would add verified client evidence, broader reviewed rules, statutory consolidation, secure uploads, cited model answers, approvals and maintained change history.
+Eleven questions and selected exact aliases work. Arbitrary questions receive a limitation notice. No live AI or file ingestion is connected.
 
-## Optional appendix: public evidence
+## Optional: acquisition and reporting phases
 
-Expand **Optional public-data example** and select PepsiCo. Its five dated public subsidiary records remain unresolved. This shows how incomplete public evidence is handled without inventing ownership or applicability facts. Return to Atlas for the working scenarios.
+**Acquire Orchid** changes eight row memberships; its local conditions are unchanged. The in-group matched count rises from six to seven. Financial control includes the fictional 40% investment while operational control excludes it. **Divest Pacific** removes it and its facility from the group without erasing its local screen.
 
-## Before presenting
+Choose FY start **1 Jan 2025**, then **Compare reporting phases** to compare with **1 Jan 2028** under the same checked rules. Three rows change status: the AU size route and two historical-STI Scope 3 rows. California's fixed cycle and legal-status overlays do not advance.
 
-Check layout, scrolling, keyboard navigation, source dialogs and controls in the presentation browser. Automated tests use a minimal DOM adapter; actual browser/visual QA is still required. Do not enter confidential client material. Review REQUIREMENTS_SCOPE.md and keep the fictional-fact and pending-review labels visible.
+## Funding discussion
+
+The demonstrated flow is entity evidence → selected legal conditions → local/group/supplier roles → materiality and data gaps → cited guidance. Funding would add verified client evidence, broader reviewed rules, country-law implementation, secure uploads, cited model answers, supplier workflows, reviewer approvals and maintained change history.
+
+Before presenting, check layout, scrolling, keyboard controls and source dialogs in the actual browser. Automated tests use a minimal DOM adapter; visual/browser QA and human regulatory review remain outstanding. Do not enter confidential client information.

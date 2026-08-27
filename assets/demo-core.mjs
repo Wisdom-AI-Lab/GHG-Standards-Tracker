@@ -1,12 +1,16 @@
 import {PUBLIC_SOURCE,PUBLIC_ENTITIES,FICTIONAL_ENTITIES,SCENARIOS,GUIDED_QUESTIONS} from '../data/client-demo.mjs';
 import {REAL_REQUIREMENTS,REGULATORY_SOURCES,RULESET_VERSION,REPORTING_PERIODS} from '../data/requirements.mjs';
 import {dateRange,safeUrl} from './core.mjs';
+import {evaluateExtended,assessMateriality,supplierRows,TOPIC_SOURCES,TOPIC_TEXT} from './extended-core.mjs';
+import {MATERIALITY_CASES,EVIDENCE_MODES} from '../data/extended-requirements.mjs';
+export {assessMateriality};
+export const valueChainRows=state=>state.profile==='public'?[]:supplierRows(state,snapshot(state),isMember);
 
 export {PUBLIC_SOURCE,PUBLIC_ENTITIES,SCENARIOS,GUIDED_QUESTIONS,REPORTING_PERIODS};
-export const RESULTS={match:'Screen matched · fictional facts',no_match:'Selected route not matched',unknown:'Requires more facts',not_due:'Before selected route starts',not_covered:'Coverage not researched',outside:'Outside scenario group'};
+export const RESULTS={match:'Screen matched · fictional facts',no_match:'Selected route not matched',unknown:'Requires more facts',not_due:'Before selected route starts',not_covered:'Coverage not researched',outside:'Outside scenario group',implementation:'Scope matched · implementation unresolved',paused:'Scope matched · enforcement enjoined'};
 export const BOUNDARIES={financial_control:'Financial control',operational_control:'Operational control',equity_share:'Equity share'};
 export function createDemoState(){
-  return {profile:'fictional',scenario:'baseline',asOf:'2027-02-01',reportingStart:'2026-07-01',boundary:'financial_control',entity:'all',jurisdiction:'all',tab:'graph',sources:['public-entities','fictional-facts',...REGULATORY_SOURCES.map(s=>s.id),'ifrs'],question:'',answer:null,saved:[],notice:''};
+  return {profile:'fictional',scenario:'baseline',asOf:'2027-02-01',reportingStart:'2026-07-01',boundary:'financial_control',entity:'all',jurisdiction:'all',tab:'graph',materialityCase:'water',materialityLevel:'entity',supplierEvidence:'missing',sources:['public-entities','fictional-facts',...REGULATORY_SOURCES.map(s=>s.id),'ifrs'],question:'',answer:null,saved:[],notice:''};
 }
 const fullDate=value=>typeof value==='string'&&value.length===10&&!!dateRange(value);
 export function snapshot({scenario='baseline',asOf='2027-02-01',reportingStart='2026-07-01'}={}){
@@ -15,6 +19,7 @@ export function snapshot({scenario='baseline',asOf='2027-02-01',reportingStart='
   const applied=scenario==='regulation'||!!event.effective_on&&asOf>=event.effective_on;
   if(applied&&scenario==='acquisition')Object.assign(entities.find(e=>e.id==='orchid'),{member:true,ownership:40,financial_control:true,operational_control:false});
   if(applied&&scenario==='divestment')Object.assign(entities.find(e=>e.id==='atlas-au'),{member:false,ownership:0,financial_control:false,operational_control:false});
+  if(applied&&scenario==='divest_mexico')Object.assign(entities.find(e=>e.id==='atlas-mx'),{member:false,ownership:0,financial_control:false,operational_control:false});
   return {entities,rules,applied,scenario,asOf,reportingStart:scenario==='regulation'?'2028-01-01':reportingStart,version:RULESET_VERSION};
 }
 export function isMember(entity,entities,seen=new Set()){
@@ -37,6 +42,10 @@ export function atLeastTwo(trace){
 }
 // Local screening is independent of group membership and GHG boundary selection.
 export function evaluateRequirement(entity,rule,snap){
+  if(!['au_size','sgx'].includes(rule.kind)){
+    const result=evaluateExtended(entity,rule,snap),inGroup=isMember(entity,snap.entities);
+    return {id:`${entity.id}:${rule.id}`,entityId:entity.id,entity:entity.name,jurisdiction:rule.jurisdiction,rule:rule.id,instrument:rule.title,standard:rule.standard,trigger:rule.trigger,inGroup,version:snap.version,citations:['fictional-facts',...rule.sources],locator:rule.locator,...result,note:(inGroup?'':'Outside this group view; the local screen is retained. ')+result.note};
+  }
   let trace=[],status,phase='',missing=[],limits;
   if(rule.kind==='au_size'){
     const active=[...rule.phases].reverse().find(p=>snap.reportingStart>=p.start);
@@ -96,7 +105,7 @@ export function demoSources(data){
   const ifrs=data.records.find(r=>r.id==='ifrs-s2-ghg-amendments');
   return [
     {...PUBLIC_SOURCE,text:PUBLIC_SOURCE.note+' Selected rows and exhibit page references are shown in the optional public workspace.'},
-    {id:'fictional-facts',title:'Atlas · fictional entity evidence',kind:'Fictional company facts',url:null,text:'All Atlas company facts are authored assumptions, including Mainboard coverage, historical STI membership, control and absence of relief. Pacific has separate illustrative consolidated figures for each selectable financial year: AUD 240m revenue, AUD 600m assets and 200 employees. Straits is assumed in the historical STI cohort. UK Distribution is assumed subject to SGX Mainboard rules, but its historical STI membership is unknown. Orchid is Mainboard-listed and outside the historical STI cohort. Acquisition adds it to the group without creating its local obligations. Group root and facility are not separately screened. These are not PepsiCo facts or actual client records.'},
+    {id:'fictional-facts',title:'Atlas · fictional entity evidence',kind:'Fictional company facts',url:null,text:'All Atlas company facts are authored assumptions, including Mainboard coverage, historical STI membership, control and absence of relief. Pacific has separate illustrative consolidated figures for each selectable financial year: AUD 240m revenue, AUD 600m assets and 200 employees. Straits is assumed in the historical STI cohort. UK Distribution is assumed subject to SGX Mainboard rules, but its historical STI membership is unknown. Orchid is Mainboard-listed and outside the historical STI cohort. Acquisition adds it to the group without creating its local obligations. Americas and California Distribution are fictional US-formed businesses with California nexus and FY 2025 total revenue of USD 1,500m and USD 750m respectively. Mexico is a domestic nonfinancial CNBV issuer; relief elections are unknown. France has fictional 1,200 average employees and EUR 600m net turnover; national scope, wave and exemptions are unverified. Lumen Packaging is an independent fictional supplier, not an owned entity. Materiality and sample evidence controls are authored assumptions. Group root and facility are not separately screened. These are not PepsiCo facts or actual client records.'},
     ...REGULATORY_SOURCES,
     {id:'ifrs',title:'IFRS S2 amendment source note',kind:'Official source · bounded summary',url:ifrs?.sources[0]?.url||null,text:ifrs?`${ifrs.summary} ${ifrs.applicability}`:'The IFRS S2 source record is unavailable. No answer can be supported.',available:!!ifrs}
   ];
@@ -104,16 +113,22 @@ export function demoSources(data){
 const normalise=value=>String(value).toLowerCase().replace(/[?.,!]/g,'').replace(/\s+/g,' ').trim();
 export function answerQuestion(input,state,data){
   const question=GUIDED_QUESTIONS.find(q=>[q.question,...q.aliases].some(label=>normalise(label)===normalise(input)));
-  if(!question)return {supported:false,title:'Outside the guided demo',text:'No live AI model is connected. Choose one of the five example questions. This demo does not analyse arbitrary questions or uploaded files.',citations:[]};
-  const citations=question.id==='ifrs'?['ifrs']:state.profile==='public'?['public-entities']:['fictional-facts',...REGULATORY_SOURCES.map(s=>s.id)];
+  if(!question)return {supported:false,title:'Outside the guided demo',text:'No live AI model is connected. Choose an example question. This demo does not analyse arbitrary questions or uploaded files.',citations:[]};
+  const citations=question.id==='ifrs'?['ifrs']:state.profile==='public'?['public-entities']:['fictional-facts',...(TOPIC_SOURCES[question.id]||REGULATORY_SOURCES.map(s=>s.id))];
   const sources=demoSources(data),missing=citations.filter(id=>!state.sources.includes(id)||sources.find(s=>s.id===id)?.available===false);
   if(missing.length)return {supported:false,title:'Required evidence is not selected',text:'Select the following source(s) before this guided answer can be shown: '+missing.map(id=>sources.find(s=>s.id===id)?.title||id).join('; ')+'. No answer has been inferred from excluded sources.',citations:[]};
-  let text,rows=[];
+  let text,rows=[],materiality=null,suppliers=[];
   const allRows=assessmentRows(state),snap=state.profile==='fictional'?snapshot(state):null;
   if(question.id==='ifrs')text=sources.find(s=>s.id==='ifrs').text;
   else if(state.profile==='public'){
     text=question.id==='changes'?'Business scenarios are disabled for the optional public example. Use Atlas for the presentation.':question.id==='boundary'?'The subsidiary list supports selected names and jurisdictions at its stated date, not direct ownership, control or legal applicability.':question.id==='missing'?'Missing: verified reporting periods, direct ownership/control, listing, financial facts, applicable instruments and relief. The real-rule pack has not been applied to these public records.':'Five entity/jurisdiction pairs are visible in the optional public extract; every row remains unresolved.';
     if(question.id==='matrix'||question.id==='missing')rows=allRows;
+  }else if(TOPIC_TEXT[question.id]){
+    text=TOPIC_TEXT[question.id];
+    if(question.id==='california')rows=allRows.filter(r=>r.rule.startsWith('CA-')&&r.entityId.startsWith('atlas-us'));
+    if(question.id==='mexico')rows=allRows.filter(r=>r.id==='atlas-mx:MX-ISSB');
+    if(question.id==='materiality')materiality=assessMateriality(state);
+    if(['subentities','suppliers'].includes(question.id))suppliers=valueChainRows(state);
   }else if(question.id==='matrix'){
     rows=allRows;
     text=`${rows.filter(r=>r.inGroup&&r.status==='match').length} in-group entity/requirement pairs pass the selected screens for financial years starting ${snap.reportingStart}. Company facts are fictional; requirements are source-checked, with human review pending. The full matrix ignores table filters. Non-matches do not exclude other routes, and the UK coverage gap remains explicit.`;
@@ -121,10 +136,10 @@ export function answerQuestion(input,state,data){
     rows=scenarioDiff(state);
     text=`${rows.length} rows change screening status or group membership against the baseline. ${state.scenario==='regulation'?`Reporting periods compared: ${state.reportingStart} → ${snap.reportingStart}; the source-backed rules are unchanged.`:'Acquisition and divestment change the group view, not the existence of an entity’s local legal obligations.'} Organisation snapshot: ${state.asOf}.`;
   }else if(question.id==='missing'){
-    rows=allRows.filter(r=>r.inGroup&&['unknown','not_covered'].includes(r.status));
-    text='The rows below name unresolved inputs or unresearched coverage. UK Distribution’s historical STI membership is unknown; its SGX listing alone cannot resolve the STI-specific routes. UK domestic requirements still need research. All fictional assumptions, relief positions and year-end financial facts require verification before client use.';
+    rows=allRows.filter(r=>r.inGroup&&(r.missing?.length||['unknown','not_covered','implementation','paused'].includes(r.status)));
+    text='The rows below name unresolved inputs, implementation or enforcement status, and unresearched coverage. A route may match while disclosure content or filing status still needs review. UK Distribution’s historical STI membership is unknown; its SGX listing alone cannot resolve the STI-specific routes. UK domestic requirements still need research. All fictional assumptions, relief positions and year-end financial facts require verification before client use.';
   }else text='A match means only that fictional facts satisfy a selected, source-backed screening route. Read each row’s condition trace, source locator, reporting-period start, missing inputs and scope limits. Local adoption is separate from a standard’s effective date. GHG boundary choices do not switch legal obligations on or off. This is not a legal opinion, full compliance assessment or human approval.';
-  return {supported:true,title:question.question,text,rows,citations,context:state.profile==='public'?'Optional public evidence · 27 Dec 2025':`Atlas · ${SCENARIOS[state.scenario].label} · organisation ${state.asOf} · FY start ${snap.reportingStart} · ${BOUNDARIES[state.boundary]} · sources checked 27 Aug 2026`,questionId:question.id};
+  return {supported:true,title:question.question,text,rows,materiality,suppliers,citations,context:state.profile==='public'?'Optional public evidence · 27 Dec 2025':`Atlas · ${SCENARIOS[state.scenario].label} · organisation ${state.asOf} · FY start ${snap.reportingStart} · California fixed 2026 cycle · ${BOUNDARIES[state.boundary]} · materiality ${state.materialityCase}/${state.materialityLevel} · supplier evidence ${state.supplierEvidence} · sources checked 27 Aug 2026`,questionId:question.id};
 }
 export function validateDemo(){
   const errors=[],ids=new Set(FICTIONAL_ENTITIES.map(e=>e.id));
@@ -151,7 +166,10 @@ export function updateDemo(state,action,value,data){
   if(action==='date'&&state.profile==='fictional'&&fullDate(value))next.asOf=value;
   if(action==='period'&&state.profile==='fictional'&&REPORTING_PERIODS.includes(value))next.reportingStart=value;
   if(action==='boundary'&&Object.hasOwn(BOUNDARIES,value))next.boundary=value;
-  if(action==='tab'&&['graph','matrix','changes'].includes(value))next.tab=value;
+  if(action==='tab'&&['graph','matrix','changes','adoption','materiality','valuechain'].includes(value))next.tab=value;
+  if(action==='materiality-case'&&Object.hasOwn(MATERIALITY_CASES,value))next.materialityCase=value;
+  if(action==='materiality-level'&&['entity','group'].includes(value))next.materialityLevel=value;
+  if(action==='supplier-evidence'&&Object.hasOwn(EVIDENCE_MODES,value))next.supplierEvidence=value;
   if(action==='entity'&&(value==='all'||(state.profile==='public'?PUBLIC_ENTITIES:snapshot(state).entities).some(x=>x.id===value)))next.entity=value;
   if(action==='jurisdiction'&&(value==='all'||assessmentRows(state).some(r=>r.jurisdiction===value)))next.jurisdiction=value;
   if(action==='clear-filters')Object.assign(next,{entity:'all',jurisdiction:'all'});

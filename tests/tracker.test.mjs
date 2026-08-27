@@ -4,7 +4,7 @@ import {readFile} from 'node:fs/promises';
 import {createServer} from 'node:http';
 import {STAGES,escapeHtml,safeUrl,dateRange,formatDate,isStale,filterRecords,milestones,developments,summarise,validateDataset} from '../assets/core.mjs';
 import {renderView,renderDetail,start} from '../assets/app.mjs';
-import {createDemoState,updateDemo,validateDemo,PUBLIC_SOURCE,PUBLIC_ENTITIES,snapshot,isMember,boundaryPosition,assessmentRows,evaluateRequirement,atLeastTwo,visibleRows,scenarioDiff,answerQuestion,GUIDED_QUESTIONS} from '../assets/demo-core.mjs';
+import {createDemoState,updateDemo,validateDemo,PUBLIC_SOURCE,PUBLIC_ENTITIES,snapshot,isMember,boundaryPosition,assessmentRows,evaluateRequirement,atLeastTwo,visibleRows,scenarioDiff,answerQuestion,GUIDED_QUESTIONS,assessMateriality,valueChainRows} from '../assets/demo-core.mjs';
 import {REAL_REQUIREMENTS,REGULATORY_SOURCES,RULESET_VERSION} from '../data/requirements.mjs';
 import {renderWorkspace,renderNotebook,renderAssessment,renderDemoSource} from '../assets/demo-views.mjs';
 
@@ -142,7 +142,7 @@ test('static assets and dataset are served from repository-relative paths over H
   const root=new URL('../',import.meta.url);
   const server=createServer(async(req,res)=>{try{const target=req.url==='/'?'index.html':req.url.slice(1);const body=await readFile(new URL(target,root));res.setHeader('Content-Type',target.endsWith('.mjs')?'text/javascript':target.endsWith('.json')?'application/json':target.endsWith('.css')?'text/css':'text/html');res.end(body);}catch{res.writeHead(404);res.end();}});
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
-  try{const base=`http://127.0.0.1:${server.address().port}`;for(const target of ['/','/assets/app.mjs','/assets/core.mjs','/assets/styles.css','/assets/demo.css','/assets/demo-core.mjs','/assets/demo-views.mjs','/data/client-demo.mjs','/data/requirements.mjs','/data/records.json']){const response=await fetch(base+target);assert.equal(response.status,200);if(target.endsWith('.json'))assert.deepEqual(validateDataset(await response.json()),[]);}}
+  try{const base=`http://127.0.0.1:${server.address().port}`;for(const target of ['/','/assets/app.mjs','/assets/core.mjs','/assets/styles.css','/assets/demo.css','/assets/demo-core.mjs','/assets/demo-views.mjs','/data/client-demo.mjs','/data/requirements.mjs','/data/extended-requirements.mjs','/assets/extended-core.mjs','/assets/extended-views.mjs','/data/records.json']){const response=await fetch(base+target);assert.equal(response.status,200);if(target.endsWith('.json'))assert.deepEqual(validateDataset(await response.json()),[]);}}
   finally{await new Promise(resolve=>server.close(resolve));}
 });
 
@@ -186,7 +186,7 @@ test('divestment removes subsidiary and facility from group view without erasing
 });
 test('real requirements expose sources, cross-border listing and unresolved inputs',()=>{
   const state=createDemoState(),rows=assessmentRows(state);
-  assert.equal(rows.length,17);
+  assert.equal(rows.length,65);
   assert.equal(rows.find(r=>r.id==='atlas-au:AU-SIZE').status,'match');
   assert.equal(rows.find(r=>r.id==='atlas-uk:SGX-S12').status,'match');
   const missing=rows.find(r=>r.id==='atlas-uk:SGX-STI-CLIMATE');
@@ -257,7 +257,7 @@ test('acquisition changes group inclusion without inventing new local reporting 
   const after=assessmentRows({...state,scenario:'acquisition'}).find(r=>r.id===before.id);
   assert.equal(before.inGroup,false);assert.equal(after.inGroup,true);assert.equal(after.status,before.status);
   assert.equal(before.status,'match');assert.deepEqual(before.trace,after.trace);
-  assert.equal(scenarioDiff({...state,scenario:'acquisition'}).length,4);
+  assert.equal(scenarioDiff({...state,scenario:'acquisition'}).length,8);
 });
 test('Atlas is the default route and public evidence is an optional, isolated presentation path',async()=>{
   const env=harness(async()=>({ok:true,json:async()=>clone()}));
@@ -280,9 +280,9 @@ test('source-backed assessments expose citations, locators, pending review and m
 test('workspace filters are independent and support the full jurisdiction/entity matrix',()=>{
   const state={...createDemoState(),entity:'atlas-sg',jurisdiction:'Australia'};
   assert.equal(visibleRows(state).length,1);
-  assert.equal(visibleRows({...state,entity:'all'}).length,4);
+  assert.equal(visibleRows({...state,entity:'all'}).length,8);
   assert.equal(visibleRows({...state,entity:'atlas-site'}).length,0);
-  for(const profile of ['public','fictional'])for(const tab of ['graph','matrix','changes']){
+  for(const profile of ['public','fictional'])for(const tab of ['graph','matrix','changes','adoption','materiality','valuechain']){
     const output=renderWorkspace({...state,entity:'all',profile,tab});assert.doesNotMatch(output,/undefined|NaN/);
   }
 });
@@ -301,9 +301,9 @@ test('notebook supports only guided questions and requires selected evidence',()
 test('notebook answers reflect the active scenario, not workspace table filters',()=>{
   const state={...createDemoState(),scenario:'acquisition',entity:'atlas-au',jurisdiction:'Australia'};
   const answer=answerQuestion('What applies?',state,data);
-  assert.equal(answer.rows.length,17);assert.match(answer.context,/Acquire Orchid/);
+  assert.equal(answer.rows.length,65);assert.match(answer.context,/Acquire Orchid/);
   assert.ok(answer.rows.some(r=>r.id==='orchid:SGX-S12'&&r.status==='match'));
-  assert.equal(answerQuestion('What changes in this scenario?',state,data).rows.length,4);
+  assert.equal(answerQuestion('What changes in this scenario?',state,data).rows.length,8);
 });
 test('saved responses are bounded session snapshots and never invent review approval',()=>{
   let state=updateDemo(createDemoState(),'question','matrix',data);
@@ -350,5 +350,98 @@ test('browser event wiring connects the workspace, guided questions, source sele
     env.nodes.view.handlers.submit({target:{id:'demo-question-form'},preventDefault(){prevented=true;}});assert.equal(prevented,true);assert.match(env.nodes.view.innerHTML,/Outside the guided demo/);
     click('profile','public');click('question','matrix');assert.match(env.nodes.view.innerHTML,/PepsiCo Beverages Australia/);assert.match(env.nodes.view.innerHTML,/every row remains unresolved/);
     click('source','public-entities');assert.match(env.nodes['dialog-body'].innerHTML,/27 Dec 2025/);
+  }finally{env.restore();}
+});
+test('California uses strict revenue thresholds, explicit US formation and separate enforcement status',()=>{
+  const snap=snapshot(),entity=structuredClone(snap.entities.find(x=>x.id==='atlas-us'));
+  const r253=snap.rules.find(r=>r.id==='CA-SB253'),r261=snap.rules.find(r=>r.id==='CA-SB261');
+  assert.equal(evaluateRequirement(entity,r253,snap).status,'implementation');
+  assert.equal(evaluateRequirement(entity,r261,snap).status,'paused');
+  for(const [rule,boundary] of [[r253,1000],[r261,500]]){
+    entity.ca_revenue_2025_musd=boundary;assert.equal(evaluateRequirement(entity,rule,snap).status,'no_match');
+    entity.ca_revenue_2025_musd=boundary+0.01;assert.equal(evaluateRequirement(entity,rule,snap).scopeStatus,'match');
+    for(const value of [null,undefined,'1500',NaN,-1]){entity.ca_revenue_2025_musd=value;assert.equal(evaluateRequirement(entity,rule,snap).status,'unknown');}
+  }
+  entity.ca_revenue_2025_musd=1500;entity.us_formed=false;assert.equal(evaluateRequirement(entity,r253,snap).status,'no_match');
+  entity.us_formed=true;entity.ca_business=null;assert.equal(evaluateRequirement(entity,r253,snap).status,'unknown');
+  entity.ca_business=true;entity.insurance=true;assert.equal(evaluateRequirement(entity,r261,snap).status,'no_match');
+  assert.equal(evaluateRequirement(entity,r253,snap).scopeStatus,'match');
+});
+test('California revenue cycle and legal status do not silently follow future FY or organisation dates',()=>{
+  const base=assessmentRows(createDemoState()).filter(r=>r.rule.startsWith('CA-'));
+  const future=assessmentRows({...createDemoState(),reportingStart:'2028-01-01',asOf:'2030-01-01'}).filter(r=>r.rule.startsWith('CA-'));
+  assert.deepEqual(future,base);
+  const parent=base.find(r=>r.id==='atlas-us:CA-SB253'),child=base.find(r=>r.id==='atlas-us-ops:CA-SB253');
+  assert.equal(child.status,'no_match');assert.equal(parent.scopeStatus,'match');
+  assert.match(parent.period,/FY 2025/);assert.match(parent.missing.join(' '),/parent report/);
+  assert.match(parent.note,/proposed/);assert.match(renderAssessment('atlas-us:CA-SB261',createDemoState()),/voluntary/);
+});
+test('Mexico issuer scope is not inferred from country and preserves relief uncertainty',()=>{
+  const snap=snapshot(),entity=structuredClone(snap.entities.find(e=>e.id==='atlas-mx')),rule=snap.rules.find(r=>r.id==='MX-ISSB');
+  assert.equal(evaluateRequirement(entity,rule,snap).status,'match');
+  assert.match(evaluateRequirement(entity,rule,snap).missing.join(' '),/relief/);
+  assert.equal(evaluateRequirement(entity,rule,{...snap,reportingStart:'2024-12-31'}).status,'not_due');
+  entity.mx_issuer=false;assert.equal(evaluateRequirement(entity,rule,snap).status,'no_match');
+  entity.mx_issuer=null;assert.equal(evaluateRequirement(entity,rule,snap).status,'unknown');
+  entity.mx_issuer=true;entity.mx_nonfinancial=false;assert.equal(evaluateRequirement(entity,rule,snap).status,'not_covered');
+  entity.mx_nonfinancial=true;entity.mx_domestic=false;assert.equal(evaluateRequirement(entity,rule,snap).status,'no_match');
+});
+test('EU threshold matches cannot become country-law conclusions or erase missing exemptions',()=>{
+  const snap=snapshot(),entity=structuredClone(snap.entities.find(e=>e.id==='atlas-eu')),rule=snap.rules.find(r=>r.id==='EU-CSRD');
+  let row=evaluateRequirement(entity,rule,snap);assert.equal(row.scopeStatus,'match');assert.equal(row.status,'unknown');assert.match(row.missing.join(' '),/exemption/);
+  entity.eu_employees=1000;assert.equal(evaluateRequirement(entity,rule,snap).status,'no_match');
+  entity.eu_employees=1001;entity.eu_turnover_meur=450;assert.equal(evaluateRequirement(entity,rule,snap).status,'no_match');
+  entity.eu_turnover_meur=451;entity.eu_national_scope_confirmed=true;entity.eu_wave_confirmed=true;entity.eu_no_exemption=true;
+  assert.equal(evaluateRequirement(entity,rule,snap).status,'unknown');
+  entity.eu_employees=null;assert.equal(evaluateRequirement(entity,rule,snap).status,'unknown');
+});
+test('materiality uses impact OR financial, preserves unknowns and separates group assessment',()=>{
+  const state=createDemoState();let m=assessMateriality(state);
+  assert.equal(m.financial,false);assert.equal(m.impact,true);assert.equal(m.combined,true);
+  m=assessMateriality({...state,materialityLevel:'group'});assert.equal(m.financial,null);assert.equal(m.combined,true);assert.ok(m.missing.length);
+  m=assessMateriality({...state,materialityCase:'transition'});assert.equal(m.financial,true);assert.equal(m.impact,false);assert.equal(m.combined,true);
+  m=assessMateriality({...state,materialityCase:'unknown'});assert.equal(m.combined,null);assert.equal(m.ifrs,'Assessment missing');
+  assert.deepEqual(assessmentRows(state),assessmentRows({...state,materialityCase:'both',materialityLevel:'group'}));
+});
+test('Mexico divestment changes the buyer data role but retains independent issuer scope',()=>{
+  const state=createDemoState(),before=valueChainRows(state).find(r=>r.id==='atlas-mx');
+  const afterState={...state,scenario:'divest_mexico'},after=valueChainRows(afterState).find(r=>r.id==='atlas-mx');
+  assert.match(before.role,/Group operations/);assert.match(after.role,/after sale/);
+  assert.deepEqual(valueChainRows({...afterState,asOf:'2026-12-31'}),valueChainRows(state));
+  const pre=assessmentRows(state).find(r=>r.id==='atlas-mx:MX-ISSB'),post=assessmentRows(afterState).find(r=>r.id===pre.id);
+  assert.equal(pre.inGroup,true);assert.equal(post.inGroup,false);assert.equal(pre.status,post.status);assert.deepEqual(pre.trace,post.trace);
+  assert.ok(scenarioDiff(afterState).every(r=>r.entityId==='atlas-mx'&&r.before===r.status));
+  assert.equal(snapshot().entities.find(e=>e.id==='atlas-mx').ownership,100);
+});
+test('supplier evidence is independent of ownership and does not create supplier filing conclusions',()=>{
+  const state=createDemoState(),rows=valueChainRows(state);
+  assert.ok(!snapshot().entities.some(e=>e.id==='lumen'));assert.match(rows[0].direct,/No supplier filing duty inferred/);
+  assert.match(rows[0].evidence,/No activity/);assert.ok(rows[0].missing.length);
+  const secondary=valueChainRows({...state,supplierEvidence:'secondary'});assert.match(secondary[0].evidence,/no emissions number/);
+  const primary=valueChainRows({...state,supplierEvidence:'primary'});assert.match(primary[0].evidence,/unverified/);assert.ok(primary[0].missing.length);
+  assert.deepEqual(assessmentRows(state),assessmentRows({...state,supplierEvidence:'primary'}));
+  assert.deepEqual(valueChainRows({...state,profile:'public'}),[]);
+});
+test('new guided answers require their own sources and do not apply fictional facts to public entities',()=>{
+  const state=createDemoState();
+  for(const id of ['adoption','california','mexico','materiality','subentities','suppliers']){
+    const q=GUIDED_QUESTIONS.find(q=>q.id===id),answer=answerQuestion(q.question,state,data);
+    assert.equal(answer.supported,true);
+    for(const source of answer.citations)assert.equal(answerQuestion(q.question,{...state,sources:state.sources.filter(s=>s!==source)},data).supported,false);
+    const publicAnswer=answerQuestion(q.question,{...state,profile:'public'},data);
+    assert.deepEqual(publicAnswer.citations,['public-entities']);assert.equal(publicAnswer.materiality,null);assert.deepEqual(publicAnswer.suppliers,[]);
+  }
+  const mexico=GUIDED_QUESTIONS.find(q=>q.id==='mexico');assert.equal(answerQuestion(mexico.question,{...state,sources:['fictional-facts','mx-issb']},data).supported,true);
+});
+test('new workspace controls reach materiality and supplier answers through application events',async()=>{
+  const env=harness(async()=>({ok:true,json:async()=>clone()}));
+  const click=(key,value='')=>env.nodes.view.handlers.click({target:env.button('data-demo-'+key,value)});
+  try{
+    location.hash='#workspace';await start();click('tab','adoption');assert.match(env.nodes.view.innerHTML,/CA-SB253/);
+    click('tab','materiality');click('materiality-level','group');assert.match(env.nodes.view.innerHTML,/GROUP PERSPECTIVE/);assert.match(env.nodes.view.innerHTML,/Assessment missing/);
+    click('materiality-case','both');assert.doesNotMatch(env.nodes.view.innerHTML,/Assessment missing/);
+    click('tab','valuechain');click('scenario','divest_mexico');click('supplier-evidence','secondary');assert.match(env.nodes.view.innerHTML,/Divested entity/);assert.match(env.nodes.view.innerHTML,/secondary-data method/);
+    location.hash='#notebook';env.window.handlers.hashchange();click('question','subentities');assert.match(env.nodes.view.innerHTML,/continuing independent supply contract/);click('save');assert.match(env.nodes.view.innerHTML,/supplier evidence secondary/);
+    click('profile','public');location.hash='#workspace';env.window.handlers.hashchange();assert.match(env.nodes.view.innerHTML,/Use Atlas/);
   }finally{env.restore();}
 });

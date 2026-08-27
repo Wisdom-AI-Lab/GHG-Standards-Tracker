@@ -1,6 +1,7 @@
 // Bounded checks of official sources on 27 August 2026; human legal review pending.
 // These are selected reporting routes, not a comprehensive jurisdiction ruleset.
-export const RULESET_VERSION = 'source-check-2026-08-27';
+import {EXTENDED_SOURCES,EXTENDED_REQUIREMENTS} from './extended-requirements.mjs';
+export const RULESET_VERSION = 'source-check-2026-08-27-expanded';
 export const REPORTING_PERIODS = ['2025-01-01','2026-01-01','2026-07-01','2027-07-01','2028-01-01'];
 export const REGULATORY_SOURCES = [
   {id:'asic-scope',title:'ASIC · reporting scope',kind:'Official regulator · source checked',checked_on:'2026-08-27',review:'source_checked',url:'https://www.asic.gov.au/regulatory-resources/sustainability-reporting/for-preparers-of-sustainability-reports/who-must-prepare-a-sustainability-report',locator:'Who must prepare a sustainability report?',text:'Chapter 2M annual financial-report obligations are a prerequisite. Corporate size, NGER and specified asset-value routes are distinct. This demo screens the corporate-size route only; failure of that route does not exclude another reporting obligation.'},
@@ -18,5 +19,7 @@ export const REAL_REQUIREMENTS = [
   {id:'SGX-STI-CLIMATE',jurisdiction:'Singapore',title:'Mainboard · STI climate-disclosure route',standard:'IFRS S2 excluding Scope 3; climate-relevant S1',trigger:'Mainboard + STI on 30 Jun 2025 + FYC 2025',sources:['sgx-711b','sgx-pn76'],locator:'PN 7.6 4.12(b)(i), 4.13',kind:'sgx',start:'2025-01-01',sti:true},
   {id:'SGX-STI-S3',jurisdiction:'Singapore',title:'Mainboard · STI Scope 3 route',standard:'IFRS S2 Scope 3 through SGX requirements',trigger:'Mainboard + STI on 30 Jun 2025 + FYC 2026',sources:['sgx-711b','sgx-pn76'],locator:'PN 7.6 4.12(c)',kind:'sgx',start:'2026-01-01',sti:true}
 ];
+REGULATORY_SOURCES.push(...EXTENDED_SOURCES);
+REAL_REQUIREMENTS.push(...EXTENDED_REQUIREMENTS);
 function freeze(value){Object.freeze(value);for(const v of Object.values(value))if(v&&typeof v==='object'&&!Object.isFrozen(v))freeze(v);}
 for(const value of [REPORTING_PERIODS,REGULATORY_SOURCES,REAL_REQUIREMENTS])freeze(value);
