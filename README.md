@@ -4,7 +4,7 @@ An original, static tracker for sustainability frameworks, regulatory developmen
 
 ## What this version contains
 
-- Seven main navigation items: Overview, Standards register, Amended Disclosure Requirements, Timeline, Client workspace, Regulatory notebook and Evidence. The amended-requirements area contains Compare regulatory impacts and an interactive Interoperability map; existing `#updates` and `#compare` links continue to work.
+- Seven main navigation items: Overview, Standards register, Developments, Timeline, Client workspace, Regulatory notebook and Evidence. Developments contains Amended Disclosure Requirements, Compare regulatory impacts and an interactive Interoperability map; existing `#updates` and `#compare` links continue to work.
 - Framework, stage and region filters; source-linked detail dialogs. TNFD recommendations and planned ISSB nature work are distinct records; SB 253 and SB 261 retain their separate implementation/enforcement states.
 - CSRD, PPWR and packaging EPR records for California, Oregon, Colorado, Maine, Minnesota, Maryland and Washington. Coverage is packaging-focused, not all US EPR product regimes.
 - Nine selectable regulatory relationships distinguish guidance, methods, conditional routes and editorial data reuse. Scenario-aware client priority actions identify missing evidence without inventing filing obligations.

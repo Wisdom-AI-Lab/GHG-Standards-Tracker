@@ -33,6 +33,7 @@ test('filters combine search tokens, framework, stage and region',()=>{
   assert.equal(filterRecords(data.records,{query:'  IFRS   emissions ',framework:'ISSB / IFRS',stage:'published',region:'Global'})[0].id,'ifrs-s2-ghg-amendments');
   assert.equal(filterRecords(data.records,{query:'Scope 2',region:'United States'}).length,0);
   assert.equal(filterRecords(data.records,{query:'CBAM',region:'European Union'}).length,1);
+  assert.deepEqual(filterRecords(data.records,{framework:'US SEC',region:'United States'}).map(r=>r.id),['us-sec-rescission']);
   assert.equal(filterRecords(data.records).length,20);
 });
 test('filtered metrics and stale checks derive from records, not hardcoded counts',()=>{
@@ -96,6 +97,7 @@ test('detail records include applicability, primary source and review boundaries
 test('HTML supplies semantic navigation, labelled controls and a native dialog',()=>{
   assert.match(html,/<html lang="en">/);assert.match(html,/<meta name="viewport"/);
   assert.match(html,/<nav aria-label="Main navigation">/);assert.equal([...html.matchAll(/<a href="#(?:overview|register|updates|timeline|compare|method|workspace|notebook)"/g)].length,7);
+  assert.match(html,/<a href="#updates">Developments<\/a>/);
   assert.match(html,/<dialog[^>]*aria-labelledby="dialog-title"/);
   assert.match(html,/<script type="module" src="assets\/app.mjs">/);
   assert.doesNotMatch(html,/onclick=|supabase|justinzeh/);
@@ -120,6 +122,12 @@ test('application loads, filters, changes routes and opens/closes evidence detai
   const env=harness(async url=>{assert.equal(url,'data/records.json');return {ok:true,json:async()=>clone()};});
   try{
     await start();assert.match(env.nodes.view.innerHTML,/The watch register/);
+    const frameworks=env.nodes.framework.children.map(option=>option.textContent);
+    assert.ok(frameworks.includes('US SEC'));assert.ok(!frameworks.includes('United States'));
+    env.nodes.framework.value='US SEC';env.nodes.framework.handlers.change();
+    assert.match(env.nodes['result-count'].textContent,/1 of 20/);
+    assert.match(env.nodes.view.innerHTML,/SEC climate-rule rescission proposal/);
+    env.nodes['clear-filters'].handlers.click();
     env.nodes.search.value='CBAM';env.nodes.search.handlers.input();assert.match(env.nodes['result-count'].textContent,/1 of 20/);
     location.hash='#register';env.window.handlers.hashchange();assert.match(env.nodes.view.innerHTML,/<table>/);
     const b=env.button('data-record','eu-cbam-definitive');env.nodes.view.handlers.click({target:b});assert.equal(env.nodes['record-dialog'].open,true);assert.match(env.nodes['dialog-body'].innerHTML,/CBAM definitive/);
@@ -549,10 +557,14 @@ test('interoperability selection, navigation highlighting and record dialogs wor
   assert.match(env.nodes.view.innerHTML,/data-map-relation="packaging-markets" aria-pressed="true"/);
   env.nodes.view.handlers.click({target:env.button('data-record','eu-ppwr')});assert.match(env.nodes['dialog-body'].innerHTML,/Timeline and exact date evidence/);
   location.hash='#updates';env.window.handlers.hashchange();assert.equal(env.nodes['page-title'].textContent,'Amended Disclosure Requirements');
+  assert.match(env.nodes.view.innerHTML,/>Amended Disclosure Requirements<\/a>/);
  }finally{env.restore();}
 });
 test('priority actions follow entities and dated transactions without inferring packaging duties',()=>{
  const state=createDemoState();const get=s=>priorityActions(s,data,snapshot(s).entities,assessmentRows(s),valueChainRows(s));
+ const workspace=renderView({view:'workspace',data,today});
+ assert.match(workspace,/Priorities reflect the selected scenario and entities\. Confirm requirements and deadlines before acting\./);
+ assert.doesNotMatch(workspace,/Suggested review order, not a compliance score/);
  const before=JSON.stringify(state);const all=get(state);assert.equal(JSON.stringify(state),before);
  assert.ok(all.some(t=>t.id==='packaging-scope'&&t.missing.some(m=>m.includes('Destination'))));
  assert.match(get({...state,entity:'atlas-eu'}).find(t=>t.id==='resolve-screens').missing.join(' '),/national implementation/);

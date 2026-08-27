@@ -10,7 +10,7 @@ Start with **Baseline**, organisation date **1 Feb 2027**, FY start **1 Jul 2026
 
 ## Product navigation
 
-Overview and Standards register include TNFD and California records. Amended Disclosure Requirements contains Compare regulatory impacts and the Interoperability map. Evidence contains the glossary and source-review definitions. The header date identifies the published edition; automated searches are not active.
+Overview and Standards register include TNFD and California records. Developments contains Amended Disclosure Requirements, Compare regulatory impacts and the Interoperability map. Evidence contains the glossary and source-review definitions. The header date identifies the published edition; automated searches are not active.
 
 ## 1. Organisation graph
 
@@ -73,7 +73,7 @@ Before presenting, check layout, scrolling, keyboard controls and source dialogs
 ## Packaging and interoperability review
 
 1. Open **Overview** or **Standards register**. Find CSRD, PPWR and the seven state packaging EPR records; open each source note. Confirm the Maine timing and Colorado/Maryland evidence gaps remain visible.
-2. Open **Amended Disclosure Requirements → Interoperability map**. Select “Climate disclosure alignment”, then “Packaging data across markets”. Check the shared information, separate obligations, linked records and evidence. Map nodes open records; the US packaging group opens its relationship detail.
+2. Open **Developments → Interoperability map**. Select “Climate disclosure alignment”, then “Packaging data across markets”. Check the shared information, separate obligations, linked records and evidence. Map nodes open records; the US packaging group opens its relationship detail.
 3. Open **Timeline**, turn off “Upcoming only”, and inspect PPWR’s August 2026 application. Month/year labels retain exact days below. Inspect a year/quarter-only event and a conditional 2028 or 2030 anchor.
 4. In **Client workspace**, inspect **Priority actions**. Select France, then Mexico; compare the Mexico sale before and after 1 January 2027. Review missing facts and suggested owners. No task is sent, no deadline is assigned, and no packaging scope match is inferred.
 5. In **Regulatory notebook**, ask the packaging and overlap questions. Deselect the PPWR register evidence: the answer must be withheld. Switch to the public example: Atlas’s company assumptions must not appear as PepsiCo findings.
