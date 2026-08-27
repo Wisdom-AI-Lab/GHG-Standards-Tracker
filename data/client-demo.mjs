@@ -1,3 +1,4 @@
+import {REPORTING_PERIODS} from './requirements.mjs';
 // Public facts and fictional scenario inputs are deliberately separate.
 // No client confidential information, ownership inference or live service is used.
 export const PUBLIC_SOURCE = {
@@ -19,32 +20,39 @@ export const PUBLIC_ENTITIES = [
 ].map(entity=>({...entity, type:'entity', source:'public-entities', observed_on:'2025-12-27'}));
 
 export const FICTIONAL_ENTITIES = [
-  {id:'atlas', name:'Atlas Beverages Group', jurisdiction:'United Kingdom', type:'group', parent:null, member:true, ownership:100, financial_control:true, operational_control:true, revenue_musd:900, listed:true, uk_nexus:true},
-  {id:'atlas-au', name:'Atlas Pacific Beverages', jurisdiction:'Australia', type:'entity', parent:'atlas', member:true, ownership:100, financial_control:true, operational_control:true, revenue_musd:180, listed:false, uk_nexus:false},
-  {id:'atlas-sg', name:'Atlas Straits Trading', jurisdiction:'Singapore', type:'entity', parent:'atlas', member:true, ownership:60, financial_control:true, operational_control:false, revenue_musd:40, listed:true, uk_nexus:true},
-  {id:'atlas-uk', name:'Atlas UK Distribution', jurisdiction:'United Kingdom', type:'entity', parent:'atlas', member:true, ownership:80, financial_control:true, operational_control:true, revenue_musd:null, listed:null, uk_nexus:true},
-  {id:'atlas-site', name:'Pacific Bottling Facility', jurisdiction:'Australia', type:'facility', parent:'atlas-au', member:true, ownership:100, financial_control:true, operational_control:true, revenue_musd:null, listed:null, uk_nexus:false},
-  {id:'orchid', name:'Orchid Beverage Co.', jurisdiction:'Singapore', type:'entity', parent:'atlas', member:false, ownership:0, financial_control:false, operational_control:false, revenue_musd:140, listed:false, uk_nexus:true}
+  {id:'atlas', name:'Atlas Beverages Group', jurisdiction:'United Kingdom', type:'group', parent:null, member:true, ownership:100, financial_control:true, operational_control:true},
+  {id:'atlas-au', name:'Atlas Pacific Beverages', jurisdiction:'Australia', type:'entity', parent:'atlas', member:true, ownership:100, financial_control:true, operational_control:true},
+  {id:'atlas-sg', name:'Atlas Straits Trading', jurisdiction:'Singapore', type:'entity', parent:'atlas', member:true, ownership:60, financial_control:true, operational_control:false},
+  {id:'atlas-uk', name:'Atlas UK Distribution', jurisdiction:'United Kingdom', type:'entity', parent:'atlas', member:true, ownership:80, financial_control:true, operational_control:true},
+  {id:'atlas-site', name:'Pacific Bottling Facility', jurisdiction:'Australia', type:'facility', parent:'atlas-au', member:true, ownership:100, financial_control:true, operational_control:true},
+  {id:'orchid', name:'Orchid Beverage Co.', jurisdiction:'Singapore', type:'entity', parent:'atlas', member:false, ownership:0, financial_control:false, operational_control:false}
 ];
+
+// All regulatory facts below are authored scenario assumptions, not public data.
+// Financial totals are supplied consolidated figures, not computed from GHG boundaries.
+for(const entity of FICTIONAL_ENTITIES){
+  Object.assign(entity,{au_ch2m:false,au_ordinary_company:true,au_no_relief:true,sgx_mainboard:false,sgx_no_waiver:true,sti_at_2025_06_30:false});
+  if(entity.id==='atlas-au'){
+    entity.au_ch2m=true;
+    entity.financials=Object.fromEntries(REPORTING_PERIODS.map(start=>[start,{revenue_maud:240,assets_maud:600,employees:200}]));
+  }
+  if(entity.id==='atlas-sg')Object.assign(entity,{sgx_mainboard:true,sti_at_2025_06_30:true});
+  if(entity.id==='atlas-uk')Object.assign(entity,{sgx_mainboard:true,sti_at_2025_06_30:null});
+  if(entity.id==='orchid')Object.assign(entity,{sgx_mainboard:true,sti_at_2025_06_30:false});
+}
 
 export const SCENARIOS = {
   baseline: {label:'Baseline', effective_on:null, note:'Fictional baseline. No scenario overlay is applied.'},
   acquisition: {label:'Acquire Orchid', effective_on:'2027-01-01', note:'Fictional 40% investment with financial control stipulated separately; operational control remains false. This is not a real transaction.'},
   divestment: {label:'Divest Pacific', effective_on:'2027-01-01', note:'Fictional exit of Atlas Pacific and its facility from this group view. Removal from a group is not termination of the entity’s legal obligations.'},
-  regulation: {label:'Change demo rule', effective_on:'2027-01-01', note:'Fictional AU-01 threshold rises from USD 100m to USD 200m. This is an invented rule change, not Australian law.'}
+  regulation: {label:'Compare reporting phases', effective_on:null, note:'Compare the selected financial-year start with 1 January 2028 using the same source-checked requirements and fictional facts. No legal threshold is invented or changed.'}
 };
-
-export const DEMO_RULES = [
-  {id:'DEMO-AU-01', jurisdiction:'Australia', title:'Illustrative large-entity disclosure rule', trigger:'INCORPORATION + SIZE', standard:'IFRS S2 reference (illustrative)', conditions:[{field:'jurisdiction',op:'eq',value:'Australia',label:'Incorporated in Australia'},{field:'revenue_musd',op:'gte',value:100,label:'Revenue ≥ USD 100m (invented threshold)'}]},
-  {id:'DEMO-SG-01', jurisdiction:'Singapore', title:'Illustrative listed-entity disclosure rule', trigger:'INCORPORATION + LISTING', standard:'IFRS S1 / S2 reference (illustrative)', conditions:[{field:'jurisdiction',op:'eq',value:'Singapore',label:'Incorporated in Singapore'},{field:'listed',op:'eq',value:true,label:'Listed status is true (fictional input)'}]},
-  {id:'DEMO-UK-01', jurisdiction:'United Kingdom', title:'Illustrative economic-nexus disclosure rule', trigger:'ECONOMIC NEXUS + SIZE', standard:'IFRS S2 reference (illustrative)', conditions:[{field:'uk_nexus',op:'eq',value:true,label:'UK economic nexus (fictional input)'},{field:'revenue_musd',op:'gte',value:100,label:'Revenue ≥ USD 100m (invented threshold)'}]}
-];
 
 export const GUIDED_QUESTIONS = [
   {id:'matrix', question:'Which jurisdictions and triggers apply?', aliases:['Show the applicability matrix','What applies?']},
   {id:'changes', question:'What changes in this scenario?', aliases:['Show the scenario changes','What changes after the acquisition?']},
   {id:'missing', question:'What information is missing?', aliases:['Which facts are missing?']},
-  {id:'boundary', question:'Can the public entity list establish the reporting boundary?', aliases:['Does the subsidiary list prove ownership or control?']},
+  {id:'boundary', question:'What does a screening result mean?', aliases:['Can I rely on this as a compliance determination?']},
   {id:'ifrs', question:'When do the IFRS S2 amendments take effect?', aliases:['What is the IFRS S2 amendment effective date?']}
 ];
 
@@ -52,4 +60,4 @@ function freeze(value) {
   Object.freeze(value);
   for (const child of Object.values(value)) if(child && typeof child==='object' && !Object.isFrozen(child)) freeze(child);
 }
-for(const value of [PUBLIC_SOURCE,PUBLIC_ENTITIES,FICTIONAL_ENTITIES,SCENARIOS,DEMO_RULES,GUIDED_QUESTIONS]) freeze(value);
+for(const value of [PUBLIC_SOURCE,PUBLIC_ENTITIES,FICTIONAL_ENTITIES,SCENARIOS,GUIDED_QUESTIONS]) freeze(value);

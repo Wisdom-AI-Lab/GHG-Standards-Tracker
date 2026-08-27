@@ -8,8 +8,8 @@ This is a proposal, not an implemented backend or a delivery commitment. The two
 | --- | --- | --- |
 | Organisation | Selected public subsidiaries; fictional group and facility graph | Verified entity identities, relationship types, reporting hierarchy, control evidence and effective-dated ownership |
 | Boundaries | Three methods using explicit fictional facts | Framework-specific policies, joint arrangements, consolidation adjustments and reviewed client decisions |
-| Applicability | Invented condition traces and unresolved inputs | Versioned jurisdiction instruments, local ISSB adoption, thresholds, exemptions, transitional rules, nexus and reporting-period alignment |
-| Change impact | Independent acquisition, divestment and rule overlays | Persistent transaction/rule history, affected-entity recomputation, review queue and approvals |
+| Applicability | Four selected source-backed AU/SGX screens, condition traces and unresolved inputs | Expanded jurisdiction coverage, reviewed exemptions, full transitional rules, versioned evidence and statutory consolidation |
+| Change impact | Independent transaction overlays and source-backed reporting-phase comparisons | Persistent transaction/rule history, affected-entity recomputation, review queue and approvals |
 | Notebook | Five guided answers, evidence selection and session notes | Secure ingestion, retrieval, source passages, arbitrary-question handling, model integration and evaluations |
 | Monitoring | Proposed workflow in AGENT_WORKFLOW.md | Scheduled jobs, permitted search sources, model/service credentials, budget, observability and human approval |
 
@@ -25,7 +25,7 @@ An assessment should retain entity facts, rule version, reporting period, evalua
 
 ## Evaluation and AI boundary
 
-Use explicit, tested rules for structured applicability conditions. Unknown inputs should remain unknown, and contradictory sources should be flagged for review. Real rules may need AND/OR groups, thresholds over multiple years, exemptions and group-level calculations; the demo's simple AND conditions do not cover these.
+Use explicit, tested rules for structured applicability conditions. Unknown inputs should remain unknown, and contradictory sources should be flagged for review. Real rules may need AND/OR groups, thresholds over multiple years, exemptions and group-level calculations; the demo covers only a bounded set of eligibility conditions, a two-of-three size test and selected phase dates, not this full range.
 
 A future model can retrieve relevant passages, help extract proposed facts, explain evaluated results and draft guidance with citations. Require human approval before proposed extracted facts or legal interpretations enter the approved dataset. Treat uploaded text as evidence, not instructions. Test for unsupported claims, citation accuracy, prompt injection, source exclusions and confidentiality leaks.
 

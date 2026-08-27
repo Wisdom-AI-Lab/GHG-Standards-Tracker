@@ -9,11 +9,11 @@ An original, static demonstration tracker for greenhouse gas accounting, targets
 - Seven independently researched starter records, prepared on 27 August 2026. They are source-checked but await human review.
 - Exact, month-level and quarter-level dates, with projected milestones distinguished from source-stated dates.
 - A 30-day source recheck flag, schema validation, application tests and GitHub validation workflow.
-- A selected PepsiCo subsidiary extract from an official filing, kept separate from fictional Atlas entities and invented rules.
-- Interactive acquisition, divestment and rule-change scenarios; three GHG boundary methods; a jurisdiction × entity × instrument × trigger matrix with condition traces.
+- Atlas as the default presentation path, with fictional company facts and four source-backed reporting screens across Australia and Singapore. PepsiCo remains an optional public-evidence example.
+- Interactive acquisition/divestment scenarios and actual reporting-phase comparisons; three GHG boundary methods; a jurisdiction × entity × instrument × trigger matrix with citations, condition traces and missing-information flags.
 - Five guided notebook questions, selectable supporting sources and up to five session notes. No live AI or file uploads.
 
-This is not a complete regulatory database, a production applicability engine, or an active monitoring service. The invented rules demonstrate decision logic, not real legal requirements. Public PepsiCo rows always remain unresolved. A passed milestone is not automatically treated as completed, and no record is automatically marked human-reviewed.
+This is not a complete regulatory database, a production applicability engine, or an active monitoring service. The selected real requirements were checked against official sources on 27 August 2026; human legal review is pending. Results apply to fictional inputs and selected routes only, not all obligations. UK domestic coverage is explicitly unresearched. Public PepsiCo rows always remain unresolved. A passed milestone is not automatically treated as completed, and no record is automatically marked human-reviewed.
 
 For a team presentation, follow [the five-minute walkthrough](docs/DEMO_WALKTHROUGH.md). No confidential client information is needed.
 
@@ -25,7 +25,7 @@ No application dependencies, build tools, database or API key are needed. Serve 
 python3 -m http.server 8000
 ```
 
-Open http://localhost:8000. Use HTTP/HTTPS, not a `file://` URL: the interface loads a JavaScript module and a local JSON file.
+Open http://localhost:8000; it starts in the Atlas client workspace. Use HTTP/HTTPS, not a `file://` URL: the interface loads a JavaScript module and a local JSON file.
 
 ## Test
 
@@ -36,7 +36,7 @@ node scripts/check.mjs
 node --test tests/tracker.test.mjs
 ```
 
-The 33 tests cover schema and source references, date semantics, filtering, safe rendering, eight views, application event wiring, error recovery, local HTTP delivery, scenario dates, control/ownership distinctions, public-data isolation, evidence selection and session notes. The DOM adapter is not a browser; visual layout and real browser interactions need a separate check before public release.
+The 40 tests cover schema and source references, date semantics, filtering, safe rendering, eight views, application event wiring, error recovery, local HTTP delivery, actual threshold boundaries, financial-year phases, historical listing/index facts, relief uncertainty, scenario dates, control/ownership distinctions, public-data isolation, evidence selection and session notes. The DOM adapter is not a browser; visual layout and real browser interactions need a separate check before public release.
 
 ## Structure
 
@@ -46,16 +46,18 @@ The 33 tests cover schema and source references, date semantics, filtering, safe
 | `assets/styles.css` | Original responsive styling; system fonts |
 | `assets/core.mjs` | Validation, filtering and date logic |
 | `assets/app.mjs` | Views, details and browser interaction |
-| `assets/demo-core.mjs` | Scenario snapshots, boundary positions, invented rule evaluation, guided answers and in-memory state |
+| `assets/demo-core.mjs` | Scenario snapshots, boundary positions, source-backed requirement screening, guided answers and in-memory state |
 | `assets/demo-views.mjs` | Client graph, entity inspector, applicability matrix, change comparison and three-panel notebook |
 | `assets/demo.css` | Responsive styling for the two demo views |
+| `data/requirements.mjs` | Four selected real requirements, phase thresholds, source metadata and locators |
 | `data/records.json` | Original starter dataset and editorial comparisons |
-| `data/client-demo.mjs` | Dated public subsidiary extract, separate fictional entities, scenario definitions and invented rules |
+| `data/client-demo.mjs` | Optional public subsidiary extract, fictional Atlas facts and transaction/phase scenarios |
 | `docs/DATA_GUIDE.md` | Schema and content editing rules |
 | `docs/AGENT_WORKFLOW.md` | Proposed research/verification workflow; not activated |
 | `docs/SOURCE_LOG.md` | Research scope and primary-source record |
 | `docs/PROVENANCE.md` | Implementation and repository-history boundaries |
 | `docs/DEMO_WALKTHROUGH.md` | Presentation steps and expected results |
+| `docs/REQUIREMENTS_SCOPE.md` | Included routes, exclusions, date semantics and research limitations |
 | `docs/FUTURE_MODULES.md` | Proposed full-build architecture and scope boundaries |
 | `docs/CLIENT_DATA_SECURITY.md` | Security requirements before handling client data or adding AI |
 | `scripts/check.mjs` | Dataset, demo fixture and local asset validation |
@@ -72,7 +74,7 @@ For another static host: serve the repository root with no build command. No cus
 
 ## Data and automation
 
-The browser loads **local assets, `data/records.json` and the bundled `data/client-demo.mjs` module**. It does not call the reference project's backend, any AI provider or analytics service. External regulatory URLs are links opened on user request. The public extract is a snapshot, not a live feed.
+The browser loads **local assets, `data/records.json` and the bundled `data/client-demo.mjs` and `data/requirements.mjs` modules**. It does not call the reference project's backend, any AI provider or analytics service. External regulatory URLs are links opened on user request. The public extract is a snapshot, not a live feed.
 
 Demo state and saved responses stay in page memory and are cleared on refresh. Scenario overlays are independent, not a persistent graph history. No client file picker, upload endpoint, database, login or model integration is active. See [future modules](docs/FUTURE_MODULES.md) and [client-data safeguards](docs/CLIENT_DATA_SECURITY.md) before extending the demo.
 

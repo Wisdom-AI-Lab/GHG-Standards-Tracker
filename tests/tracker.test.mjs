@@ -4,7 +4,8 @@ import {readFile} from 'node:fs/promises';
 import {createServer} from 'node:http';
 import {STAGES,escapeHtml,safeUrl,dateRange,formatDate,isStale,filterRecords,milestones,developments,summarise,validateDataset} from '../assets/core.mjs';
 import {renderView,renderDetail,start} from '../assets/app.mjs';
-import {createDemoState,updateDemo,validateDemo,PUBLIC_SOURCE,PUBLIC_ENTITIES,snapshot,isMember,boundaryPosition,assessmentRows,visibleRows,scenarioDiff,answerQuestion,GUIDED_QUESTIONS} from '../assets/demo-core.mjs';
+import {createDemoState,updateDemo,validateDemo,PUBLIC_SOURCE,PUBLIC_ENTITIES,snapshot,isMember,boundaryPosition,assessmentRows,evaluateRequirement,atLeastTwo,visibleRows,scenarioDiff,answerQuestion,GUIDED_QUESTIONS} from '../assets/demo-core.mjs';
+import {REAL_REQUIREMENTS,REGULATORY_SOURCES,RULESET_VERSION} from '../data/requirements.mjs';
 import {renderWorkspace,renderNotebook,renderAssessment,renderDemoSource} from '../assets/demo-views.mjs';
 
 const data=JSON.parse(await readFile(new URL('../data/records.json',import.meta.url),'utf8'));
@@ -141,7 +142,7 @@ test('static assets and dataset are served from repository-relative paths over H
   const root=new URL('../',import.meta.url);
   const server=createServer(async(req,res)=>{try{const target=req.url==='/'?'index.html':req.url.slice(1);const body=await readFile(new URL(target,root));res.setHeader('Content-Type',target.endsWith('.mjs')?'text/javascript':target.endsWith('.json')?'application/json':target.endsWith('.css')?'text/css':'text/html');res.end(body);}catch{res.writeHead(404);res.end();}});
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
-  try{const base=`http://127.0.0.1:${server.address().port}`;for(const target of ['/','/assets/app.mjs','/assets/core.mjs','/assets/styles.css','/assets/demo.css','/assets/demo-core.mjs','/assets/demo-views.mjs','/data/client-demo.mjs','/data/records.json']){const response=await fetch(base+target);assert.equal(response.status,200);if(target.endsWith('.json'))assert.deepEqual(validateDataset(await response.json()),[]);}}
+  try{const base=`http://127.0.0.1:${server.address().port}`;for(const target of ['/','/assets/app.mjs','/assets/core.mjs','/assets/styles.css','/assets/demo.css','/assets/demo-core.mjs','/assets/demo-views.mjs','/data/client-demo.mjs','/data/requirements.mjs','/data/records.json']){const response=await fetch(base+target);assert.equal(response.status,200);if(target.endsWith('.json'))assert.deepEqual(validateDataset(await response.json()),[]);}}
   finally{await new Promise(resolve=>server.close(resolve));}
 });
 
@@ -180,30 +181,104 @@ test('divestment removes subsidiary and facility from group view without erasing
   assert.equal(isMember(snap.entities.find(x=>x.id==='atlas-site'),snap.entities),false);
   assert.equal(snapshot().entities.find(x=>x.id==='atlas-au').member,true);
   const rows=assessmentRows({...createDemoState(),scenario:'divestment'}).filter(r=>r.entityId==='atlas-au');
-  assert.ok(rows.every(r=>r.status==='outside'&&r.note.includes('local obligations are not assessed')));
+  assert.ok(rows.every(r=>!r.inGroup&&r.note.includes('local screen is retained')));
+  assert.equal(rows.find(r=>r.rule==='AU-SIZE').status,'match');
 });
-test('invented rules show traces, cross-border nexus and unresolved input',()=>{
-  const state=createDemoState(), rows=assessmentRows(state);
-  assert.equal(rows.length,12);
-  assert.equal(rows.find(r=>r.id==='atlas-au:DEMO-AU-01').status,'match');
-  assert.equal(rows.find(r=>r.id==='atlas-uk:DEMO-UK-01').status,'unknown');
-  const acquired=assessmentRows({...state,scenario:'acquisition'}).find(r=>r.id==='orchid:DEMO-UK-01');
-  assert.equal(acquired.status,'match');assert.equal(acquired.jurisdiction,'United Kingdom');
-  assert.ok(acquired.trace.every(t=>t.pass));
-  assert.match(renderAssessment('atlas-uk:DEMO-UK-01',state),/UNKNOWN/);
+test('real requirements expose sources, cross-border listing and unresolved inputs',()=>{
+  const state=createDemoState(),rows=assessmentRows(state);
+  assert.equal(rows.length,17);
+  assert.equal(rows.find(r=>r.id==='atlas-au:AU-SIZE').status,'match');
+  assert.equal(rows.find(r=>r.id==='atlas-uk:SGX-S12').status,'match');
+  const missing=rows.find(r=>r.id==='atlas-uk:SGX-STI-CLIMATE');
+  assert.equal(missing.status,'unknown');assert.match(missing.missing.join(' '),/30 June 2025/);
+  assert.ok(missing.citations.includes('sgx-pn76'));
+  assert.equal(rows.find(r=>r.rule==='UK-COVERAGE').status,'not_covered');
+  assert.match(renderAssessment(missing.id,state),/UNKNOWN/);
   assert.match(renderAssessment('missing',state),/Assessment unavailable/);
 });
-test('rule change preserves historical v1 and compares before/after statuses',()=>{
-  const state={...createDemoState(),scenario:'regulation'};
-  assert.equal(snapshot({...state,asOf:'2026-08-27'}).version,'illustrative-v1');
-  assert.equal(snapshot(state).version,'illustrative-v2');
-  const diff=scenarioDiff(state);assert.equal(diff.length,1);
-  assert.equal(diff[0].id,'atlas-au:DEMO-AU-01');assert.equal(diff[0].before,'match');assert.equal(diff[0].status,'no_match');
-  assert.deepEqual(scenarioDiff({...state,asOf:'2026-08-27'}),[]);
-  assert.equal(assessmentRows({...state,scenario:'baseline'}).find(r=>r.id===diff[0].id).status,'match');
+test('phase comparison uses actual reporting dates without mutating the checked rules',()=>{
+  const state={...createDemoState(),scenario:'regulation',reportingStart:'2025-01-01'};
+  const snap=snapshot(state);assert.equal(snap.version,RULESET_VERSION);assert.equal(snap.reportingStart,'2028-01-01');
+  assert.deepEqual(snap.rules,snapshot({...state,scenario:'baseline'}).rules);
+  const diff=scenarioDiff(state);assert.equal(diff.length,3);
+  assert.equal(diff.find(r=>r.id==='atlas-au:AU-SIZE').before,'no_match');
+  assert.equal(diff.find(r=>r.id==='atlas-au:AU-SIZE').status,'match');
+  assert.equal(diff.find(r=>r.id==='atlas-sg:SGX-STI-S3').before,'not_due');
+  assert.equal(diff.find(r=>r.id==='atlas-sg:SGX-STI-S3').status,'match');
+  assert.deepEqual(scenarioDiff({...state,reportingStart:'2028-01-01'}),[]);
+});
+test('Australian size thresholds include equality, require two criteria and preserve unknowns',()=>{
+  const snap=snapshot(),rule=REAL_REQUIREMENTS.find(r=>r.id==='AU-SIZE');
+  const entity=snap.entities.find(e=>e.id==='atlas-au');
+  const amounts=entity.financials[snap.reportingStart];
+  Object.assign(amounts,{revenue_maud:200,assets_maud:500,employees:null});
+  assert.equal(evaluateRequirement(entity,rule,snap).status,'match');
+  amounts.assets_maud=499.99;
+  assert.equal(evaluateRequirement(entity,rule,snap).status,'unknown');
+  amounts.employees=249;
+  assert.equal(evaluateRequirement(entity,rule,snap).status,'no_match');
+  amounts.employees=250;
+  assert.equal(evaluateRequirement(entity,rule,snap).status,'match');
+  entity.au_ch2m=null;assert.equal(evaluateRequirement(entity,rule,snap).status,'unknown');
+  entity.au_ch2m=false;assert.equal(evaluateRequirement(entity,rule,snap).status,'no_match');
+  assert.equal(atLeastTwo([{pass:true},{pass:false},{pass:null}]),null);
+});
+test('AU phase boundaries use FY start, not organisation snapshot date or reused financial amounts',()=>{
+  const state=createDemoState();
+  const row=start=>assessmentRows({...state,reportingStart:start}).find(r=>r.rule==='AU-SIZE'&&r.entityId==='atlas-au');
+  assert.equal(row('2026-01-01').status,'no_match');assert.equal(row('2026-07-01').status,'match');
+  assert.match(row('2027-07-01').phase,/Group 3/);
+  assert.equal(row('2027-01-01').status,'unknown'); // No fixture for this financial year.
+  const a=assessmentRows({...state,asOf:'2026-08-27'}),b=assessmentRows({...state,asOf:'2027-02-01'});
+  assert.deepEqual(a,b);
+  for(const [start,group] of [['2026-06-30','Group 1'],['2026-07-01','Group 2'],['2027-06-30','Group 2'],['2027-07-01','Group 3']])assert.match(row(start).phase,new RegExp(group));
+});
+test('relief, unsupported entity types and missing period facts cannot silently pass AU screening',()=>{
+  const snap=snapshot(),rule=REAL_REQUIREMENTS[0],entity=snap.entities.find(e=>e.id==='atlas-au');
+  entity.au_no_relief=null;assert.equal(evaluateRequirement(entity,rule,snap).status,'unknown');
+  entity.au_no_relief=false;assert.match(evaluateRequirement(entity,rule,snap).missing.join(' '),/relief/);
+  entity.au_no_relief=true;entity.au_ordinary_company=false;assert.equal(evaluateRequirement(entity,rule,snap).status,'not_covered');
+  entity.au_ordinary_company=true;delete entity.financials[snap.reportingStart];
+  assert.equal(evaluateRequirement(entity,rule,snap).status,'unknown');
+});
+test('SGX historical STI membership and source-specific commencement are not generic listing',()=>{
+  const snap=snapshot(),entity=snap.entities.find(e=>e.id==='atlas-sg'),rule=REAL_REQUIREMENTS.find(r=>r.id==='SGX-STI-S3');
+  assert.equal(evaluateRequirement(entity,rule,{...snap,reportingStart:'2025-01-01'}).status,'not_due');
+  assert.equal(evaluateRequirement(entity,rule,{...snap,reportingStart:'2026-01-01'}).status,'match');
+  entity.current_sti=false;assert.equal(evaluateRequirement(entity,rule,snap).status,'match');
+  entity.sti_at_2025_06_30=null;assert.equal(evaluateRequirement(entity,rule,snap).status,'unknown');
+  entity.sti_at_2025_06_30=false;const result=evaluateRequirement(entity,rule,snap);
+  assert.equal(result.status,'no_match');assert.match(result.limits,/not an exemption/);
+  entity.sti_at_2025_06_30=true;entity.sgx_no_waiver=null;assert.equal(evaluateRequirement(entity,rule,snap).status,'unknown');
+  entity.sgx_no_waiver=true;entity.sgx_mainboard=null;entity.listed=true;assert.equal(evaluateRequirement(entity,rule,snap).status,'unknown');
+});
+test('acquisition changes group inclusion without inventing new local reporting duties',()=>{
+  const state=createDemoState(),before=assessmentRows(state).find(r=>r.id==='orchid:SGX-S12');
+  const after=assessmentRows({...state,scenario:'acquisition'}).find(r=>r.id===before.id);
+  assert.equal(before.inGroup,false);assert.equal(after.inGroup,true);assert.equal(after.status,before.status);
+  assert.equal(before.status,'match');assert.deepEqual(before.trace,after.trace);
+  assert.equal(scenarioDiff({...state,scenario:'acquisition'}).length,4);
+});
+test('Atlas is the default route and public evidence is an optional, isolated presentation path',async()=>{
+  const env=harness(async()=>({ok:true,json:async()=>clone()}));
+  try{location.hash='';await start();assert.match(env.nodes.view.innerHTML,/Atlas · main demo/);assert.match(env.nodes.view.innerHTML,/<details class="optional-example" >/);
+    assert.equal(env.nav.find(a=>a.getAttribute('href')==='#workspace').getAttribute('aria-current'),'page');
+    env.nodes.view.handlers.change({target:{id:'demo-period',value:'2025-01-01'}});
+    assert.match(env.nodes.view.innerHTML,/Screened FY start: 1 Jan 2025/);
+  }finally{env.restore();}
+  assert.doesNotMatch(renderNotebook(createDemoState(),data),/data-demo-source-toggle="public-entities"/);
+  assert.match(renderNotebook({...createDemoState(),profile:'public'},data),/data-demo-source-toggle="public-entities"/);
+});
+test('source-backed assessments expose citations, locators, pending review and missing evidence',()=>{
+  for(const source of REGULATORY_SOURCES){assert.ok(safeUrl(source.url));assert.equal(source.review,'source_checked');assert.ok(source.locator);}
+  const detail=renderAssessment('atlas-uk:SGX-STI-CLIMATE',createDemoState());
+  assert.match(detail,/30 June 2025/);assert.match(detail,/Missing \/ unresolved/);assert.match(detail,/sgx-pn76/);assert.match(detail,/4.12/);
+  const question=answerQuestion('What information is missing?',createDemoState(),data);
+  assert.ok(question.rows.some(r=>r.rule==='UK-COVERAGE'));
+  for(const source of REGULATORY_SOURCES){const state=createDemoState();state.sources=state.sources.filter(id=>id!==source.id);assert.equal(answerQuestion('What applies?',state,data).supported,false);}
 });
 test('workspace filters are independent and support the full jurisdiction/entity matrix',()=>{
-  const state={...createDemoState(),entity:'atlas-sg',jurisdiction:'United Kingdom'};
+  const state={...createDemoState(),entity:'atlas-sg',jurisdiction:'Australia'};
   assert.equal(visibleRows(state).length,1);
   assert.equal(visibleRows({...state,entity:'all'}).length,4);
   assert.equal(visibleRows({...state,entity:'atlas-site'}).length,0);
@@ -226,9 +301,9 @@ test('notebook supports only guided questions and requires selected evidence',()
 test('notebook answers reflect the active scenario, not workspace table filters',()=>{
   const state={...createDemoState(),scenario:'acquisition',entity:'atlas-au',jurisdiction:'Australia'};
   const answer=answerQuestion('What applies?',state,data);
-  assert.equal(answer.rows.length,12);assert.match(answer.context,/Acquire Orchid/);
-  assert.ok(answer.rows.some(r=>r.id==='orchid:DEMO-UK-01'&&r.status==='match'));
-  assert.equal(answerQuestion('What changes in this scenario?',state,data).rows.length,3);
+  assert.equal(answer.rows.length,17);assert.match(answer.context,/Acquire Orchid/);
+  assert.ok(answer.rows.some(r=>r.id==='orchid:SGX-S12'&&r.status==='match'));
+  assert.equal(answerQuestion('What changes in this scenario?',state,data).rows.length,4);
 });
 test('saved responses are bounded session snapshots and never invent review approval',()=>{
   let state=updateDemo(createDemoState(),'question','matrix',data);
@@ -256,7 +331,7 @@ test('source detail and notebook escape user text and do not expose upload or mo
   assert.doesNotMatch(output,/<img|<script|type="file"/);assert.match(output,/&lt;img/);
   assert.match(output,/GUIDED DEMO — NO LIVE AI/);assert.match(output,/disabled>Add a client file/);
   assert.match(renderDemoSource('public-entities',data),/Exhibit 21, page 7/);
-  assert.match(renderDemoSource('demo-rules',data),/invented/);
+  assert.match(renderDemoSource('asic-rg280',data),/Table 2/);
 });
 test('browser event wiring connects the workspace, guided questions, source selection and session saves',async()=>{
   const env=harness(async()=>({ok:true,json:async()=>clone()}));
@@ -266,11 +341,11 @@ test('browser event wiring connects the workspace, guided questions, source sele
     assert.equal(env.nodes.filters.hidden,true);assert.match(env.nodes.view.innerHTML,/Atlas Beverages Group/);
     click('scenario','acquisition');click('entity','orchid');assert.match(env.nodes.view.innerHTML,/40%/);
     env.nodes.view.handlers.change({target:{id:'demo-boundary',value:'operational_control'}});assert.match(env.nodes.view.innerHTML,/Excluded by this boundary method/);
-    click('tab','matrix');assert.match(env.nodes.view.innerHTML,/DEMO-UK-01/);
-    click('assessment','orchid:DEMO-UK-01');assert.equal(env.nodes['record-dialog'].open,true);
+    click('tab','matrix');assert.match(env.nodes.view.innerHTML,/SGX-S12/);
+    click('assessment','orchid:SGX-S12');assert.equal(env.nodes['record-dialog'].open,true);
     location.hash='#notebook';env.window.handlers.hashchange();assert.equal(env.nodes['record-dialog'].open,false);
     click('question','matrix');assert.match(env.nodes.view.innerHTML,/GUIDED RESPONSE/);click('save');assert.match(env.nodes.view.innerHTML,/NOTE 1/);
-    env.nodes.view.handlers.change({target:env.button('data-demo-source-toggle','demo-rules')});assert.match(env.nodes.view.innerHTML,/Required evidence is not selected/);
+    env.nodes.view.handlers.change({target:env.button('data-demo-source-toggle','asic-rg280')});assert.match(env.nodes.view.innerHTML,/Required evidence is not selected/);
     env.nodes['demo-question'].value='Unsupported arbitrary question';let prevented=false;
     env.nodes.view.handlers.submit({target:{id:'demo-question-form'},preventDefault(){prevented=true;}});assert.equal(prevented,true);assert.match(env.nodes.view.innerHTML,/Outside the guided demo/);
     click('profile','public');click('question','matrix');assert.match(env.nodes.view.innerHTML,/PepsiCo Beverages Australia/);assert.match(env.nodes.view.innerHTML,/every row remains unresolved/);

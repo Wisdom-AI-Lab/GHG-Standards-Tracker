@@ -1,71 +1,60 @@
-# Five-minute team walkthrough
+# Five-minute Atlas team walkthrough
 
-## Preparation
+## Opening the demo
 
-Serve the repository root with `python3 -m http.server 8000` and open http://localhost:8000 in a current browser. Open **Client workspace**. Refresh to reset the demonstration. This branch is not automatically hosted; review and merge, then explicitly choose hosting if needed.
+Local preview is optional: with the project downloaded and Python installed, serve the repository root with `python3 -m http.server 8000`, then open http://localhost:8000. This does not publish anything. Alternatively, after review/merge and explicit hosting setup, open the hosted link. Hosting is not enabled by this change.
 
-Use this opening: “We are demonstrating how an organisation, evidence and regulatory conditions can be connected. The public company example shows the limits of available evidence. The working decision scenarios use invented entities and rules.”
+The default view is **Atlas · main demo**. Refresh resets the session. PepsiCo is available under **Optional public-data example**, but is not needed for this presentation.
 
-## 1. Start with public evidence — 45 seconds
+Opening statement: “Atlas is a fictional client. We are testing selected real reporting requirements against clearly labelled sample facts, showing the evidence and the gaps. A screening result is not a final compliance determination.”
 
-Choose **PepsiCo · public extract**. The graph shows five selected subsidiaries from Exhibit 21 of PepsiCo's 2025 filing, observed on 27 December 2025. This is a partial historical extract, not the entire corporate structure.
+## 1. Organisation and reporting boundary — 45 seconds
 
-Select a node. Its jurisdiction and source location are shown, but direct parent, ownership, control, listing and revenue are unknown. Open **Inspect evidence** to see the official link. Graph links mean “listed subsidiary,” not direct ownership.
+Start with **Baseline**, organisation date **1 Feb 2027**, FY start **1 Jul 2026**, and **Financial control**. Select a graph node to inspect its facts. Ownership and control are separate inputs. The group root and facility illustrate structure but are not separately screened as legal entities.
 
-Choose **Applicability**. All five rows require more facts; no local instrument has been assessed. Say: “This is where additional client information and reviewed local adoption rules would enter the full build.”
+## 2. Requirements and evidence — 75 seconds
 
-## 2. Explain a working decision — 60 seconds
+Open **Applicability**, then **Clear table filters**. There are 17 rows: four fictional legal entities against four selected real requirements, plus one explicit UK domestic-coverage gap.
 
-Switch to **Atlas · fictional scenario**. Choose **Baseline**, **1 Feb 2027 · after event**, **Financial control**, and **Applicability**. Clear table filters if needed.
+- Five in-group pairs pass the selected screens at the default period.
+- Pacific matches the Australian corporate-size route. Open **Why this result?** to see the two-of-three calculation, period, currency, prerequisites and ASIC citations.
+- Straits matches the three selected SGX routes. The inspector identifies its historical STI membership as a fictional fact.
+- UK Distribution matches the SGX Scope 1/2 screen because Mainboard coverage is explicitly assumed, despite UK incorporation. Its historical STI membership is unknown, so two routes remain unresolved. Its UK domestic obligations are unresearched.
 
-- There are 12 assessment rows: four fictional legal entities against three invented rules. The acquisition target is initially outside the group.
-- Two pairs match: Pacific against the invented Australian rule and Straits against the invented Singapore rule.
-- The UK entity's revenue is missing, leaving one row unresolved.
+Every row provides source-note buttons. Open a note to see the official URL, paragraph/page locator, source-check date and review limits. A route non-match does not mean there are no reporting obligations.
 
-Use **Why this result?** to show actual inputs and PASS / FAIL / UNKNOWN conditions. The UK rule tests fictional economic nexus across all entities, not just UK incorporation. These thresholds and instruments are not real laws, even where an IFRS standard is named as an illustrative reference.
+## 3. Acquisition, divestment and real reporting phases — 90 seconds
 
-Explain that the GHG accounting boundary and local legal applicability are separate questions. Changing a boundary method does not switch off an entity's local obligations.
+Choose **Acquire Orchid**, then **Changes & history**. Four rows change group membership; Orchid's local screening results do not change merely because it enters Atlas. The in-group match count rises from five to six.
 
-## 3. Show change over time — 90 seconds
+In the graph, select Orchid. Financial control includes it, operational control excludes it, and equity share shows a 40% illustrative allocation. The control facts are stipulated, not inferred from the ownership percentage. Set the organisation date to **27 Aug 2026** to show the acquisition has not yet taken effect.
 
-Choose **Acquire Orchid** at the after-event date. Open **Changes & history**. Three assessment statuses change from outside the group to evaluated; Orchid matches the invented UK nexus rule. There are now three matching pairs overall.
+Return to **1 Feb 2027** and choose **Divest Pacific**. Pacific and its facility leave the group view. Pacific's local screen remains visible and matched; group exit is not an exemption.
 
-Open **Organisation graph**, select Orchid and change the boundary method:
+For the regulatory-time example, choose **Baseline** and FY start **1 Jan 2025**, then **Compare reporting phases**. This compares that period with **1 Jan 2028**, holding the checked rule pack constant. Three rows change screening status: Pacific's Australian screen and two STI Scope 3 screens. One moves to unresolved because the historical index fact is missing. No threshold or regulatory amendment is invented. Non-STI routes in later years remain outside this selected pack.
 
-| Method | Expected demonstration result |
-| --- | --- |
-| Financial control | Included; control is explicitly stipulated in this scenario |
-| Operational control | Excluded by this method |
-| Equity share | 40% illustrative allocation |
+The organisation date and FY start have different jobs. All financial inputs are explicit sample amounts for the selected period, not actual year-end results or forecasts of a real company.
 
-The example deliberately does not infer control from percentage ownership. Change the date to **27 Aug 2026 · before event**: the acquisition has not taken effect and Orchid is outside the group view.
+## 4. Cited answers and missing facts — 60 seconds
 
-Return to the after-event date. Choose **Divest Pacific**, then **Changes & history**: Pacific and its facility leave the group view. This does not conclude that their local legal obligations cease.
+Open **Regulatory notebook**. It shares the active Atlas scenario and reporting period.
 
-Choose **Change demo rule**: the invented Australian revenue threshold moves from USD 100m to USD 200m. Pacific's USD 180m input no longer meets it. One assessment status changes; the earlier snapshot is preserved. Scenarios are independent, not cumulative.
+1. Choose **Which jurisdictions and triggers apply?** View the matrix, source buttons and context.
+2. Choose **What information is missing?** See named evidence gaps and the UK coverage gap.
+3. Uncheck **ASIC RG 280 · size and commencement**. The guided answer is withheld until required evidence is selected again.
+4. Save a supported response. It becomes a session snapshot, not a reviewer approval; refresh clears it.
+5. Use **What does a screening result mean?** to explain the distinction between a source-backed screen and a final compliance conclusion.
 
-## 4. Show the notebook — 60 seconds
+Five guided questions and a few exact aliases are supported. Arbitrary questions receive a limitation message. No live model or file ingestion is connected.
 
-Open **Regulatory notebook**. Its Sources / Questions / Outputs layout uses the same active profile and scenario.
+## 5. Funding discussion — 30 seconds
 
-1. Select **What changes in this scenario?** The response includes the current date, results and supporting notes.
-2. Uncheck **Illustrative policy pack**. The answer is withheld because required evidence is deselected. Recheck it.
-3. Select **Save response in this session**. A note appears in Outputs; it is a snapshot, not an approval or persistent record.
-4. Ask an arbitrary question. The interface explains that only the five guided questions and a few exact aliases are supported.
-5. Select the IFRS amendment question to see a bounded source-based summary. A standard's effective date is not proof that a particular jurisdiction or company must apply it.
+The demonstrated workflow is entity facts → selected legal conditions → explained result → missing information → reviewed guidance. The funded build would add verified client evidence, broader reviewed rules, statutory consolidation, secure uploads, cited model answers, approvals and maintained change history.
 
-The disabled file button is a future provision. No document is uploaded and no AI model is called. Refresh clears notes.
+## Optional appendix: public evidence
 
-## 5. Close with the funding request — 45 seconds
+Expand **Optional public-data example** and select PepsiCo. Its five dated public subsidiary records remain unresolved. This shows how incomplete public evidence is handled without inventing ownership or applicability facts. Return to Atlas for the working scenarios.
 
-“The demo connects the workflow: entity evidence, reporting boundaries, rule conditions, change impact and cited guidance. Funding would turn these examples into a maintained, permission-controlled service.”
+## Before presenting
 
-The next phase needs a small agreed jurisdiction set, reviewed legal rules and exceptions, verified client facts, a versioned graph/data store, secure document retrieval, model evaluation, human review and deployment operations. Mistral or another model can support explanations and retrieval; it should not silently decide or approve applicability.
-
-## Presenter checks before the meeting
-
-- Test navigation, scrolling, source dialogs, keyboard focus and notebook layout in the actual presentation browser and screen size.
-- Confirm the demo is served over HTTP/HTTPS and the dataset loads without an error.
-- Keep the distinction between public facts, invented scenarios and future capabilities visible.
-- Do not enter confidential client information; the demo has no authentication or tenant isolation.
-- Automated tests passed during implementation. Real-browser visual QA remains a separate pre-presentation check.
+Check layout, scrolling, keyboard navigation, source dialogs and controls in the presentation browser. Automated tests use a minimal DOM adapter; actual browser/visual QA is still required. Do not enter confidential client material. Review REQUIREMENTS_SCOPE.md and keep the fictional-fact and pending-review labels visible.
