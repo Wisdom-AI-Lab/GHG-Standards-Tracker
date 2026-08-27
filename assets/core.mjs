@@ -1,6 +1,6 @@
 export const STAGES = Object.freeze({development:'In development', published:'Published', effective:'Effective', proposal:'Proposal',implementation_pending:'Implementation unresolved',enforcement_paused:'Enforcement enjoined'});
 export const REVIEW = Object.freeze({source_checked:'Source checked · review pending', human_reviewed:'Human reviewed', unverified:'Not verified'});
-export const DATE_TYPES = Object.freeze({publication:'Publication', consultation:'Planned consultation', expected_publication:'Expected publication', standard_effective:'Standard effective date', regulatory_effective:'Regulatory effective date', programme_opening:'Programme opening', comment_deadline:'Comment deadline',proposed_deadline:'Proposed deadline · not confirmed operative',enforcement_event:'Enforcement / court event',reporting_year:'Statutory reporting start year · not an exact deadline'});
+export const DATE_TYPES = Object.freeze({publication:'Publication', consultation:'Planned consultation', expected_publication:'Expected publication', standard_effective:'Standard effective date', regulatory_effective:'Regulatory effective date', programme_opening:'Programme opening', comment_deadline:'Comment deadline',proposed_deadline:'Proposed deadline · not confirmed operative',enforcement_event:'Enforcement / court event',reporting_year:'Financial-year start · not a filing deadline',transposition_deadline:'Member State transposition deadline',compliance_target:'Compliance target · assess scope and exceptions',conditional_application:'Conditional application · later-of rule',implementation_phase:'Programme phase · not an individual filing deadline'});
 
 export function escapeHtml(value) {
   return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -24,6 +24,18 @@ export function formatDate(value) {
   if(value.length===4)return value;
   if(value.includes('-Q')) return `${value.slice(5)} ${value.slice(0,4)}`;
   return new Intl.DateTimeFormat('en-GB',{timeZone:'UTC',...(value.length===10?{day:'numeric'}:{}),month:'short',year:'numeric'}).format(range[0]);
+}
+// Display a common month/year scale without inventing precision for a quarter or year.
+export function formatTimelineDate(value) {
+  const range=dateRange(value);if(!range)return 'Not specified';
+  const month=new Intl.DateTimeFormat('en-GB',{timeZone:'UTC',month:'short',year:'numeric'});
+  return value.length===4||value.includes('-Q')?`${month.format(range[0])} – ${month.format(range[1])}`:month.format(range[0]);
+}
+export function datePrecision(value) {
+  if(!dateRange(value))return 'Date not specified';
+  if(value.length===4)return 'Year only · exact month not specified';
+  if(value.includes('-Q'))return `${formatDate(value)} · exact month not specified`;
+  return value.length===10?`Exact date: ${formatDate(value)}`:'Month only · exact day not specified';
 }
 export function isStale(record, today = new Date(), days = 30) {
   const range=dateRange(record.checked_on); return !range || today.getTime()-range[1]>days*86400000;
@@ -71,7 +83,7 @@ export function validateDataset(data) {
         add(!!dateRange(m.date),`${p}.${key}[${j}] invalid date`);
         add(Number.isInteger(m.source)&&m.source>=0&&m.source<sources.length,`${p}.${key}[${j}] needs valid source index`);
         add(typeof m.label==='string'&&m.label.trim().length>0,`${p}.${key}[${j}] needs label`);
-        if(key==='milestones'){add(Object.hasOwn(DATE_TYPES,m.kind),`${p}.${key}[${j}] invalid kind`);add(typeof m.projected==='boolean',`${p}.${key}[${j}] projected must be boolean`);if(['consultation','expected_publication','proposed_deadline'].includes(m.kind))add(m.projected===true,`${p}.${key}[${j}] plan must be marked projected`);}
+        if(key==='milestones'){add(Object.hasOwn(DATE_TYPES,m.kind),`${p}.${key}[${j}] invalid kind`);add(typeof m.projected==='boolean',`${p}.${key}[${j}] projected must be boolean`);if(['consultation','expected_publication','proposed_deadline','conditional_application'].includes(m.kind))add(m.projected===true,`${p}.${key}[${j}] plan must be marked projected`);}
       });
     }
   });

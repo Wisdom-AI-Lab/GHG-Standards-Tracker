@@ -70,3 +70,14 @@ Keep `scopeStatus` separate from the final implementation/enforcement `status`. 
 The register now includes TNFD recommendations, TNFD-related ISSB proposals, SB 253 and SB 261. `implementation_pending` and `enforcement_paused` are distinct stages. `proposed_deadline` milestones must be marked projected; a `reporting_year` preserves year precision and is not an invented January deadline. The header update date comes from `prepared_on`, not page load time.
 
 Atlas uses the `illustrative` profile and `illustrative-facts` source identifier. These replace the earlier internal identifiers; state is session-only, so no persisted client data requires migration. France reports beneath UK Distribution; Mexico beneath California Division. The parent edges do not recompute statutory revenue or remove independent local obligations.
+
+
+## Packaging/interoperability edition
+
+- `formatDate` retains original precision; `formatTimelineDate` changes presentation only. Exact days remain in visible supporting labels and record details. Year and quarter sources appear as explicitly labelled month ranges, never invented point deadlines.
+- New date kinds: `transposition_deadline`, `compliance_target`, `conditional_application`, `implementation_phase`. Conditional application requires `projected: true`; it is an anchor subject to the recorded later-of condition. A programme phase is not a producer filing deadline.
+- Source objects may include `locator`; these are shown in record details. Distinguish regulators from programme operators such as CAA.
+- `data/interactions.mjs` references stable register IDs. Validation rejects missing map records. New interactions must state shared information, remaining requirements and a review action; label editorial mappings distinctly from published guidance and conditional statutory routes.
+- Client priority actions use the selected organisation scenario and entity, not the table’s jurisdiction filter. They suggest owners/review order, not assigned tasks or definitive legal due dates. Group and facility labels are not silently treated as separately assessed companies.
+- Packaging and overlap notebook questions read register-backed source notes. Missing/deselected required records block the answer. Public PepsiCo facts remain isolated. The eight existing applicability routes have not expanded into a packaging eligibility engine.
+- The phase-1 research pilot and weekly scheduling remain unimplemented; these changes update the static scanner only.

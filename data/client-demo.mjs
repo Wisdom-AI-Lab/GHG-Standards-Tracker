@@ -60,6 +60,8 @@ export const SCENARIOS = {
 };
 
 export const GUIDED_QUESTIONS = [
+  {id:'packaging',question:'What PPWR and US packaging EPR checks are needed?',aliases:['Explain packaging requirements']},
+  {id:'overlaps',question:'Where do CSRD, IFRS and packaging reporting overlap?',aliases:['Explain regulatory interoperability']},
   {id:'matrix', question:'Which jurisdictions and triggers apply?', aliases:['Show the applicability matrix','What applies?']},
   {id:'changes', question:'What changes in this scenario?', aliases:['Show the scenario changes','What changes after the acquisition?']},
   {id:'missing', question:'What information is missing?', aliases:['Which facts are missing?']},

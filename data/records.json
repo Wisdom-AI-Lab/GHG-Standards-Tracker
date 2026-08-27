@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "prepared_on": "2026-08-27",
-  "edition": "ESG regulatory research · Aug 27, 2026",
+  "edition": "Regulatory and packaging review · August 2026",
   "records": [
     {
       "id": "joint-corporate-standard",
@@ -543,6 +543,572 @@
       "check_note": "Scope checked against HSC 38533; enforcement position checked on CARB’s docket. The underlying court order was not independently reviewed here. No current overdue filing or future appeal outcome is inferred.",
       "review": "source_checked",
       "checked_on": "2026-08-27"
+    },
+    {
+      "id": "eu-csrd",
+      "title": "CSRD · revised scope and reporting phases",
+      "framework": "EU CSRD / ESRS",
+      "category": "Mandatory disclosure",
+      "region": "European Union",
+      "stage": "effective",
+      "summary": "Directive (EU) 2026/470 narrows the selected EU undertaking route to more than 1,000 average employees and EUR 450 million net turnover. Revised scope applies from financial years starting January 2027; national implementation and transition relief still require assessment.",
+      "change_note": "Directive (EU) 2026/470 narrows the selected EU undertaking route to more than 1,000 average employees and EUR 450 million net turnover. Revised scope applies from financial years starting January 2027; national implementation and transition relief still require assessment.",
+      "action": "Confirm the entity or consolidated group, reporting wave, national transposition and subsidiary exemptions. Retain both impact and financial materiality assessments; do not infer exemption solely from group reporting.",
+      "applicability": "Selected EU undertaking route only. Non-EU parent reporting is a separate test. CSRD scope changes do not remove PPWR or state EPR obligations. Reporting-period start is not the filing deadline.",
+      "tags": [
+        "CSRD",
+        "ESRS",
+        "double materiality",
+        "subsidiary",
+        "value chain"
+      ],
+      "review": "source_checked",
+      "checked_on": "2026-08-27",
+      "check_note": "Directive 2026/470 Articles 2, 3 and 5 checked. Country-law implementation, client exemptions and the operative version of revised ESRS are not resolved. Human review pending.",
+      "sources": [
+        {
+          "title": "Directive (EU) 2026/470",
+          "publisher": "European Union / EUR-Lex",
+          "url": "https://eur-lex.europa.eu/eli/dir/2026/470/oj/eng",
+          "locator": "Articles 2(4), 2(5), 3 and 5"
+        },
+        {
+          "title": "CSRD simplification: Council adoption",
+          "publisher": "Council of the EU",
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/02/24/council-signs-off-simplification-of-sustainability-reporting-and-due-diligence-requirements-to-boost-eu-competitiveness/",
+          "locator": "CSRD scope and transition exemption"
+        },
+        {
+          "title": "Revised ESRS adopted, subject to scrutiny",
+          "publisher": "European Commission",
+          "url": "https://finance.ec.europa.eu/news/commission-adopts-revised-sustainability-reporting-standards-2026-07-03_en",
+          "locator": "3 July 2026; scrutiny period and value-chain cap"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2026-02-24",
+          "label": "CSRD simplification adopted",
+          "kind": "publication",
+          "projected": false,
+          "source": 1
+        },
+        {
+          "date": "2027-01-01",
+          "label": "Revised EU scope: financial years starting on or after this date",
+          "kind": "reporting_year",
+          "projected": false,
+          "source": 0
+        },
+        {
+          "date": "2027-03-19",
+          "label": "Member States: transpose CSRD amendments (Articles 1–3)",
+          "kind": "transposition_deadline",
+          "projected": false,
+          "source": 0
+        },
+        {
+          "date": "2026-07-03",
+          "label": "Commission adopts revised ESRS; not proof of completed scrutiny",
+          "kind": "publication",
+          "projected": false,
+          "source": 2
+        }
+      ],
+      "developments": [
+        {
+          "date": "2026-02-24",
+          "label": "CSRD scope and transition amendments adopted",
+          "source": 1
+        },
+        {
+          "date": "2026-07-03",
+          "label": "Revised ESRS adopted by Commission; scrutiny remains separate",
+          "source": 2
+        }
+      ]
+    },
+    {
+      "id": "eu-ppwr",
+      "title": "PPWR · packaging compliance and phased requirements",
+      "framework": "EU PPWR",
+      "category": "Packaging / EPR",
+      "region": "European Union",
+      "stage": "effective",
+      "summary": "Packaging and Packaging Waste Regulation (EU) 2025/40 generally applies from 12 August 2026. Packaging conformity, substances and producer responsibilities are distinct from corporate sustainability reporting. Labelling, design and reuse requirements follow provision-specific dates.",
+      "change_note": "Packaging and Packaging Waste Regulation (EU) 2025/40 generally applies from 12 August 2026. Packaging conformity, substances and producer responsibilities are distinct from corporate sustainability reporting. Labelling, design and reuse requirements follow provision-specific dates.",
+      "action": "Map packaging by SKU, material and destination; identify manufacturer, importer and producer roles. Obtain conformity and food-contact PFAS evidence. Check national registration and EPR arrangements, beverage exemptions and later implementing acts.",
+      "applicability": "EU market placement and economic-operator role matter, not CSRD size thresholds. Article 12 labelling and Articles 6–7 design/recycled-content dates have later-of conditions. Article 29 beverage reuse targets have product and operator exemptions.",
+      "tags": [
+        "packaging",
+        "EPR",
+        "producer",
+        "value chain"
+      ],
+      "review": "source_checked",
+      "checked_on": "2026-08-27",
+      "check_note": "Articles 5–7, 12, 15, 29, 44–45 and 71 checked. Conditional dates are planning anchors, not confirmed universal deadlines. Product-specific exemptions and national procedures require review.",
+      "sources": [
+        {
+          "title": "Packaging waste: EU implementation overview",
+          "publisher": "European Commission",
+          "url": "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en",
+          "locator": "Overview, implementation and timeline"
+        },
+        {
+          "title": "Regulation (EU) 2025/40 (PPWR)",
+          "publisher": "European Union / EUR-Lex",
+          "url": "https://eur-lex.europa.eu/eli/reg/2025/40/oj/eng",
+          "locator": "Articles 5–7, 12, 15, 29, 44–45, 71"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2025-02-11",
+          "label": "PPWR enters into force",
+          "kind": "regulatory_effective",
+          "projected": false,
+          "source": 0
+        },
+        {
+          "date": "2026-08-12",
+          "label": "General application; food-contact PFAS limits subject to Article 5",
+          "kind": "regulatory_effective",
+          "projected": false,
+          "source": 1
+        },
+        {
+          "date": "2028-08-12",
+          "label": "Labelling: this date or 24 months after relevant implementing acts, whichever is later",
+          "kind": "conditional_application",
+          "projected": true,
+          "source": 1
+        },
+        {
+          "date": "2030-01-01",
+          "label": "Design/recycled-content anchors: later-of conditions in Articles 6–7",
+          "kind": "conditional_application",
+          "projected": true,
+          "source": 1
+        },
+        {
+          "date": "2030-01-01",
+          "label": "Selected beverage distributors: 10% reuse target, subject to Article 29 exceptions",
+          "kind": "compliance_target",
+          "projected": false,
+          "source": 1
+        }
+      ],
+      "developments": [
+        {
+          "date": "2026-08-12",
+          "label": "PPWR general application begins",
+          "source": 0
+        }
+      ]
+    },
+    {
+      "id": "us-epr-ca",
+      "title": "California SB 54 · packaging producer responsibility",
+      "framework": "US packaging EPR",
+      "category": "Packaging / EPR",
+      "region": "California (US)",
+      "stage": "effective",
+      "summary": "CalRecycle confirms permanent SB 54 regulations took effect on 1 May 2026. The programme covers single-use packaging and single-use plastic food serviceware, with staged source-reduction and recycling requirements through 2032.",
+      "change_note": "CalRecycle confirms permanent SB 54 regulations took effect on 1 May 2026. The programme covers single-use packaging and single-use plastic food serviceware, with staged source-reduction and recycling requirements through 2032.",
+      "action": "Identify the obligated producer, covered materials and exemptions; reconcile state-supplied packaging quantities with PRO reporting. Review approved programme requirements and fees.",
+      "applicability": "Packaging producer responsibilities are separate from CARB SB 253/261. Shared company identity does not establish the same scope, threshold, reporting boundary or responsible agency.",
+      "tags": [
+        "packaging",
+        "EPR",
+        "producer",
+        "value chain"
+      ],
+      "review": "source_checked",
+      "checked_on": "2026-08-27",
+      "check_note": "CalRecycle rulemaking outcome and programme targets checked; producer-specific deadlines, fees, exemptions and compliance are not established.",
+      "sources": [
+        {
+          "title": "SB 54 permanent regulations: approval and targets",
+          "publisher": "CalRecycle",
+          "url": "https://calrecycle.ca.gov/laws/rulemaking/sb54regulations/",
+          "locator": "Overview and Current Status"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2026-05-01",
+          "label": "Permanent SB 54 regulations effective",
+          "kind": "regulatory_effective",
+          "projected": false,
+          "source": 0
+        },
+        {
+          "date": "2027",
+          "label": "Plastic pollution mitigation funding begins (programme level)",
+          "kind": "implementation_phase",
+          "projected": false,
+          "source": 0
+        },
+        {
+          "date": "2032",
+          "label": "Programme targets: 100% recyclable/compostable covered packaging; 65% plastic recycling; 25% plastic reduction",
+          "kind": "compliance_target",
+          "projected": false,
+          "source": 0
+        }
+      ],
+      "developments": [
+        {
+          "date": "2026-05-01",
+          "label": "OAL approves permanent SB 54 regulations",
+          "source": 0
+        }
+      ]
+    },
+    {
+      "id": "us-epr-or",
+      "title": "Oregon · Recycling Modernization Act",
+      "framework": "US packaging EPR",
+      "category": "Packaging / EPR",
+      "region": "Oregon (US)",
+      "stage": "effective",
+      "summary": "Covered producers have PRO membership, fees and information duties from July 2025. Covered materials include packaging, food serviceware and printing/writing paper. Bottle Bill containers and producer exemptions require separate checks.",
+      "change_note": "Covered producers have PRO membership, fees and information duties from July 2025. Covered materials include packaging, food serviceware and printing/writing paper. Bottle Bill containers and producer exemptions require separate checks.",
+      "action": "Confirm producer status, exemptions and PRO membership. Separate beverage containers from secondary packaging; reconcile material weights and current PRO submissions.",
+      "applicability": "Sales into Oregon can trigger duties without an Oregon subsidiary. Bottle Bill container exclusion does not automatically exclude cartons, wrap or other packaging.",
+      "tags": [
+        "packaging",
+        "EPR",
+        "producer",
+        "value chain"
+      ],
+      "review": "source_checked",
+      "checked_on": "2026-08-27",
+      "check_note": "DEQ producer obligations guidance (February 2025), pages 1–3, checked. Current fee schedules, submission dates and any later relief require review.",
+      "sources": [
+        {
+          "title": "Producer obligations under the RMA",
+          "publisher": "Oregon DEQ",
+          "url": "https://www.oregon.gov/deq/recycling/Documents/RMAProducerObligationsSummary.pdf",
+          "locator": "Pages 1–3: products, producers, exemptions and compliance"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2025-07-01",
+          "label": "Covered producers: PRO membership, fees and information duties",
+          "kind": "regulatory_effective",
+          "projected": false,
+          "source": 0
+        }
+      ],
+      "developments": [
+        {
+          "date": "2025-07-01",
+          "label": "Oregon packaging producer programme starts",
+          "source": 0
+        }
+      ]
+    },
+    {
+      "id": "us-epr-co",
+      "title": "Colorado · Producer Responsibility Program",
+      "framework": "US packaging EPR",
+      "category": "Packaging / EPR",
+      "region": "Colorado (US)",
+      "stage": "effective",
+      "summary": "Colorado requires participation for covered packaging and paper producers. CAA announced final programme-plan approval in December 2025, with implementation required within six months.",
+      "change_note": "Colorado requires participation for covered packaging and paper producers. CAA announced final programme-plan approval in December 2025, with implementation required within six months.",
+      "action": "Confirm participation or an approved individual plan, covered materials, supply reports and current producer dues with the programme operator.",
+      "applicability": "State product-market and producer definitions apply. Company incorporation and GHG consolidation methods do not establish the obligated packaging producer.",
+      "tags": [
+        "packaging",
+        "EPR",
+        "producer",
+        "value chain"
+      ],
+      "review": "source_checked",
+      "checked_on": "2026-08-27",
+      "check_note": "Legislative act summary and CAA plan announcement checked. CDPHE pages returned access errors; current agency implementation status is a coverage gap. The June 2026 window is derived from the announcement, not a verified client deadline.",
+      "sources": [
+        {
+          "title": "HB22-1355: enacted act summary",
+          "publisher": "Colorado General Assembly",
+          "url": "https://leg.colorado.gov/bills/hb22-1355",
+          "locator": "Bill Summary: programme participation and plans"
+        },
+        {
+          "title": "Final programme plan announcement",
+          "publisher": "Circular Action Alliance · programme operator",
+          "url": "https://circularactionalliance.org/news-feed/co-program-plan-approved",
+          "locator": "10 December 2025 announcement; What’s Next"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2025-07-01",
+          "label": "Covered-producer participation condition begins (statutory summary)",
+          "kind": "regulatory_effective",
+          "projected": false,
+          "source": 0
+        },
+        {
+          "date": "2025-12-10",
+          "label": "CAA announces final programme-plan approval",
+          "kind": "publication",
+          "projected": false,
+          "source": 1
+        },
+        {
+          "date": "2026-06",
+          "label": "Implementation planning window: within six months of approval; confirm agency status",
+          "kind": "implementation_phase",
+          "projected": true,
+          "source": 1
+        }
+      ],
+      "developments": [
+        {
+          "date": "2025-12-10",
+          "label": "CAA announces approved Colorado programme plan",
+          "source": 1
+        }
+      ]
+    },
+    {
+      "id": "us-epr-me",
+      "title": "Maine · packaging stewardship timetable under revision",
+      "framework": "US packaging EPR",
+      "category": "Packaging / EPR",
+      "region": "Maine (US)",
+      "stage": "implementation_pending",
+      "summary": "Maine amended Chapter 428 in March 2026. DEP reported no stewardship-organisation proposals by the tender deadline in August 2026 and is reassessing implementation timing.",
+      "change_note": "Maine amended Chapter 428 in March 2026. DEP reported no stewardship-organisation proposals by the tender deadline in August 2026 and is reassessing implementation timing.",
+      "action": "Prepare packaging material data and producer-scope checks. Monitor stewardship-organisation selection and the registration mechanism before assigning calendar deadlines.",
+      "applicability": "DEP describes initial registration within 90 days after the stewardship organisation makes a mechanism available. Recurring reporting dates do not establish the first reporting year.",
+      "tags": [
+        "packaging",
+        "EPR",
+        "producer",
+        "value chain"
+      ],
+      "review": "source_checked",
+      "checked_on": "2026-08-27",
+      "check_note": "DEP implementation page and August 20 notice checked. No fixed launch, first registration date or first producer payment year is asserted.",
+      "sources": [
+        {
+          "title": "Stewardship Program for Packaging",
+          "publisher": "Maine DEP",
+          "url": "https://www.maine.gov/dep/waste/recycle/epr.html",
+          "locator": "Recent newsletters; implementation progress; producer obligations"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2026-03",
+          "label": "Chapter 428 amended: material types and alignment",
+          "kind": "publication",
+          "projected": false,
+          "source": 0
+        },
+        {
+          "date": "2026-08-20",
+          "label": "No stewardship proposals; implementation schedule being reassessed",
+          "kind": "publication",
+          "projected": false,
+          "source": 0
+        }
+      ],
+      "developments": [
+        {
+          "date": "2026-08-20",
+          "label": "Maine implementation schedule under reassessment",
+          "source": 0
+        }
+      ]
+    },
+    {
+      "id": "us-epr-mn",
+      "title": "Minnesota · Packaging Waste and Cost Reduction Act",
+      "framework": "US packaging EPR",
+      "category": "Packaging / EPR",
+      "region": "Minnesota (US)",
+      "stage": "effective",
+      "summary": "Minnesota requires covered packaging, food-packaging and paper producers to participate in a PRO. Programme design runs through 2027–2028, followed by implementation and phased cost reimbursement from 2029.",
+      "change_note": "Minnesota requires covered packaging, food-packaging and paper producers to participate in a PRO. Programme design runs through 2027–2028, followed by implementation and phased cost reimbursement from 2029.",
+      "action": "Confirm producer membership, product exclusions and state-supplied quantities. Prepare material attributes for fee modulation and assess refill, reuse, recycling and composting options.",
+      "applicability": "Materials sold or shipped into Minnesota can be covered. Product exclusions and the defined business-to-business exemption must be assessed separately.",
+      "tags": [
+        "packaging",
+        "EPR",
+        "producer",
+        "value chain"
+      ],
+      "review": "source_checked",
+      "checked_on": "2026-08-27",
+      "check_note": "MPCA scope and programme phases checked. Phase windows are not individual producer filing dates; annual fees and detailed submissions need further review.",
+      "sources": [
+        {
+          "title": "Packaging EPR: requirements and timeline",
+          "publisher": "Minnesota Pollution Control Agency",
+          "url": "https://www.pca.state.mn.us/air-water-land-climate/extended-producer-responsibility-for-packaging",
+          "locator": "Covered materials; programme oversight; timeline"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2027",
+          "label": "Programme structure phase starts (2027–2028)",
+          "kind": "implementation_phase",
+          "projected": true,
+          "source": 0
+        },
+        {
+          "date": "2029",
+          "label": "Implementation and phased cost coverage start (2029–2032)",
+          "kind": "implementation_phase",
+          "projected": true,
+          "source": 0
+        },
+        {
+          "date": "2032-01-01",
+          "label": "Packaging must meet refill/reuse/recycling/composting routes, subject to exclusions",
+          "kind": "compliance_target",
+          "projected": false,
+          "source": 0
+        }
+      ],
+      "developments": [
+        {
+          "date": "2024",
+          "label": "Packaging Waste and Cost Reduction Act signed",
+          "source": 0
+        }
+      ]
+    },
+    {
+      "id": "us-epr-md",
+      "title": "Maryland · packaging and paper producer responsibility",
+      "framework": "US packaging EPR",
+      "category": "Packaging / EPR",
+      "region": "Maryland (US)",
+      "stage": "effective",
+      "summary": "Maryland’s packaging producer law was signed in May 2025. COMAR 26.04.14 took effect on 25 May 2026. MDE identifies CAA as the approved packaging PRO and publishes producer/brand registration information.",
+      "change_note": "Maryland’s packaging producer law was signed in May 2025. COMAR 26.04.14 took effect on 25 May 2026. MDE identifies CAA as the approved packaging PRO and publishes producer/brand registration information.",
+      "action": "Check producer registration, exclusions and the current compliance guide; map packaging and paper supply to state reporting categories and confirm upcoming programme submissions.",
+      "applicability": "Packaging and paper are a separate EPR programme from Maryland paint or electronics. Do not reuse the paint programme’s plan approval date for packaging.",
+      "tags": [
+        "packaging",
+        "EPR",
+        "producer",
+        "value chain"
+      ],
+      "review": "source_checked",
+      "checked_on": "2026-08-27",
+      "check_note": "MDE programme page and regulation administrative history checked. Detailed registration deadlines, fee phases and the full compliance guide remain to be verified.",
+      "sources": [
+        {
+          "title": "Packaging and paper producer programme",
+          "publisher": "Maryland Department of the Environment",
+          "url": "https://mde.maryland.gov/programs/land/WasteManagement/Pages/ProducerResponsibility.aspx",
+          "locator": "Packaging and Paper Products section"
+        },
+        {
+          "title": "COMAR 26.04.14 administrative history",
+          "publisher": "State of Maryland",
+          "url": "https://regs.maryland.gov/us/md/exec/comar/26.04.14",
+          "locator": "Effective date: May 25, 2026"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2025-05-13",
+          "label": "Packaging and paper producer law signed",
+          "kind": "publication",
+          "projected": false,
+          "source": 0
+        },
+        {
+          "date": "2026-05-25",
+          "label": "COMAR 26.04.14 effective",
+          "kind": "regulatory_effective",
+          "projected": false,
+          "source": 1
+        }
+      ],
+      "developments": [
+        {
+          "date": "2026-05-25",
+          "label": "Maryland packaging producer regulations effective",
+          "source": 1
+        }
+      ]
+    },
+    {
+      "id": "us-epr-wa",
+      "title": "Washington · Recycling Reform Act",
+      "framework": "US packaging EPR",
+      "category": "Packaging / EPR",
+      "region": "Washington (US)",
+      "stage": "effective",
+      "summary": "Washington requires covered residential packaging and paper producers to register, report data and pay PRO membership fees from 2026. The wider recycling service and cost-reimbursement programme starts in 2030.",
+      "change_note": "Washington requires covered residential packaging and paper producers to register, report data and pay PRO membership fees from 2026. The wider recycling service and cost-reimbursement programme starts in 2030.",
+      "action": "Confirm producer status, noncommercial consumer supply, exemptions and PRO reporting. Separate present registration/data duties from later service rollout.",
+      "applicability": "Brand owners, licensed manufacturers, importers and other defined producers can be responsible. Online shipment packaging has separate role rules; de minimis exemptions need checking.",
+      "tags": [
+        "packaging",
+        "EPR",
+        "producer",
+        "value chain"
+      ],
+      "review": "source_checked",
+      "checked_on": "2026-08-27",
+      "check_note": "Ecology programme and producer-obligation pages checked. Detailed producer submission dates, final rule provisions and individual exclusions require review.",
+      "sources": [
+        {
+          "title": "Recycling Reform Act: programme and timeline",
+          "publisher": "Washington Department of Ecology",
+          "url": "https://ecology.wa.gov/waste-toxics/reducing-recycling-waste/our-recycling-programs/recycling-reform-act",
+          "locator": "Programme timeline"
+        },
+        {
+          "title": "Producers and PRO obligations",
+          "publisher": "Washington Department of Ecology",
+          "url": "https://ecology.wa.gov/waste-toxics/reducing-recycling-waste/our-recycling-programs/recycling-reform-act/producer-responsibility-organization",
+          "locator": "Producer obligations: from 2026"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2026",
+          "label": "Covered producers: registration, data and membership-fee duties begin",
+          "kind": "implementation_phase",
+          "projected": false,
+          "source": 1
+        },
+        {
+          "date": "2029-03",
+          "label": "PRO membership sales restriction: after March 2029; verify exact legal date",
+          "kind": "implementation_phase",
+          "projected": false,
+          "source": 0
+        },
+        {
+          "date": "2030",
+          "label": "Recycling service rollout and at least 90% cost reimbursement",
+          "kind": "implementation_phase",
+          "projected": false,
+          "source": 0
+        }
+      ],
+      "developments": [
+        {
+          "date": "2026-08-19",
+          "label": "Preliminary statewide collection-list comment period closes",
+          "source": 0
+        }
+      ]
     }
   ],
   "comparisons": [
@@ -599,6 +1165,39 @@
       ],
       "distinction": "SB 253 and SB 261 have different thresholds, reporting subjects and implementation or enforcement positions. A single California nexus does not make their reporting duties interchangeable.",
       "question": "Which entity crosses each threshold, and what operative reporting or enforcement conditions apply?"
+    },
+    {
+      "topic": "CSRD / ESRS and IFRS sustainability disclosures",
+      "records": [
+        "eu-csrd",
+        "ifrs-s2-ghg-amendments"
+      ],
+      "distinction": "Financial-materiality and climate information can overlap, but ESRS adds the impact lens. The 2024 interoperability guidance predates later revisions; map the actual versions used.",
+      "question": "Which additional disclosures, periods and assurance requirements remain after mapping shared data?"
+    },
+    {
+      "topic": "Corporate reporting and packaging compliance",
+      "records": [
+        "eu-csrd",
+        "eu-ppwr"
+      ],
+      "distinction": "Packaging material data may inform resource-use disclosures, but PPWR product conformity and producer responsibilities are separate. Falling outside CSRD does not establish a PPWR exemption.",
+      "question": "Who owns product-level conformity evidence and who owns the group sustainability disclosure?"
+    },
+    {
+      "topic": "EU packaging and US state producer responsibility",
+      "records": [
+        "eu-ppwr",
+        "us-epr-ca",
+        "us-epr-or",
+        "us-epr-co",
+        "us-epr-me",
+        "us-epr-mn",
+        "us-epr-md",
+        "us-epr-wa"
+      ],
+      "distinction": "Reuse a packaging bill of materials and destination ledger, then apply each market’s categories, producer hierarchy, exclusions, fees and dates separately. No mutual recognition is assumed.",
+      "question": "Can every reported weight be reconciled to the responsible entity, market, material category and reporting period?"
     }
   ]
 }

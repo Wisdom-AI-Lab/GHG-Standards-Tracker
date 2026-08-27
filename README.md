@@ -4,16 +4,18 @@ An original, static tracker for sustainability frameworks, regulatory developmen
 
 ## What this version contains
 
-- Seven main navigation items: Overview, Standards register, Developments, Timeline, Client workspace, Regulatory notebook and Evidence. Compare regulatory impacts is a subsection of Developments; existing `#compare` links continue to work.
+- Seven main navigation items: Overview, Standards register, Amended Disclosure Requirements, Timeline, Client workspace, Regulatory notebook and Evidence. The amended-requirements area contains Compare regulatory impacts and an interactive Interoperability map; existing `#updates` and `#compare` links continue to work.
 - Framework, stage and region filters; source-linked detail dialogs. TNFD recommendations and planned ISSB nature work are distinct records; SB 253 and SB 261 retain their separate implementation/enforcement states.
+- CSRD, PPWR and packaging EPR records for California, Oregon, Colorado, Maine, Minnesota, Maryland and Washington. Coverage is packaging-focused, not all US EPR product regimes.
+- Nine selectable regulatory relationships distinguish guidance, methods, conditional routes and editorial data reuse. Scenario-aware client priority actions identify missing evidence without inventing filing obligations.
 - Compact ESG Regulatory Scanner identity with an original rounded-ray SVG symbol, sticky navigation, an edition date and an Evidence glossary.
-- Eleven independently researched records, prepared on 27 August 2026. They are source-checked but await human review.
-- Exact, month-level, quarter-level and year-level dates, with projected milestones distinguished from source-stated dates.
+- Twenty independently researched records, prepared on 27 August 2026. They are source-checked but await human review.
+- Uniform month/year timeline labels, retaining exact days in supporting labels and details. Quarter/year-only sources display labelled month ranges; conditional and projected milestones remain distinct.
 - A 30-day source recheck flag, schema validation, application tests and GitHub validation workflow.
 - Atlas as the default presentation path, with illustrative company facts and eight selected reporting routes across Australia, Singapore, California, Mexico and the EU, with explicit implementation limits. PepsiCo remains an optional public-evidence example.
 - Interactive acquisition/divestment scenarios and actual reporting-phase comparisons; three GHG boundary methods; a jurisdiction × entity × instrument × trigger matrix with citations, condition traces and missing-information flags.
 - Three added workspace sections: **Adoption & entity roles**, **Materiality**, and **Group & supplier data**. Sell Mexico while retaining a supply contract to compare group and value-chain roles.
-- Eleven guided notebook questions, selectable supporting sources and up to five session notes. No live AI or file uploads.
+- Thirteen guided notebook questions, selectable supporting sources and up to five session notes. No live AI or file uploads.
 
 This is not a complete regulatory database, a production applicability engine, or an active monitoring service. The selected real requirements were checked against official sources on 27 August 2026; human legal review is pending. Results apply to illustrative inputs and selected routes only, not all obligations. UK domestic coverage is explicitly unresearched. California uses a fixed initial-cycle example with separate implementation/enforcement overlays; EU thresholds are not a verified national filing assessment. Revised ESRS scrutiny and Mexico relief questions remain visible. Public PepsiCo rows always remain unresolved. A passed milestone is not automatically treated as completed, and no record is automatically marked human-reviewed.
 
@@ -38,7 +40,7 @@ node scripts/check.mjs
 node --test tests/tracker.test.mjs
 ```
 
-The 55 tests cover schema and source references, date semantics, filtering, safe rendering, navigation and comparison subsection, application event wiring, error recovery, local HTTP delivery, actual threshold boundaries, financial-year phases, historical listing/index facts, relief uncertainty, scenario dates, control/ownership distinctions, public-data isolation, evidence selection and session notes. The DOM adapter is not a browser. Browser preview was attempted but local access returned `ERR_BLOCKED_BY_CLIENT`; sticky scrolling, graph connectors and responsive layout still need visual review before merging.
+The 63 tests cover schema and source references, date semantics, filtering, safe rendering, navigation and comparison subsection, application event wiring, error recovery, local HTTP delivery, actual threshold boundaries, financial-year phases, historical listing/index facts, relief uncertainty, scenario dates, control/ownership distinctions, public-data isolation, evidence selection and session notes. The DOM adapter is not a browser. No browser QA was run for this update. Sticky scrolling, the relationship map and responsive layout still need visual review before merging.
 
 ## Structure
 
@@ -46,6 +48,9 @@ The 55 tests cover schema and source references, date semantics, filtering, safe
 | --- | --- |
 | `index.html` | Product identity, semantic page shell and primary navigation |
 | `assets/logo.svg` | Original rounded oblong-ray brand mark |
+| `data/interactions.mjs` | Typed regulatory relationships and stable record references |
+| `assets/interaction-views.mjs` | Interactive relationship map and overlap table |
+| `assets/priority-actions.mjs` | Deterministic, scenario-aware client review recommendations |
 | `data/glossary.mjs` | Editorial ESG term definitions for Evidence |
 | `assets/styles.css` | Original responsive styling; system fonts |
 | `assets/core.mjs` | Validation, filtering and date logic |

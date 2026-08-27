@@ -10,7 +10,7 @@ Start with **Baseline**, organisation date **1 Feb 2027**, FY start **1 Jul 2026
 
 ## Product navigation
 
-Overview and Standards register include TNFD and California records. Developments contains the comparison subsection. Evidence contains the glossary and source-review definitions. The header date identifies the published edition; automated searches are not active.
+Overview and Standards register include TNFD and California records. Amended Disclosure Requirements contains Compare regulatory impacts and the Interoperability map. Evidence contains the glossary and source-review definitions. The header date identifies the published edition; automated searches are not active.
 
 ## 1. Organisation graph
 
@@ -55,7 +55,7 @@ Open **Regulatory notebook**, sharing the active scenario.
 - Save a response: the note records the selected scenario and assessment/evidence controls, but is only a page-session snapshot.
 - Ask **What information is missing?** to show relief, implementation, enforcement and coverage gaps.
 
-Eleven questions and selected exact aliases work. Arbitrary questions receive a limitation notice. No live AI or file ingestion is connected.
+Thirteen questions and selected exact aliases work. Arbitrary questions receive a limitation notice. No live AI or file ingestion is connected.
 
 ## Optional: acquisition and reporting phases
 
@@ -68,3 +68,15 @@ Choose FY start **1 Jan 2025**, then **Compare reporting phases** to compare wit
 The demonstrated flow is entity evidence → selected legal conditions → local/group/supplier roles → materiality and data gaps → cited guidance. Funding would add verified client evidence, broader reviewed rules, country-law implementation, secure uploads, cited model answers, supplier workflows, reviewer approvals and maintained change history.
 
 Before presenting, check layout, scrolling, keyboard controls and source dialogs in the actual browser. Automated tests use a minimal DOM adapter; visual/browser QA and human regulatory review remain outstanding. Do not enter confidential client information.
+
+
+## Packaging and interoperability review
+
+1. Open **Overview** or **Standards register**. Find CSRD, PPWR and the seven state packaging EPR records; open each source note. Confirm the Maine timing and Colorado/Maryland evidence gaps remain visible.
+2. Open **Amended Disclosure Requirements → Interoperability map**. Select “Climate disclosure alignment”, then “Packaging data across markets”. Check the shared information, separate obligations, linked records and evidence. Map nodes open records; the US packaging group opens its relationship detail.
+3. Open **Timeline**, turn off “Upcoming only”, and inspect PPWR’s August 2026 application. Month/year labels retain exact days below. Inspect a year/quarter-only event and a conditional 2028 or 2030 anchor.
+4. In **Client workspace**, inspect **Priority actions**. Select France, then Mexico; compare the Mexico sale before and after 1 January 2027. Review missing facts and suggested owners. No task is sent, no deadline is assigned, and no packaging scope match is inferred.
+5. In **Regulatory notebook**, ask the packaging and overlap questions. Deselect the PPWR register evidence: the answer must be withheld. Switch to the public example: Atlas’s company assumptions must not appear as PepsiCo findings.
+6. Open **Evidence** and check the four balanced information cards and glossary.
+
+Before merging, visually check the opaque sticky navigation, long navigation labels, the relationship map, narrow-screen horizontal scrolling, and the space before the glossary. Browser layout review and human regulatory review are outstanding.

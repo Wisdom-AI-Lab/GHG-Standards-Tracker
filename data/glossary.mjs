@@ -1,5 +1,13 @@
 // Concise editorial definitions; legal scope remains in the linked record evidence.
 export const GLOSSARY=Object.freeze([
+  ['PPWR','EU Packaging and Packaging Waste Regulation (EU) 2025/40: product and packaging-waste requirements with distinct application dates and operator roles.'],
+  ['EPR','Extended producer responsibility: obligations on defined producers for the end-of-life management of covered products. Scope and timing vary by jurisdiction and product.'],
+  ['PRO / SO','Producer responsibility organisation / stewardship organisation: a programme operator coordinating specified producer duties. Membership does not prove full compliance.'],
+  ['Obligated producer','The person identified by a particular law’s producer hierarchy; this may be a brand owner, manufacturer, importer or another party, not necessarily the ultimate parent.'],
+  ['Packaging bill of materials','An itemised record of packaging components, material types and weights, linked to products and destination markets.'],
+  ['Interoperability','The ability to map and reuse information across frameworks while satisfying each framework’s remaining requirements; it is not automatic legal equivalence.'],
+  ['Conditional date','A date governed by an additional event or later-of rule, such as an implementing act. The displayed anchor is not necessarily the operative deadline.'],
+
   ['CARB','California Air Resources Board; the state agency administering the selected California climate-disclosure programmes.'],
   ['CSRD','Corporate Sustainability Reporting Directive; EU sustainability-reporting legislation requiring assessment of applicable national implementation.'],
   ['ESRS','European Sustainability Reporting Standards; disclosure standards used under the CSRD framework.'],
