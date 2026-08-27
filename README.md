@@ -4,13 +4,18 @@ An original, static demonstration tracker for greenhouse gas accounting, targets
 
 ## What this version contains
 
-- Six views: overview, searchable standards register, dated developments, timeline, comparison prompts, and evidence/method.
+- Eight views: overview, searchable standards register, dated developments, timeline, comparison prompts, evidence/method, **client workspace**, and **regulatory notebook**.
 - Framework, stage and region filters; source-linked detail dialogs.
 - Seven independently researched starter records, prepared on 27 August 2026. They are source-checked but await human review.
 - Exact, month-level and quarter-level dates, with projected milestones distinguished from source-stated dates.
 - A 30-day source recheck flag, schema validation, application tests and GitHub validation workflow.
+- A selected PepsiCo subsidiary extract from an official filing, kept separate from fictional Atlas entities and invented rules.
+- Interactive acquisition, divestment and rule-change scenarios; three GHG boundary methods; a jurisdiction × entity × instrument × trigger matrix with condition traces.
+- Five guided notebook questions, selectable supporting sources and up to five session notes. No live AI or file uploads.
 
-This is not a complete regulatory database, an entity applicability engine, or an active monitoring service. Missing coverage is identified in the interface. A passed milestone is not automatically treated as completed, and no record is automatically marked human-reviewed.
+This is not a complete regulatory database, a production applicability engine, or an active monitoring service. The invented rules demonstrate decision logic, not real legal requirements. Public PepsiCo rows always remain unresolved. A passed milestone is not automatically treated as completed, and no record is automatically marked human-reviewed.
+
+For a team presentation, follow [the five-minute walkthrough](docs/DEMO_WALKTHROUGH.md). No confidential client information is needed.
 
 ## Run
 
@@ -31,7 +36,7 @@ node scripts/check.mjs
 node --test tests/tracker.test.mjs
 ```
 
-Checks cover schema and source references, date semantics, filtering, safe rendering, six views, application event wiring, error recovery and local HTTP delivery. The DOM adapter is not a browser; visual layout and real browser interactions need a separate check before public release.
+The 33 tests cover schema and source references, date semantics, filtering, safe rendering, eight views, application event wiring, error recovery, local HTTP delivery, scenario dates, control/ownership distinctions, public-data isolation, evidence selection and session notes. The DOM adapter is not a browser; visual layout and real browser interactions need a separate check before public release.
 
 ## Structure
 
@@ -41,11 +46,21 @@ Checks cover schema and source references, date semantics, filtering, safe rende
 | `assets/styles.css` | Original responsive styling; system fonts |
 | `assets/core.mjs` | Validation, filtering and date logic |
 | `assets/app.mjs` | Views, details and browser interaction |
+| `assets/demo-core.mjs` | Scenario snapshots, boundary positions, invented rule evaluation, guided answers and in-memory state |
+| `assets/demo-views.mjs` | Client graph, entity inspector, applicability matrix, change comparison and three-panel notebook |
+| `assets/demo.css` | Responsive styling for the two demo views |
 | `data/records.json` | Original starter dataset and editorial comparisons |
+| `data/client-demo.mjs` | Dated public subsidiary extract, separate fictional entities, scenario definitions and invented rules |
 | `docs/DATA_GUIDE.md` | Schema and content editing rules |
 | `docs/AGENT_WORKFLOW.md` | Proposed research/verification workflow; not activated |
 | `docs/SOURCE_LOG.md` | Research scope and primary-source record |
 | `docs/PROVENANCE.md` | Implementation and repository-history boundaries |
+| `docs/DEMO_WALKTHROUGH.md` | Presentation steps and expected results |
+| `docs/FUTURE_MODULES.md` | Proposed full-build architecture and scope boundaries |
+| `docs/CLIENT_DATA_SECURITY.md` | Security requirements before handling client data or adding AI |
+| `scripts/check.mjs` | Dataset, demo fixture and local asset validation |
+| `tests/tracker.test.mjs` | Automated unit, rendering and event-wiring tests |
+| `.github/workflows/validate.yml` | GitHub checks only; no deployment or scheduled research |
 
 ## Hosting after review and merge
 
@@ -57,7 +72,9 @@ For another static host: serve the repository root with no build command. No cus
 
 ## Data and automation
 
-The browser requests **only `data/records.json`** for its dataset. It does not call the reference project's backend, any AI provider or analytics service. All regulatory URLs are links opened on user request.
+The browser loads **local assets, `data/records.json` and the bundled `data/client-demo.mjs` module**. It does not call the reference project's backend, any AI provider or analytics service. External regulatory URLs are links opened on user request. The public extract is a snapshot, not a live feed.
+
+Demo state and saved responses stay in page memory and are cleared on refresh. Scenario overlays are independent, not a persistent graph history. No client file picker, upload endpoint, database, login or model integration is active. See [future modules](docs/FUTURE_MODULES.md) and [client-data safeguards](docs/CLIENT_DATA_SECURITY.md) before extending the demo.
 
 Research automation is **not enabled**. The included GitHub workflow validates committed files only. To add scheduled research, choose the model/search services, credentials, budget, cadence and reviewer; follow `docs/AGENT_WORKFLOW.md`. A schedule must not be described as active until a real run has succeeded.
 

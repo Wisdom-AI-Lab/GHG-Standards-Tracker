@@ -9,3 +9,9 @@ The reference project's inherited `data/data.json`, `og.png`, `UPDATE_GUIDE.md` 
 This document is a provenance statement, not a licence for earlier commits or third-party material. No blanket licence is added to the repository by this change. Source publishers retain rights in their standards, publications and other materials. The new dataset links to authoritative sources and contains short original summaries; it does not reproduce standards documents.
 
 Do not use upstream “Sync fork” merges without reviewing them: the original project and this implementation now have different structures, datasets and runtime behaviour.
+
+## Client workspace and notebook
+
+The two additional views, scenario logic, sample entities and guided responses are original code and content. The user-provided notebook screenshot informed the general Sources / Questions / Outputs concept; no screenshot assets, branded interface elements, code or document contents were imported.
+
+The PepsiCo example is a short, attributed factual extract independently researched from the official SEC filing linked in SOURCE_LOG.md. It is kept separate from invented entities and rules. The demo does not claim affiliation with PepsiCo, Google, any regulator or any model provider, and does not call a notebook product or AI service.

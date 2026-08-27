@@ -17,3 +17,22 @@ Prepared: 27 August 2026. Sources were accessed through web retrieval during thi
 All initial records are `source_checked`, not `human_reviewed`. The check establishes support for a small set of summaries/dates, not a comprehensive legal review, reproduction of the standards, or assurance over the dataset. The SEC entry does not claim a complete litigation review; CBAM does not infer product or entity scope; ISSB dates are not treated as universal legal deadlines. These bounded checks can become stale.
 
 Comparison cards and suggested actions are editorial prompts, not source quotations or established equivalence findings. Review them against the relevant instruments before use. No scheduled refresh or independent human audit has occurred.
+
+## Public entity example added for the demo
+
+Source checked: 27 August 2026. Observed entity snapshot: 27 December 2025.
+
+- [PepsiCo Exhibit 21 — subsidiary listing](https://www.sec.gov/Archives/edgar/data/77476/000007747626000007/pepsico202510-kexhibit21.htm)
+- [SEC filing index](https://www.sec.gov/Archives/edgar/data/77476/000007747626000007/0000077476-26-000007-index.htm)
+
+| Selected entity | Listed jurisdiction | Exhibit location |
+| --- | --- | --- |
+| PepsiCo Beverages Australia Pty Ltd | Australia | Page 7 |
+| PepsiCo International Pte Ltd. | Singapore | Page 9 |
+| PepsiCo Holdings | United Kingdom | Page 9 |
+| Asia Bottlers Limited | Hong Kong | Page 1 |
+| Baltray Finance Unlimited Company | Ireland | Page 1 |
+
+This deliberately small extract supports names, jurisdictions and the listed-subsidiary relationship at the stated date. It does not establish a complete organisation chart, direct parents, ownership percentages, control, thresholds, listing status or current regulatory applicability. No client relationship or endorsement is claimed. The public workspace therefore leaves all applicability rows unresolved.
+
+Atlas, Orchid, their financial/control inputs, transactions and DEMO-prefixed rules were independently invented for the demonstration. They are not PepsiCo facts or actual Australian, Singaporean or UK legal requirements. Fictional sources and rules are visibly labelled in the workspace and notebook.
