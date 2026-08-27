@@ -1,6 +1,6 @@
-export const STAGES = Object.freeze({development:'In development', published:'Published', effective:'Effective', proposal:'Proposal'});
+export const STAGES = Object.freeze({development:'In development', published:'Published', effective:'Effective', proposal:'Proposal',implementation_pending:'Implementation unresolved',enforcement_paused:'Enforcement enjoined'});
 export const REVIEW = Object.freeze({source_checked:'Source checked · review pending', human_reviewed:'Human reviewed', unverified:'Not verified'});
-export const DATE_TYPES = Object.freeze({publication:'Publication', consultation:'Planned consultation', expected_publication:'Expected publication', standard_effective:'Standard effective date', regulatory_effective:'Regulatory effective date', programme_opening:'Programme opening', comment_deadline:'Comment deadline'});
+export const DATE_TYPES = Object.freeze({publication:'Publication', consultation:'Planned consultation', expected_publication:'Expected publication', standard_effective:'Standard effective date', regulatory_effective:'Regulatory effective date', programme_opening:'Programme opening', comment_deadline:'Comment deadline',proposed_deadline:'Proposed deadline · not confirmed operative',enforcement_event:'Enforcement / court event',reporting_year:'Statutory reporting start year · not an exact deadline'});
 
 export function escapeHtml(value) {
   return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -10,6 +10,7 @@ export function safeUrl(value) {
 }
 export function dateRange(value) {
   if (typeof value !== 'string') return null;
+  if (/^[1-9]\d{3}$/.test(value))return [Date.UTC(+value,0,1),Date.UTC(+value,11,31,23,59,59,999)];
   const q = /^(\d{4})-Q([1-4])$/.exec(value);
   if (q) {const y=+q[1], m=(+q[2]-1)*3; return [Date.UTC(y,m,1),Date.UTC(y,m+3,0,23,59,59,999)];}
   const m = /^(\d{4})-(\d{2})(?:-(\d{2}))?$/.exec(value);
@@ -20,6 +21,7 @@ export function dateRange(value) {
 }
 export function formatDate(value) {
   const range=dateRange(value); if(!range) return 'Not specified';
+  if(value.length===4)return value;
   if(value.includes('-Q')) return `${value.slice(5)} ${value.slice(0,4)}`;
   return new Intl.DateTimeFormat('en-GB',{timeZone:'UTC',...(value.length===10?{day:'numeric'}:{}),month:'short',year:'numeric'}).format(range[0]);
 }
@@ -69,7 +71,7 @@ export function validateDataset(data) {
         add(!!dateRange(m.date),`${p}.${key}[${j}] invalid date`);
         add(Number.isInteger(m.source)&&m.source>=0&&m.source<sources.length,`${p}.${key}[${j}] needs valid source index`);
         add(typeof m.label==='string'&&m.label.trim().length>0,`${p}.${key}[${j}] needs label`);
-        if(key==='milestones'){add(Object.hasOwn(DATE_TYPES,m.kind),`${p}.${key}[${j}] invalid kind`);add(typeof m.projected==='boolean',`${p}.${key}[${j}] projected must be boolean`);if(['consultation','expected_publication'].includes(m.kind))add(m.projected===true,`${p}.${key}[${j}] plan must be marked projected`);}
+        if(key==='milestones'){add(Object.hasOwn(DATE_TYPES,m.kind),`${p}.${key}[${j}] invalid kind`);add(typeof m.projected==='boolean',`${p}.${key}[${j}] projected must be boolean`);if(['consultation','expected_publication','proposed_deadline'].includes(m.kind))add(m.projected===true,`${p}.${key}[${j}] plan must be marked projected`);}
       });
     }
   });

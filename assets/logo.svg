@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>ESG Regulatory Scanner</title>
+  <g fill="#caebce">
+    <rect x="28" y="3" width="8" height="24" rx="4"/>
+    <rect x="28" y="37" width="8" height="24" rx="4"/>
+    <rect x="3" y="28" width="24" height="8" rx="4"/>
+    <rect x="37" y="28" width="24" height="8" rx="4"/>
+    <rect x="28" y="5" width="8" height="23" rx="4" transform="rotate(45 32 32)"/>
+    <rect x="28" y="36" width="8" height="23" rx="4" transform="rotate(45 32 32)"/>
+    <rect x="5" y="28" width="23" height="8" rx="4" transform="rotate(45 32 32)"/>
+    <rect x="36" y="28" width="23" height="8" rx="4" transform="rotate(45 32 32)"/>
+  </g>
+  <rect x="24" y="24" width="16" height="16" rx="6" fill="#70c0ac"/>
+</svg>

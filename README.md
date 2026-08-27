@@ -1,22 +1,23 @@
-# GHG Standards Watch
+# ESG Regulatory Scanner
 
-An original, static demonstration tracker for greenhouse gas accounting, targets and disclosure developments, developed for Wisdom AI Lab.
+An original, static tracker for sustainability frameworks, regulatory developments and entity-level assessment, prepared for internal review.
 
 ## What this version contains
 
-- Eight views: overview, searchable standards register, dated developments, timeline, comparison prompts, evidence/method, **client workspace**, and **regulatory notebook**.
-- Framework, stage and region filters; source-linked detail dialogs.
-- Seven independently researched starter records, prepared on 27 August 2026. They are source-checked but await human review.
-- Exact, month-level and quarter-level dates, with projected milestones distinguished from source-stated dates.
+- Seven main navigation items: Overview, Standards register, Developments, Timeline, Client workspace, Regulatory notebook and Evidence. Compare regulatory impacts is a subsection of Developments; existing `#compare` links continue to work.
+- Framework, stage and region filters; source-linked detail dialogs. TNFD recommendations and planned ISSB nature work are distinct records; SB 253 and SB 261 retain their separate implementation/enforcement states.
+- Compact ESG Regulatory Scanner identity with an original rounded-ray SVG symbol, sticky navigation, an edition date and an Evidence glossary.
+- Eleven independently researched records, prepared on 27 August 2026. They are source-checked but await human review.
+- Exact, month-level, quarter-level and year-level dates, with projected milestones distinguished from source-stated dates.
 - A 30-day source recheck flag, schema validation, application tests and GitHub validation workflow.
-- Atlas as the default presentation path, with fictional company facts and eight selected reporting routes across Australia, Singapore, California, Mexico and the EU, with explicit implementation limits. PepsiCo remains an optional public-evidence example.
+- Atlas as the default presentation path, with illustrative company facts and eight selected reporting routes across Australia, Singapore, California, Mexico and the EU, with explicit implementation limits. PepsiCo remains an optional public-evidence example.
 - Interactive acquisition/divestment scenarios and actual reporting-phase comparisons; three GHG boundary methods; a jurisdiction × entity × instrument × trigger matrix with citations, condition traces and missing-information flags.
 - Three added workspace sections: **Adoption & entity roles**, **Materiality**, and **Group & supplier data**. Sell Mexico while retaining a supply contract to compare group and value-chain roles.
 - Eleven guided notebook questions, selectable supporting sources and up to five session notes. No live AI or file uploads.
 
-This is not a complete regulatory database, a production applicability engine, or an active monitoring service. The selected real requirements were checked against official sources on 27 August 2026; human legal review is pending. Results apply to fictional inputs and selected routes only, not all obligations. UK domestic coverage is explicitly unresearched. California uses a fixed initial-cycle example with separate implementation/enforcement overlays; EU thresholds are not a verified national filing assessment. Revised ESRS scrutiny and Mexico relief questions remain visible. Public PepsiCo rows always remain unresolved. A passed milestone is not automatically treated as completed, and no record is automatically marked human-reviewed.
+This is not a complete regulatory database, a production applicability engine, or an active monitoring service. The selected real requirements were checked against official sources on 27 August 2026; human legal review is pending. Results apply to illustrative inputs and selected routes only, not all obligations. UK domestic coverage is explicitly unresearched. California uses a fixed initial-cycle example with separate implementation/enforcement overlays; EU thresholds are not a verified national filing assessment. Revised ESRS scrutiny and Mexico relief questions remain visible. Public PepsiCo rows always remain unresolved. A passed milestone is not automatically treated as completed, and no record is automatically marked human-reviewed.
 
-For a team presentation, follow [the team walkthrough](docs/DEMO_WALKTHROUGH.md). No confidential client information is needed.
+For a team presentation, follow [the team walkthrough](docs/DEMO_WALKTHROUGH.md). No confidential client information is needed. Atlas has a concise illustrative-data notice; source review limits and the inactive monitoring status remain explicit. The Overview describes assessment, not a currently operating near-real-time service.
 
 ## Run
 
@@ -37,13 +38,15 @@ node scripts/check.mjs
 node --test tests/tracker.test.mjs
 ```
 
-The 49 tests cover schema and source references, date semantics, filtering, safe rendering, eight views, application event wiring, error recovery, local HTTP delivery, actual threshold boundaries, financial-year phases, historical listing/index facts, relief uncertainty, scenario dates, control/ownership distinctions, public-data isolation, evidence selection and session notes. The DOM adapter is not a browser; visual layout and real browser interactions need a separate check before public release.
+The 55 tests cover schema and source references, date semantics, filtering, safe rendering, navigation and comparison subsection, application event wiring, error recovery, local HTTP delivery, actual threshold boundaries, financial-year phases, historical listing/index facts, relief uncertainty, scenario dates, control/ownership distinctions, public-data isolation, evidence selection and session notes. The DOM adapter is not a browser. Browser preview was attempted but local access returned `ERR_BLOCKED_BY_CLIENT`; sticky scrolling, graph connectors and responsive layout still need visual review before merging.
 
 ## Structure
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | Semantic page shell and controls |
+| `index.html` | Product identity, semantic page shell and primary navigation |
+| `assets/logo.svg` | Original rounded oblong-ray brand mark |
+| `data/glossary.mjs` | Editorial ESG term definitions for Evidence |
 | `assets/styles.css` | Original responsive styling; system fonts |
 | `assets/core.mjs` | Validation, filtering and date logic |
 | `assets/app.mjs` | Views, details and browser interaction |
@@ -51,11 +54,11 @@ The 49 tests cover schema and source references, date semantics, filtering, safe
 | `assets/demo-views.mjs` | Client graph, entity inspector, applicability matrix, change comparison and three-panel notebook |
 | `assets/extended-core.mjs` | California/Mexico/EU screening, materiality and supplier-role logic |
 | `assets/extended-views.mjs` | Adoption, materiality and supplier sections |
-| `data/extended-requirements.mjs` | Additional official sources, selected routes and fictional assessment examples |
+| `data/extended-requirements.mjs` | Additional official sources, selected routes and illustrative assessment examples |
 | `assets/demo.css` | Responsive styling for the two demo views |
 | `data/requirements.mjs` | Combined eight-route pack; AU/SGX phases and source metadata |
 | `data/records.json` | Original starter dataset and editorial comparisons |
-| `data/client-demo.mjs` | Optional public subsidiary extract, fictional Atlas facts and transaction/phase scenarios |
+| `data/client-demo.mjs` | Optional public subsidiary extract, illustrative Atlas facts and transaction/phase scenarios |
 | `docs/DATA_GUIDE.md` | Schema and content editing rules |
 | `docs/AGENT_WORKFLOW.md` | Proposed research/verification workflow; not activated |
 | `docs/SOURCE_LOG.md` | Research scope and primary-source record |

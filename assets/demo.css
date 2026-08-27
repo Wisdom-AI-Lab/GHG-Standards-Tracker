@@ -12,3 +12,17 @@
 .supplier-card dt{font-weight:700;font-size:12px}.supplier-card dd{margin:5px 0 0}
 .demo-result.implementation,.demo-result.paused{background:#fff0d2;color:#784900;white-space:normal}
 @media(max-width:800px){.lens-grid,.supplier-grid{grid-template-columns:1fr}}
+/* A continuous, nested tree preserves connectors at every depth and on narrow screens. */
+.org-graph .graph-root{margin:0;max-width:none;text-align:left}
+.org-graph .edge-legend{text-align:left;padding:0 0 14px}
+.org-graph .org-branches,.org-graph .facility-branch{display:block;min-width:0;border:0;border-left:2px solid #9abbb1;margin:0 0 0 20px;padding:0 0 0 20px;list-style:none}
+.org-graph .org-branches>li,.org-graph .facility-branch>li{position:relative;min-width:0;padding:14px 0 0;margin:0}
+.org-graph .org-branches>li:before,.org-graph .facility-branch>li:before{content:"";position:absolute;left:-22px;top:42px;width:20px;height:0;border:0;border-top:2px solid #9abbb1}
+.org-graph .facility-branch:before{display:none}
+.org-graph .entity-node{min-height:0;padding:12px 15px}
+.org-graph .entity-node strong{margin:4px 0;font-size:13px}.org-graph .entity-node em{margin-top:5px}
+.org-graph .public-branches{border-left-style:dashed}.org-graph .public-branches>li:before{border-top-style:dashed}
+.data-context{font-size:11px;color:var(--muted);margin:10px 0 0;max-width:700px}
+.inspector{align-self:start;position:sticky;top:70px;max-height:calc(100vh - 90px);overflow:auto}
+@media(max-width:1100px){.inspector{position:static;max-height:none}}
+@media(max-width:600px){.org-graph .org-branches,.org-graph .facility-branch{margin-left:8px;padding-left:12px}.org-graph .org-branches>li:before,.org-graph .facility-branch>li:before{left:-14px;width:12px}.org-graph .entity-node{padding:10px}}
