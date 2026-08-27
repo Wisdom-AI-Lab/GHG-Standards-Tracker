@@ -1,61 +1,70 @@
-# GHG Standards Tracker
+# GHG Standards Watch
 
-A weekly-updated, vendor-neutral reference for sustainability professionals tracking the simultaneous revision of the standards that govern corporate GHG accounting and disclosure:
+An original, static demonstration tracker for greenhouse gas accounting, targets and disclosure developments, developed for Wisdom AI Lab.
 
-- **GHG Protocol** — Corporate, Scope 2, Scope 3, AMI, Land Sector & Removals, Product, Project
-- **ISO** — 14060-family harmonization and the GHGP–ISO consolidated corporate standard
-- **SBTi** — Corporate Net-Zero Standard V2.0 and sector standards
-- **ISSB / IFRS** — S1/S2, the December 2025 S2 amendments, and jurisdictional adoption
-- **EU** — CSRD/Omnibus, revised ESRS, CBAM
-- **US** — SEC climate rule rescission, California SB 253/261, state programs
+## What this version contains
+
+- Six views: overview, searchable standards register, dated developments, timeline, comparison prompts, and evidence/method.
+- Framework, stage and region filters; source-linked detail dialogs.
+- Seven independently researched starter records, prepared on 27 August 2026. They are source-checked but await human review.
+- Exact, month-level and quarter-level dates, with projected milestones distinguished from source-stated dates.
+- A 30-day source recheck flag, schema validation, application tests and GitHub validation workflow.
+
+This is not a complete regulatory database, an entity applicability engine, or an active monitoring service. Missing coverage is identified in the interface. A passed milestone is not automatically treated as completed, and no record is automatically marked human-reviewed.
+
+## Run
+
+No application dependencies, build tools, database or API key are needed. Serve the repository root:
+
+```sh
+python3 -m http.server 8000
+```
+
+Open http://localhost:8000. Use HTTP/HTTPS, not a `file://` URL: the interface loads a JavaScript module and a local JSON file.
+
+## Test
+
+Use Node.js 22 or later:
+
+```sh
+node scripts/check.mjs
+node --test tests/tracker.test.mjs
+```
+
+Checks cover schema and source references, date semantics, filtering, safe rendering, six views, application event wiring, error recovery and local HTTP delivery. The DOM adapter is not a browser; visual layout and real browser interactions need a separate check before public release.
 
 ## Structure
 
-```
-index.html        # the entire dashboard (single file, no build step, no dependencies)
-data/data.json    # all content: frameworks, workstreams, updates, timeline, crosswalk
-UPDATE_GUIDE.md   # how the weekly refresh works
-VERIFICATION.md   # how the dataset is audited monthly against primary sources
-```
+| Path | Purpose |
+| --- | --- |
+| `index.html` | Semantic page shell and controls |
+| `assets/styles.css` | Original responsive styling; system fonts |
+| `assets/core.mjs` | Validation, filtering and date logic |
+| `assets/app.mjs` | Views, details and browser interaction |
+| `data/records.json` | Original starter dataset and editorial comparisons |
+| `docs/DATA_GUIDE.md` | Schema and content editing rules |
+| `docs/AGENT_WORKFLOW.md` | Proposed research/verification workflow; not activated |
+| `docs/SOURCE_LOG.md` | Research scope and primary-source record |
+| `docs/PROVENANCE.md` | Implementation and repository-history boundaries |
 
-## Data quality
+## Hosting after review and merge
 
-Content is refreshed weekly and **re-audited monthly**: parallel AI research agents re-verify every load-bearing date, status, and figure against primary sources, findings are cross-checked and classified by severity, and verified corrections are applied to the live dataset. See [VERIFICATION.md](VERIFICATION.md) for the full process and its limitations. Spotted an error? Open an issue — flagged items get priority in the next audit.
+All runtime paths are relative, so the project can be hosted under a repository subpath.
 
-The page loads its dataset from a live endpoint (`https://jhuaienvydgdnqwgwiau.supabase.co/functions/v1/ghg-data`), which is refreshed weekly — so content updates never require a redeploy. The bundled `data/data.json` is the fallback snapshot: the site uses it when the endpoint is unreachable, and the endpoint seeds itself from it if its store is ever empty. The snapshot is re-synced to the repo periodically.
+For GitHub Pages: open this repository's Settings → Pages, select Deploy from a branch, then `main` and `/(root)`. Save and check the Pages deployment in Actions. This is a manual opt-in; the validation workflow does not publish a website.
 
-## Run locally
+For another static host: serve the repository root with no build command. No custom domain is required. Do not publish `.env` files or API keys.
 
-```
-python3 -m http.server 8000
-# open http://localhost:8000
-```
+## Data and automation
 
-(Opening `index.html` directly as a file won't work because browsers block `fetch` on `file://`.)
+The browser requests **only `data/records.json`** for its dataset. It does not call the reference project's backend, any AI provider or analytics service. All regulatory URLs are links opened on user request.
 
-## Deploy on Cloudflare Pages
+Research automation is **not enabled**. The included GitHub workflow validates committed files only. To add scheduled research, choose the model/search services, credentials, budget, cadence and reviewer; follow `docs/AGENT_WORKFLOW.md`. A schedule must not be described as active until a real run has succeeded.
 
-1. Push this repo to GitHub.
-2. In the Cloudflare dashboard: **Workers & Pages → Create → Pages → Connect to Git**, pick the repo.
-3. Build settings: **Framework preset = None**, build command *empty*, output directory `/`.
-4. Deploy. Every push to `main` auto-deploys, so a weekly commit to `data/data.json` republishes the site.
+## Originality and limitations
 
-## Data model (short version)
+This working version replaces the inherited website, data snapshot and documentation with a new implementation and original summaries researched from official sources. The earlier project was a functional reference, not a source of copied code, styling or data. Its image and service connection are not used.
 
-`data.json` top-level keys:
+The repository remains a GitHub fork. Earlier commits and GitHub's fork relationship remain intact; this change does not relicense or claim ownership of those materials. No new blanket licence is applied to inherited history or third-party sources. See `docs/PROVENANCE.md`.
 
-| key | what it holds |
-|---|---|
-| `meta` | `last_updated` (drives the header badge), disclaimer, cadence |
-| `headline_metrics` | the KPI cards on the Overview tab |
-| `frameworks[]` | one entry per framework; each has `workstreams[]` with `status_label`, `summary`, `key_points`, `confidence {level, reasoning}`, `next_milestone`, `sources` |
-| `updates[]` | the dated feed; recency buckets (past week / past month / earlier) are computed client-side from `date` |
-| `timeline` | lanes → `spans` (phase bands) and `milestones` (diamonds); `projected: true` renders hatched/hollow |
-| `crosswalk` | relationships between frameworks + divergence watchlist |
-| `confidence_legend` | definitions shown on the Method tab |
-
-Confidence levels: `confirmed` / `high` / `medium` / `low` — every rating carries visible reasoning. See `UPDATE_GUIDE.md` for the rules used to assign them.
-
-## Disclaimer
-
-Independent and non-commercial. Not affiliated with any standard-setter or regulator. Not legal or compliance advice — verify deadlines against the primary sources linked throughout.
+This is an independent demo, unaffiliated with standard setters or regulators. It is not legal, accounting or assurance advice. Read the authoritative source and assess the relevant entity, jurisdiction and reporting period before acting.
