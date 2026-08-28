@@ -557,13 +557,14 @@ test('interoperability selection, navigation highlighting and record dialogs wor
   assert.match(env.nodes.view.innerHTML,/data-map-relation="packaging-markets" aria-pressed="true"/);
   env.nodes.view.handlers.click({target:env.button('data-record','eu-ppwr')});assert.match(env.nodes['dialog-body'].innerHTML,/Timeline and exact date evidence/);
   location.hash='#updates';env.window.handlers.hashchange();assert.equal(env.nodes['page-title'].textContent,'Amended Disclosure Requirements');
+  assert.equal(env.nodes['page-intro'].textContent,'Explore amended disclosure, impacts and interoperability');
   assert.match(env.nodes.view.innerHTML,/>Amended Disclosure Requirements<\/a>/);
  }finally{env.restore();}
 });
 test('priority actions follow entities and dated transactions without inferring packaging duties',()=>{
  const state=createDemoState();const get=s=>priorityActions(s,data,snapshot(s).entities,assessmentRows(s),valueChainRows(s));
  const workspace=renderView({view:'workspace',data,today});
- assert.match(workspace,/Priorities reflect the selected scenario and entities\. Confirm requirements and deadlines before acting\./);
+ assert.match(workspace,/<p class="demo-small">Priorities reflect the selected scenario and entities\. Confirm requirements and deadlines before acting<\/p>/);
  assert.doesNotMatch(workspace,/Suggested review order, not a compliance score/);
  const before=JSON.stringify(state);const all=get(state);assert.equal(JSON.stringify(state),before);
  assert.ok(all.some(t=>t.id==='packaging-scope'&&t.missing.some(m=>m.includes('Destination'))));
